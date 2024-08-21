@@ -1,19 +1,17 @@
 package pl.kamjer.shoppinglistservice.model.dto;
 
-import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
-import pl.kamjer.shoppinglistservice.model.CategoryId;
-import pl.kamjer.shoppinglistservice.model.User;
+import pl.kamjer.shoppinglistservice.model.ModifyState;
 
 @Builder
 @Getter
 public class CategoryDto {
 
     private long categoryId;
-
-    private String userName;
-
+    private long localCategoryId;
     private String categoryName;
+    private boolean deleted;
+    private ModifyState modifyState;
 
 }

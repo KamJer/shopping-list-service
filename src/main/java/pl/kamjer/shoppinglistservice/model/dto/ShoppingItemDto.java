@@ -1,32 +1,25 @@
 package pl.kamjer.shoppinglistservice.model.dto;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import pl.kamjer.shoppinglistservice.model.AmountType;
-import pl.kamjer.shoppinglistservice.model.Category;
-import pl.kamjer.shoppinglistservice.model.ShoppingItemId;
-import pl.kamjer.shoppinglistservice.model.User;
+import pl.kamjer.shoppinglistservice.model.ModifyState;
 
 @Getter
 @Builder
 public class ShoppingItemDto {
 
-    private Long shoppingItemId;
-
-    private String userName;
-
-    private Long itemAmountTypeId;
-
-    private Long itemCategoryId;
-
+    private long shoppingItemId;
+    private long localShoppingItemId;
+    private long itemAmountTypeId;
+    private long localAmountTypeId;
+    private long itemCategoryId;
+    private long localCategoryId;
+    @NotEmpty
     private String itemName;
-
     private Double amount;
-
     private boolean bought;
+    private boolean deleted;
+    private ModifyState modifyState;
 
-    private boolean movedToBought;
 }
