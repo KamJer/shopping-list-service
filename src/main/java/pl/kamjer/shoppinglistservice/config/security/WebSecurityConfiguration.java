@@ -16,7 +16,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import static org.springframework.boot.autoconfigure.security.servlet.PathRequest.toH2Console;
 import static org.springframework.security.config.Customizer.withDefaults;
 
 @SuppressWarnings("ALL")
@@ -33,9 +32,10 @@ public class WebSecurityConfiguration {
         httpSecurity
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((authz) -> authz
-                        .requestMatchers(toH2Console()).permitAll()
                         .requestMatchers(HttpMethod.POST, "/user").permitAll()
+//                        .requestMatchers(HttpMethod.GET, "/user/log/**").permitAll()
                         .requestMatchers(HttpMethod.PUT, "/error/**").permitAll()
+                        .requestMatchers("/util/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .httpBasic(withDefaults());
