@@ -24,7 +24,6 @@ public class DatabaseUtil {
                 .typeName(amountTypeDto.getTypeName())
                 .savedTime(savedTime)
                 .deleted(amountTypeDto.isDeleted())
-                .localAmountTypeId(amountTypeDto.getLocalAmountTypeId())
                 .build();
     }
 
@@ -33,7 +32,6 @@ public class DatabaseUtil {
                 .amountTypeId(amountType.getAmountTypeId().getAmountTypeId())
                 .typeName(amountType.getTypeName())
                 .modifyState(modifyState)
-                .localAmountTypeId(amountType.getLocalAmountTypeId())
                 .build();
     }
 
@@ -50,7 +48,6 @@ public class DatabaseUtil {
                 .categoryId(category.getCategoryId().getCategoryId())
                 .categoryName(category.getCategoryName())
                 .modifyState(modifyState)
-                .localCategoryId(category.getLocalCategoryId())
                 .build();
     }
 
@@ -63,7 +60,6 @@ public class DatabaseUtil {
                 .categoryName(categoryDto.getCategoryName())
                 .savedTime(savedTime)
                 .deleted(categoryDto.isDeleted())
-                .localCategoryId(categoryDto.getLocalCategoryId())
                 .build();
     }
 
@@ -76,9 +72,6 @@ public class DatabaseUtil {
                 .amount(shoppingItem.getAmount())
                 .bought(shoppingItem.isBought())
                 .modifyState(modifyState)
-                .localShoppingItemId(shoppingItem.getLocalShoppingItemId())
-                .localAmountTypeId(shoppingItem.getLocalAmountTypeId())
-                .localCategoryId(shoppingItem.getLocalCategoryId())
                 .build();
     }
 
@@ -95,9 +88,6 @@ public class DatabaseUtil {
                 .bought(shoppingItemDto.isBought())
                 .savedTime(savedTime)
                 .deleted(shoppingItemDto.isDeleted())
-                .localShoppingItemId(shoppingItemDto.getLocalShoppingItemId())
-                .localAmountTypeId(shoppingItemDto.getLocalAmountTypeId())
-                .localCategoryId(shoppingItemDto.getLocalCategoryId())
                 .build();
     }
 }

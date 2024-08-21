@@ -10,7 +10,6 @@ import pl.kamjer.shoppinglistservice.model.ModifyState;
 public class AmountTypeDto {
 
     private long amountTypeId;
-    private long localAmountTypeId;
     @NotEmpty
     private String typeName;
     private boolean deleted;

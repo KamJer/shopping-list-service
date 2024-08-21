@@ -10,11 +10,8 @@ import pl.kamjer.shoppinglistservice.model.ModifyState;
 public class ShoppingItemDto {
 
     private long shoppingItemId;
-    private long localShoppingItemId;
     private long itemAmountTypeId;
-    private long localAmountTypeId;
     private long itemCategoryId;
-    private long localCategoryId;
     @NotEmpty
     private String itemName;
     private Double amount;
