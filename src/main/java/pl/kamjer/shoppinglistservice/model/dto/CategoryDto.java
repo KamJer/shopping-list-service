@@ -9,7 +9,6 @@ import pl.kamjer.shoppinglistservice.model.ModifyState;
 public class CategoryDto {
 
     private long categoryId;
-    private long localCategoryId;
     private String categoryName;
     private boolean deleted;
     private ModifyState modifyState;

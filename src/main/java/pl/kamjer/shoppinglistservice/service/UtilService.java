@@ -118,7 +118,9 @@ public class UtilService {
                 .map(amountType -> {
                     AmountType amountTypeDb = amountType;
                     if (amountType.getAmountTypeId().getAmountTypeId() != 0L) {
-                        amountTypeDb = amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(user.getUserName(), amountType.getAmountTypeId().getAmountTypeId())
+                        amountTypeDb = amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(
+                                        user.getUserName(),
+                                        amountType.getAmountTypeId().getAmountTypeId())
                                 .map(amountType1 -> {
                                     amountType1.setAmountTypeId(amountType.getAmountTypeId());
                                     amountType1.setTypeName(amountType.getTypeName());
@@ -142,7 +144,9 @@ public class UtilService {
                 .map(category -> {
                     Category categoryDb = category;
                     if (category.getCategoryId().getCategoryId() != 0L) {
-                        categoryDb = categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(user.getUserName(), category.getCategoryId().getCategoryId())
+                        categoryDb = categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(
+                                        user.getUserName(),
+                                        category.getCategoryId().getCategoryId())
                                 .map(category1 -> {
                                     category1.setCategoryId(category.getCategoryId());
                                     category1.setCategoryName(category.getCategoryName());
