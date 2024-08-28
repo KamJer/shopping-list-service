@@ -24,11 +24,15 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor
-public class AmountTypeService {
+public class AmountTypeService extends CustomService{
 
-    private AmountTypeRepository amountTypeRepository;
-    private UserRepository userRepository;
+    private final AmountTypeRepository amountTypeRepository;
+
+    public AmountTypeService(AmountTypeRepository amountTypeRepository, UserRepository userRepository) {
+        super(userRepository);
+        this.amountTypeRepository = amountTypeRepository;
+    }
+
 
     @Transactional
     public AddDto insertAmountType(AmountTypeDto amountTypeDto) throws NoResourcesFoundException {
@@ -57,17 +61,5 @@ public class AmountTypeService {
         amountTypeToDelete.setDeleted(true);
         amountTypeRepository.save(amountTypeToDelete);
         return savedTime;
-    }
-
-    private User updateSaveTimeInUser(LocalDateTime localDateTime) throws NoResourcesFoundException {
-        User user = getUserFromAuth();
-        user.setSavedTime(localDateTime);
-        userRepository.save(user);
-        return user;
-    }
-
-    private User getUserFromAuth() throws NoResourcesFoundException {
-        String userName = ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
-        return userRepository.findByUserName(userName).orElseThrow(() -> new NoResourcesFoundException("No such User"));
     }
 }

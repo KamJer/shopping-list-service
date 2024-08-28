@@ -29,5 +29,5 @@ public class Category {
     private List<ShoppingItem> shoppingItemList;
 
     @Transient
-    private long localCategoryId;
+    private long localId;
 }

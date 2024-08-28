@@ -1,0 +1,1130 @@
+2024-08-27 18:24:19 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20h11m24s184ms910µs500ns).
+2024-08-27 18:31:20 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2024-08-27 19:01:20 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2024-08-27 19:10:47 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 19:10:47 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@75eed00f]]
+2024-08-27 19:10:47 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 19:10:47 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 19:10:47 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 19:10:47 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 21:11:34 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 21:11:35 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 20816 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 21:11:35 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 21:11:35 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 21:11:35 [main] INFO  : Finished Spring Data repository scanning in 86 ms. Found 4 JPA repository interfaces.
+2024-08-27 21:11:36 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 21:11:36 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 21:11:36 [main] INFO  : Starting service [Tomcat]
+2024-08-27 21:11:36 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 21:11:36 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 21:11:36 [main] INFO  : Root WebApplicationContext: initialization completed in 1172 ms
+2024-08-27 21:11:36 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 21:11:36 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 21:11:36 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 21:11:36 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 21:11:36 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 21:11:36 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 21:11:36 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@570b85dd
+2024-08-27 21:11:36 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 21:11:36 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 21:11:37 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 21:11:37 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 21:11:37 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 21:11:38 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 21:11:38 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 21:11:38 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 21:11:38 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 21:11:38 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 21:11:38 [main] INFO  : Starting...
+2024-08-27 21:11:38 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@dcdf733]]
+2024-08-27 21:11:38 [main] INFO  : Started.
+2024-08-27 21:11:38 [main] INFO  : Started ShoppingListServiceApplication in 4.017 seconds (process running for 4.406)
+2024-08-27 21:11:39 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 21:11:39 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 21:11:39 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 0 ms
+2024-08-27 21:12:38 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-08-27 21:36:58 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s202ms561µs400ns).
+2024-08-27 21:36:58 [https-jsse-nio-8443-exec-3] ERROR : User(userName=test, password=$2a$10$eoO5cOyKjyxjLwRgdoBQVu0j7ZIQJ0q.DgXvnnPTNkGV4Qwxz5uvm, savedTime=2024-08-27T19:10:44.667157): 
+java.lang.Exception: null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	at org.springframework.validation.DataBinder.createObject(DataBinder.java:928)
+	at org.springframework.validation.DataBinder.construct(DataBinder.java:903)
+	at org.springframework.web.bind.ServletRequestDataBinder.construct(ServletRequestDataBinder.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletModelAttributeMethodProcessor.constructAttribute(ServletModelAttributeMethodProcessor.java:157)
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:148)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:213)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at pl.kamjer.shoppinglistservice.config.components.SkipAuthorizationFilter.doFilterInternal(SkipAuthorizationFilter.java:30)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:107)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-08-27 21:42:38 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2024-08-27 21:48:50 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 21:48:50 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@dcdf733]]
+2024-08-27 21:48:50 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 21:48:50 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 21:48:50 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 21:48:50 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 21:48:53 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 21:48:53 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 10480 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 21:48:53 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 21:48:54 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 21:48:54 [main] INFO  : Finished Spring Data repository scanning in 103 ms. Found 4 JPA repository interfaces.
+2024-08-27 21:48:55 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 21:48:55 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 21:48:55 [main] INFO  : Starting service [Tomcat]
+2024-08-27 21:48:55 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 21:48:55 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 21:48:55 [main] INFO  : Root WebApplicationContext: initialization completed in 1348 ms
+2024-08-27 21:48:55 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 21:48:55 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 21:48:55 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 21:48:55 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 21:48:55 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 21:48:55 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 21:48:56 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e836aed
+2024-08-27 21:48:56 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 21:48:56 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 21:48:56 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 21:48:56 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 21:48:57 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 21:48:57 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 21:48:57 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 21:48:58 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 21:48:58 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 21:48:58 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 21:48:58 [main] INFO  : Starting...
+2024-08-27 21:48:58 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2e6c69f]]
+2024-08-27 21:48:58 [main] INFO  : Started.
+2024-08-27 21:48:58 [main] INFO  : Started ShoppingListServiceApplication in 4.541 seconds (process running for 4.935)
+2024-08-27 21:48:58 [RMI TCP Connection(3)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 21:48:58 [RMI TCP Connection(3)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 21:48:58 [RMI TCP Connection(3)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-08-27 21:49:27 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 21:49:27 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2e6c69f]]
+2024-08-27 21:49:27 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 21:49:27 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 21:49:27 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 21:49:27 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 21:49:32 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 21:49:32 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 21776 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 21:49:32 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 21:49:32 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 21:49:32 [main] INFO  : Finished Spring Data repository scanning in 100 ms. Found 4 JPA repository interfaces.
+2024-08-27 21:49:33 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 21:49:33 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 21:49:33 [main] INFO  : Starting service [Tomcat]
+2024-08-27 21:49:33 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 21:49:33 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 21:49:33 [main] INFO  : Root WebApplicationContext: initialization completed in 1365 ms
+2024-08-27 21:49:33 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 21:49:33 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 21:49:33 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 21:49:34 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 21:49:34 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 21:49:34 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 21:49:34 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43a8bd35
+2024-08-27 21:49:34 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 21:49:34 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 21:49:35 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 21:49:35 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 21:49:35 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 21:49:35 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 21:49:35 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 21:49:36 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 21:49:36 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 21:49:36 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 21:49:36 [main] INFO  : Starting...
+2024-08-27 21:49:36 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@75eed00f]]
+2024-08-27 21:49:36 [main] INFO  : Started.
+2024-08-27 21:49:36 [main] INFO  : Started ShoppingListServiceApplication in 4.6 seconds (process running for 4.993)
+2024-08-27 21:49:36 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 21:49:36 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 21:49:36 [RMI TCP Connection(1)-192.168.0.13] INFO  : Completed initialization in 0 ms
+2024-08-27 21:50:36 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-08-27 21:57:07 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 21:57:07 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@75eed00f]]
+2024-08-27 21:57:07 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 21:57:07 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 21:57:07 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 21:57:07 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 21:57:11 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 21:57:11 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 22292 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 21:57:11 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 21:57:12 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 21:57:12 [main] INFO  : Finished Spring Data repository scanning in 97 ms. Found 4 JPA repository interfaces.
+2024-08-27 21:57:13 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 21:57:13 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 21:57:13 [main] INFO  : Starting service [Tomcat]
+2024-08-27 21:57:13 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 21:57:13 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 21:57:13 [main] INFO  : Root WebApplicationContext: initialization completed in 1309 ms
+2024-08-27 21:57:13 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 21:57:13 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 21:57:13 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 21:57:13 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 21:57:13 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 21:57:13 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 21:57:13 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d02a066
+2024-08-27 21:57:13 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 21:57:13 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 21:57:14 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 21:57:14 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 21:57:14 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 21:57:14 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 21:57:15 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 21:57:15 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 21:57:15 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 21:57:15 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 21:57:15 [main] INFO  : Starting...
+2024-08-27 21:57:15 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@60319a00]]
+2024-08-27 21:57:15 [main] INFO  : Started.
+2024-08-27 21:57:15 [main] INFO  : Started ShoppingListServiceApplication in 4.304 seconds (process running for 4.662)
+2024-08-27 21:57:16 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 21:57:16 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 21:57:16 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 2 ms
+2024-08-27 21:58:15 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-08-27 22:06:52 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 22:06:52 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@60319a00]]
+2024-08-27 22:06:52 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 22:06:52 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:06:52 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 22:06:52 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 22:06:56 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 22:06:56 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 5888 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 22:06:56 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 22:06:56 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 22:06:56 [main] INFO  : Finished Spring Data repository scanning in 103 ms. Found 4 JPA repository interfaces.
+2024-08-27 22:06:57 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 22:06:57 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:06:57 [main] INFO  : Starting service [Tomcat]
+2024-08-27 22:06:57 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 22:06:57 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 22:06:57 [main] INFO  : Root WebApplicationContext: initialization completed in 1213 ms
+2024-08-27 22:06:57 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 22:06:57 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 22:06:57 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 22:06:57 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 22:06:57 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 22:06:57 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 22:06:58 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cbb11e4
+2024-08-27 22:06:58 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 22:06:58 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 22:06:58 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 22:06:58 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:06:59 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 22:06:59 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 22:06:59 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 22:06:59 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:07:00 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 22:07:00 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 22:07:00 [main] INFO  : Starting...
+2024-08-27 22:07:00 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@378446f9]]
+2024-08-27 22:07:00 [main] INFO  : Started.
+2024-08-27 22:07:00 [main] INFO  : Started ShoppingListServiceApplication in 4.092 seconds (process running for 4.436)
+2024-08-27 22:07:00 [RMI TCP Connection(3)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 22:07:00 [RMI TCP Connection(3)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 22:07:00 [RMI TCP Connection(3)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-08-27 22:07:59 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-08-27 22:09:09 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 22:09:09 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@378446f9]]
+2024-08-27 22:09:09 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 22:09:09 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:09:09 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 22:09:09 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 22:09:13 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 22:09:13 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 5196 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 22:09:13 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 22:09:14 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 22:09:14 [main] INFO  : Finished Spring Data repository scanning in 117 ms. Found 4 JPA repository interfaces.
+2024-08-27 22:09:15 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 22:09:15 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:09:15 [main] INFO  : Starting service [Tomcat]
+2024-08-27 22:09:15 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 22:09:15 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 22:09:15 [main] INFO  : Root WebApplicationContext: initialization completed in 1460 ms
+2024-08-27 22:09:15 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 22:09:15 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 22:09:15 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 22:09:15 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 22:09:15 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 22:09:15 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 22:09:16 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cbb11e4
+2024-08-27 22:09:16 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 22:09:16 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 22:09:16 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 22:09:16 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:09:17 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 22:09:17 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 22:09:17 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 22:09:18 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:09:18 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 22:09:18 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 22:09:18 [main] INFO  : Starting...
+2024-08-27 22:09:18 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@12620e98]]
+2024-08-27 22:09:18 [main] INFO  : Started.
+2024-08-27 22:09:18 [main] INFO  : Started ShoppingListServiceApplication in 4.767 seconds (process running for 5.14)
+2024-08-27 22:09:18 [RMI TCP Connection(3)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 22:09:18 [RMI TCP Connection(3)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 22:09:18 [RMI TCP Connection(3)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-08-27 22:10:18 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-08-27 22:10:31 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 22:10:31 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@12620e98]]
+2024-08-27 22:10:31 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 22:10:31 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:10:31 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 22:10:31 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 22:10:35 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 22:10:35 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 22364 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 22:10:35 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 22:10:36 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 22:10:36 [main] INFO  : Finished Spring Data repository scanning in 90 ms. Found 4 JPA repository interfaces.
+2024-08-27 22:10:36 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 22:10:36 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:10:36 [main] INFO  : Starting service [Tomcat]
+2024-08-27 22:10:36 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 22:10:36 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 22:10:36 [main] INFO  : Root WebApplicationContext: initialization completed in 1248 ms
+2024-08-27 22:10:37 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 22:10:37 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 22:10:37 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 22:10:37 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 22:10:37 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 22:10:37 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 22:10:37 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ed7c178
+2024-08-27 22:10:37 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 22:10:37 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 22:10:38 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 22:10:38 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:10:38 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 22:10:38 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 22:10:38 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 22:10:39 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:10:39 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 22:10:39 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 22:10:39 [main] INFO  : Starting...
+2024-08-27 22:10:39 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6048e171]]
+2024-08-27 22:10:39 [main] INFO  : Started.
+2024-08-27 22:10:39 [main] INFO  : Started ShoppingListServiceApplication in 4.151 seconds (process running for 4.528)
+2024-08-27 22:10:39 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 22:10:39 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 22:10:39 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-08-27 22:11:29 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 22:11:29 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6048e171]]
+2024-08-27 22:11:29 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 22:11:29 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:11:29 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 22:11:29 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 22:11:35 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 22:11:35 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 16516 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 22:11:35 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 22:11:35 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 22:11:35 [main] INFO  : Finished Spring Data repository scanning in 101 ms. Found 4 JPA repository interfaces.
+2024-08-27 22:11:36 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 22:11:36 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:11:36 [main] INFO  : Starting service [Tomcat]
+2024-08-27 22:11:36 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 22:11:36 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 22:11:36 [main] INFO  : Root WebApplicationContext: initialization completed in 1242 ms
+2024-08-27 22:11:36 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 22:11:36 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 22:11:36 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 22:11:36 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 22:11:36 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 22:11:36 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 22:11:37 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@647aa45c
+2024-08-27 22:11:37 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 22:11:37 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 22:11:37 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 22:11:37 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:11:38 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 22:11:38 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 22:11:38 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 22:11:38 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:11:39 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 22:11:39 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 22:11:39 [main] INFO  : Starting...
+2024-08-27 22:11:39 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@680aa303]]
+2024-08-27 22:11:39 [main] INFO  : Started.
+2024-08-27 22:11:39 [main] INFO  : Started ShoppingListServiceApplication in 4.167 seconds (process running for 4.526)
+2024-08-27 22:11:39 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 22:11:39 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 22:11:39 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-08-27 22:12:21 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 22:12:21 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@680aa303]]
+2024-08-27 22:12:21 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 22:12:21 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:12:21 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 22:12:21 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 22:12:25 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 22:12:25 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 22552 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 22:12:25 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 22:12:26 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 22:12:26 [main] INFO  : Finished Spring Data repository scanning in 95 ms. Found 4 JPA repository interfaces.
+2024-08-27 22:12:26 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 22:12:26 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:12:26 [main] INFO  : Starting service [Tomcat]
+2024-08-27 22:12:26 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 22:12:26 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 22:12:26 [main] INFO  : Root WebApplicationContext: initialization completed in 1271 ms
+2024-08-27 22:12:27 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 22:12:27 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 22:12:27 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 22:12:27 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 22:12:27 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 22:12:27 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 22:12:27 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3922b297
+2024-08-27 22:12:27 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 22:12:27 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 22:12:28 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 22:12:28 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:12:28 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 22:12:28 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 22:12:28 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 22:12:29 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:12:29 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 22:12:29 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 22:12:29 [main] INFO  : Starting...
+2024-08-27 22:12:29 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@680aa303]]
+2024-08-27 22:12:29 [main] INFO  : Started.
+2024-08-27 22:12:29 [main] INFO  : Started ShoppingListServiceApplication in 4.269 seconds (process running for 4.626)
+2024-08-27 22:12:30 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 22:12:30 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 22:12:30 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-08-27 22:13:29 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-08-27 22:15:31 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 22:15:31 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@680aa303]]
+2024-08-27 22:15:31 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 22:15:31 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:15:31 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 22:15:31 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 22:15:34 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 22:15:34 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 12336 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 22:15:34 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 22:15:35 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 22:15:35 [main] INFO  : Finished Spring Data repository scanning in 109 ms. Found 4 JPA repository interfaces.
+2024-08-27 22:15:36 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 22:15:36 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:15:36 [main] INFO  : Starting service [Tomcat]
+2024-08-27 22:15:36 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 22:15:36 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 22:15:36 [main] INFO  : Root WebApplicationContext: initialization completed in 1314 ms
+2024-08-27 22:15:36 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 22:15:36 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 22:15:36 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 22:15:36 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 22:15:36 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 22:15:36 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 22:15:36 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c7db0e8
+2024-08-27 22:15:36 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 22:15:36 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 22:15:37 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 22:15:37 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:15:38 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 22:15:38 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 22:15:38 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 22:15:38 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:15:38 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 22:15:38 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 22:15:38 [main] INFO  : Starting...
+2024-08-27 22:15:38 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3ace955c]]
+2024-08-27 22:15:38 [main] INFO  : Started.
+2024-08-27 22:15:38 [main] INFO  : Started ShoppingListServiceApplication in 4.264 seconds (process running for 4.634)
+2024-08-27 22:15:39 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 22:15:39 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 22:15:39 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-08-27 22:16:38 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-08-27 22:17:16 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 22:17:16 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3ace955c]]
+2024-08-27 22:17:16 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 22:17:16 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:17:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 22:17:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 22:17:20 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 22:17:20 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 19180 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 22:17:20 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 22:17:21 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 22:17:21 [main] INFO  : Finished Spring Data repository scanning in 92 ms. Found 4 JPA repository interfaces.
+2024-08-27 22:17:21 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 22:17:21 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:17:21 [main] INFO  : Starting service [Tomcat]
+2024-08-27 22:17:21 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 22:17:21 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 22:17:21 [main] INFO  : Root WebApplicationContext: initialization completed in 1238 ms
+2024-08-27 22:17:22 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 22:17:22 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 22:17:22 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 22:17:22 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 22:17:22 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 22:17:22 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 22:17:22 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c06e145
+2024-08-27 22:17:22 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 22:17:22 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 22:17:23 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 22:17:23 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 22:17:23 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 22:17:23 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 22:17:24 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 22:17:24 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 22:17:24 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 22:17:24 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 22:17:24 [main] INFO  : Starting...
+2024-08-27 22:17:24 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@bcecdd]]
+2024-08-27 22:17:24 [main] INFO  : Started.
+2024-08-27 22:17:24 [main] INFO  : Started ShoppingListServiceApplication in 4.224 seconds (process running for 4.619)
+2024-08-27 22:17:24 [RMI TCP Connection(4)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 22:17:24 [RMI TCP Connection(4)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 22:17:24 [RMI TCP Connection(4)-192.168.0.13] INFO  : Completed initialization in 0 ms
+2024-08-27 22:18:24 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-08-27 22:48:24 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2024-08-27 23:18:24 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2024-08-27 23:25:26 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 23:25:26 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@bcecdd]]
+2024-08-27 23:25:26 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 23:25:26 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 23:25:26 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 23:25:26 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 23:25:32 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 23:25:32 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 10688 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 23:25:32 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 23:25:32 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 23:25:32 [main] INFO  : Finished Spring Data repository scanning in 93 ms. Found 4 JPA repository interfaces.
+2024-08-27 23:25:33 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 23:25:33 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 23:25:33 [main] INFO  : Starting service [Tomcat]
+2024-08-27 23:25:33 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 23:25:33 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 23:25:33 [main] INFO  : Root WebApplicationContext: initialization completed in 1244 ms
+2024-08-27 23:25:33 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 23:25:33 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 23:25:33 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 23:25:33 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 23:25:33 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 23:25:33 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 23:25:34 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72c1bf75
+2024-08-27 23:25:34 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 23:25:34 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 23:25:34 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 23:25:34 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 23:25:35 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 23:25:35 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 23:25:35 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 23:25:35 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 23:25:36 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 23:25:36 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 23:25:36 [main] INFO  : Starting...
+2024-08-27 23:25:36 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@40a923e6]]
+2024-08-27 23:25:36 [main] INFO  : Started.
+2024-08-27 23:25:36 [main] INFO  : Started ShoppingListServiceApplication in 4.137 seconds (process running for 4.5)
+2024-08-27 23:25:36 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 23:25:36 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 23:25:36 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-08-27 23:25:41 [https-jsse-nio-8443-exec-7] WARN  : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-08-27 23:25:59 [https-jsse-nio-8443-exec-6] ERROR : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.lang.String cannot be cast to class org.springframework.security.core.userdetails.UserDetails (java.lang.String is in module java.base of loader 'bootstrap'; org.springframework.security.core.userdetails.UserDetails is in unnamed module of loader 'app')] with root cause
+java.lang.ClassCastException: class java.lang.String cannot be cast to class org.springframework.security.core.userdetails.UserDetails (java.lang.String is in module java.base of loader 'bootstrap'; org.springframework.security.core.userdetails.UserDetails is in unnamed module of loader 'app')
+	at pl.kamjer.shoppinglistservice.service.CustomService.getUserFromAuth(CustomService.java:25)
+	at pl.kamjer.shoppinglistservice.service.ExceptionService.insertLog(ExceptionService.java:16)
+	at pl.kamjer.shoppinglistservice.controller.ExceptionController.sendLog(ExceptionController.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at pl.kamjer.shoppinglistservice.config.components.SkipAuthorizationFilter.doFilterInternal(SkipAuthorizationFilter.java:30)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:107)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-08-27 23:26:35 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-08-27 23:29:21 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 23:29:21 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@40a923e6]]
+2024-08-27 23:29:21 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 23:29:21 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 23:29:21 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 23:29:21 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-27 23:29:25 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 23:29:25 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 10068 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-27 23:29:25 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-27 23:29:26 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 23:29:26 [main] INFO  : Finished Spring Data repository scanning in 94 ms. Found 4 JPA repository interfaces.
+2024-08-27 23:29:26 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-27 23:29:26 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 23:29:26 [main] INFO  : Starting service [Tomcat]
+2024-08-27 23:29:26 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-27 23:29:26 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-27 23:29:26 [main] INFO  : Root WebApplicationContext: initialization completed in 1354 ms
+2024-08-27 23:29:27 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 23:29:27 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 23:29:27 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-27 23:29:27 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 23:29:27 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-27 23:29:27 [main] INFO  : HikariPool-1 - Starting...
+2024-08-27 23:29:27 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e836aed
+2024-08-27 23:29:27 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-27 23:29:27 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 23:29:28 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 23:29:28 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 23:29:28 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 23:29:28 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-27 23:29:29 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-27 23:29:29 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-27 23:29:29 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-27 23:29:29 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-27 23:29:29 [main] INFO  : Starting...
+2024-08-27 23:29:29 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2919976e]]
+2024-08-27 23:29:29 [main] INFO  : Started.
+2024-08-27 23:29:29 [main] INFO  : Started ShoppingListServiceApplication in 4.502 seconds (process running for 4.88)
+2024-08-27 23:29:30 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 23:29:30 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-27 23:29:30 [RMI TCP Connection(1)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-08-27 23:30:25 [https-jsse-nio-8443-exec-3] ERROR : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.lang.String cannot be cast to class org.springframework.security.core.userdetails.UserDetails (java.lang.String is in module java.base of loader 'bootstrap'; org.springframework.security.core.userdetails.UserDetails is in unnamed module of loader 'app')] with root cause
+java.lang.ClassCastException: class java.lang.String cannot be cast to class org.springframework.security.core.userdetails.UserDetails (java.lang.String is in module java.base of loader 'bootstrap'; org.springframework.security.core.userdetails.UserDetails is in unnamed module of loader 'app')
+	at pl.kamjer.shoppinglistservice.service.CustomService.getUserFromAuth(CustomService.java:25)
+	at pl.kamjer.shoppinglistservice.service.ExceptionService.insertLog(ExceptionService.java:16)
+	at pl.kamjer.shoppinglistservice.controller.ExceptionController.sendLog(ExceptionController.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at pl.kamjer.shoppinglistservice.config.components.SkipAuthorizationFilter.doFilterInternal(SkipAuthorizationFilter.java:30)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:107)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-08-27 23:30:29 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-08-27 23:32:04 [https-jsse-nio-8443-exec-9] ERROR : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.lang.String cannot be cast to class org.springframework.security.core.userdetails.UserDetails (java.lang.String is in module java.base of loader 'bootstrap'; org.springframework.security.core.userdetails.UserDetails is in unnamed module of loader 'app')] with root cause
+java.lang.ClassCastException: class java.lang.String cannot be cast to class org.springframework.security.core.userdetails.UserDetails (java.lang.String is in module java.base of loader 'bootstrap'; org.springframework.security.core.userdetails.UserDetails is in unnamed module of loader 'app')
+	at pl.kamjer.shoppinglistservice.service.CustomService.getUserFromAuth(CustomService.java:25)
+	at pl.kamjer.shoppinglistservice.service.ExceptionService.insertLog(ExceptionService.java:16)
+	at pl.kamjer.shoppinglistservice.controller.ExceptionController.sendLog(ExceptionController.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at pl.kamjer.shoppinglistservice.config.components.SkipAuthorizationFilter.doFilterInternal(SkipAuthorizationFilter.java:30)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:107)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-08-27 23:32:04 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-27 23:32:04 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2919976e]]
+2024-08-27 23:32:04 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-27 23:32:04 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 23:32:04 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-27 23:32:04 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.

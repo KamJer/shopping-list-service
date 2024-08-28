@@ -2,11 +2,9 @@ package pl.kamjer.shoppinglistservice.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import pl.kamjer.shoppinglistservice.model.dto.AmountTypeDto;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Objects;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -31,5 +29,5 @@ public class AmountType {
     private List<ShoppingItem> shoppingItemList;
 
     @Transient
-    private long localAmountTypeId;
+    private long localId;
 }

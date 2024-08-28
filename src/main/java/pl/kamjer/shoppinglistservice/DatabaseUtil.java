@@ -1,6 +1,6 @@
 package pl.kamjer.shoppinglistservice;
 
-import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.*;
 import pl.kamjer.shoppinglistservice.model.dto.AmountTypeDto;
@@ -12,7 +12,7 @@ import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 
 import java.time.LocalDateTime;
 
-@Log
+@Slf4j
 public class DatabaseUtil {
 
     public static AmountType toAmountType(User user,  AmountTypeDto amountTypeDto, LocalDateTime savedTime) throws NoResourcesFoundException {
@@ -24,6 +24,7 @@ public class DatabaseUtil {
                 .typeName(amountTypeDto.getTypeName())
                 .savedTime(savedTime)
                 .deleted(amountTypeDto.isDeleted())
+                .localId(amountTypeDto.getLocalId())
                 .build();
     }
 
@@ -32,6 +33,7 @@ public class DatabaseUtil {
                 .amountTypeId(amountType.getAmountTypeId().getAmountTypeId())
                 .typeName(amountType.getTypeName())
                 .modifyState(modifyState)
+                .localId(amountType.getLocalId())
                 .build();
     }
 
@@ -48,6 +50,7 @@ public class DatabaseUtil {
                 .categoryId(category.getCategoryId().getCategoryId())
                 .categoryName(category.getCategoryName())
                 .modifyState(modifyState)
+                .localId(category.getLocalId())
                 .build();
     }
 
@@ -60,6 +63,7 @@ public class DatabaseUtil {
                 .categoryName(categoryDto.getCategoryName())
                 .savedTime(savedTime)
                 .deleted(categoryDto.isDeleted())
+                .localId(categoryDto.getLocalId())
                 .build();
     }
 
@@ -72,6 +76,9 @@ public class DatabaseUtil {
                 .amount(shoppingItem.getAmount())
                 .bought(shoppingItem.isBought())
                 .modifyState(modifyState)
+                .localId(shoppingItem.getLocalShoppingItemId())
+                .localAmountTypeId(shoppingItem.getLocalAmountTypeId())
+                .localCategoryId(shoppingItem.getLocalCategoryId())
                 .build();
     }
 
@@ -88,6 +95,9 @@ public class DatabaseUtil {
                 .bought(shoppingItemDto.isBought())
                 .savedTime(savedTime)
                 .deleted(shoppingItemDto.isDeleted())
+                .localShoppingItemId(shoppingItemDto.getLocalId())
+                .localAmountTypeId(shoppingItemDto.getLocalAmountTypeId())
+                .localCategoryId(shoppingItemDto.getLocalCategoryId())
                 .build();
     }
 }

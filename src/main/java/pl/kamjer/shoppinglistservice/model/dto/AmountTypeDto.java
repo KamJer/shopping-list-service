@@ -14,4 +14,7 @@ public class AmountTypeDto {
     private String typeName;
     private boolean deleted;
     private ModifyState modifyState;
+
+    private long localId;
+
 }

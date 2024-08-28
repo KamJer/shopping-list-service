@@ -23,13 +23,21 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor
-public class UtilService {
+public class UtilService extends CustomService {
 
-    private AmountTypeRepository amountTypeRepository;
-    private CategoryRepository categoryRepository;
-    private ShoppingItemRepository shoppingItemRepository;
-    private UserRepository userRepository;
+    private final AmountTypeRepository amountTypeRepository;
+    private final CategoryRepository categoryRepository;
+    private final ShoppingItemRepository shoppingItemRepository;
+
+    public UtilService(UserRepository userRepository,
+                       AmountTypeRepository amountTypeRepository,
+                       CategoryRepository categoryRepository,
+                       ShoppingItemRepository shoppingItemRepository) {
+        super(userRepository);
+        this.amountTypeRepository = amountTypeRepository;
+        this.categoryRepository = categoryRepository;
+        this.shoppingItemRepository = shoppingItemRepository;
+    }
 
     @Transactional
     public AllDto synchronizeDto(AllDto allDto) {
@@ -37,6 +45,7 @@ public class UtilService {
         LocalDateTime savedTime = LocalDateTime.now();
         User user = getUserFromAuth();
 
+//        getting date and time from user, if time from user is null take the oldest possible time
         LocalDateTime userSavedTime = Optional.ofNullable(allDto.getSavedTime()).orElseGet(() -> LocalDateTime.of(1000, 1, 1, 0, 0));
 
 //        getting data from dto and converting it to entity
@@ -55,7 +64,6 @@ public class UtilService {
         List<Category> categoriesFromDb = categoryRepository.findCategoryByCategoryIdUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
         List<ShoppingItem> shoppingItemsFromDb = shoppingItemRepository.findShoppingItemByShoppingItemIdUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
 
-//        filtering data so only data after passed timestamp is left and based on whether data is set to be deleted or inserted
         List<AmountTypeDto> amountTypesToCheck = amountTypesFromDb
                 .stream()
                 .filter(amountType -> {
@@ -66,7 +74,7 @@ public class UtilService {
                 })
                 .map(amountType -> {
                     ModifyState modifyState = ModifyState.INSERT;
-                    if (amountType.isDeleted()) {
+                    if (amountType.isDeleted() && amountTypesFromClient.contains(amountType)) {
                         modifyState = ModifyState.DELETE;
                     } else if (amountTypesFromClient.contains(amountType)) {
                         modifyState = ModifyState.UPDATE;
@@ -129,14 +137,22 @@ public class UtilService {
                                     return amountType1;
                                 }).orElse(amountType);
                     }
-                    AmountType insertedAmountType = amountTypeRepository.save(amountTypeDb);
-                    insertedAmountType.setLocalAmountTypeId(amountType.getLocalAmountTypeId());
-                    return insertedAmountType;
+                    amountTypeDb = amountTypeRepository.save(amountTypeDb);
+                    amountTypeDb.setLocalId(amountType.getLocalId());
+                    return amountTypeDb;
                 })
                 .toList();
         List<AmountTypeDto> amountTypeDtoToSend = new ArrayList<>(amountTypesFromClientAfterFilter
                 .stream()
-                .map(amountType -> DatabaseUtil.toAmountTypeDto(amountType, ModifyState.UPDATE))
+                .map(amountType -> {
+                    AmountTypeDto amountTypeDto;
+                    if (amountType.isDeleted()) {
+                        amountTypeDto = DatabaseUtil.toAmountTypeDto(amountType, ModifyState.DELETE);
+                    } else {
+                        amountTypeDto = DatabaseUtil.toAmountTypeDto(amountType, ModifyState.UPDATE);
+                    }
+                    return amountTypeDto;
+                })
                 .toList());
         amountTypeDtoToSend.addAll(amountTypesToCheck);
 
@@ -155,14 +171,23 @@ public class UtilService {
                                     return category1;
                                 }).orElse(category);
                     }
-                    Category insertedCategory = categoryRepository.save(categoryDb);
-                    insertedCategory.setLocalCategoryId(category.getLocalCategoryId());
-                    return insertedCategory;
+                    categoryDb = categoryRepository.save(categoryDb);
+                    categoryDb.setLocalId(category.getLocalId());
+                    return categoryDb;
+
                 })
                 .toList();
         List<CategoryDto> categoryDtoToSend = new ArrayList<>(categoriesFromClientAfterFilter
                 .stream()
-                .map(category -> DatabaseUtil.toCategoryDto(category, ModifyState.UPDATE))
+                .map(category -> {
+                    CategoryDto categoryDto;
+                    if (category.isDeleted()) {
+                        categoryDto = DatabaseUtil.toCategoryDto(category, ModifyState.DELETE);
+                    } else {
+                        categoryDto = DatabaseUtil.toCategoryDto(category, ModifyState.UPDATE);
+                    }
+                    return categoryDto;
+                })
                 .toList());
         categoryDtoToSend.addAll(categoriesToCheck);
 
@@ -179,11 +204,10 @@ public class UtilService {
                         shoppingItemDb.setItemAmountType(amountTypeDb);
                         shoppingItemDb.setItemCategory(categoryDb);
                         shoppingItemDb.setItemName(shoppingItem.getItemName());
-                        shoppingItemDb.setAmount(shoppingItem.getAmount());
                         shoppingItemDb.setBought(shoppingItem.isBought());
+                        shoppingItemDb.setAmount(shoppingItem.getAmount());
                         shoppingItemDb.setSavedTime(shoppingItem.getSavedTime());
                         shoppingItemDb.setDeleted(shoppingItem.isDeleted());
-
                     }
                     ShoppingItem insertedShoppingItem = shoppingItemRepository.save(shoppingItemDb);
                     insertedShoppingItem.setLocalShoppingItemId(shoppingItem.getLocalShoppingItemId());
@@ -194,7 +218,15 @@ public class UtilService {
                 .toList();
         List<ShoppingItemDto> shoppingItemToSend = new ArrayList<>((shoppingItemsFromClientAfterFilter)
                 .stream()
-                .map(shoppingItem -> DatabaseUtil.toShoppingItemDto(shoppingItem, ModifyState.UPDATE))
+                .map(shoppingItem -> {
+                    ShoppingItemDto shoppingItemDto;
+                    if (shoppingItem.isDeleted()) {
+                        shoppingItemDto = DatabaseUtil.toShoppingItemDto(shoppingItem, ModifyState.DELETE);
+                    } else {
+                        shoppingItemDto = DatabaseUtil.toShoppingItemDto(shoppingItem, ModifyState.UPDATE);
+                    }
+                    return shoppingItemDto;
+                })
                 .toList());
         shoppingItemToSend.addAll(shoppingItemsToCheck);
 
@@ -207,10 +239,5 @@ public class UtilService {
                 .shoppingItemDtoList(shoppingItemToSend)
                 .savedTime(savedTime)
                 .build();
-    }
-
-    private User getUserFromAuth() throws NoResourcesFoundException {
-        String userName = ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
-        return userRepository.findByUserName(userName).orElseThrow(() -> new NoResourcesFoundException("No such User"));
     }
 }

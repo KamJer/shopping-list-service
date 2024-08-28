@@ -19,4 +19,7 @@ public class ShoppingItemDto {
     private boolean deleted;
     private ModifyState modifyState;
 
+    private long localId;
+    private long localAmountTypeId;
+    protected long localCategoryId;
 }
