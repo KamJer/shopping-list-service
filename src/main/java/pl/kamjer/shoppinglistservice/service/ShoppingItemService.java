@@ -22,13 +22,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor
-public class ShoppingItemService {
+public class ShoppingItemService extends CustomService {
 
-    private ShoppingItemRepository shoppingItemRepository;
-    private UserRepository userRepository;
-    private AmountTypeRepository amountTypeRepository;
-    private CategoryRepository categoryRepository;
+    private final ShoppingItemRepository shoppingItemRepository;
+    private final AmountTypeRepository amountTypeRepository;
+    private final CategoryRepository categoryRepository;
+
+    public ShoppingItemService(ShoppingItemRepository shoppingItemRepository, AmountTypeRepository amountTypeRepository, CategoryRepository categoryRepository, UserRepository userRepository) {
+        super(userRepository);
+        this.shoppingItemRepository = shoppingItemRepository;
+        this.amountTypeRepository = amountTypeRepository;
+        this.categoryRepository = categoryRepository;
+    }
 
     @Transactional
     public AddDto insertShoppingItem(ShoppingItemDto shoppingItemDto) throws NoResourcesFoundException {
@@ -67,17 +72,5 @@ public class ShoppingItemService {
         shoppingItemToDelete.setDeleted(true);
         shoppingItemRepository.save(shoppingItemToDelete);
         return savedTime;
-    }
-
-    private User updateSaveTimeInUser(LocalDateTime localDateTime) throws NoResourcesFoundException {
-        User user = getUserFromAuth();
-        user.setSavedTime(localDateTime);
-        userRepository.save(user);
-        return user;
-    }
-
-    private User getUserFromAuth() throws NoResourcesFoundException {
-        String userName = ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
-        return userRepository.findByUserName(userName).orElseThrow(() -> new NoResourcesFoundException("No such User"));
     }
 }

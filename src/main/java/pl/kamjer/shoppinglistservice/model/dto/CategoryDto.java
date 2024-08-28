@@ -13,4 +13,5 @@ public class CategoryDto {
     private boolean deleted;
     private ModifyState modifyState;
 
+    private long localId;
 }

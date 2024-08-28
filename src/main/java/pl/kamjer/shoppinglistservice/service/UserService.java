@@ -16,30 +16,38 @@ import pl.kamjer.shoppinglistservice.repository.UserRepository;
 import java.time.LocalDateTime;
 
 @Service
-@AllArgsConstructor
-public class UserService {
+public class UserService extends CustomService {
 
-    private UserRepository userRepository;
-    private PasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
+
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+        super(userRepository);
+        this.passwordEncoder = passwordEncoder;
+    }
 
     public LocalDateTime insertUser(UserDto userDto) {
+        LocalDateTime savedTime = LocalDateTime.now();
         User user = DatabaseUtil.toUser(userDto);
+        user.setSavedTime(savedTime);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
         return LocalDateTime.now();
     }
 
-    @PreAuthorize("#userDto.userName == authentication.principal.username")
     public void updateUser(UserDto userDto) {
+        User userSec = getUserFromAuth();
         User user = DatabaseUtil.toUser(userDto);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        userRepository.save(user);
+        User userToUpdate = userRepository.findByUserName(userSec.getUserName())
+                .orElseThrow(() -> new NoResourcesFoundException("No such User found: " + userSec.getUserName()));
+        userToUpdate.setUserName(user.getUserName());
+        userToUpdate.setPassword(user.getPassword());
     }
 
-    @PreAuthorize("#userName == authentication.principal.username")
-    public void deleteUser(String userName) throws NoResourcesFoundException {
-        userRepository.delete(userRepository.findByUserName(userName).orElseThrow(() -> new NoResourcesFoundException("No such User")));
+    public void deleteUser() throws NoResourcesFoundException {
+        userRepository.delete(userRepository.findByUserName(getUserFromAuth().getUserName()).orElseThrow(() -> new NoResourcesFoundException("No such User")));
     }
+
     public LocalDateTime getLastUpdateTime() throws NoResourcesFoundException {
         return getUserFromAuth().getSavedTime();
     }
@@ -47,11 +55,4 @@ public class UserService {
     public boolean logUser(String userName) {
         return userRepository.existsByUserName(userName);
     }
-
-    private User getUserFromAuth() throws NoResourcesFoundException {
-        String userName = ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
-        return userRepository.findByUserName(userName).orElseThrow(() -> new NoResourcesFoundException("No such User"));
-    }
-
-
 }

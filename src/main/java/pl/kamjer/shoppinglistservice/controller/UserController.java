@@ -4,6 +4,7 @@ import jakarta.validation.Valid;
 import jakarta.websocket.server.PathParam;
 import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 @RestController
 @AllArgsConstructor
 @RequestMapping(path = "/user")
-@Log
+@Slf4j
 public class UserController {
 
     private UserService userService;
@@ -32,9 +33,9 @@ public class UserController {
         return ResponseEntity.ok(userService.insertUser(user));
     }
 
-    @DeleteMapping(path = "/{userName}")
-    public ResponseEntity<?> deleteUser(@PathVariable String userName) throws NoResourcesFoundException {
-        userService.deleteUser(userName);
+    @DeleteMapping()
+    public ResponseEntity<?> deleteUser() throws NoResourcesFoundException {
+        userService.deleteUser();
         return ResponseEntity.ok().build();
     }
 
