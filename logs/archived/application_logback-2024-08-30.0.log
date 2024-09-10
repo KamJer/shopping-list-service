@@ -1,0 +1,140 @@
+2024-08-30 00:00:16 [https-jsse-nio-8443-exec-9] ERROR : test: 
+pl.kamjer.shoppinglistservice.exception.LogException: Unable to start activity ComponentInfo{pl.kamjer.shoppinglist/pl.kamjer.shoppinglist.activity.shoppinglistactiviti.newshoppingitemdialog.UpdateShoppingItemDialog}: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String pl.kamjer.shoppinglist.model.ShoppingItem.getItemName()' on a null object reference
+	at .performLaunchActivity(ActivityThread.java:3782)
+	at .handleLaunchActivity(ActivityThread.java:3922)
+	at .execute(LaunchActivityItem.java:103)
+	at .executeCallbacks(TransactionExecutor.java:139)
+	at .execute(TransactionExecutor.java:96)
+	at .handleMessage(ActivityThread.java:2443)
+	at .dispatchMessage(Handler.java:106)
+	at .loopOnce(Looper.java:205)
+	at .loop(Looper.java:294)
+	at .main(ActivityThread.java:8177)
+	at .invoke(Native Method)
+	at .run(RuntimeInit.java:552)
+	at .main(ZygoteInit.java:971)
+2024-08-30 00:05:15 [https-jsse-nio-8443-exec-8] ERROR : test: 
+pl.kamjer.shoppinglistservice.exception.LogException: Unable to start activity ComponentInfo{pl.kamjer.shoppinglist/pl.kamjer.shoppinglist.activity.shoppinglistactiviti.newshoppingitemdialog.UpdateShoppingItemDialog}: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String pl.kamjer.shoppinglist.model.ShoppingItem.getItemName()' on a null object reference
+	at .performLaunchActivity(ActivityThread.java:3782)
+	at .handleLaunchActivity(ActivityThread.java:3922)
+	at .execute(LaunchActivityItem.java:103)
+	at .executeCallbacks(TransactionExecutor.java:139)
+	at .execute(TransactionExecutor.java:96)
+	at .handleMessage(ActivityThread.java:2443)
+	at .dispatchMessage(Handler.java:106)
+	at .loopOnce(Looper.java:205)
+	at .loop(Looper.java:294)
+	at .main(ActivityThread.java:8177)
+	at .invoke(Native Method)
+	at .run(RuntimeInit.java:552)
+	at .main(ZygoteInit.java:971)
+2024-08-30 00:10:47 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2024-08-30 00:11:09 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-30 00:11:09 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7a63c618]]
+2024-08-30 00:11:09 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-30 00:11:09 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 00:11:09 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-30 00:11:09 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-30 09:34:47 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-30 09:34:47 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 22364 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-30 09:34:47 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-30 09:34:48 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 09:34:48 [main] INFO  : Finished Spring Data repository scanning in 116 ms. Found 4 JPA repository interfaces.
+2024-08-30 09:34:49 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-30 09:34:49 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-30 09:34:49 [main] INFO  : Starting service [Tomcat]
+2024-08-30 09:34:49 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-30 09:34:49 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-30 09:34:49 [main] INFO  : Root WebApplicationContext: initialization completed in 1528 ms
+2024-08-30 09:34:49 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30 09:34:49 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-30 09:34:49 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-30 09:34:49 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30 09:34:49 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-30 09:34:49 [main] INFO  : HikariPool-1 - Starting...
+2024-08-30 09:34:49 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fb219dd
+2024-08-30 09:34:49 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-30 09:34:49 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-30 09:34:50 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-30 09:34:50 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 09:34:51 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-30 09:34:51 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-30 09:34:51 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-30 09:34:51 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-30 09:34:51 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-30 09:34:51 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-30 09:34:51 [main] INFO  : Starting...
+2024-08-30 09:34:51 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3aef4650]]
+2024-08-30 09:34:51 [main] INFO  : Started.
+2024-08-30 09:34:51 [main] INFO  : Started ShoppingListServiceApplication in 4.541 seconds (process running for 5.422)
+2024-08-30 09:34:52 [RMI TCP Connection(3)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-30 09:34:52 [RMI TCP Connection(3)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-30 09:34:52 [RMI TCP Connection(3)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-08-30 09:35:51 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-08-30 10:05:51 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2024-08-30 10:26:30 [https-jsse-nio-8443-exec-4] ERROR : test: 
+pl.kamjer.shoppinglistservice.exception.LogException: Unable to start activity ComponentInfo{pl.kamjer.shoppinglist/pl.kamjer.shoppinglist.activity.shoppinglistactiviti.newshoppingitemdialog.NewShoppingItemDialog}: java.lang.ClassCastException: java.lang.Boolean cannot be cast to pl.kamjer.shoppinglist.model.Category
+	at .performLaunchActivity(ActivityThread.java:3782)
+	at .handleLaunchActivity(ActivityThread.java:3922)
+	at .execute(LaunchActivityItem.java:103)
+	at .executeCallbacks(TransactionExecutor.java:139)
+	at .execute(TransactionExecutor.java:96)
+	at .handleMessage(ActivityThread.java:2443)
+	at .dispatchMessage(Handler.java:106)
+	at .loopOnce(Looper.java:205)
+	at .loop(Looper.java:294)
+	at .main(ActivityThread.java:8177)
+	at .invoke(Native Method)
+	at .run(RuntimeInit.java:552)
+	at .main(ZygoteInit.java:971)
+2024-08-30 10:35:51 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2024-08-30 16:58:40 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h59m33s284ms6µs500ns).
+2024-08-30 16:59:09 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-08-30 16:59:09 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3aef4650]]
+2024-08-30 16:59:09 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-08-30 16:59:09 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 16:59:09 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-08-30 16:59:09 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-08-30 20:12:58 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-08-30 20:12:58 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 13528 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-08-30 20:12:58 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-08-30 20:12:58 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 20:12:58 [main] INFO  : Finished Spring Data repository scanning in 84 ms. Found 4 JPA repository interfaces.
+2024-08-30 20:12:59 [main] INFO  : Tomcat initialized with port 8443 (https)
+2024-08-30 20:12:59 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-30 20:12:59 [main] INFO  : Starting service [Tomcat]
+2024-08-30 20:12:59 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-30 20:12:59 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-08-30 20:12:59 [main] INFO  : Root WebApplicationContext: initialization completed in 1251 ms
+2024-08-30 20:12:59 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30 20:12:59 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-30 20:12:59 [main] INFO  : HHH000026: Second-level cache disabled
+2024-08-30 20:12:59 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30 20:12:59 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-08-30 20:12:59 [main] INFO  : HikariPool-1 - Starting...
+2024-08-30 20:12:59 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e09e367
+2024-08-30 20:12:59 [main] INFO  : HikariPool-1 - Start completed.
+2024-08-30 20:13:00 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-30 20:13:00 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-30 20:13:00 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 20:13:01 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-30 20:13:01 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-08-30 20:13:01 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-30 20:13:01 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-8443"]
+2024-08-30 20:13:01 [main] INFO  : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-08-30 20:13:01 [main] INFO  : Tomcat started on port 8443 (https) with context path '/'
+2024-08-30 20:13:01 [main] INFO  : Starting...
+2024-08-30 20:13:01 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3aef4650]]
+2024-08-30 20:13:01 [main] INFO  : Started.
+2024-08-30 20:13:01 [main] INFO  : Started ShoppingListServiceApplication in 4.189 seconds (process running for 4.813)
+2024-08-30 20:13:02 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-30 20:13:02 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-08-30 20:13:02 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 2 ms
+2024-08-30 20:14:01 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-08-30 20:44:01 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2024-08-30 21:14:01 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2024-08-30 21:44:01 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+2024-08-30 22:14:01 [MessageBroker-3] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 5, active threads = 1, queued tasks = 0, completed tasks = 4]
+2024-08-30 22:44:01 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 0, completed tasks = 5]
+2024-08-30 23:14:01 [MessageBroker-4] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 7, active threads = 1, queued tasks = 0, completed tasks = 6]
+2024-08-30 23:44:01 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 7]
