@@ -6,7 +6,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.*;
 import org.springframework.security.core.userdetails.UserDetails;
-import pl.kamjer.shoppinglistservice.validation.UniqUserNameConstraint;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;

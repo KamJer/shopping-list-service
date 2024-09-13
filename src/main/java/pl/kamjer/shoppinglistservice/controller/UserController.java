@@ -1,12 +1,9 @@
 package pl.kamjer.shoppinglistservice.controller;
 
 import jakarta.validation.Valid;
-import jakarta.websocket.server.PathParam;
 import lombok.AllArgsConstructor;
-import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.dto.UserDto;

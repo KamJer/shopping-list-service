@@ -1,27 +1,17 @@
 package pl.kamjer.shoppinglistservice.service;
 
 import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import org.hibernate.dialect.Database;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import pl.kamjer.shoppinglistservice.DatabaseUtil;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.AmountType;
-import pl.kamjer.shoppinglistservice.model.AmountTypeId;
 import pl.kamjer.shoppinglistservice.model.User;
 import pl.kamjer.shoppinglistservice.model.dto.AmountTypeDto;
-import pl.kamjer.shoppinglistservice.model.dto.UserDto;
 import pl.kamjer.shoppinglistservice.model.dto.utilDto.AddDto;
 import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
 import pl.kamjer.shoppinglistservice.repository.UserRepository;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class AmountTypeService extends CustomService{

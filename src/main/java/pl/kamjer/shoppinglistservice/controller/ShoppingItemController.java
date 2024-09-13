@@ -8,8 +8,6 @@ import pl.kamjer.shoppinglistservice.model.dto.ShoppingItemDto;
 import pl.kamjer.shoppinglistservice.model.dto.utilDto.AddDto;
 import pl.kamjer.shoppinglistservice.service.ShoppingItemService;
 
-import java.util.List;
-
 @AllArgsConstructor
 @RestController
 @RequestMapping(path = "/shoppingItem")
