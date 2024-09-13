@@ -6,8 +6,6 @@ import pl.kamjer.shoppinglistservice.exception.LogException;
 import pl.kamjer.shoppinglistservice.model.dto.utilDto.ExceptionDto;
 import pl.kamjer.shoppinglistservice.repository.UserRepository;
 
-import java.util.Arrays;
-
 @Service
 @Slf4j
 public class ExceptionService extends CustomService{

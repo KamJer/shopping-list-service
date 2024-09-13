@@ -1,6 +1,5 @@
 package pl.kamjer.shoppinglistservice.controller;
 
-import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,9 +7,6 @@ import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.dto.AmountTypeDto;
 import pl.kamjer.shoppinglistservice.model.dto.utilDto.AddDto;
 import pl.kamjer.shoppinglistservice.service.AmountTypeService;
-
-import java.time.LocalDateTime;
-import java.util.List;
 
 @RestController
 @AllArgsConstructor

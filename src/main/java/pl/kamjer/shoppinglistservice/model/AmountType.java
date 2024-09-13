@@ -23,7 +23,7 @@ public class AmountType {
     private String typeName;
     @Column(name = "saved_time")
     private LocalDateTime savedTime;
-    @Column(name = "deleted")
+    @Column(name = "deleted", columnDefinition = "BIT(1) NOT NULL DEFAULT b'0'")
     private boolean deleted;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "itemAmountType", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ShoppingItem> shoppingItemList;

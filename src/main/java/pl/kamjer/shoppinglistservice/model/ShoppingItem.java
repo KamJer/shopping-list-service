@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.Objects;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,27 +22,22 @@ public class ShoppingItem {
             @JoinColumn(name = "amount_type_id", referencedColumnName = "amount_type_id"),
             @JoinColumn(name = "amount_type_user_name", referencedColumnName = "user_name")
     })
-    @EqualsAndHashCode.Include
     private AmountType itemAmountType;
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumns({
             @JoinColumn(name = "category_id", referencedColumnName = "category_id"),
             @JoinColumn(name = "category_user_name", referencedColumnName = "user_name")
     })
-    @EqualsAndHashCode.Include
     private Category itemCategory;
     @Column(name = "item_name")
-    @EqualsAndHashCode.Include
     private String itemName;
     @Column(name = "amount")
-    @EqualsAndHashCode.Include
     private Double amount;
-    @Column(name = "bought")
-    @EqualsAndHashCode.Include
+    @Column(name = "bought", columnDefinition = "BIT(1) NOT NULL DEFAULT b'0'")
     private boolean bought;
     @Column(name = "saved_time")
     private LocalDateTime savedTime;
-    @Column(name = "deleted")
+    @Column(name = "deleted", columnDefinition = "BIT(1) NOT NULL DEFAULT b'0'")
     private boolean deleted;
 
     @Transient

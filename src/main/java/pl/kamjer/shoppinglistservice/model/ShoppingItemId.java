@@ -9,6 +9,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Data
+@EqualsAndHashCode
 @Embeddable
 public class ShoppingItemId implements Serializable {
 
