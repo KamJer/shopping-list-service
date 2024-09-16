@@ -1,0 +1,583 @@
+2024-09-13 00:19:29 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2024-09-13 00:27:26 [https-jsse-nio-0.0.0.0-443-exec-2] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:961)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:89)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1528)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1145)
+	at .run(ThreadPoolExecutor.java:644)
+	at .run(Thread.java:1012)
+2024-09-13 00:45:50 [https-jsse-nio-0.0.0.0-443-exec-4] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:961)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:89)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1528)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1145)
+	at .run(ThreadPoolExecutor.java:644)
+	at .run(Thread.java:1012)
+2024-09-13 00:47:47 [https-jsse-nio-0.0.0.0-443-exec-9] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:961)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:89)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1528)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1145)
+	at .run(ThreadPoolExecutor.java:644)
+	at .run(Thread.java:1012)
+2024-09-13 00:49:29 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+2024-09-13 00:51:09 [https-jsse-nio-0.0.0.0-443-exec-10] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 00:58:08 [https-jsse-nio-0.0.0.0-443-exec-3] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:961)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:89)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1528)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1145)
+	at .run(ThreadPoolExecutor.java:644)
+	at .run(Thread.java:1012)
+2024-09-13 01:01:05 [https-jsse-nio-0.0.0.0-443-exec-7] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 01:01:40 [https-jsse-nio-0.0.0.0-443-exec-2] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 01:03:12 [https-jsse-nio-0.0.0.0-443-exec-8] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 01:06:04 [https-jsse-nio-0.0.0.0-443-exec-6] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:961)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:89)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1528)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1145)
+	at .run(ThreadPoolExecutor.java:644)
+	at .run(Thread.java:1012)
+2024-09-13 01:07:33 [https-jsse-nio-0.0.0.0-443-exec-5] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 01:07:51 [https-jsse-nio-0.0.0.0-443-exec-7] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 01:09:54 [https-jsse-nio-0.0.0.0-443-exec-7] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 01:11:02 [https-jsse-nio-0.0.0.0-443-exec-6] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 01:12:00 [https-jsse-nio-0.0.0.0-443-exec-7] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 01:19:29 [MessageBroker-3] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 5, active threads = 1, queued tasks = 0, completed tasks = 4]
+2024-09-13 01:29:47 [https-jsse-nio-0.0.0.0-443-exec-1] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 01:31:38 [https-jsse-nio-0.0.0.0-443-exec-2] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:961)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:89)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1528)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1145)
+	at .run(ThreadPoolExecutor.java:644)
+	at .run(Thread.java:1012)
+2024-09-13 01:42:22 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-13 01:42:22 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1a8b10dd]]
+2024-09-13 01:42:22 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-13 01:42:23 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 01:42:23 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-13 01:42:23 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-09-13 01:42:29 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 01:42:29 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 19400 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-13 01:42:29 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-13 01:42:29 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 01:42:30 [main] INFO  : Finished Spring Data repository scanning in 114 ms. Found 4 JPA repository interfaces.
+2024-09-13 01:42:30 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-13 01:42:30 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-13 01:42:30 [main] INFO  : Starting service [Tomcat]
+2024-09-13 01:42:30 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 01:42:30 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-13 01:42:30 [main] INFO  : Root WebApplicationContext: initialization completed in 1415 ms
+2024-09-13 01:42:30 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 01:42:30 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 01:42:30 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-13 01:42:31 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 01:42:31 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-13 01:42:31 [main] INFO  : HikariPool-1 - Starting...
+2024-09-13 01:42:31 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7253c53
+2024-09-13 01:42:31 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-13 01:42:31 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-13 01:42:32 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 01:42:32 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 01:42:32 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-13 01:42:32 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-13 01:42:33 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-13 01:42:33 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-13 01:42:33 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-13 01:42:33 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-13 01:42:33 [main] INFO  : Starting...
+2024-09-13 01:42:33 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3aef4650]]
+2024-09-13 01:42:33 [main] INFO  : Started.
+2024-09-13 01:42:33 [main] INFO  : Started ShoppingListServiceApplication in 4.8 seconds (process running for 5.171)
+2024-09-13 01:42:34 [RMI TCP Connection(4)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 01:42:34 [RMI TCP Connection(4)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-13 01:42:34 [RMI TCP Connection(4)-192.168.0.13] INFO  : Completed initialization in 0 ms
+2024-09-13 01:43:33 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-13 02:07:38 [https-jsse-nio-0.0.0.0-443-exec-4] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 02:07:50 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-13 02:07:50 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3aef4650]]
+2024-09-13 02:07:50 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-13 02:07:50 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 02:07:50 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-13 02:07:50 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-09-13 12:34:33 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 12:34:33 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 11716 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-13 12:34:33 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-13 12:34:33 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 12:34:34 [main] INFO  : Finished Spring Data repository scanning in 116 ms. Found 4 JPA repository interfaces.
+2024-09-13 12:34:34 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-13 12:34:34 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-13 12:34:34 [main] INFO  : Starting service [Tomcat]
+2024-09-13 12:34:34 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 12:34:34 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-13 12:34:34 [main] INFO  : Root WebApplicationContext: initialization completed in 1476 ms
+2024-09-13 12:34:34 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 12:34:34 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 12:34:34 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-13 12:34:35 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 12:34:35 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-13 12:34:35 [main] INFO  : HikariPool-1 - Starting...
+2024-09-13 12:34:35 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7253c53
+2024-09-13 12:34:35 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-13 12:34:35 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-13 12:34:36 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 12:34:36 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 12:34:36 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-13 12:34:36 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-13 12:34:37 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-13 12:34:37 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-13 12:34:37 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-13 12:34:37 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-13 12:34:37 [main] INFO  : Starting...
+2024-09-13 12:34:37 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@78c7d992]]
+2024-09-13 12:34:37 [main] INFO  : Started.
+2024-09-13 12:34:37 [main] INFO  : Started ShoppingListServiceApplication in 4.755 seconds (process running for 5.68)
+2024-09-13 12:34:38 [RMI TCP Connection(4)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 12:34:38 [RMI TCP Connection(4)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-13 12:34:38 [RMI TCP Connection(4)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-09-13 12:35:37 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-13 12:38:29 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-13 12:38:29 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@78c7d992]]
+2024-09-13 12:38:29 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-13 12:38:29 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 12:38:29 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-13 12:38:29 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-09-13 12:46:30 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-13 12:46:30 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 1428 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-13 12:46:30 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-13 12:46:31 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-13 12:46:31 [main] INFO  : Finished Spring Data repository scanning in 92 ms. Found 4 JPA repository interfaces.
+2024-09-13 12:46:31 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-13 12:46:31 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-13 12:46:31 [main] INFO  : Starting service [Tomcat]
+2024-09-13 12:46:31 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-13 12:46:31 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-13 12:46:31 [main] INFO  : Root WebApplicationContext: initialization completed in 1109 ms
+2024-09-13 12:46:32 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-13 12:46:32 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-13 12:46:32 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-13 12:46:32 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-13 12:46:32 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-13 12:46:32 [main] INFO  : HikariPool-1 - Starting...
+2024-09-13 12:46:32 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28ceb25e
+2024-09-13 12:46:32 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-13 12:46:32 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-13 12:46:33 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-13 12:46:33 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 12:46:33 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-13 12:46:33 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-13 12:46:33 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-13 12:46:34 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-13 12:46:34 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-13 12:46:34 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-13 12:46:34 [main] INFO  : Starting...
+2024-09-13 12:46:34 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5e744b4b]]
+2024-09-13 12:46:34 [main] INFO  : Started.
+2024-09-13 12:46:34 [main] INFO  : Started ShoppingListServiceApplication in 3.787 seconds (process running for 4.1)
+2024-09-13 12:46:34 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-13 12:46:34 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-13 12:46:34 [RMI TCP Connection(1)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-09-13 12:47:34 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-13 12:49:46 [https-jsse-nio-0.0.0.0-443-exec-6] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 12:52:09 [https-jsse-nio-0.0.0.0-443-exec-10] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:961)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:89)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:75)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1528)
+	at .insertAllElements(UtilDao.java:72)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:134)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1145)
+	at .run(ThreadPoolExecutor.java:644)
+	at .run(Thread.java:1012)
+2024-09-13 13:17:34 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2024-09-13 13:30:10 [https-jsse-nio-0.0.0.0-443-exec-10] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:88)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:84)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:148)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-13 13:47:34 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2024-09-13 14:17:34 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+2024-09-13 14:47:34 [MessageBroker-3] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 5, active threads = 1, queued tasks = 0, completed tasks = 4]
+2024-09-13 15:17:34 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 0, completed tasks = 5]
+2024-09-13 15:20:56 [https-jsse-nio-0.0.0.0-443-exec-1] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: UNIQUE constraint failed: SHOPPING_ITEM.item_amount_type_id, SHOPPING_ITEM.shopping_item_id, SHOPPING_ITEM.item_category_id (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:961)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:89)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertShoppingItems(UtilDao_Impl.java:317)
+	at .lambda$insertAllElements$2(UtilDao.java:88)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1528)
+	at .insertAllElements(UtilDao.java:84)
+	at .insertAllElements(UtilDao_Impl.java:402)
+	at .synchronizeData(UtilDao.java:148)
+	at .synchronizeData(UtilDao_Impl.java:439)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:242)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1145)
+	at .run(ThreadPoolExecutor.java:644)
+	at .run(Thread.java:1012)
+2024-09-13 15:47:34 [MessageBroker-4] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 7, active threads = 1, queued tasks = 0, completed tasks = 6]
+2024-09-13 16:17:34 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 7]
+2024-09-13 16:39:06 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-13 16:39:06 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5e744b4b]]
+2024-09-13 16:39:06 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-13 16:39:07 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-13 16:39:07 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-13 16:39:07 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
