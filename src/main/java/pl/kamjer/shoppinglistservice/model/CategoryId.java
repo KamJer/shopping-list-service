@@ -19,6 +19,6 @@ public class CategoryId implements Serializable {
     @JoinColumn(name = "user_name", referencedColumnName = "user_name")
     private User user;
     @Column(name = "category_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long categoryId;
 }
