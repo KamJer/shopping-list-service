@@ -47,35 +47,33 @@ public class UtilService extends CustomService {
         LocalDateTime userSavedTime = Optional.ofNullable(allDto.getSavedTime()).orElseGet(() -> LocalDateTime.of(1000, 1, 1, 0, 0));
 
         //        handling saving data from client
-        List<AmountTypeDto> amountTypeDtosFromClientProcessed = (allDto.getAmountTypeDtoList())
+        List<AmountType> amountTypeDtosFromClientProcessed = (allDto.getAmountTypeDtoList())
                 .stream()
                 .map(amountTypeDto -> {
                     switch (amountTypeDto.getModifyState()) {
                         case INSERT -> {
                             AmountType amountTypeFromDb = amountTypeRepository.save(DatabaseUtil.toAmountType(getUserFromAuth(), amountTypeDto, savedTime));
                             amountTypeFromDb.setLocalId(amountTypeDto.getLocalId());
-                            return DatabaseUtil.toAmountTypeDto(amountTypeFromDb, ModifyState.UPDATE);
+                            return amountTypeFromDb;
                         }
                         case UPDATE -> {
-                            amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(
-                                            user.getUserName(), amountTypeDto.getAmountTypeId())
-                                    .ifPresent(amountType1 -> {
-                                        amountType1.setTypeName(amountTypeDto.getTypeName());
-                                        amountType1.setDeleted(amountTypeDto.isDeleted());
-                                        amountType1.setSavedTime(savedTime);
-                                    });
-//                            return null, it does not need to be returned, client already have current version
-                            return null;
-                        }
-                        case DELETE -> {
-                            return DatabaseUtil.toAmountTypeDto(amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(
+                            return amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(
                                             user.getUserName(), amountTypeDto.getAmountTypeId())
                                     .map(amountType1 -> {
                                         amountType1.setTypeName(amountTypeDto.getTypeName());
                                         amountType1.setDeleted(amountTypeDto.isDeleted());
                                         amountType1.setSavedTime(savedTime);
                                         return amountType1;
-                                    }).orElseThrow(), ModifyState.DELETE);
+                                    }).orElseThrow();
+                        }
+                        case DELETE -> {
+                            return amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(
+                                            user.getUserName(), amountTypeDto.getAmountTypeId())
+                                    .map(amountType1 -> {
+                                        amountType1.setDeleted(amountTypeDto.isDeleted());
+                                        amountType1.setSavedTime(savedTime);
+                                        return amountType1;
+                                    }).orElseThrow();
                         }
                     }
                     return null;
@@ -83,84 +81,80 @@ public class UtilService extends CustomService {
                 .filter(Objects::nonNull)
                 .toList();
 
-        List<CategoryDto> categoryDtosFromClientProcessed = (allDto.getCategoryDtoList())
+        List<Category> categoryDtosFromClientProcessed = (allDto.getCategoryDtoList())
                 .stream()
                 .map(categoryDto -> {
                     switch (categoryDto.getModifyState()) {
                         case INSERT -> {
                             Category categoryFromDb = categoryRepository.save(DatabaseUtil.toCategory(getUserFromAuth(), categoryDto, savedTime));
                             categoryFromDb.setLocalId(categoryDto.getLocalId());
-                            return DatabaseUtil.toCategoryDto(categoryFromDb, ModifyState.UPDATE);
+                            return categoryFromDb;
                         }
                         case UPDATE -> {
-                            categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(
-                                            user.getUserName(), categoryDto.getCategoryId())
-                                    .ifPresent(category -> {
-                                        category.setCategoryName(categoryDto.getCategoryName());
-                                        category.setDeleted(categoryDto.isDeleted());
-                                        category.setSavedTime(savedTime);
-                                    });
-//                            return null, it does not need to be returned, client already have current version
-                            return null;
-                        }
-                        case DELETE -> {
-                            return DatabaseUtil.toCategoryDto(categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(
+                            return categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(
                                             user.getUserName(), categoryDto.getCategoryId())
                                     .map(category -> {
                                         category.setCategoryName(categoryDto.getCategoryName());
                                         category.setDeleted(categoryDto.isDeleted());
                                         category.setSavedTime(savedTime);
                                         return category;
-                                    }).orElseThrow(), ModifyState.DELETE);
+                                    }).orElseThrow();
+                        }
+                        case DELETE -> {
+                            return categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(
+                                            user.getUserName(), categoryDto.getCategoryId())
+                                    .map(category -> {
+                                        category.setDeleted(categoryDto.isDeleted());
+                                        category.setSavedTime(savedTime);
+                                        return category;
+                                    }).orElseThrow();
                         }
                     }
                     return null;
                 })
-//                filtering null values
                 .filter(Objects::nonNull)
                 .toList();
 
-        List<ShoppingItemDto> shoppingItemDtosFromClientProcessed = (allDto.getShoppingItemDtoList())
+        List<ShoppingItem> shoppingItemDtosFromClientProcessed = (allDto.getShoppingItemDtoList())
                 .stream()
                 .map(shoppingItemDto -> {
                     switch (shoppingItemDto.getModifyState()) {
                         case INSERT -> {
-                            ShoppingItem categoryFromDb = shoppingItemRepository.save(DatabaseUtil.toShoppingItem(getUserFromAuth(), amountTypeRepository, categoryRepository, shoppingItemDto, savedTime));
-                            categoryFromDb.setLocalShoppingItemId(shoppingItemDto.getLocalId());
-                            categoryFromDb.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
-                            categoryFromDb.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
+                            ShoppingItem shoppingItemFromDb = shoppingItemRepository.save(DatabaseUtil.toShoppingItem(getUserFromAuth(), amountTypeRepository, categoryRepository, shoppingItemDto, savedTime));
+                            shoppingItemFromDb.setLocalShoppingItemId(shoppingItemDto.getLocalId());
+                            shoppingItemFromDb.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
+                            shoppingItemFromDb.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
 //                            returning update state so client will update with server ids
-                            return DatabaseUtil.toShoppingItemDto(categoryFromDb, ModifyState.UPDATE);
+                            return shoppingItemFromDb;
                         }
                         case UPDATE -> {
-                            shoppingItemRepository.findByShoppingItemIdUserUserNameAndShoppingItemIdShoppingItemId(
+                            return shoppingItemRepository.findByShoppingItemIdUserUserNameAndShoppingItemIdShoppingItemId(
                                             user.getUserName(), shoppingItemDto.getShoppingItemId())
-                                    .ifPresent(hoppingItem -> {
+                                    .map(shoppingItem -> {
 //                                        finding relevant data
                                         AmountType amountTypeDb = amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId())
                                                 .orElseThrow(() -> new NoResourcesFoundException("No such AmountType:" + shoppingItemDto.getItemAmountTypeId()));
                                         Category categoryDb = categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId())
                                                 .orElseThrow(() -> new NoResourcesFoundException("no such Category:" + shoppingItemDto.getItemCategoryId()));
 
-                                        hoppingItem.setItemAmountType(amountTypeDb);
-                                        hoppingItem.setItemCategory(categoryDb);
-                                        hoppingItem.setBought(shoppingItemDto.isBought());
-                                        hoppingItem.setAmount(shoppingItemDto.getAmount());
-                                        hoppingItem.setItemName(shoppingItemDto.getItemName());
-                                        hoppingItem.setDeleted(shoppingItemDto.isDeleted());
-                                        hoppingItem.setSavedTime(savedTime);
-                                    });
-//                            return null, it does not need to be returned, client already have current version
-                            return null;
+                                        shoppingItem.setItemAmountType(amountTypeDb);
+                                        shoppingItem.setItemCategory(categoryDb);
+                                        shoppingItem.setBought(shoppingItemDto.isBought());
+                                        shoppingItem.setAmount(shoppingItemDto.getAmount());
+                                        shoppingItem.setItemName(shoppingItemDto.getItemName());
+                                        shoppingItem.setDeleted(shoppingItemDto.isDeleted());
+                                        shoppingItem.setSavedTime(savedTime);
+                                        return shoppingItem;
+                                    }).orElseThrow();
                         }
                         case DELETE -> {
-                            return DatabaseUtil.toShoppingItemDto(shoppingItemRepository.findByShoppingItemIdUserUserNameAndShoppingItemIdShoppingItemId(
+                            return shoppingItemRepository.findByShoppingItemIdUserUserNameAndShoppingItemIdShoppingItemId(
                                             user.getUserName(), shoppingItemDto.getShoppingItemId())
                                     .map(shoppingItem -> {
                                         shoppingItem.setDeleted(shoppingItemDto.isDeleted());
                                         shoppingItem.setSavedTime(savedTime);
                                         return shoppingItem;
-                                    }).orElseThrow(), ModifyState.DELETE);
+                                    }).orElseThrow();
                         }
                     }
                     return null;
@@ -195,7 +189,7 @@ public class UtilService extends CustomService {
                         modifyState = ModifyState.DELETE;
 //                        if clients database contains that data but its timestamp happens later than the last
 //                        contact client had with server it needs to be updated (data was updated)
-                    } else if (amountTypesFromClient.contains(amountType)) {
+                    } else if (amountTypesFromClient.contains(amountType) || amountTypeDtosFromClientProcessed.contains(amountType)) {
                         modifyState = ModifyState.UPDATE;
                     }
                     return DatabaseUtil.toAmountTypeDto(amountType, modifyState);
@@ -208,45 +202,33 @@ public class UtilService extends CustomService {
                     ModifyState modifyState = ModifyState.INSERT;
                     if (category.isDeleted()) {
                         modifyState = ModifyState.DELETE;
-                    } else if (categoriesFromClient.contains(category)) {
+                    } else if (categoriesFromClient.contains(category) || categoryDtosFromClientProcessed.contains(category)) {
                         modifyState = ModifyState.UPDATE;
                     }
                     return DatabaseUtil.toCategoryDto(category, modifyState);
                 })
                 .toList();
 
-        List<ShoppingItemDto> shoppingItemsFromDataBaserProcessed = (shoppingItemsFromDb)
+        List<ShoppingItemDto> shoppingItemsFromDataBaseProcessed = (shoppingItemsFromDb)
                 .stream()
                 .map(shoppingItem -> {
                     ModifyState modifyState = ModifyState.INSERT;
                     if (shoppingItem.isDeleted()) {
                         modifyState = ModifyState.DELETE;
-                    } else if (shoppingItemsFromClient.contains(shoppingItem)) {
+                    } else if (shoppingItemsFromClient.contains(shoppingItem) || shoppingItemDtosFromClientProcessed.contains(shoppingItem)) {
                         modifyState = ModifyState.UPDATE;
                     }
                     return DatabaseUtil.toShoppingItemDto(shoppingItem, modifyState);
                 })
                 .toList();
 
-        List<AmountTypeDto> amountTypeDtosToSend = new ArrayList<>();
-        amountTypeDtosToSend.addAll(amountTypesFromDbProcessed);
-//        amountTypeDtosToSend.addAll(amountTypeDtosFromClientProcessed);
-
-        List<CategoryDto> categoryDtosToSend = new ArrayList<>();
-        categoryDtosToSend.addAll(categoriesFromDatabaseProcessed);
-//        categoryDtosToSend.addAll(categoryDtosFromClientProcessed);
-
-        List<ShoppingItemDto> shoppingItemDtosToSend = new ArrayList<>();
-        shoppingItemDtosToSend.addAll(shoppingItemsFromDataBaserProcessed);
-//        shoppingItemDtosToSend.addAll(shoppingItemDtosFromClientProcessed);
-
         user.setSavedTime(savedTime);
         userRepository.save(user);
 
         return AllDto.builder()
-                .amountTypeDtoList(amountTypeDtosToSend)
-                .categoryDtoList(categoryDtosToSend)
-                .shoppingItemDtoList(shoppingItemDtosToSend)
+                .amountTypeDtoList(amountTypesFromDbProcessed)
+                .categoryDtoList(categoriesFromDatabaseProcessed)
+                .shoppingItemDtoList(shoppingItemsFromDataBaseProcessed)
                 .savedTime(savedTime)
                 .build();
     }

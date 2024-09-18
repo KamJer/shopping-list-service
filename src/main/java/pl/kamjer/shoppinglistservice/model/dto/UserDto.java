@@ -9,8 +9,8 @@ import pl.kamjer.shoppinglistservice.validation.UniqUserNameConstraint;
 @Builder
 public class UserDto {
 
-    @UniqUserNameConstraint
     @NotEmpty
+    @UniqUserNameConstraint
     private String userName;
     private String password;
 }

@@ -13,12 +13,11 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
+import pl.kamjer.shoppinglistservice.model.dto.utilDto.ExceptionMessage;
 
 import javax.swing.text.html.Option;
 import java.security.Principal;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @ControllerAdvice
 @Slf4j
@@ -26,15 +25,15 @@ public class ShoppingListControllerAdvice {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseEntity<Map<String, String>> handleValidationExceptions(MethodArgumentNotValidException ex) {
-        Map<String, String> errors = new HashMap<>();
+    public ResponseEntity<String> handleValidationExceptions(MethodArgumentNotValidException ex) {
+        StringBuilder errorStringBuilder = new StringBuilder();
         ex.getBindingResult().getAllErrors().forEach((error) -> {
             String fieldName = ((FieldError) error).getField();
             String errorMessage = error.getDefaultMessage();
-            errors.put(fieldName, errorMessage);
-            log.error(errorMessage);
+            errorStringBuilder.append("field:").append(fieldName).append(" : ").append(errorMessage).append("\n");
         });
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
+        log.error(errorStringBuilder.toString());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorStringBuilder.toString());
     }
 
     @ExceptionHandler({NoResourcesFoundException.class})
