@@ -23,7 +23,6 @@ public class UniqUserNameConstraintValidator implements ConstraintValidator<Uniq
 
     @Override
     public boolean isValid(String userName, ConstraintValidatorContext constraintValidatorContext) {
-        Optional<User> foundUser = userRepository.findByUserName(userName);
-        return foundUser.isEmpty();
+        return userRepository.existsByUserName(userName);
     }
 }

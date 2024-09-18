@@ -1,0 +1,302 @@
+2024-09-17 21:32:34 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-17 21:32:34 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 5240 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-17 21:32:34 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-17 21:32:35 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-17 21:32:35 [main] INFO  : Finished Spring Data repository scanning in 104 ms. Found 4 JPA repository interfaces.
+2024-09-17 21:32:35 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-17 21:32:35 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-17 21:32:35 [main] INFO  : Starting service [Tomcat]
+2024-09-17 21:32:35 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-17 21:32:35 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-17 21:32:35 [main] INFO  : Root WebApplicationContext: initialization completed in 1483 ms
+2024-09-17 21:32:36 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-17 21:32:36 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-17 21:32:36 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-17 21:32:36 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-17 21:32:36 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-17 21:32:36 [main] INFO  : HikariPool-1 - Starting...
+2024-09-17 21:32:36 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a24390b
+2024-09-17 21:32:36 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-17 21:32:36 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-17 21:32:37 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-17 21:32:37 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-17 21:32:37 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-17 21:32:37 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-17 21:32:38 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-17 21:32:38 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-17 21:32:38 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-17 21:32:38 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-17 21:32:38 [main] INFO  : Starting...
+2024-09-17 21:32:38 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@129204bf]]
+2024-09-17 21:32:38 [main] INFO  : Started.
+2024-09-17 21:32:38 [main] INFO  : Started ShoppingListServiceApplication in 4.769 seconds (process running for 5.528)
+2024-09-17 21:32:38 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-17 21:32:38 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-17 21:32:38 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-09-17 21:32:46 [https-jsse-nio-0.0.0.0-443-exec-7] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: No Category found for that id: 102
+	at .lambda$getLocalCategoryIdForShoppingItem$12(UtilDao.java:187)
+	at .get(D8$$SyntheticClass:0)
+	at .orElseThrow(Optional.java:286)
+	at .getLocalCategoryIdForShoppingItem(UtilDao.java:187)
+	at .lambda$insertAllElements$2(UtilDao.java:91)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .insertAllElements(UtilDao.java:89)
+	at .insertAllElements(UtilDao_Impl.java:451)
+	at .synchronizeData(UtilDao.java:156)
+	at .synchronizeData(UtilDao_Impl.java:489)
+	at .lambda$synchronizeData$15$pl-kamjer-shoppinglist-repository-ShoppingRepository(ShoppingRepository.java:245)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-09-17 21:33:38 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-17 21:34:59 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-17 21:34:59 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@129204bf]]
+2024-09-17 21:34:59 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-17 21:35:00 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-17 21:35:00 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-17 21:35:00 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-09-17 21:35:02 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-17 21:35:02 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 13048 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-17 21:35:02 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-17 21:35:03 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-17 21:35:03 [main] INFO  : Finished Spring Data repository scanning in 81 ms. Found 4 JPA repository interfaces.
+2024-09-17 21:35:03 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-17 21:35:03 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-17 21:35:03 [main] INFO  : Starting service [Tomcat]
+2024-09-17 21:35:03 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-17 21:35:03 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-17 21:35:03 [main] INFO  : Root WebApplicationContext: initialization completed in 1146 ms
+2024-09-17 21:35:04 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-17 21:35:04 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-17 21:35:04 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-17 21:35:04 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-17 21:35:04 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-17 21:35:04 [main] INFO  : HikariPool-1 - Starting...
+2024-09-17 21:35:04 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51aaa9d4
+2024-09-17 21:35:04 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-17 21:35:04 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-17 21:35:05 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-17 21:35:05 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-17 21:35:05 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-17 21:35:05 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-17 21:35:06 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-17 21:35:06 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-17 21:35:06 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-17 21:35:06 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-17 21:35:06 [main] INFO  : Starting...
+2024-09-17 21:35:06 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@30e787e2]]
+2024-09-17 21:35:06 [main] INFO  : Started.
+2024-09-17 21:35:06 [main] INFO  : Started ShoppingListServiceApplication in 3.998 seconds (process running for 4.334)
+2024-09-17 21:35:06 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-17 21:35:06 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-17 21:35:06 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-09-17 21:36:06 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-17 21:40:44 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s828ms503µs200ns).
+2024-09-17 21:41:40 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s257ms721µs900ns).
+2024-09-17 21:41:40 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-17 21:41:40 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@30e787e2]]
+2024-09-17 21:41:40 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-17 21:41:40 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-17 21:41:40 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-17 21:41:40 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-09-17 21:42:21 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-17 21:42:21 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 8596 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-17 21:42:21 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-17 21:42:21 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-17 21:42:21 [main] INFO  : Finished Spring Data repository scanning in 88 ms. Found 4 JPA repository interfaces.
+2024-09-17 21:42:22 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-17 21:42:22 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-17 21:42:22 [main] INFO  : Starting service [Tomcat]
+2024-09-17 21:42:22 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-17 21:42:22 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-17 21:42:22 [main] INFO  : Root WebApplicationContext: initialization completed in 1233 ms
+2024-09-17 21:42:22 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-17 21:42:22 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-17 21:42:22 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-17 21:42:22 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-17 21:42:22 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-17 21:42:22 [main] INFO  : HikariPool-1 - Starting...
+2024-09-17 21:42:23 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@518a7b8a
+2024-09-17 21:42:23 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-17 21:42:23 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-17 21:42:23 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-17 21:42:24 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-17 21:42:24 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-17 21:42:24 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-17 21:42:24 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-17 21:42:25 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-17 21:42:25 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-17 21:42:25 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-17 21:42:25 [main] INFO  : Starting...
+2024-09-17 21:42:25 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@28e9f6b8]]
+2024-09-17 21:42:25 [main] INFO  : Started.
+2024-09-17 21:42:25 [main] INFO  : Started ShoppingListServiceApplication in 4.438 seconds (process running for 4.812)
+2024-09-17 21:42:25 [RMI TCP Connection(4)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-17 21:42:25 [RMI TCP Connection(4)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-17 21:42:25 [RMI TCP Connection(4)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-09-17 21:43:25 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-17 22:00:39 [https-jsse-nio-0.0.0.0-443-exec-4] ERROR : nie może być puste
+2024-09-17 22:13:25 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2024-09-17 22:34:31 [https-jsse-nio-0.0.0.0-443-exec-4] ERROR : nie może być puste
+2024-09-17 22:42:43 [https-jsse-nio-0.0.0.0-443-exec-10] ERROR : nie może być puste
+2024-09-17 22:43:25 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2024-09-17 22:43:47 [https-jsse-nio-0.0.0.0-443-exec-8] ERROR : nie może być puste
+2024-09-17 22:44:14 [https-jsse-nio-0.0.0.0-443-exec-4] ERROR : nie może być puste
+2024-09-17 22:48:15 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m21s140ms955µs500ns).
+2024-09-17 22:55:20 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m5s112ms552µs300ns).
+2024-09-17 22:55:22 [https-jsse-nio-0.0.0.0-443-exec-4] ERROR : nie może być puste
+2024-09-17 22:56:11 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-17 22:56:11 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@28e9f6b8]]
+2024-09-17 22:56:11 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-17 22:56:11 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-17 22:56:11 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-17 22:56:11 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-09-17 22:56:15 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-17 22:56:15 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 10880 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-17 22:56:15 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-17 22:56:15 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-17 22:56:15 [main] INFO  : Finished Spring Data repository scanning in 77 ms. Found 4 JPA repository interfaces.
+2024-09-17 22:56:16 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-17 22:56:16 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-17 22:56:16 [main] INFO  : Starting service [Tomcat]
+2024-09-17 22:56:16 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-17 22:56:16 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-17 22:56:16 [main] INFO  : Root WebApplicationContext: initialization completed in 1071 ms
+2024-09-17 22:56:16 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-17 22:56:16 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-17 22:56:16 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-17 22:56:16 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-17 22:56:16 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-17 22:56:16 [main] INFO  : HikariPool-1 - Starting...
+2024-09-17 22:56:16 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a24390b
+2024-09-17 22:56:16 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-17 22:56:16 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-17 22:56:17 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-17 22:56:17 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-17 22:56:17 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-17 22:56:18 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-17 22:56:18 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-17 22:56:18 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-17 22:56:18 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-17 22:56:18 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-17 22:56:18 [main] INFO  : Starting...
+2024-09-17 22:56:18 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4b628301]]
+2024-09-17 22:56:18 [main] INFO  : Started.
+2024-09-17 22:56:18 [main] INFO  : Started ShoppingListServiceApplication in 3.661 seconds (process running for 3.973)
+2024-09-17 22:56:18 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-17 22:56:18 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-17 22:56:18 [RMI TCP Connection(1)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-09-17 22:57:18 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-17 23:03:03 [https-jsse-nio-0.0.0.0-443-exec-2] ERROR : User name is taken, try with different name
+2024-09-17 23:03:03 [https-jsse-nio-0.0.0.0-443-exec-9] ERROR : User name is taken, try with different name
+2024-09-17 23:03:10 [https-jsse-nio-0.0.0.0-443-exec-2] ERROR : nie może być puste
+2024-09-17 23:03:10 [https-jsse-nio-0.0.0.0-443-exec-9] ERROR : nie może być puste
+2024-09-17 23:03:25 [https-jsse-nio-0.0.0.0-443-exec-6] ERROR : nie może być puste
+2024-09-17 23:03:25 [https-jsse-nio-0.0.0.0-443-exec-6] ERROR : User name is taken, try with different name
+2024-09-17 23:06:09 [https-jsse-nio-0.0.0.0-443-exec-1] ERROR : User name is taken, try with different name
+2024-09-17 23:06:09 [https-jsse-nio-0.0.0.0-443-exec-1] ERROR : nie może być puste
+2024-09-17 23:06:17 [https-jsse-nio-0.0.0.0-443-exec-10] ERROR : User name is taken, try with different name
+2024-09-17 23:06:17 [https-jsse-nio-0.0.0.0-443-exec-10] ERROR : nie może być puste
+2024-09-17 23:06:37 [https-jsse-nio-0.0.0.0-443-exec-5] ERROR : User name is taken, try with different name
+2024-09-17 23:06:43 [https-jsse-nio-0.0.0.0-443-exec-5] ERROR : nie może być puste
+2024-09-17 23:07:10 [https-jsse-nio-0.0.0.0-443-exec-9] ERROR : User name is taken, try with different name
+2024-09-17 23:07:29 [https-jsse-nio-0.0.0.0-443-exec-9] ERROR : nie może być puste
+2024-09-17 23:07:41 [https-jsse-nio-0.0.0.0-443-exec-6] ERROR : User name is taken, try with different name
+2024-09-17 23:07:42 [https-jsse-nio-0.0.0.0-443-exec-6] ERROR : nie może być puste
+2024-09-17 23:08:21 [https-jsse-nio-0.0.0.0-443-exec-1] ERROR : User name is taken, try with different name
+2024-09-17 23:08:21 [https-jsse-nio-0.0.0.0-443-exec-1] ERROR : nie może być puste
+2024-09-17 23:13:53 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m53s913ms32µs600ns).
+2024-09-17 23:14:10 [https-jsse-nio-0.0.0.0-443-exec-10] ERROR : User name is taken, try with different name
+2024-09-17 23:14:10 [https-jsse-nio-0.0.0.0-443-exec-10] ERROR : nie może być puste
+2024-09-17 23:15:54 [https-jsse-nio-0.0.0.0-443-exec-6] ERROR : nie może być puste
+2024-09-17 23:15:54 [https-jsse-nio-0.0.0.0-443-exec-6] ERROR : User name is taken, try with different name
+2024-09-17 23:16:15 [https-jsse-nio-0.0.0.0-443-exec-1] ERROR : nie może być puste
+2024-09-17 23:16:15 [https-jsse-nio-0.0.0.0-443-exec-1] ERROR : User name is taken, try with different name
+2024-09-17 23:27:18 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2024-09-17 23:36:26 [https-jsse-nio-0.0.0.0-443-exec-9] ERROR : nie może być puste
+2024-09-17 23:36:26 [https-jsse-nio-0.0.0.0-443-exec-9] ERROR : User name is taken, try with different name
+2024-09-17 23:38:24 [https-jsse-nio-0.0.0.0-443-exec-10] ERROR : User name is taken, try with different name
+2024-09-17 23:38:24 [https-jsse-nio-0.0.0.0-443-exec-10] ERROR : nie może być puste
+2024-09-17 23:45:55 [https-jsse-nio-0.0.0.0-443-exec-5] ERROR : User name is taken, try with different name
+2024-09-17 23:45:55 [https-jsse-nio-0.0.0.0-443-exec-5] ERROR : nie może być puste
+2024-09-17 23:52:27 [https-jsse-nio-0.0.0.0-443-exec-9] ERROR : User name is taken, try with different name
+2024-09-17 23:52:27 [https-jsse-nio-0.0.0.0-443-exec-9] ERROR : nie może być puste
+2024-09-17 23:53:19 [https-jsse-nio-0.0.0.0-443-exec-6] ERROR : User name is taken, try with different name
+2024-09-17 23:53:19 [https-jsse-nio-0.0.0.0-443-exec-6] ERROR : nie może być puste
+2024-09-17 23:56:19 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-17 23:56:19 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4b628301]]
+2024-09-17 23:56:19 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-17 23:56:19 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-17 23:56:19 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-17 23:56:19 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-09-17 23:56:24 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-17 23:56:24 [main] INFO  : Starting ShoppingListServiceApplication using Java 17.0.11 with PID 16748 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-17 23:56:24 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-17 23:56:25 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-17 23:56:25 [main] INFO  : Finished Spring Data repository scanning in 81 ms. Found 4 JPA repository interfaces.
+2024-09-17 23:56:25 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-17 23:56:25 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-17 23:56:25 [main] INFO  : Starting service [Tomcat]
+2024-09-17 23:56:25 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-17 23:56:25 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-17 23:56:25 [main] INFO  : Root WebApplicationContext: initialization completed in 1114 ms
+2024-09-17 23:56:25 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-17 23:56:25 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-17 23:56:25 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-17 23:56:26 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-17 23:56:26 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-17 23:56:26 [main] INFO  : HikariPool-1 - Starting...
+2024-09-17 23:56:26 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e09e367
+2024-09-17 23:56:26 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-17 23:56:26 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-17 23:56:26 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-17 23:56:26 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-17 23:56:27 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-17 23:56:27 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-17 23:56:27 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-17 23:56:27 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-17 23:56:27 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-17 23:56:27 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-17 23:56:27 [main] INFO  : Starting...
+2024-09-17 23:56:27 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6ca6a1a6]]
+2024-09-17 23:56:27 [main] INFO  : Started.
+2024-09-17 23:56:27 [main] INFO  : Started ShoppingListServiceApplication in 3.749 seconds (process running for 4.053)
+2024-09-17 23:56:28 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-17 23:56:28 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-17 23:56:28 [RMI TCP Connection(1)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-09-17 23:56:28 [https-jsse-nio-0.0.0.0-443-exec-4] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .lambda$onResponse$0(LoginDialogViewModel.java:79)
+	at .accept(D8$$SyntheticClass:0)
+	at .ifPresent(Optional.java:155)
+	at .onResponse(LoginDialogViewModel.java:76)
+	at .lambda$onResponse$0$retrofit2-DefaultCallAdapterFactory$ExecutorCallbackCall$1(DefaultCallAdapterFactory.java:89)
+	at .run(D8$$SyntheticClass:0)
+	at .handleCallback(Handler.java:883)
+	at .dispatchMessage(Handler.java:100)
+	at .loop(Looper.java:214)
+	at .main(ActivityThread.java:7356)
+	at .invoke(Native Method)
+	at .run(RuntimeInit.java:492)
+	at .main(ZygoteInit.java:930)
+2024-09-17 23:56:40 [https-jsse-nio-0.0.0.0-443-exec-5] ERROR : "userName":"User name is taken, try with different name"
+2024-09-17 23:56:40 [https-jsse-nio-0.0.0.0-443-exec-5] ERROR : "userName":"nie może być puste"
+2024-09-17 23:57:27 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-17 23:58:12 [https-jsse-nio-0.0.0.0-443-exec-1] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .lambda$onResponse$0(LoginDialogViewModel.java:79)
+	at .accept(D8$$SyntheticClass:0)
+	at .ifPresent(Optional.java:155)
+	at .onResponse(LoginDialogViewModel.java:76)
+	at .lambda$onResponse$0$retrofit2-DefaultCallAdapterFactory$ExecutorCallbackCall$1(DefaultCallAdapterFactory.java:89)
+	at .run(D8$$SyntheticClass:0)
+	at .handleCallback(Handler.java:883)
+	at .dispatchMessage(Handler.java:100)
+	at .loop(Looper.java:214)
+	at .main(ActivityThread.java:7356)
+	at .invoke(Native Method)
+	at .run(RuntimeInit.java:492)
+	at .main(ZygoteInit.java:930)

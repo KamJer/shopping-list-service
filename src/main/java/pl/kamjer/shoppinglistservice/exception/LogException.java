@@ -10,6 +10,6 @@ public class LogException extends Throwable{
     }
 
     public LogException(ExceptionDto exceptionDto) {
-        this(exceptionDto.getMassage(), exceptionDto.getStackTrace());
+        this(exceptionDto.getMessage(), exceptionDto.getStackTrace());
     }
 }
