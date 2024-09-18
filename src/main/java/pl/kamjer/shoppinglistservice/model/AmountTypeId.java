@@ -20,6 +20,6 @@ public class AmountTypeId implements Serializable {
     @JoinColumn(name = "user_name", referencedColumnName = "user_name", nullable = false)
     private User user;
     @Column(name = "amount_type_id")
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long amountTypeId;
 }
