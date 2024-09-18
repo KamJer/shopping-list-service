@@ -17,6 +17,6 @@ public class ShoppingItemId implements Serializable {
     @JoinColumn(name = "user_name", referencedColumnName = "user_name")
     private User user;
     @Column(name = "shopping_item_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private Long shoppingItemId;
 }
