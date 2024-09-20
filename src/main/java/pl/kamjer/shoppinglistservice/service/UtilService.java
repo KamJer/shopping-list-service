@@ -76,9 +76,8 @@ public class UtilService extends CustomService {
                                     }).orElseThrow();
                         }
                     }
-                    return null;
+                    return DatabaseUtil.toAmountType(getUserFromAuth(), amountTypeDto, savedTime);
                 })
-                .filter(Objects::nonNull)
                 .toList();
 
         List<Category> categoryDtosFromClientProcessed = (allDto.getCategoryDtoList())
@@ -110,9 +109,8 @@ public class UtilService extends CustomService {
                                     }).orElseThrow();
                         }
                     }
-                    return null;
+                    return DatabaseUtil.toCategory(getUserFromAuth(), categoryDto, savedTime);
                 })
-                .filter(Objects::nonNull)
                 .toList();
 
         List<ShoppingItem> shoppingItemDtosFromClientProcessed = (allDto.getShoppingItemDtoList())
@@ -157,21 +155,8 @@ public class UtilService extends CustomService {
                                     }).orElseThrow();
                         }
                     }
-                    return null;
+                    return DatabaseUtil.toShoppingItem(getUserFromAuth(), amountTypeRepository, categoryRepository, shoppingItemDto, savedTime);
                 })
-                .filter(Objects::nonNull)
-                .toList();
-
-        List<AmountType> amountTypesFromClient = allDto.getAmountTypeDtoList().stream()
-                .map(amountTypeDto -> DatabaseUtil.toAmountType(user, amountTypeDto, savedTime))
-                .toList();
-
-        List<Category> categoriesFromClient = allDto.getCategoryDtoList().stream()
-                .map(categoryDto -> DatabaseUtil.toCategory(user, categoryDto, savedTime))
-                .toList();
-
-        List<ShoppingItem> shoppingItemsFromClient = allDto.getShoppingItemDtoList().stream()
-                .map(shoppingItemDto -> DatabaseUtil.toShoppingItem(user, amountTypeRepository, categoryRepository, shoppingItemDto, savedTime))
                 .toList();
 
 //        data from database (data user does not have) it needs to be inserted, updated or deleted from local database, server needs to figure that out
@@ -182,6 +167,15 @@ public class UtilService extends CustomService {
 //        data after processing can be sent to a client
         List<AmountTypeDto> amountTypesFromDbProcessed = (amountTypesFromDb)
                 .stream()
+                .filter(amountType -> {
+//                    if entity is deleted check if it exists on a list from client, if it does exist it means
+//                    client still has that entity, and it needs to be deleted, if client doesn't have that data
+//                    it means it was already deleted and can be filtered, if it is not deleted return pass data further
+                    if (amountType.isDeleted()) {
+                        return amountTypeDtosFromClientProcessed.contains(amountType);
+                    }
+                    return true;
+                })
                 .map(amountType -> {
                     ModifyState modifyState = ModifyState.INSERT;
 //                    if entity flagged as deleted tell client to delete data
@@ -189,7 +183,7 @@ public class UtilService extends CustomService {
                         modifyState = ModifyState.DELETE;
 //                        if clients database contains that data but its timestamp happens later than the last
 //                        contact client had with server it needs to be updated (data was updated)
-                    } else if (amountTypesFromClient.contains(amountType) || amountTypeDtosFromClientProcessed.contains(amountType)) {
+                    } else if (amountTypeDtosFromClientProcessed.contains(amountType)) {
                         modifyState = ModifyState.UPDATE;
                     }
                     return DatabaseUtil.toAmountTypeDto(amountType, modifyState);
@@ -198,11 +192,20 @@ public class UtilService extends CustomService {
 
         List<CategoryDto> categoriesFromDatabaseProcessed = (categoriesFromDb)
                 .stream()
+                .filter(category -> {
+//                    if entity is deleted check if it exists on a list from client, if it does exist it means
+//                    client still has that entity, and it needs to be deleted, if client doesn't have that data
+//                    it means it was already deleted and can be filtered, if it is not deleted return pass data further
+                    if (category.isDeleted()) {
+                        return categoryDtosFromClientProcessed.contains(category);
+                    }
+                    return true;
+                })
                 .map(category -> {
                     ModifyState modifyState = ModifyState.INSERT;
                     if (category.isDeleted()) {
                         modifyState = ModifyState.DELETE;
-                    } else if (categoriesFromClient.contains(category) || categoryDtosFromClientProcessed.contains(category)) {
+                    } else if (categoryDtosFromClientProcessed.contains(category)) {
                         modifyState = ModifyState.UPDATE;
                     }
                     return DatabaseUtil.toCategoryDto(category, modifyState);
@@ -211,11 +214,20 @@ public class UtilService extends CustomService {
 
         List<ShoppingItemDto> shoppingItemsFromDataBaseProcessed = (shoppingItemsFromDb)
                 .stream()
+                .filter(shoppingItem -> {
+//                    if entity is deleted check if it exists on a list from client, if it does exist it means
+//                    client still has that entity, and it needs to be deleted, if client doesn't have that data
+//                    it means it was already deleted and can be filtered, if it is not deleted return pass data further
+                    if (shoppingItem.isDeleted()) {
+                        return shoppingItemDtosFromClientProcessed.contains(shoppingItem);
+                    }
+                    return true;
+                })
                 .map(shoppingItem -> {
                     ModifyState modifyState = ModifyState.INSERT;
                     if (shoppingItem.isDeleted()) {
                         modifyState = ModifyState.DELETE;
-                    } else if (shoppingItemsFromClient.contains(shoppingItem) || shoppingItemDtosFromClientProcessed.contains(shoppingItem)) {
+                    } else if (shoppingItemDtosFromClientProcessed.contains(shoppingItem)) {
                         modifyState = ModifyState.UPDATE;
                     }
                     return DatabaseUtil.toShoppingItemDto(shoppingItem, modifyState);
