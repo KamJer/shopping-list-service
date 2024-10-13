@@ -1,0 +1,740 @@
+2024-10-10 10:18:02 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-10-10 10:18:02 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 2964 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-10-10 10:18:02 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-10-10 10:18:02 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10 10:18:02 [main] INFO  : Finished Spring Data repository scanning in 114 ms. Found 4 JPA repository interfaces.
+2024-10-10 10:18:03 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-10-10 10:18:03 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-10 10:18:03 [main] INFO  : Starting service [Tomcat]
+2024-10-10 10:18:03 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-10-10 10:18:03 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-10-10 10:18:03 [main] INFO  : Root WebApplicationContext: initialization completed in 1392 ms
+2024-10-10 10:18:03 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-10 10:18:03 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-10 10:18:03 [main] INFO  : HHH000026: Second-level cache disabled
+2024-10-10 10:18:04 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10 10:18:04 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-10-10 10:18:04 [main] INFO  : HikariPool-1 - Starting...
+2024-10-10 10:18:04 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63af52a6
+2024-10-10 10:18:04 [main] INFO  : HikariPool-1 - Start completed.
+2024-10-10 10:18:04 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-10 10:18:04 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-10 10:18:05 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 10:18:05 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10 10:18:05 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-10-10 10:18:05 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-10 10:18:06 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-10 10:18:06 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-10-10 10:18:06 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-10-10 10:18:06 [main] INFO  : Started ShoppingListServiceApplication in 4.537 seconds (process running for 5.961)
+2024-10-10 10:18:06 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-10 10:18:06 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-10-10 10:18:06 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-10-10 10:39:50 [tomcat-handler-4] INFO  : New session connected: 00ffe7ec-75bc-1781-c51d-3db48ea5f05f, user: Jerzynki
+2024-10-10 10:48:15 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m40s988ms210µs400ns).
+2024-10-10 10:48:15 [tomcat-handler-11] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 10:48:15 [tomcat-handler-10] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .lambda$send$7(WebSocket.java:197)
+	at .get(D8$$SyntheticClass:0)
+	at .orElseThrow(Optional.java:286)
+	at .send(WebSocket.java:197)
+	at .websocketSynchronize(ShoppingServiceRepository.java:117)
+	at .synchronizeData(ShoppingServiceRepository.java:138)
+	at .lambda$synchronizeData$3(CustomViewModel.java:92)
+	at .$r8$lambda$ZEwY4zfdv6fV7K7QYHybIXFgko0(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .lambda$getAllDataAndAct$14(ShoppingRepository.java:234)
+	at .$r8$lambda$1UrOsx6w7OeNQCa2dHeSzWE0EQQ(:0)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-10-10 10:48:15 [tomcat-handler-18] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 10:48:15 [tomcat-handler-19] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 10:48:17 [tomcat-handler-17] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .lambda$send$7(WebSocket.java:197)
+	at .get(D8$$SyntheticClass:0)
+	at .orElseThrow(Optional.java:286)
+	at .send(WebSocket.java:197)
+	at .websocketSynchronize(ShoppingServiceRepository.java:117)
+	at .synchronizeData(ShoppingServiceRepository.java:138)
+	at .lambda$synchronizeData$3(CustomViewModel.java:92)
+	at .$r8$lambda$ZEwY4zfdv6fV7K7QYHybIXFgko0(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .lambda$getAllDataAndAct$14(ShoppingRepository.java:234)
+	at .$r8$lambda$1UrOsx6w7OeNQCa2dHeSzWE0EQQ(:0)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-10-10 10:48:30 [tomcat-handler-20] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":6,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":0,\"categoryName\":\"warzywa\",\"deleted\":true,\"localId\":16,\"modifyState\":\"DELETE\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}","ID":"00ffe7ec-75bc-1781-c51d-3db48ea5f05f","DEST":"/synchronizeData"}}
+2024-10-10 10:48:52 [tomcat-handler-22] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertCategory(CategoryDao_Impl.java:100)
+	at .lambda$insertCategory$8(ShoppingRepository.java:186)
+	at .$r8$lambda$JAhKJ4WIbum71vnphctbDqmaSyQ(:0)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-10-10 10:52:02 [tomcat-handler-31] INFO  : New session connected: aaf5158a-7341-1faa-fe66-8ee03e080caf, user: Jerzynki
+2024-10-10 10:52:02 [tomcat-handler-37] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .lambda$send$7(WebSocket.java:197)
+	at .get(D8$$SyntheticClass:0)
+	at .orElseThrow(Optional.java:286)
+	at .send(WebSocket.java:197)
+	at .websocketSynchronize(ShoppingServiceRepository.java:117)
+	at .synchronizeData(ShoppingServiceRepository.java:138)
+	at .lambda$synchronizeData$3(CustomViewModel.java:92)
+	at .$r8$lambda$ZEwY4zfdv6fV7K7QYHybIXFgko0(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .lambda$getAllDataAndAct$14(ShoppingRepository.java:234)
+	at .$r8$lambda$1UrOsx6w7OeNQCa2dHeSzWE0EQQ(:0)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-10-10 10:52:02 [tomcat-handler-38] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 10:52:02 [tomcat-handler-39] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 10:52:02 [tomcat-handler-40] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 11:20:57 [tomcat-handler-48] INFO  : New session connected: 9d3a1980-4419-eca2-3fa3-0b41482d3fcb, user: Jerzynki
+2024-10-10 11:20:57 [tomcat-handler-49] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 11:20:57 [tomcat-handler-50] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 11:20:57 [tomcat-handler-51] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 11:20:57 [tomcat-handler-52] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"ID":"9d3a1980-4419-eca2-3fa3-0b41482d3fcb","DEST":"/synchronizeData","BODY":"{\"amountTypeDtoList\":[],\"categoryDtoList\":[],\"shoppingItemDtoList\":[]}"}}
+2024-10-10 11:28:26 [tomcat-handler-59] INFO  : New session connected: ed3eee9b-c889-09be-f16c-b1bc200896eb, user: Jerzynki
+2024-10-10 11:28:26 [tomcat-handler-60] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 11:28:26 [tomcat-handler-61] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 11:28:26 [tomcat-handler-62] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 11:28:26 [tomcat-handler-63] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"ID":"ed3eee9b-c889-09be-f16c-b1bc200896eb","DEST":"/synchronizeData","BODY":"{\"amountTypeDtoList\":[],\"categoryDtoList\":[],\"shoppingItemDtoList\":[]}"}}
+2024-10-10 12:40:23 [tomcat-handler-79] INFO  : New session connected: c1d94b16-b011-e5ea-3e7e-23d5698c92a7, user: Jerzynki
+2024-10-10 12:40:23 [tomcat-handler-78] INFO  : New session connected: 6b672e6d-ad09-b7cf-8546-c03045d91390, user: Jerzynki
+2024-10-10 12:40:23 [tomcat-handler-83] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .assertMainThread(LiveData.java:502)
+	at .observeForever(LiveData.java:224)
+	at .connect(WebSocket.java:103)
+	at .reInitializeWithUser(ShoppingServiceRepository.java:105)
+	at .lambda$logUserInAndInitialize$4(LoginDialogOptionalLogin.java:81)
+	at .$r8$lambda$RiBvSc8eReAFmbn2_2Ff7q-ifGg(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .websocketSynchronize(ShoppingServiceRepository.java:118)
+	at .lambda$synchronizeData$3(CustomViewModel.java:92)
+	at .$r8$lambda$SZ_UDmMSbsT8GocIT7HcHFrUwwA(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .lambda$getAllDataAndAct$14(ShoppingRepository.java:234)
+	at .$r8$lambda$1UrOsx6w7OeNQCa2dHeSzWE0EQQ(:0)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-10-10 12:40:23 [tomcat-handler-85] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 12:40:23 [tomcat-handler-84] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 12:40:32 [tomcat-handler-86] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 12:40:32 [tomcat-handler-87] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 12:40:32 [tomcat-handler-88] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"ID":"c1d94b16-b011-e5ea-3e7e-23d5698c92a7","DEST":"/synchronizeData","BODY":"{\"amountTypeDtoList\":[],\"categoryDtoList\":[],\"shoppingItemDtoList\":[]}"}}
+2024-10-10 12:40:32 [tomcat-handler-89] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 12:40:32 [tomcat-handler-90] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 12:40:32 [tomcat-handler-91] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"ID":"6b672e6d-ad09-b7cf-8546-c03045d91390","DEST":"/synchronizeData","BODY":"{\"amountTypeDtoList\":[],\"categoryDtoList\":[],\"shoppingItemDtoList\":[]}"}}
+2024-10-10 13:26:09 [tomcat-handler-100] INFO  : New session connected: b57363a4-dd83-2bcd-5a6b-e7ef67b771a0, user: Jerzynki
+2024-10-10 13:26:09 [tomcat-handler-101] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 13:26:09 [tomcat-handler-102] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 13:26:09 [tomcat-handler-103] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 13:26:09 [tomcat-handler-104] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"ID":"b57363a4-dd83-2bcd-5a6b-e7ef67b771a0","BODY":"{\"amountTypeDtoList\":[],\"categoryDtoList\":[{\"categoryId\":0,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"INSERT\"}],\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData"}}
+2024-10-10 13:26:23 [tomcat-handler-111] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertCategory(CategoryDao_Impl.java:100)
+	at .lambda$insertCategory$8(ShoppingRepository.java:186)
+	at .$r8$lambda$JAhKJ4WIbum71vnphctbDqmaSyQ(:0)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-10-10 13:50:56 [tomcat-handler-123] INFO  : New session connected: 847aa46d-2726-ea84-aa11-bca9071e9fad, user: Jerzynki
+2024-10-10 13:50:56 [tomcat-handler-124] INFO  : New session connected: 9ba1fcec-d18a-0a07-77ba-a4e89f927aff, user: Jerzynki
+2024-10-10 13:50:56 [tomcat-handler-132] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .assertMainThread(LiveData.java:502)
+	at .observeForever(LiveData.java:224)
+	at .connect(WebSocket.java:103)
+	at .reInitializeWithUser(ShoppingServiceRepository.java:105)
+	at .lambda$logUserInAndInitialize$4(LoginDialogOptionalLogin.java:81)
+	at .$r8$lambda$RiBvSc8eReAFmbn2_2Ff7q-ifGg(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .websocketSynchronize(ShoppingServiceRepository.java:118)
+	at .lambda$synchronizeData$3(CustomViewModel.java:92)
+	at .$r8$lambda$SZ_UDmMSbsT8GocIT7HcHFrUwwA(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .lambda$getAllDataAndAct$14(ShoppingRepository.java:234)
+	at .$r8$lambda$1UrOsx6w7OeNQCa2dHeSzWE0EQQ(:0)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-10-10 13:50:56 [tomcat-handler-133] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 13:50:56 [tomcat-handler-134] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 13:50:57 [tomcat-handler-135] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 13:50:57 [tomcat-handler-136] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 13:50:57 [tomcat-handler-137] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[],\"categoryDtoList\":[],\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData","ID":"9ba1fcec-d18a-0a07-77ba-a4e89f927aff"}}
+2024-10-10 13:50:57 [tomcat-handler-138] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 13:50:57 [tomcat-handler-139] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 13:50:57 [tomcat-handler-140] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[],\"categoryDtoList\":[],\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData","ID":"847aa46d-2726-ea84-aa11-bca9071e9fad"}}
+2024-10-10 14:10:09 [tomcat-handler-149] INFO  : New session connected: b7702cdc-c1b3-0dc1-81ff-3d6fe35d42d5, user: Jerzynki
+2024-10-10 14:10:09 [tomcat-handler-150] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 14:10:09 [tomcat-handler-151] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 14:10:09 [tomcat-handler-152] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 14:10:09 [tomcat-handler-153] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[],\"categoryDtoList\":[],\"shoppingItemDtoList\":[]}","ID":"b7702cdc-c1b3-0dc1-81ff-3d6fe35d42d5","DEST":"/synchronizeData"}}
+2024-10-10 14:10:52 [tomcat-handler-163] INFO  : New session connected: e4e4530f-42fc-337f-b49b-d8d9265dc6c6, user: Jerzynki
+2024-10-10 14:10:52 [tomcat-handler-175] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 14:10:52 [tomcat-handler-166] INFO  : New session connected: 0f707859-07e3-9911-e106-eb7cfd059b2e, user: Jerzynki
+2024-10-10 14:10:52 [tomcat-handler-176] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 14:10:52 [tomcat-handler-174] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .assertMainThread(LiveData.java:502)
+	at .observeForever(LiveData.java:224)
+	at .connect(WebSocket.java:103)
+	at .reInitializeWithUser(ShoppingServiceRepository.java:105)
+	at .lambda$logUserInAndInitialize$4(LoginDialogOptionalLogin.java:81)
+	at .$r8$lambda$RiBvSc8eReAFmbn2_2Ff7q-ifGg(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .websocketSynchronize(ShoppingServiceRepository.java:118)
+	at .lambda$synchronizeData$3(CustomViewModel.java:92)
+	at .$r8$lambda$SZ_UDmMSbsT8GocIT7HcHFrUwwA(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .lambda$getAllDataAndAct$14(ShoppingRepository.java:234)
+	at .$r8$lambda$1UrOsx6w7OeNQCa2dHeSzWE0EQQ(:0)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-10-10 14:10:52 [tomcat-handler-177] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 14:10:52 [tomcat-handler-178] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 14:10:52 [tomcat-handler-179] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[],\"categoryDtoList\":[],\"shoppingItemDtoList\":[]}","ID":"0f707859-07e3-9911-e106-eb7cfd059b2e","DEST":"/synchronizeData"}}
+2024-10-10 14:10:52 [tomcat-handler-180] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 14:10:52 [tomcat-handler-181] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 14:10:52 [tomcat-handler-182] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[],\"categoryDtoList\":[],\"shoppingItemDtoList\":[]}","ID":"e4e4530f-42fc-337f-b49b-d8d9265dc6c6","DEST":"/synchronizeData"}}
+2024-10-10 14:11:17 [tomcat-handler-191] INFO  : New session connected: daddb22c-6ff0-c886-b198-54c221800602, user: Jerzynki
+2024-10-10 14:11:17 [tomcat-handler-192] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 14:11:17 [tomcat-handler-193] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 14:11:17 [tomcat-handler-194] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 14:11:17 [tomcat-handler-195] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData","ID":"daddb22c-6ff0-c886-b198-54c221800602"}}
+2024-10-10 14:11:23 [tomcat-handler-201] INFO  : New session connected: af319625-0a3d-7a04-d566-bbb299f98a93, user: Jerzynki
+2024-10-10 14:11:23 [tomcat-handler-208] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 14:11:23 [tomcat-handler-207] INFO  : New session connected: 17d2ddf0-5b5c-1cd7-8252-2d4718997f05, user: Jerzynki
+2024-10-10 14:11:23 [tomcat-handler-216] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 14:11:23 [tomcat-handler-217] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 14:11:23 [tomcat-handler-215] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .assertMainThread(LiveData.java:502)
+	at .observeForever(LiveData.java:224)
+	at .connect(WebSocket.java:103)
+	at .reInitializeWithUser(ShoppingServiceRepository.java:105)
+	at .lambda$logUserInAndInitialize$4(LoginDialogOptionalLogin.java:81)
+	at .$r8$lambda$RiBvSc8eReAFmbn2_2Ff7q-ifGg(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .websocketSynchronize(ShoppingServiceRepository.java:118)
+	at .lambda$synchronizeData$3(CustomViewModel.java:92)
+	at .$r8$lambda$SZ_UDmMSbsT8GocIT7HcHFrUwwA(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .lambda$getAllDataAndAct$14(ShoppingRepository.java:234)
+	at .$r8$lambda$1UrOsx6w7OeNQCa2dHeSzWE0EQQ(:0)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-10-10 14:11:23 [tomcat-handler-218] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 14:11:23 [tomcat-handler-219] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData","ID":"af319625-0a3d-7a04-d566-bbb299f98a93"}}
+2024-10-10 14:11:23 [tomcat-handler-220] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 14:11:23 [tomcat-handler-221] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 14:11:23 [tomcat-handler-222] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData","ID":"17d2ddf0-5b5c-1cd7-8252-2d4718997f05"}}
+2024-10-10 14:11:35 [tomcat-handler-231] INFO  : New session connected: 4c9582ac-dfaf-86a1-1cf9-bfd4a3b25bcd, user: Jerzynki
+2024-10-10 14:11:35 [tomcat-handler-242] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 14:11:35 [tomcat-handler-234] INFO  : New session connected: 0c833b1f-4e66-6034-317c-729776226e9c, user: Jerzynki
+2024-10-10 14:11:35 [tomcat-handler-243] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 14:11:35 [tomcat-handler-241] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .assertMainThread(LiveData.java:502)
+	at .observeForever(LiveData.java:224)
+	at .connect(WebSocket.java:103)
+	at .reInitializeWithUser(ShoppingServiceRepository.java:105)
+	at .lambda$logUserInAndInitialize$4(LoginDialogOptionalLogin.java:81)
+	at .$r8$lambda$RiBvSc8eReAFmbn2_2Ff7q-ifGg(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .websocketSynchronize(ShoppingServiceRepository.java:118)
+	at .lambda$synchronizeData$3(CustomViewModel.java:92)
+	at .$r8$lambda$SZ_UDmMSbsT8GocIT7HcHFrUwwA(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .lambda$getAllDataAndAct$14(ShoppingRepository.java:234)
+	at .$r8$lambda$1UrOsx6w7OeNQCa2dHeSzWE0EQQ(:0)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-10-10 14:11:35 [tomcat-handler-244] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 14:11:35 [tomcat-handler-245] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 14:11:35 [tomcat-handler-246] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData","ID":"4c9582ac-dfaf-86a1-1cf9-bfd4a3b25bcd"}}
+2024-10-10 14:11:35 [tomcat-handler-247] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 14:11:35 [tomcat-handler-248] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 14:11:35 [tomcat-handler-249] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData","ID":"0c833b1f-4e66-6034-317c-729776226e9c"}}
+2024-10-10 14:35:36 [tomcat-handler-252] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"INSERT\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData"}}
+2024-10-10 15:57:35 [tomcat-handler-263] INFO  : New session connected: af5f680c-20ab-6190-a854-4f7e28f2f479, user: Jerzynki
+2024-10-10 15:57:35 [tomcat-handler-264] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 15:57:35 [tomcat-handler-265] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 15:57:35 [tomcat-handler-266] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 15:57:35 [tomcat-handler-267] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"ID":"af5f680c-20ab-6190-a854-4f7e28f2f479","DEST":"/synchronizeData","BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"INSERT\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}"}}
+2024-10-10 15:58:40 [tomcat-handler-268] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"DEST":"/synchronizeData","BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}"}}
+2024-10-10 16:01:05 [tomcat-handler-269] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"DEST":"/synchronizeData","BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}"}}
+2024-10-10 16:01:41 [tomcat-handler-270] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"DEST":"/synchronizeData","BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test2\",\"deleted\":false,\"localId\":4,\"modifyState\":\"INSERT\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}"}}
+2024-10-10 16:02:33 [tomcat-handler-271] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"DEST":"/synchronizeData","BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test2\",\"deleted\":false,\"localId\":4,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test3\",\"deleted\":false,\"localId\":5,\"modifyState\":\"INSERT\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}"}}
+2024-10-10 16:03:24 [tomcat-handler-272] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"DEST":"/synchronizeData","BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test2\",\"deleted\":false,\"localId\":4,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test3\",\"deleted\":false,\"localId\":5,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test4\",\"deleted\":false,\"localId\":6,\"modifyState\":\"INSERT\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}"}}
+2024-10-10 16:04:39 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m17s626ms892µs500ns).
+2024-10-10 16:12:18 [tomcat-handler-279] INFO  : New session connected: 7c54b103-52ca-f9c3-39a5-fbbf0dac2763, user: Jerzynki
+2024-10-10 16:12:23 [tomcat-handler-280] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 16:12:27 [tomcat-handler-281] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 16:12:27 [tomcat-handler-282] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 16:12:27 [tomcat-handler-283] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test2\",\"deleted\":false,\"localId\":4,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test3\",\"deleted\":false,\"localId\":5,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test4\",\"deleted\":false,\"localId\":6,\"modifyState\":\"INSERT\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData","ID":"7c54b103-52ca-f9c3-39a5-fbbf0dac2763"}}
+2024-10-10 16:13:03 [tomcat-handler-290] INFO  : New session connected: 37498864-694c-4d8c-20c0-c4ffdb000992, user: Jerzynki
+2024-10-10 16:13:07 [tomcat-handler-291] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 16:13:08 [tomcat-handler-292] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 16:13:09 [tomcat-handler-292] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 16:13:31 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s786ms735µs100ns).
+2024-10-10 16:13:31 [tomcat-handler-292] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"ID":"37498864-694c-4d8c-20c0-c4ffdb000992","DEST":"/synchronizeData","BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test2\",\"deleted\":false,\"localId\":4,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test3\",\"deleted\":false,\"localId\":5,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test4\",\"deleted\":false,\"localId\":6,\"modifyState\":\"INSERT\"}],\"savedTime\":{},\"shoppingItemDtoList\":[]}"}}
+2024-10-10 16:15:38 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m6s495ms646µs400ns).
+2024-10-10 16:22:17 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m39s529ms342µs100ns).
+2024-10-10 16:22:17 [tomcat-handler-292] ERROR : Closing session due to exception for StandardWebSocketSession[id=37498864-694c-4d8c-20c0-c4ffdb000992, uri=wss://192.168.0.13/ws]
+java.lang.IllegalStateException: The remote endpoint was in state [TEXT_PARTIAL_WRITING] which is an invalid state for called method
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase$StateMachine.checkState(WsRemoteEndpointImplBase.java:1250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase$StateMachine.textPartialStart(WsRemoteEndpointImplBase.java:1215)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:222)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:71)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleTransportError(WebSocketHandler.java:55)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleTransportError(WebSocketHandlerDecorator.java:80)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleTransportError(LoggingWebSocketHandlerDecorator.java:64)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleTransportError(ExceptionWebSocketHandlerDecorator.java:68)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onError(StandardWebSocketHandlerAdapter.java:156)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:804)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:589)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:324)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:223)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:71)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleMessage(WebSocketHandler.java:48)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-10 16:22:17 [tomcat-handler-292] ERROR : Closing session due to exception for StandardWebSocketSession[id=37498864-694c-4d8c-20c0-c4ffdb000992, uri=wss://192.168.0.13/ws]
+java.io.IOException: java.io.IOException: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:326)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:223)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:71)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleMessage(WebSocketHandler.java:48)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+Caused by: java.io.IOException: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:102)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:542)
+	at org.apache.tomcat.util.net.SecureNioChannel.flush(SecureNioChannel.java:124)
+	at org.apache.tomcat.util.net.SecureNioChannel.write(SecureNioChannel.java:881)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1632)
+	at org.apache.tomcat.util.net.SocketWrapperBase$OperationState.start(SocketWrapperBase.java:1051)
+	at org.apache.tomcat.util.net.SocketWrapperBase.vectoredOperation(SocketWrapperBase.java:1440)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1366)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1337)
+	at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer.doWrite(WsRemoteEndpointImplServer.java:171)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:521)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:313)
+	... 29 common frames omitted
+2024-10-10 16:22:17 [tomcat-handler-292] ERROR : Closing session due to exception for StandardWebSocketSession[id=37498864-694c-4d8c-20c0-c4ffdb000992, uri=wss://192.168.0.13/ws]
+java.lang.IllegalStateException: The WebSocket session [13] has been closed and no method (apart from close()) may be called on a closed session
+	at org.apache.tomcat.websocket.WsSession.checkState(WsSession.java:1054)
+	at org.apache.tomcat.websocket.WsSession.getBasicRemote(WsSession.java:531)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:71)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleTransportError(WebSocketHandler.java:55)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleTransportError(WebSocketHandlerDecorator.java:80)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleTransportError(LoggingWebSocketHandlerDecorator.java:64)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleTransportError(ExceptionWebSocketHandlerDecorator.java:68)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onError(StandardWebSocketHandlerAdapter.java:156)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.onError(WsHttpUpgradeHandler.java:234)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:156)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-10 19:41:10 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m37s27ms233µs100ns).
+2024-10-10 22:06:01 [tomcat-handler-306] INFO  : New session connected: fec26dcb-b64e-2bff-0cd4-136f8fa3fab1, user: Jerzynki
+2024-10-10 22:06:10 [tomcat-handler-307] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 22:06:10 [tomcat-handler-308] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 22:06:10 [tomcat-handler-309] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 22:06:10 [tomcat-handler-310] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test2\",\"deleted\":false,\"localId\":4,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test3\",\"deleted\":false,\"localId\":5,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test4\",\"deleted\":false,\"localId\":6,\"modifyState\":\"INSERT\"}],\"savedTime\":\"2024-10-10T14:10:52.773179700\",\"shoppingItemDtoList\":[]}","ID":"fec26dcb-b64e-2bff-0cd4-136f8fa3fab1","DEST":"/synchronizeData"}}
+2024-10-10 22:07:25 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m11s984ms97µs800ns).
+2024-10-10 22:07:25 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 22:07:25 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-10-10 22:07:25 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-10-10 22:07:25 [SpringApplicationShutdownHook] ERROR : Closing session due to exception for StandardWebSocketSession[id=fec26dcb-b64e-2bff-0cd4-136f8fa3fab1, uri=wss://192.168.0.13/ws]
+java.lang.IllegalStateException: Message will not be sent because the WebSocket session has been closed
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:455)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:313)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:223)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:71)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleTransportError(WebSocketHandler.java:55)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleTransportError(WebSocketHandlerDecorator.java:80)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleTransportError(LoggingWebSocketHandlerDecorator.java:64)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleTransportError(ExceptionWebSocketHandlerDecorator.java:68)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onError(StandardWebSocketHandlerAdapter.java:156)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:804)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:589)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:556)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:544)
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:1024)
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:46)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4041)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:4650)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:471)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:447)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:301)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.destroy(TomcatWebServer.java:374)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:177)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1093)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-10-10 22:07:33 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-10-10 22:07:33 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 14000 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-10-10 22:07:33 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-10-10 22:07:34 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10 22:07:34 [main] INFO  : Finished Spring Data repository scanning in 104 ms. Found 4 JPA repository interfaces.
+2024-10-10 22:07:35 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-10-10 22:07:35 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-10 22:07:35 [main] INFO  : Starting service [Tomcat]
+2024-10-10 22:07:35 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-10-10 22:07:35 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-10-10 22:07:35 [main] INFO  : Root WebApplicationContext: initialization completed in 1578 ms
+2024-10-10 22:07:35 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-10 22:07:35 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-10 22:07:35 [main] INFO  : HHH000026: Second-level cache disabled
+2024-10-10 22:07:35 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10 22:07:36 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-10-10 22:07:36 [main] INFO  : HikariPool-1 - Starting...
+2024-10-10 22:07:36 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24a807a9
+2024-10-10 22:07:36 [main] INFO  : HikariPool-1 - Start completed.
+2024-10-10 22:07:36 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-10 22:07:37 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-10 22:07:37 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 22:07:37 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10 22:07:37 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-10-10 22:07:37 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-10 22:07:38 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-10 22:07:38 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-10-10 22:07:38 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-10-10 22:07:38 [main] INFO  : Started ShoppingListServiceApplication in 4.867 seconds (process running for 5.791)
+2024-10-10 22:07:38 [tomcat-handler-4] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-10 22:07:38 [tomcat-handler-4] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-10-10 22:07:38 [tomcat-handler-4] INFO  : Completed initialization in 1 ms
+2024-10-10 22:07:38 [tomcat-handler-4] INFO  : New session connected: 7777eae9-10bf-bbef-ab80-af6a12a72005, user: Jerzynki
+2024-10-10 22:07:38 [tomcat-handler-5] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 22:07:38 [tomcat-handler-6] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 22:07:38 [tomcat-handler-7] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 22:07:38 [tomcat-handler-8] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"ID":"7777eae9-10bf-bbef-ab80-af6a12a72005","BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test2\",\"deleted\":false,\"localId\":4,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test3\",\"deleted\":false,\"localId\":5,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test4\",\"deleted\":false,\"localId\":6,\"modifyState\":\"INSERT\"}],\"savedTime\":\"2024-10-10T14:10:52.773179700\",\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData"}}
+2024-10-10 22:08:38 [tomcat-handler-15] INFO  : New session connected: aea36925-4133-3238-6021-48f71454e044, user: Jerzynki
+2024-10-10 22:08:38 [tomcat-handler-16] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 22:08:38 [tomcat-handler-17] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 22:08:38 [tomcat-handler-18] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 22:08:38 [tomcat-handler-19] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test2\",\"deleted\":false,\"localId\":4,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test3\",\"deleted\":false,\"localId\":5,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test4\",\"deleted\":false,\"localId\":6,\"modifyState\":\"INSERT\"}],\"savedTime\":\"2024-10-10T14:10:52.773179700\",\"shoppingItemDtoList\":[]}","ID":"aea36925-4133-3238-6021-48f71454e044","DEST":"/synchronizeData"}}
+2024-10-10 22:56:42 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47m53s103ms901µs800ns).
+2024-10-10 22:56:57 [tomcat-handler-26] INFO  : New session connected: ad552b2b-0b80-5003-f58f-ef1b450b24b8, user: Jerzynki
+2024-10-10 22:56:57 [tomcat-handler-27] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 22:56:57 [tomcat-handler-28] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 22:56:57 [tomcat-handler-29] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 22:56:57 [tomcat-handler-30] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"ID":"ad552b2b-0b80-5003-f58f-ef1b450b24b8","DEST":"/synchronizeData","BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test2\",\"deleted\":false,\"localId\":4,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test3\",\"deleted\":false,\"localId\":5,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test4\",\"deleted\":false,\"localId\":6,\"modifyState\":\"INSERT\"}],\"savedTime\":\"2024-10-10T14:10:52.773179700\",\"shoppingItemDtoList\":[]}"}}
+2024-10-10 22:57:25 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 22:57:25 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-10-10 22:57:25 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-10-10 22:57:25 [SpringApplicationShutdownHook] ERROR : Closing session due to exception for StandardWebSocketSession[id=ad552b2b-0b80-5003-f58f-ef1b450b24b8, uri=wss://192.168.0.13/ws]
+java.lang.IllegalStateException: Message will not be sent because the WebSocket session has been closed
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:455)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:313)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:223)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:71)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleTransportError(WebSocketHandler.java:55)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleTransportError(WebSocketHandlerDecorator.java:80)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleTransportError(LoggingWebSocketHandlerDecorator.java:64)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleTransportError(ExceptionWebSocketHandlerDecorator.java:68)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onError(StandardWebSocketHandlerAdapter.java:156)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:804)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:589)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:556)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:544)
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:1024)
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:46)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4041)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:4650)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:471)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:447)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:301)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.destroy(TomcatWebServer.java:374)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:177)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1093)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-10-10 22:57:40 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-10-10 22:57:40 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 19044 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-10-10 22:57:40 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-10-10 22:57:40 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10 22:57:40 [main] INFO  : Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
+2024-10-10 22:57:41 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-10-10 22:57:41 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-10 22:57:41 [main] INFO  : Starting service [Tomcat]
+2024-10-10 22:57:41 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-10-10 22:57:41 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-10-10 22:57:41 [main] INFO  : Root WebApplicationContext: initialization completed in 1130 ms
+2024-10-10 22:57:41 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-10 22:57:41 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-10 22:57:41 [main] INFO  : HHH000026: Second-level cache disabled
+2024-10-10 22:57:41 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10 22:57:41 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-10-10 22:57:41 [main] INFO  : HikariPool-1 - Starting...
+2024-10-10 22:57:41 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c0ab04f
+2024-10-10 22:57:41 [main] INFO  : HikariPool-1 - Start completed.
+2024-10-10 22:57:41 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-10 22:57:42 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-10 22:57:42 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 22:57:43 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10 22:57:43 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-10-10 22:57:43 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-10 22:57:43 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-10 22:57:43 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-10-10 22:57:43 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-10-10 22:57:43 [main] INFO  : Started ShoppingListServiceApplication in 3.72 seconds (process running for 4.123)
+2024-10-10 22:57:44 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-10 22:57:44 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-10-10 22:57:44 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-10-10 22:57:51 [tomcat-handler-4] INFO  : New session connected: 2dcb5214-9903-9a6d-57b6-600650473dbf, user: Jerzynki
+2024-10-10 22:57:51 [tomcat-handler-5] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 22:57:52 [tomcat-handler-6] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 22:57:52 [tomcat-handler-7] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 22:57:52 [tomcat-handler-8] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test2\",\"deleted\":false,\"localId\":4,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test3\",\"deleted\":false,\"localId\":5,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test4\",\"deleted\":false,\"localId\":6,\"modifyState\":\"INSERT\"}],\"savedTime\":\"2024-10-10T14:10:52.773179700\",\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData","ID":"2dcb5214-9903-9a6d-57b6-600650473dbf"}}
+2024-10-10 23:00:19 [tomcat-handler-15] INFO  : New session connected: 7f87133c-0bcd-533f-4693-3976f545f508, user: Jerzynki
+2024-10-10 23:00:19 [tomcat-handler-16] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 23:00:19 [tomcat-handler-17] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 23:00:19 [tomcat-handler-18] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 23:00:19 [tomcat-handler-19] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test2\",\"deleted\":false,\"localId\":4,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test3\",\"deleted\":false,\"localId\":5,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test4\",\"deleted\":false,\"localId\":6,\"modifyState\":\"INSERT\"}],\"savedTime\":\"2024-10-10T14:10:52.773179700\",\"shoppingItemDtoList\":[]}","ID":"7f87133c-0bcd-533f-4693-3976f545f508","DEST":"/synchronizeData"}}
+2024-10-10 23:04:25 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m13s337ms234µs300ns).
+2024-10-10 23:04:25 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:04:25 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-10-10 23:04:25 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-10-10 23:04:25 [SpringApplicationShutdownHook] ERROR : Closing session due to exception for StandardWebSocketSession[id=7f87133c-0bcd-533f-4693-3976f545f508, uri=wss://192.168.0.13/ws]
+java.lang.IllegalStateException: Message will not be sent because the WebSocket session has been closed
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:455)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:313)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:223)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:71)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleTransportError(WebSocketHandler.java:55)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleTransportError(WebSocketHandlerDecorator.java:80)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleTransportError(LoggingWebSocketHandlerDecorator.java:64)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleTransportError(ExceptionWebSocketHandlerDecorator.java:68)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onError(StandardWebSocketHandlerAdapter.java:156)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:804)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:589)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:556)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:544)
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:1024)
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:46)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4041)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:4650)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:471)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:231)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:447)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:301)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.destroy(TomcatWebServer.java:374)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:177)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1093)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-10-10 23:04:28 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-10-10 23:04:28 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 15316 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-10-10 23:04:28 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-10-10 23:04:29 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10 23:04:29 [main] INFO  : Finished Spring Data repository scanning in 86 ms. Found 4 JPA repository interfaces.
+2024-10-10 23:04:30 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-10-10 23:04:30 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-10 23:04:30 [main] INFO  : Starting service [Tomcat]
+2024-10-10 23:04:30 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-10-10 23:04:30 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-10-10 23:04:30 [main] INFO  : Root WebApplicationContext: initialization completed in 1284 ms
+2024-10-10 23:04:30 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-10 23:04:30 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-10 23:04:30 [main] INFO  : HHH000026: Second-level cache disabled
+2024-10-10 23:04:30 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10 23:04:30 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-10-10 23:04:30 [main] INFO  : HikariPool-1 - Starting...
+2024-10-10 23:04:30 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@267b678f
+2024-10-10 23:04:30 [main] INFO  : HikariPool-1 - Start completed.
+2024-10-10 23:04:30 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-10 23:04:31 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-10 23:04:31 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10 23:04:31 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10 23:04:31 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-10-10 23:04:32 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-10 23:04:32 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-10 23:04:32 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-10-10 23:04:32 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-10-10 23:04:32 [main] INFO  : Started ShoppingListServiceApplication in 4.179 seconds (process running for 4.615)
+2024-10-10 23:04:32 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-10 23:04:32 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-10-10 23:04:32 [RMI TCP Connection(1)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-10-10 23:04:43 [tomcat-handler-4] INFO  : New session connected: 862b1f7c-2300-08b1-ca3a-f84e5f77f7b7, user: Jerzynki
+2024-10-10 23:04:43 [tomcat-handler-5] INFO  : New message - user: Jerzynki /n {"command":"CONNECT","headers":{}}
+2024-10-10 23:04:44 [tomcat-handler-6] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
+2024-10-10 23:04:44 [tomcat-handler-7] INFO  : New message - user: Jerzynki /n {"command":"SUBSCRIBE","headers":{"DEST":"/pip"}}
+2024-10-10 23:04:44 [tomcat-handler-8] INFO  : New message - user: Jerzynki /n {"command":"MESSAGE","headers":{"ID":"862b1f7c-2300-08b1-ca3a-f84e5f77f7b7","BODY":"{\"amountTypeDtoList\":[{\"amountTypeId\":1,\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\",\"typeName\":\"kg\"}],\"categoryDtoList\":[{\"categoryId\":52,\"categoryName\":\"warzywa\",\"deleted\":false,\"localId\":1,\"modifyState\":\"NONE\"},{\"categoryId\":0,\"categoryName\":\"owoce\",\"deleted\":false,\"localId\":2,\"modifyState\":\"UPDATE\"},{\"categoryId\":0,\"categoryName\":\"test\",\"deleted\":false,\"localId\":3,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test2\",\"deleted\":false,\"localId\":4,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test3\",\"deleted\":false,\"localId\":5,\"modifyState\":\"INSERT\"},{\"categoryId\":0,\"categoryName\":\"test4\",\"deleted\":false,\"localId\":6,\"modifyState\":\"INSERT\"}],\"savedTime\":\"2024-10-10T14:10:52.773179700\",\"shoppingItemDtoList\":[]}","DEST":"/synchronizeData"}}

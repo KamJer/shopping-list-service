@@ -4,10 +4,11 @@ import jakarta.validation.constraints.NotEmpty;
 import lombok.Builder;
 import lombok.Getter;
 import pl.kamjer.shoppinglistservice.model.ModifyState;
+import pl.kamjer.shoppinglistservice.model.dto.utilDto.Dto;
 
 @Getter
 @Builder
-public class ShoppingItemDto {
+public class ShoppingItemDto extends Dto {
 
     private long shoppingItemId;
     private long itemAmountTypeId;

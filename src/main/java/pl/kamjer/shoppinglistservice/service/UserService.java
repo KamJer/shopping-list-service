@@ -6,6 +6,10 @@ import pl.kamjer.shoppinglistservice.DatabaseUtil;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.User;
 import pl.kamjer.shoppinglistservice.model.dto.UserDto;
+import pl.kamjer.shoppinglistservice.model.dto.utilDto.AllDto;
+import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
+import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
+import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
 import pl.kamjer.shoppinglistservice.repository.UserRepository;
 
 import java.time.LocalDateTime;
@@ -39,15 +43,8 @@ public class UserService extends CustomService {
         userToUpdate.setPassword(user.getPassword());
     }
 
-    public void deleteUser() throws NoResourcesFoundException {
-        userRepository.delete(userRepository.findByUserName(getUserFromAuth().getUserName()).orElseThrow(() -> new NoResourcesFoundException("No such User")));
-    }
-
-    public LocalDateTime getLastUpdateTime() throws NoResourcesFoundException {
-        return getUserFromAuth().getSavedTime();
-    }
-
-    public boolean logUser(String userName) {
+    @Deprecated
+    public Boolean logUser(String userName) {
         return userRepository.existsByUserName(userName);
     }
 }

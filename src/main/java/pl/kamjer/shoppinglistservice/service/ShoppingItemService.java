@@ -8,6 +8,8 @@ import pl.kamjer.shoppinglistservice.model.ShoppingItem;
 import pl.kamjer.shoppinglistservice.model.User;
 import pl.kamjer.shoppinglistservice.model.dto.ShoppingItemDto;
 import pl.kamjer.shoppinglistservice.model.dto.utilDto.AddDto;
+import pl.kamjer.shoppinglistservice.model.dto.utilDto.Dto;
+import pl.kamjer.shoppinglistservice.model.dto.utilDto.LocalDateTimeDto;
 import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
@@ -45,7 +47,7 @@ public class ShoppingItemService extends CustomService {
     }
 
     @Transactional
-    public LocalDateTime updateShoppingItem(ShoppingItemDto shoppingItemDto) throws NoResourcesFoundException {
+    public LocalDateTimeDto updateShoppingItem(ShoppingItemDto shoppingItemDto) throws NoResourcesFoundException {
         LocalDateTime savedTime = LocalDateTime.now();
         User user = updateSaveTimeInUser(savedTime);
         shoppingItemRepository.save(DatabaseUtil.toShoppingItem(user,
@@ -53,18 +55,27 @@ public class ShoppingItemService extends CustomService {
                 categoryRepository,
                 shoppingItemDto,
                 savedTime));
-        return savedTime;
+        return LocalDateTimeDto.builder().savedTime(savedTime).build();
     }
     @Transactional
-    public LocalDateTime deleteShoppingItem(Long shoppingItemId) throws NoResourcesFoundException {
+    public LocalDateTimeDto deleteShoppingItem(Long shoppingItemId) throws NoResourcesFoundException {
         LocalDateTime savedTime = LocalDateTime.now();
         User user = getUserFromAuth();
         updateSaveTimeInUser(savedTime);
         ShoppingItem shoppingItemToDelete = shoppingItemRepository
                 .findByShoppingItemIdUserUserNameAndShoppingItemIdShoppingItemId(user.getUserName(),
-                        shoppingItemId).orElseThrow(() -> new NoResourcesFoundException("No such sHoppingItem found: " + user.getUserName() + ", " + shoppingItemId));
+                        shoppingItemId).orElseThrow(() -> new NoResourcesFoundException("No such shoppingItem found: " + user.getUserName() + ", " + shoppingItemId));
         shoppingItemToDelete.setDeleted(true);
-        shoppingItemRepository.save(shoppingItemToDelete);
-        return savedTime;
+        return LocalDateTimeDto.builder().savedTime(savedTime).build();
+    }
+
+    @Transactional
+    public Dto synchronizeShoppingItemDto(ShoppingItemDto shoppingItemDto) {
+        return switch (shoppingItemDto.getModifyState()) {
+            case INSERT -> insertShoppingItem(shoppingItemDto);
+            case UPDATE -> updateShoppingItem(shoppingItemDto);
+            case DELETE -> deleteShoppingItem(shoppingItemDto.getShoppingItemId());
+            case NONE -> null;
+        };
     }
 }

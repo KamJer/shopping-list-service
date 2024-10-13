@@ -1,0 +1,380 @@
+2024-09-29 22:41:13 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-29 22:41:13 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 2436 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-29 22:41:13 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-29 22:41:14 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-29 22:41:14 [main] INFO  : Finished Spring Data repository scanning in 125 ms. Found 4 JPA repository interfaces.
+2024-09-29 22:41:14 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-29 22:41:14 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-29 22:41:14 [main] INFO  : Starting service [Tomcat]
+2024-09-29 22:41:14 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-29 22:41:15 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-29 22:41:15 [main] INFO  : Root WebApplicationContext: initialization completed in 1418 ms
+2024-09-29 22:41:15 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-29 22:41:15 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-29 22:41:15 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-29 22:41:15 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-29 22:41:15 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-29 22:41:15 [main] INFO  : HikariPool-1 - Starting...
+2024-09-29 22:41:15 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b86f4cb
+2024-09-29 22:41:15 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-29 22:41:15 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-29 22:41:16 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-29 22:41:16 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-29 22:41:16 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-29 22:41:16 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-29 22:41:17 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-29 22:41:17 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-29 22:41:17 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-29 22:41:17 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-29 22:41:17 [main] INFO  : Starting...
+2024-09-29 22:41:17 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5278bc6d]]
+2024-09-29 22:41:17 [main] INFO  : Started.
+2024-09-29 22:41:17 [main] INFO  : Started ShoppingListServiceApplication in 4.561 seconds (process running for 5.781)
+2024-09-29 22:41:18 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-29 22:41:18 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-29 22:41:18 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 2 ms
+2024-09-29 22:42:17 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-29 23:00:58 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-29 23:00:58 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5278bc6d]]
+2024-09-29 23:00:58 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-29 23:00:58 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-29 23:00:58 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-29 23:00:58 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-09-29 23:01:03 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-29 23:01:03 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 17772 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-29 23:01:03 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-29 23:01:04 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-29 23:01:04 [main] INFO  : Finished Spring Data repository scanning in 93 ms. Found 4 JPA repository interfaces.
+2024-09-29 23:01:04 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-29 23:01:04 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-29 23:01:04 [main] INFO  : Starting service [Tomcat]
+2024-09-29 23:01:04 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-29 23:01:05 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-29 23:01:05 [main] INFO  : Root WebApplicationContext: initialization completed in 1268 ms
+2024-09-29 23:01:05 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-29 23:01:05 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-29 23:01:05 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-29 23:01:05 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-29 23:01:05 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-29 23:01:05 [main] INFO  : HikariPool-1 - Starting...
+2024-09-29 23:01:05 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31de8099
+2024-09-29 23:01:05 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-29 23:01:05 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-29 23:01:06 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-29 23:01:06 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-29 23:01:06 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-29 23:01:06 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-29 23:01:07 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-29 23:01:07 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-29 23:01:07 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-29 23:01:07 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-29 23:01:07 [main] INFO  : Starting...
+2024-09-29 23:01:07 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@67620d80]]
+2024-09-29 23:01:07 [main] INFO  : Started.
+2024-09-29 23:01:07 [main] INFO  : Started ShoppingListServiceApplication in 4.124 seconds (process running for 4.588)
+2024-09-29 23:01:07 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-29 23:01:07 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-29 23:01:07 [RMI TCP Connection(1)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-09-29 23:02:07 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-29 23:07:48 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-29 23:07:48 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@67620d80]]
+2024-09-29 23:07:48 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-29 23:07:48 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-29 23:07:48 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-29 23:07:48 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-09-29 23:07:49 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-29 23:07:49 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 2880 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-29 23:07:49 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-29 23:07:50 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-29 23:07:50 [main] INFO  : Finished Spring Data repository scanning in 101 ms. Found 4 JPA repository interfaces.
+2024-09-29 23:07:51 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-29 23:07:51 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-29 23:07:51 [main] INFO  : Starting service [Tomcat]
+2024-09-29 23:07:51 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-29 23:07:51 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-29 23:07:51 [main] INFO  : Root WebApplicationContext: initialization completed in 1225 ms
+2024-09-29 23:07:51 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-29 23:07:51 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-29 23:07:51 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-29 23:07:51 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-29 23:07:51 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-29 23:07:51 [main] INFO  : HikariPool-1 - Starting...
+2024-09-29 23:07:51 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13ae87a6
+2024-09-29 23:07:51 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-29 23:07:51 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-29 23:07:52 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-29 23:07:52 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-29 23:07:52 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-29 23:07:52 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-29 23:07:53 [main] DEBUG : Patterns [/ws/**] in 'stompWebSocketHandlerMapping'
+2024-09-29 23:07:53 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-29 23:07:53 [main] DEBUG : 
+	p.k.s.c.AmountTypeController:
+	
+2024-09-29 23:07:53 [main] DEBUG : 
+	p.k.s.c.CategoryController:
+	
+2024-09-29 23:07:53 [main] DEBUG : 
+	p.k.s.c.ExceptionController:
+	
+2024-09-29 23:07:53 [main] DEBUG : 
+	p.k.s.c.ShoppingItemController:
+	
+2024-09-29 23:07:53 [main] DEBUG : 
+	p.k.s.c.UserController:
+	
+2024-09-29 23:07:53 [main] DEBUG : 
+	p.k.s.c.UtilController:
+	
+2024-09-29 23:07:53 [main] DEBUG : 
+	p.k.s.c.w.WebSocketUtilController:
+	{[MESSAGE],[/synchronizeData]}: synchronizeData(Dto)
+2024-09-29 23:07:53 [main] DEBUG : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2024-09-29 23:07:53 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-29 23:07:53 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-29 23:07:53 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-29 23:07:53 [main] DEBUG : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-09-29 23:07:53 [main] DEBUG : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-09-29 23:07:53 [main] INFO  : Starting...
+2024-09-29 23:07:53 [main] DEBUG : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5a372288]
+2024-09-29 23:07:53 [main] DEBUG : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5a372288]
+2024-09-29 23:07:53 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5a372288]]
+2024-09-29 23:07:53 [main] INFO  : Started.
+2024-09-29 23:07:53 [main] DEBUG : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-09-29 23:07:53 [main] DEBUG : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-09-29 23:07:53 [main] INFO  : Started ShoppingListServiceApplication in 4.033 seconds (process running for 4.478)
+2024-09-29 23:07:53 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-29 23:07:53 [RMI TCP Connection(2)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-29 23:07:53 [RMI TCP Connection(2)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-09-29 23:08:06 [tomcat-handler-7] DEBUG : Mapped to org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler@2662997a
+2024-09-29 23:08:06 [tomcat-handler-7] DEBUG : Processing transport request: GET https://192.168.0.13/ws
+2024-09-29 23:08:53 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-29 23:15:10 [tomcat-handler-16] DEBUG : Mapped to org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler@2662997a
+2024-09-29 23:15:10 [tomcat-handler-16] DEBUG : Processing transport request: GET https://192.168.0.13/ws
+2024-09-29 23:17:41 [SpringApplicationShutdownHook] DEBUG : clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-09-29 23:17:41 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-09-29 23:17:41 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-29 23:17:41 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5a372288]]
+2024-09-29 23:17:41 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5a372288]
+2024-09-29 23:17:41 [SpringApplicationShutdownHook] DEBUG : brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5a372288]
+2024-09-29 23:17:41 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-29 23:17:41 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-09-29 23:17:41 [SpringApplicationShutdownHook] DEBUG : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-09-29 23:17:41 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-29 23:17:41 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-29 23:17:41 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-09-29 23:17:44 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-29 23:17:44 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 21424 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-29 23:17:44 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-29 23:17:45 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-29 23:17:45 [main] INFO  : Finished Spring Data repository scanning in 79 ms. Found 4 JPA repository interfaces.
+2024-09-29 23:17:45 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-29 23:17:45 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-29 23:17:45 [main] INFO  : Starting service [Tomcat]
+2024-09-29 23:17:45 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-29 23:17:45 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-29 23:17:45 [main] INFO  : Root WebApplicationContext: initialization completed in 1100 ms
+2024-09-29 23:17:46 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-29 23:17:46 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-29 23:17:46 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-29 23:17:46 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-29 23:17:46 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-29 23:17:46 [main] INFO  : HikariPool-1 - Starting...
+2024-09-29 23:17:46 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2681185e
+2024-09-29 23:17:46 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-29 23:17:46 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-29 23:17:47 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-29 23:17:47 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-29 23:17:47 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-29 23:17:47 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-29 23:17:47 [main] DEBUG : Patterns [/ws/**] in 'stompWebSocketHandlerMapping'
+2024-09-29 23:17:47 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-29 23:17:47 [main] DEBUG : 
+	p.k.s.c.AmountTypeController:
+	
+2024-09-29 23:17:47 [main] DEBUG : 
+	p.k.s.c.CategoryController:
+	
+2024-09-29 23:17:47 [main] DEBUG : 
+	p.k.s.c.ExceptionController:
+	
+2024-09-29 23:17:47 [main] DEBUG : 
+	p.k.s.c.ShoppingItemController:
+	
+2024-09-29 23:17:47 [main] DEBUG : 
+	p.k.s.c.UserController:
+	
+2024-09-29 23:17:47 [main] DEBUG : 
+	p.k.s.c.UtilController:
+	
+2024-09-29 23:17:47 [main] DEBUG : 
+	p.k.s.c.w.WebSocketUtilController:
+	{[MESSAGE],[/synchronizeData]}: synchronizeData(Dto)
+2024-09-29 23:17:47 [main] DEBUG : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2024-09-29 23:17:48 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-29 23:17:48 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-29 23:17:48 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-29 23:17:48 [main] DEBUG : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-09-29 23:17:48 [main] DEBUG : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-09-29 23:17:48 [main] INFO  : Starting...
+2024-09-29 23:17:48 [main] DEBUG : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@223c1a82]
+2024-09-29 23:17:48 [main] DEBUG : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@223c1a82]
+2024-09-29 23:17:48 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@223c1a82]]
+2024-09-29 23:17:48 [main] INFO  : Started.
+2024-09-29 23:17:48 [main] DEBUG : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-09-29 23:17:48 [main] DEBUG : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-09-29 23:17:48 [main] INFO  : Started ShoppingListServiceApplication in 3.727 seconds (process running for 4.119)
+2024-09-29 23:17:48 [RMI TCP Connection(3)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-29 23:17:48 [RMI TCP Connection(3)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-29 23:17:48 [RMI TCP Connection(3)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-09-29 23:18:00 [tomcat-handler-4] DEBUG : Mapped to org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler@1fd226da
+2024-09-29 23:18:00 [tomcat-handler-4] DEBUG : Processing transport request: GET https://192.168.0.13/ws
+2024-09-29 23:18:48 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-29 23:30:31 [tomcat-handler-28] DEBUG : Mapped to org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler@1fd226da
+2024-09-29 23:30:31 [tomcat-handler-28] DEBUG : Processing transport request: GET https://192.168.0.13/ws
+2024-09-29 23:32:11 [SpringApplicationShutdownHook] DEBUG : clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-09-29 23:32:11 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-09-29 23:32:11 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-29 23:32:11 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@223c1a82]]
+2024-09-29 23:32:11 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@223c1a82]
+2024-09-29 23:32:11 [SpringApplicationShutdownHook] DEBUG : brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@223c1a82]
+2024-09-29 23:32:11 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-29 23:32:11 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-09-29 23:32:11 [SpringApplicationShutdownHook] DEBUG : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-09-29 23:32:11 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-29 23:32:11 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-29 23:32:11 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-09-29 23:32:14 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-09-29 23:32:14 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 11248 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-09-29 23:32:14 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-09-29 23:32:15 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-29 23:32:15 [main] INFO  : Finished Spring Data repository scanning in 92 ms. Found 4 JPA repository interfaces.
+2024-09-29 23:32:16 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-09-29 23:32:16 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-29 23:32:16 [main] INFO  : Starting service [Tomcat]
+2024-09-29 23:32:16 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-29 23:32:16 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-09-29 23:32:16 [main] INFO  : Root WebApplicationContext: initialization completed in 1279 ms
+2024-09-29 23:32:16 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-29 23:32:16 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-29 23:32:16 [main] INFO  : HHH000026: Second-level cache disabled
+2024-09-29 23:32:16 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-29 23:32:16 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-09-29 23:32:16 [main] INFO  : HikariPool-1 - Starting...
+2024-09-29 23:32:16 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c0d3715
+2024-09-29 23:32:16 [main] INFO  : HikariPool-1 - Start completed.
+2024-09-29 23:32:16 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-29 23:32:17 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-29 23:32:17 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-29 23:32:18 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-29 23:32:18 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-09-29 23:32:18 [main] DEBUG : Patterns [/ws] in 'stompWebSocketHandlerMapping'
+2024-09-29 23:32:18 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-29 23:32:18 [main] DEBUG : 
+	p.k.s.c.AmountTypeController:
+	
+2024-09-29 23:32:18 [main] DEBUG : 
+	p.k.s.c.CategoryController:
+	
+2024-09-29 23:32:18 [main] DEBUG : 
+	p.k.s.c.ExceptionController:
+	
+2024-09-29 23:32:18 [main] DEBUG : 
+	p.k.s.c.ShoppingItemController:
+	
+2024-09-29 23:32:18 [main] DEBUG : 
+	p.k.s.c.UserController:
+	
+2024-09-29 23:32:18 [main] DEBUG : 
+	p.k.s.c.UtilController:
+	
+2024-09-29 23:32:18 [main] DEBUG : 
+	p.k.s.c.w.WebSocketUtilController:
+	{[MESSAGE],[/synchronizeData]}: synchronizeData(Dto)
+2024-09-29 23:32:18 [main] DEBUG : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2024-09-29 23:32:18 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-09-29 23:32:18 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-09-29 23:32:18 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-09-29 23:32:18 [main] DEBUG : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-09-29 23:32:18 [main] DEBUG : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-09-29 23:32:18 [main] INFO  : Starting...
+2024-09-29 23:32:18 [main] DEBUG : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7065ae93]
+2024-09-29 23:32:18 [main] DEBUG : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7065ae93]
+2024-09-29 23:32:18 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7065ae93]]
+2024-09-29 23:32:18 [main] INFO  : Started.
+2024-09-29 23:32:18 [main] DEBUG : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-09-29 23:32:18 [main] DEBUG : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-09-29 23:32:18 [main] INFO  : Started ShoppingListServiceApplication in 4.31 seconds (process running for 4.794)
+2024-09-29 23:32:19 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-29 23:32:19 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-09-29 23:32:19 [RMI TCP Connection(1)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-09-29 23:32:28 [tomcat-handler-4] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@622be81d
+2024-09-29 23:32:28 [tomcat-handler-4] DEBUG : GET /ws
+2024-09-29 23:32:28 [tomcat-handler-4] DEBUG : New StandardWebSocketSession[id=d15c1188-1e29-daee-313c-4a1095864c03, uri=wss://192.168.0.13/ws]
+2024-09-29 23:32:36 [tomcat-handler-5] DEBUG : StandardWebSocketSession[id=d15c1188-1e29-daee-313c-4a1095864c03, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1000, reason=null]
+2024-09-29 23:32:36 [tomcat-handler-5] DEBUG : Clearing session d15c1188-1e29-daee-313c-4a1095864c03
+2024-09-29 23:32:36 [clientInboundChannel-2] DEBUG : Processing DISCONNECT session=d15c1188-1e29-daee-313c-4a1095864c03
+2024-09-29 23:32:36 [clientOutboundChannel-1] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=d15c1188-1e29-daee-313c-4a1095864c03}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=d15c1188-1e29-daee-313c-4a1095864c03}]
+2024-09-29 23:33:18 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 3], outboundChannel[pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-09-29 23:34:12 [tomcat-handler-14] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@622be81d
+2024-09-29 23:34:12 [tomcat-handler-14] DEBUG : GET /ws
+2024-09-29 23:34:12 [tomcat-handler-14] DEBUG : New StandardWebSocketSession[id=1c9618d7-d909-4f91-441d-99704fe4122f, uri=wss://192.168.0.13/ws]
+2024-09-29 23:34:21 [tomcat-handler-19] DEBUG : Transport error in StandardWebSocketSession[id=1c9618d7-d909-4f91-441d-99704fe4122f, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-09-29 23:34:21 [tomcat-handler-19] DEBUG : StandardWebSocketSession[id=1c9618d7-d909-4f91-441d-99704fe4122f, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=null]
+2024-09-29 23:34:21 [tomcat-handler-19] DEBUG : Clearing session 1c9618d7-d909-4f91-441d-99704fe4122f
+2024-09-29 23:34:21 [clientInboundChannel-5] DEBUG : Processing DISCONNECT session=1c9618d7-d909-4f91-441d-99704fe4122f
+2024-09-29 23:34:21 [clientOutboundChannel-2] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=1c9618d7-d909-4f91-441d-99704fe4122f}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=1c9618d7-d909-4f91-441d-99704fe4122f}]
+2024-09-29 23:35:31 [tomcat-handler-26] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@622be81d
+2024-09-29 23:35:31 [tomcat-handler-26] DEBUG : GET /ws
+2024-09-29 23:35:31 [tomcat-handler-26] DEBUG : New StandardWebSocketSession[id=4fae2cb8-e337-3e91-6373-f455739ea4d1, uri=wss://192.168.0.13/ws]
+2024-09-29 23:35:38 [tomcat-handler-33] DEBUG : Transport error in StandardWebSocketSession[id=4fae2cb8-e337-3e91-6373-f455739ea4d1, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-09-29 23:35:38 [tomcat-handler-33] DEBUG : StandardWebSocketSession[id=4fae2cb8-e337-3e91-6373-f455739ea4d1, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=null]
+2024-09-29 23:35:38 [tomcat-handler-33] DEBUG : Clearing session 4fae2cb8-e337-3e91-6373-f455739ea4d1
+2024-09-29 23:35:38 [clientInboundChannel-8] DEBUG : Processing DISCONNECT session=4fae2cb8-e337-3e91-6373-f455739ea4d1
+2024-09-29 23:35:38 [clientOutboundChannel-3] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=4fae2cb8-e337-3e91-6373-f455739ea4d1}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=4fae2cb8-e337-3e91-6373-f455739ea4d1}]
+2024-09-29 23:36:22 [SpringApplicationShutdownHook] DEBUG : clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-09-29 23:36:22 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-09-29 23:36:22 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-09-29 23:36:22 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7065ae93]]
+2024-09-29 23:36:22 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7065ae93]
+2024-09-29 23:36:22 [SpringApplicationShutdownHook] DEBUG : brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7065ae93]
+2024-09-29 23:36:22 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-09-29 23:36:22 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-09-29 23:36:22 [SpringApplicationShutdownHook] DEBUG : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-09-29 23:36:22 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-29 23:36:22 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-09-29 23:36:22 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.

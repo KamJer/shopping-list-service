@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
-import pl.kamjer.shoppinglistservice.model.dto.utilDto.ExceptionMessage;
 
 import javax.swing.text.html.Option;
 import java.security.Principal;
@@ -44,9 +43,9 @@ public class ShoppingListControllerAdvice {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
 
-    @ExceptionHandler(HttpMessageNotReadableException.class)
+    @ExceptionHandler({HttpMessageNotReadableException.class, IllegalAccessError.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseEntity<String> handleDeserializeException(HttpMessageNotReadableException ex, Principal principal) {
+    public ResponseEntity<String> handleDeserializeException(Exception ex, Principal principal) {
         String textForError = textForError(principal);
         log.error(textForError, ex);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());

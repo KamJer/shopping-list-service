@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Builder
 @Getter
-public class AddDto {
+public class AddDto extends Dto{
     private Long newId;
     private LocalDateTime savedTime;
 }

@@ -8,6 +8,8 @@ import pl.kamjer.shoppinglistservice.model.Category;
 import pl.kamjer.shoppinglistservice.model.User;
 import pl.kamjer.shoppinglistservice.model.dto.CategoryDto;
 import pl.kamjer.shoppinglistservice.model.dto.utilDto.AddDto;
+import pl.kamjer.shoppinglistservice.model.dto.utilDto.Dto;
+import pl.kamjer.shoppinglistservice.model.dto.utilDto.LocalDateTimeDto;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 import pl.kamjer.shoppinglistservice.repository.UserRepository;
 
@@ -33,7 +35,7 @@ public class CategoryService extends CustomService {
     }
 
     @Transactional
-    public LocalDateTime updateCategory(CategoryDto categoryDto) throws NoResourcesFoundException {
+    public LocalDateTimeDto updateCategory(CategoryDto categoryDto) throws NoResourcesFoundException {
         LocalDateTime savedTime = LocalDateTime.now();
         User user = updateSaveTimeInUser(savedTime);
         Category categoryToUpdate = categoryRepository
@@ -42,17 +44,27 @@ public class CategoryService extends CustomService {
         categoryToUpdate.setCategoryName(categoryDto.getCategoryName());
         categoryToUpdate.setDeleted(categoryDto.isDeleted());
         categoryToUpdate.setSavedTime(savedTime);
-        return savedTime;
+        return LocalDateTimeDto.builder().savedTime(savedTime).build();
     }
 
     @Transactional
-    public LocalDateTime deleteCategory(Long categoryId) throws NoResourcesFoundException {
+    public LocalDateTimeDto deleteCategory(Long categoryId) throws NoResourcesFoundException {
         LocalDateTime savedTime = LocalDateTime.now();
         User user = updateSaveTimeInUser(savedTime);
         Category categoryToDelete = categoryRepository
                 .findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(user.getUserName(), categoryId)
                 .orElseThrow(() -> new NoResourcesFoundException("No such Category found: " + user.getUserName() + ", " + categoryId));
         categoryToDelete.setDeleted(true);
-        return savedTime;
+        return LocalDateTimeDto.builder().savedTime(savedTime).build();
+    }
+
+    @Transactional
+    public Dto synchronizeCategoryDto(CategoryDto categoryDto) {
+        return switch (categoryDto.getModifyState()) {
+            case INSERT -> insertCategory(categoryDto);
+            case UPDATE -> updateCategory(categoryDto);
+            case DELETE -> deleteCategory(categoryDto.getCategoryId());
+            case NONE -> null;
+        };
     }
 }

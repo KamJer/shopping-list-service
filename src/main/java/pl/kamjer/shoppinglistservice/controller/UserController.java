@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.dto.UserDto;
+import pl.kamjer.shoppinglistservice.model.dto.utilDto.AllDto;
 import pl.kamjer.shoppinglistservice.service.UserService;
 
 import java.time.LocalDateTime;
@@ -30,17 +31,7 @@ public class UserController {
         return ResponseEntity.ok(userService.insertUser(user));
     }
 
-    @DeleteMapping()
-    public ResponseEntity<?> deleteUser() throws NoResourcesFoundException {
-        userService.deleteUser();
-        return ResponseEntity.ok().build();
-    }
-
-    @GetMapping
-    public ResponseEntity<LocalDateTime> getLastUpdate() throws NoResourcesFoundException {
-        return ResponseEntity.ok(userService.getLastUpdateTime());
-    }
-
+    @Deprecated
     @GetMapping(path = "/log/{userName}")
     public ResponseEntity<Boolean> logUser(@PathVariable String userName) {
         return ResponseEntity.ok(userService.logUser(userName));

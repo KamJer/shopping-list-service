@@ -1,0 +1,1332 @@
+2024-10-02 00:02:06 [MessageBroker-3] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 5, active threads = 1, queued tasks = 0, completed tasks = 4]
+2024-10-02 10:45:48 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-10-02 10:45:48 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 14064 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-10-02 10:45:48 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-10-02 10:45:48 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-02 10:45:48 [main] INFO  : Finished Spring Data repository scanning in 108 ms. Found 4 JPA repository interfaces.
+2024-10-02 10:45:49 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-10-02 10:45:49 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-02 10:45:49 [main] INFO  : Starting service [Tomcat]
+2024-10-02 10:45:49 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-10-02 10:45:49 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-10-02 10:45:49 [main] INFO  : Root WebApplicationContext: initialization completed in 1430 ms
+2024-10-02 10:45:49 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-02 10:45:49 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-02 10:45:49 [main] INFO  : HHH000026: Second-level cache disabled
+2024-10-02 10:45:49 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-02 10:45:49 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-10-02 10:45:49 [main] INFO  : HikariPool-1 - Starting...
+2024-10-02 10:45:50 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31f9f9b3
+2024-10-02 10:45:50 [main] INFO  : HikariPool-1 - Start completed.
+2024-10-02 10:45:50 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-02 10:45:50 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-02 10:45:51 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-02 10:45:51 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-02 10:45:51 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-10-02 10:45:51 [main] DEBUG : Patterns [/ws] in 'stompWebSocketHandlerMapping'
+2024-10-02 10:45:51 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-02 10:45:51 [main] DEBUG : 
+	p.k.s.c.AmountTypeController:
+	
+2024-10-02 10:45:51 [main] DEBUG : 
+	p.k.s.c.CategoryController:
+	
+2024-10-02 10:45:51 [main] DEBUG : 
+	p.k.s.c.ExceptionController:
+	
+2024-10-02 10:45:51 [main] DEBUG : 
+	p.k.s.c.ShoppingItemController:
+	
+2024-10-02 10:45:51 [main] DEBUG : 
+	p.k.s.c.UserController:
+	
+2024-10-02 10:45:51 [main] DEBUG : 
+	p.k.s.c.UtilController:
+	
+2024-10-02 10:45:51 [main] DEBUG : 
+	p.k.s.c.w.WebSocketUtilController:
+	{[MESSAGE],[/synchronizeData]}: synchronizeData(Dto)
+2024-10-02 10:45:51 [main] DEBUG : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2024-10-02 10:45:52 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-02 10:45:52 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-10-02 10:45:52 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-10-02 10:45:52 [main] DEBUG : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-10-02 10:45:52 [main] DEBUG : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-10-02 10:45:52 [main] INFO  : Starting...
+2024-10-02 10:45:52 [main] DEBUG : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@78fb8a66]
+2024-10-02 10:45:52 [main] DEBUG : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@78fb8a66]
+2024-10-02 10:45:52 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@78fb8a66]]
+2024-10-02 10:45:52 [main] INFO  : Started.
+2024-10-02 10:45:52 [main] DEBUG : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-10-02 10:45:52 [main] DEBUG : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-10-02 10:45:52 [main] INFO  : Started ShoppingListServiceApplication in 4.649 seconds (process running for 7.639)
+2024-10-02 10:46:52 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-02 11:16:52 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2024-10-02 11:46:52 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2024-10-02 12:16:52 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+2024-10-02 12:46:52 [MessageBroker-3] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 5, active threads = 1, queued tasks = 0, completed tasks = 4]
+2024-10-02 13:06:23 [tomcat-handler-7] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-02 13:06:23 [tomcat-handler-7] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-10-02 13:06:23 [tomcat-handler-7] INFO  : Completed initialization in 2 ms
+2024-10-02 13:06:23 [tomcat-handler-15] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .<init>(Toast.java:407)
+	at .<init>(Toast.java:121)
+	at .makeText(Toast.java:286)
+	at .makeText(Toast.java:276)
+	at .lambda$reInitializeWithUser$1(ShoppingServiceRepository.java:92)
+	at .action(D8$$SyntheticClass:0)
+	at .lambda$onFailure$8(WebSocketConnectorListener.java:65)
+	at .accept(D8$$SyntheticClass:0)
+	at .ifPresent(Optional.java:155)
+	at .onFailure(WebSocketConnectorListener.java:65)
+	at .failWebSocket(RealWebSocket.java:570)
+	at .onResponse(RealWebSocket.java:199)
+	at .execute(RealCall.java:174)
+	at .run(NamedRunnable.java:32)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-10-02 13:06:23 [tomcat-handler-16] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .rejectedExecution(ThreadPoolExecutor.java:2086)
+	at .reject(ThreadPoolExecutor.java:848)
+	at .execute(ThreadPoolExecutor.java:1394)
+	at .synchronizeData(ShoppingRepository.java:245)
+	at .synchronizeData(CustomViewModel.java:171)
+	at .onResponse(CustomViewModel.java:50)
+	at .lambda$onResponse$0$retrofit2-DefaultCallAdapterFactory$ExecutorCallbackCall$1(DefaultCallAdapterFactory.java:89)
+	at .run(D8$$SyntheticClass:0)
+	at .handleCallback(Handler.java:883)
+	at .dispatchMessage(Handler.java:100)
+	at .loop(Looper.java:214)
+	at .main(ActivityThread.java:7356)
+	at .invoke(Native Method)
+	at .run(RuntimeInit.java:492)
+	at .main(ZygoteInit.java:930)
+2024-10-02 13:11:59 [tomcat-handler-56] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 13:11:59 [tomcat-handler-56] DEBUG : GET /ws
+2024-10-02 13:11:59 [tomcat-handler-56] DEBUG : New StandardWebSocketSession[id=c4cb818f-e208-a3d4-7790-434939f29af9, uri=wss://192.168.0.13/ws]
+2024-10-02 13:16:52 [MessageBroker-2] INFO  : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 0, completed tasks = 5]
+2024-10-02 13:29:45 [tomcat-handler-61] DEBUG : Transport error in StandardWebSocketSession[id=c4cb818f-e208-a3d4-7790-434939f29af9, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 13:29:45 [tomcat-handler-61] DEBUG : StandardWebSocketSession[id=c4cb818f-e208-a3d4-7790-434939f29af9, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=null]
+2024-10-02 13:29:45 [tomcat-handler-61] DEBUG : Clearing session c4cb818f-e208-a3d4-7790-434939f29af9
+2024-10-02 13:29:45 [clientInboundChannel-2] DEBUG : Processing DISCONNECT session=c4cb818f-e208-a3d4-7790-434939f29af9
+2024-10-02 13:29:45 [clientOutboundChannel-1] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=c4cb818f-e208-a3d4-7790-434939f29af9}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=c4cb818f-e208-a3d4-7790-434939f29af9}]
+2024-10-02 13:46:52 [MessageBroker-4] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 7, active threads = 1, queued tasks = 0, completed tasks = 6]
+2024-10-02 14:16:52 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 0, completed tasks = 7]
+2024-10-02 14:46:53 [MessageBroker-5] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 9, active threads = 1, queued tasks = 0, completed tasks = 8]
+2024-10-02 15:16:53 [MessageBroker-5] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 10, active threads = 1, queued tasks = 0, completed tasks = 9]
+2024-10-02 15:46:53 [MessageBroker-6] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 11, active threads = 1, queued tasks = 0, completed tasks = 10]
+2024-10-02 16:16:53 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 0, completed tasks = 11]
+2024-10-02 16:46:53 [MessageBroker-7] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 13, active threads = 1, queued tasks = 0, completed tasks = 12]
+2024-10-02 17:16:53 [MessageBroker-4] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 14, active threads = 1, queued tasks = 0, completed tasks = 13]
+2024-10-02 17:46:53 [MessageBroker-8] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 15, active threads = 1, queued tasks = 0, completed tasks = 14]
+2024-10-02 21:24:05 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h32m51s712ms303µs400ns).
+2024-10-02 21:44:00 [tomcat-handler-76] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 21:44:00 [tomcat-handler-76] DEBUG : GET /ws
+2024-10-02 21:44:00 [tomcat-handler-76] DEBUG : New StandardWebSocketSession[id=08111374-5a40-1486-5e47-2537149411df, uri=wss://192.168.0.13/ws]
+2024-10-02 21:45:46 [tomcat-handler-81] DEBUG : Transport error in StandardWebSocketSession[id=08111374-5a40-1486-5e47-2537149411df, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 21:45:46 [tomcat-handler-81] DEBUG : StandardWebSocketSession[id=08111374-5a40-1486-5e47-2537149411df, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=null]
+2024-10-02 21:45:46 [tomcat-handler-81] DEBUG : Clearing session 08111374-5a40-1486-5e47-2537149411df
+2024-10-02 21:45:46 [clientInboundChannel-5] DEBUG : Processing DISCONNECT session=08111374-5a40-1486-5e47-2537149411df
+2024-10-02 21:45:46 [clientOutboundChannel-2] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=08111374-5a40-1486-5e47-2537149411df}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=08111374-5a40-1486-5e47-2537149411df}]
+2024-10-02 21:46:30 [tomcat-handler-92] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 21:46:30 [tomcat-handler-92] DEBUG : GET /ws
+2024-10-02 21:46:30 [tomcat-handler-92] DEBUG : New StandardWebSocketSession[id=66a69f7a-510d-1023-a5f3-9ce96caa1d96, uri=wss://192.168.0.13/ws]
+2024-10-02 21:47:02 [tomcat-handler-95] DEBUG : Transport error in StandardWebSocketSession[id=66a69f7a-510d-1023-a5f3-9ce96caa1d96, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 21:47:02 [tomcat-handler-95] DEBUG : StandardWebSocketSession[id=66a69f7a-510d-1023-a5f3-9ce96caa1d96, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=null]
+2024-10-02 21:47:02 [tomcat-handler-95] DEBUG : Clearing session 66a69f7a-510d-1023-a5f3-9ce96caa1d96
+2024-10-02 21:47:02 [clientInboundChannel-8] DEBUG : Processing DISCONNECT session=66a69f7a-510d-1023-a5f3-9ce96caa1d96
+2024-10-02 21:47:02 [clientOutboundChannel-3] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=66a69f7a-510d-1023-a5f3-9ce96caa1d96}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=66a69f7a-510d-1023-a5f3-9ce96caa1d96}]
+2024-10-02 21:47:40 [tomcat-handler-104] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 21:47:40 [tomcat-handler-104] DEBUG : GET /ws
+2024-10-02 21:47:40 [tomcat-handler-104] DEBUG : New StandardWebSocketSession[id=b372062c-e276-eb36-a11c-159774bc21c3, uri=wss://192.168.0.13/ws]
+2024-10-02 21:48:58 [tomcat-handler-109] DEBUG : Transport error in StandardWebSocketSession[id=b372062c-e276-eb36-a11c-159774bc21c3, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 21:48:58 [tomcat-handler-109] DEBUG : StandardWebSocketSession[id=b372062c-e276-eb36-a11c-159774bc21c3, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=null]
+2024-10-02 21:48:58 [tomcat-handler-109] DEBUG : Clearing session b372062c-e276-eb36-a11c-159774bc21c3
+2024-10-02 21:48:58 [clientInboundChannel-11] DEBUG : Processing DISCONNECT session=b372062c-e276-eb36-a11c-159774bc21c3
+2024-10-02 21:48:58 [clientOutboundChannel-4] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=b372062c-e276-eb36-a11c-159774bc21c3}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=b372062c-e276-eb36-a11c-159774bc21c3}]
+2024-10-02 21:49:00 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 4 total, 0 closed abnormally (0 connect failure, 0 send limit, 4 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 12], outboundChannel[pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 4], sockJsScheduler[pool size = 16, active threads = 1, queued tasks = 0, completed tasks = 15]
+2024-10-02 21:49:24 [tomcat-handler-115] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 21:49:24 [tomcat-handler-115] DEBUG : GET /ws
+2024-10-02 21:49:24 [tomcat-handler-115] DEBUG : New StandardWebSocketSession[id=decd974d-fd74-bf7e-1a9f-022585587ef3, uri=wss://192.168.0.13/ws]
+2024-10-02 21:49:44 [tomcat-handler-123] DEBUG : Transport error in StandardWebSocketSession[id=decd974d-fd74-bf7e-1a9f-022585587ef3, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 21:49:44 [tomcat-handler-123] DEBUG : StandardWebSocketSession[id=decd974d-fd74-bf7e-1a9f-022585587ef3, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=null]
+2024-10-02 21:49:44 [tomcat-handler-123] DEBUG : Clearing session decd974d-fd74-bf7e-1a9f-022585587ef3
+2024-10-02 21:49:44 [clientInboundChannel-14] DEBUG : Processing DISCONNECT session=decd974d-fd74-bf7e-1a9f-022585587ef3
+2024-10-02 21:49:44 [clientOutboundChannel-5] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=decd974d-fd74-bf7e-1a9f-022585587ef3}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=decd974d-fd74-bf7e-1a9f-022585587ef3}]
+2024-10-02 21:49:53 [tomcat-handler-134] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 21:49:53 [tomcat-handler-134] DEBUG : GET /ws
+2024-10-02 21:49:53 [tomcat-handler-134] DEBUG : New StandardWebSocketSession[id=30920f37-5962-1513-2c6a-a279315940bd, uri=wss://192.168.0.13/ws]
+2024-10-02 21:49:59 [tomcat-handler-137] DEBUG : Transport error in StandardWebSocketSession[id=30920f37-5962-1513-2c6a-a279315940bd, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 21:49:59 [tomcat-handler-137] DEBUG : StandardWebSocketSession[id=30920f37-5962-1513-2c6a-a279315940bd, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=null]
+2024-10-02 21:49:59 [tomcat-handler-137] DEBUG : Clearing session 30920f37-5962-1513-2c6a-a279315940bd
+2024-10-02 21:49:59 [clientInboundChannel-17] DEBUG : Processing DISCONNECT session=30920f37-5962-1513-2c6a-a279315940bd
+2024-10-02 21:49:59 [clientOutboundChannel-6] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=30920f37-5962-1513-2c6a-a279315940bd}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=30920f37-5962-1513-2c6a-a279315940bd}]
+2024-10-02 21:51:03 [tomcat-handler-146] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 21:51:03 [tomcat-handler-146] DEBUG : GET /ws
+2024-10-02 21:51:03 [tomcat-handler-146] DEBUG : New StandardWebSocketSession[id=d67d48e8-a919-942c-72a6-dbc598e7c5b0, uri=wss://192.168.0.13/ws]
+2024-10-02 21:51:41 [tomcat-handler-152] DEBUG : Transport error in StandardWebSocketSession[id=d67d48e8-a919-942c-72a6-dbc598e7c5b0, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 21:51:41 [tomcat-handler-152] DEBUG : StandardWebSocketSession[id=d67d48e8-a919-942c-72a6-dbc598e7c5b0, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=null]
+2024-10-02 21:51:41 [tomcat-handler-152] DEBUG : Clearing session d67d48e8-a919-942c-72a6-dbc598e7c5b0
+2024-10-02 21:51:41 [clientInboundChannel-20] DEBUG : Processing DISCONNECT session=d67d48e8-a919-942c-72a6-dbc598e7c5b0
+2024-10-02 21:51:41 [clientOutboundChannel-7] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=d67d48e8-a919-942c-72a6-dbc598e7c5b0}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=d67d48e8-a919-942c-72a6-dbc598e7c5b0}]
+2024-10-02 21:51:56 [tomcat-handler-158] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 21:51:56 [tomcat-handler-158] DEBUG : GET /ws
+2024-10-02 21:51:56 [tomcat-handler-158] DEBUG : New StandardWebSocketSession[id=9ca8052a-0d32-45a2-60ab-facff9ce0013, uri=wss://192.168.0.13/ws]
+2024-10-02 21:52:34 [tomcat-handler-167] DEBUG : Transport error in StandardWebSocketSession[id=9ca8052a-0d32-45a2-60ab-facff9ce0013, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 21:52:34 [tomcat-handler-167] DEBUG : StandardWebSocketSession[id=9ca8052a-0d32-45a2-60ab-facff9ce0013, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=null]
+2024-10-02 21:52:34 [tomcat-handler-167] DEBUG : Clearing session 9ca8052a-0d32-45a2-60ab-facff9ce0013
+2024-10-02 21:52:34 [clientInboundChannel-23] DEBUG : Processing DISCONNECT session=9ca8052a-0d32-45a2-60ab-facff9ce0013
+2024-10-02 21:52:34 [clientOutboundChannel-8] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=9ca8052a-0d32-45a2-60ab-facff9ce0013}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=9ca8052a-0d32-45a2-60ab-facff9ce0013}]
+2024-10-02 21:52:45 [tomcat-handler-176] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 21:52:45 [tomcat-handler-176] DEBUG : GET /ws
+2024-10-02 21:52:45 [tomcat-handler-176] DEBUG : New StandardWebSocketSession[id=fb11b7d7-cb0e-8d4d-f066-5bf48bf55102, uri=wss://192.168.0.13/ws]
+2024-10-02 21:52:45 [tomcat-handler-180] DEBUG : Transport error in StandardWebSocketSession[id=fb11b7d7-cb0e-8d4d-f066-5bf48bf55102, uri=wss://192.168.0.13/ws]
+java.io.IOException: Unable to unwrap data, invalid status [CLOSED]
+	at org.apache.tomcat.util.net.SecureNioChannel.read(SecureNioChannel.java:672)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1291)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 21:52:45 [tomcat-handler-180] DEBUG : StandardWebSocketSession[id=fb11b7d7-cb0e-8d4d-f066-5bf48bf55102, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=Unable to unwrap data, invalid status [CLOSED]]
+2024-10-02 21:52:45 [tomcat-handler-180] DEBUG : Clearing session fb11b7d7-cb0e-8d4d-f066-5bf48bf55102
+2024-10-02 21:52:45 [clientInboundChannel-26] DEBUG : Processing DISCONNECT session=fb11b7d7-cb0e-8d4d-f066-5bf48bf55102
+2024-10-02 21:52:45 [clientOutboundChannel-9] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=fb11b7d7-cb0e-8d4d-f066-5bf48bf55102}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=fb11b7d7-cb0e-8d4d-f066-5bf48bf55102}]
+2024-10-02 21:52:45 [tomcat-handler-181] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .assertMainThread(LiveData.java:502)
+	at .setValue(LiveData.java:306)
+	at .setValue(MutableLiveData.java:50)
+	at .lambda$new$2(WebSocket.java:39)
+	at .$r8$lambda$Opl2Ek7JGAwyjkxO2a_LlVEvHnQ(:0)
+	at .action(D8$$SyntheticClass:0)
+	at .lambda$onFailure$7(WebSocketConnectorListener.java:64)
+	at .accept(D8$$SyntheticClass:0)
+	at .ifPresent(Optional.java:155)
+	at .onFailure(WebSocketConnectorListener.java:64)
+	at .failWebSocket(RealWebSocket.java:570)
+	at .onResponse(RealWebSocket.java:211)
+	at .execute(RealCall.java:174)
+	at .run(NamedRunnable.java:32)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2024-10-02 21:52:45 [tomcat-handler-188] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .rejectedExecution(ThreadPoolExecutor.java:2086)
+	at .reject(ThreadPoolExecutor.java:848)
+	at .execute(ThreadPoolExecutor.java:1394)
+	at .synchronizeData(ShoppingRepository.java:245)
+	at .synchronizeData(CustomViewModel.java:171)
+	at .onResponse(CustomViewModel.java:50)
+	at .lambda$onResponse$0$retrofit2-DefaultCallAdapterFactory$ExecutorCallbackCall$1(DefaultCallAdapterFactory.java:89)
+	at .run(D8$$SyntheticClass:0)
+	at .handleCallback(Handler.java:883)
+	at .dispatchMessage(Handler.java:100)
+	at .loop(Looper.java:214)
+	at .main(ActivityThread.java:7356)
+	at .invoke(Native Method)
+	at .run(RuntimeInit.java:492)
+	at .main(ZygoteInit.java:930)
+2024-10-02 21:54:43 [tomcat-handler-199] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 21:54:43 [tomcat-handler-199] DEBUG : GET /ws
+2024-10-02 21:54:43 [tomcat-handler-199] DEBUG : New StandardWebSocketSession[id=558beafa-3eb6-671a-801b-60798d0e63ab, uri=wss://192.168.0.13/ws]
+2024-10-02 21:55:26 [tomcat-handler-205] DEBUG : Transport error in StandardWebSocketSession[id=558beafa-3eb6-671a-801b-60798d0e63ab, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 21:55:26 [tomcat-handler-205] DEBUG : StandardWebSocketSession[id=558beafa-3eb6-671a-801b-60798d0e63ab, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=null]
+2024-10-02 21:55:26 [tomcat-handler-205] DEBUG : Clearing session 558beafa-3eb6-671a-801b-60798d0e63ab
+2024-10-02 21:55:26 [clientInboundChannel-29] DEBUG : Processing DISCONNECT session=558beafa-3eb6-671a-801b-60798d0e63ab
+2024-10-02 21:55:26 [clientOutboundChannel-10] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=558beafa-3eb6-671a-801b-60798d0e63ab}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=558beafa-3eb6-671a-801b-60798d0e63ab}]
+2024-10-02 21:55:43 [tomcat-handler-214] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 21:55:43 [tomcat-handler-214] DEBUG : GET /ws
+2024-10-02 21:55:43 [tomcat-handler-214] DEBUG : New StandardWebSocketSession[id=7e826a64-0ea4-270d-fa97-7b529cd9207c, uri=wss://192.168.0.13/ws]
+2024-10-02 21:55:55 [tomcat-handler-219] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=72, last=true] in session 7e826a64-0ea4-270d-fa97-7b529cd9207c. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 21:55:55 [tomcat-handler-219] DEBUG : Closing StandardWebSocketSession[id=7e826a64-0ea4-270d-fa97-7b529cd9207c, uri=wss://192.168.0.13/ws]
+2024-10-02 21:55:55 [tomcat-handler-219] DEBUG : StandardWebSocketSession[id=7e826a64-0ea4-270d-fa97-7b529cd9207c, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 21:55:55 [tomcat-handler-219] DEBUG : Clearing session 7e826a64-0ea4-270d-fa97-7b529cd9207c
+2024-10-02 21:55:55 [clientInboundChannel-32] DEBUG : Processing DISCONNECT session=7e826a64-0ea4-270d-fa97-7b529cd9207c
+2024-10-02 21:55:55 [clientOutboundChannel-11] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=7e826a64-0ea4-270d-fa97-7b529cd9207c}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=7e826a64-0ea4-270d-fa97-7b529cd9207c}]
+2024-10-02 22:01:05 [tomcat-handler-227] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:01:05 [tomcat-handler-227] DEBUG : GET /ws
+2024-10-02 22:01:05 [tomcat-handler-227] DEBUG : New StandardWebSocketSession[id=7e70206f-a10a-13c1-354e-e44044834952, uri=wss://192.168.0.13/ws]
+2024-10-02 22:01:08 [tomcat-handler-234] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=73, last=true] in session 7e70206f-a10a-13c1-354e-e44044834952. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:01:08 [tomcat-handler-234] DEBUG : Closing StandardWebSocketSession[id=7e70206f-a10a-13c1-354e-e44044834952, uri=wss://192.168.0.13/ws]
+2024-10-02 22:01:08 [tomcat-handler-234] DEBUG : StandardWebSocketSession[id=7e70206f-a10a-13c1-354e-e44044834952, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 22:01:08 [tomcat-handler-234] DEBUG : Clearing session 7e70206f-a10a-13c1-354e-e44044834952
+2024-10-02 22:01:08 [clientInboundChannel-35] DEBUG : Processing DISCONNECT session=7e70206f-a10a-13c1-354e-e44044834952
+2024-10-02 22:01:08 [clientOutboundChannel-12] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=7e70206f-a10a-13c1-354e-e44044834952}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=7e70206f-a10a-13c1-354e-e44044834952}]
+2024-10-02 22:02:53 [tomcat-handler-246] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:02:53 [tomcat-handler-246] DEBUG : GET /ws
+2024-10-02 22:02:53 [tomcat-handler-246] DEBUG : New StandardWebSocketSession[id=94f0e81d-d037-0f58-9aeb-f7c9d8fa27ce, uri=wss://192.168.0.13/ws]
+2024-10-02 22:08:13 [tomcat-handler-249] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=73, last=true] in session 94f0e81d-d037-0f58-9aeb-f7c9d8fa27ce. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:08:13 [tomcat-handler-249] DEBUG : Closing StandardWebSocketSession[id=94f0e81d-d037-0f58-9aeb-f7c9d8fa27ce, uri=wss://192.168.0.13/ws]
+2024-10-02 22:08:13 [tomcat-handler-249] DEBUG : StandardWebSocketSession[id=94f0e81d-d037-0f58-9aeb-f7c9d8fa27ce, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 22:08:13 [tomcat-handler-249] DEBUG : Clearing session 94f0e81d-d037-0f58-9aeb-f7c9d8fa27ce
+2024-10-02 22:08:13 [clientInboundChannel-38] DEBUG : Processing DISCONNECT session=94f0e81d-d037-0f58-9aeb-f7c9d8fa27ce
+2024-10-02 22:08:13 [clientOutboundChannel-13] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=94f0e81d-d037-0f58-9aeb-f7c9d8fa27ce}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=94f0e81d-d037-0f58-9aeb-f7c9d8fa27ce}]
+2024-10-02 22:09:51 [tomcat-handler-258] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:09:51 [tomcat-handler-258] DEBUG : GET /ws
+2024-10-02 22:09:51 [tomcat-handler-258] DEBUG : New StandardWebSocketSession[id=7ec3e39b-dd10-51fa-0a58-ad0185514ea2, uri=wss://192.168.0.13/ws]
+2024-10-02 22:10:43 [tomcat-handler-263] DEBUG : Transport error in StandardWebSocketSession[id=7ec3e39b-dd10-51fa-0a58-ad0185514ea2, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:10:43 [tomcat-handler-263] DEBUG : StandardWebSocketSession[id=7ec3e39b-dd10-51fa-0a58-ad0185514ea2, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1006, reason=null]
+2024-10-02 22:10:43 [tomcat-handler-263] DEBUG : Clearing session 7ec3e39b-dd10-51fa-0a58-ad0185514ea2
+2024-10-02 22:10:43 [clientInboundChannel-41] DEBUG : Processing DISCONNECT session=7ec3e39b-dd10-51fa-0a58-ad0185514ea2
+2024-10-02 22:10:43 [clientOutboundChannel-14] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=7ec3e39b-dd10-51fa-0a58-ad0185514ea2}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=7ec3e39b-dd10-51fa-0a58-ad0185514ea2}]
+2024-10-02 22:10:49 [tomcat-handler-272] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:10:49 [tomcat-handler-272] DEBUG : GET /ws
+2024-10-02 22:10:49 [tomcat-handler-272] DEBUG : New StandardWebSocketSession[id=f742aa9e-a5d9-0489-ff3e-ed14a576aeab, uri=wss://192.168.0.13/ws]
+2024-10-02 22:10:57 [tomcat-handler-277] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=85, last=true] in session f742aa9e-a5d9-0489-ff3e-ed14a576aeab. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:10:57 [tomcat-handler-277] DEBUG : Closing StandardWebSocketSession[id=f742aa9e-a5d9-0489-ff3e-ed14a576aeab, uri=wss://192.168.0.13/ws]
+2024-10-02 22:10:57 [tomcat-handler-277] DEBUG : StandardWebSocketSession[id=f742aa9e-a5d9-0489-ff3e-ed14a576aeab, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 22:10:57 [tomcat-handler-277] DEBUG : Clearing session f742aa9e-a5d9-0489-ff3e-ed14a576aeab
+2024-10-02 22:10:57 [clientInboundChannel-44] DEBUG : Processing DISCONNECT session=f742aa9e-a5d9-0489-ff3e-ed14a576aeab
+2024-10-02 22:10:57 [clientOutboundChannel-15] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=f742aa9e-a5d9-0489-ff3e-ed14a576aeab}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=f742aa9e-a5d9-0489-ff3e-ed14a576aeab}]
+2024-10-02 22:14:31 [tomcat-handler-287] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:14:31 [tomcat-handler-287] DEBUG : GET /ws
+2024-10-02 22:14:31 [tomcat-handler-287] DEBUG : New StandardWebSocketSession[id=81097b57-11bb-4e27-f086-87a250e59123, uri=wss://192.168.0.13/ws]
+2024-10-02 22:16:51 [tomcat-handler-293] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=85, last=true] in session 81097b57-11bb-4e27-f086-87a250e59123. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:16:51 [tomcat-handler-293] DEBUG : Closing StandardWebSocketSession[id=81097b57-11bb-4e27-f086-87a250e59123, uri=wss://192.168.0.13/ws]
+2024-10-02 22:16:51 [tomcat-handler-293] DEBUG : StandardWebSocketSession[id=81097b57-11bb-4e27-f086-87a250e59123, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 22:16:51 [tomcat-handler-293] DEBUG : Clearing session 81097b57-11bb-4e27-f086-87a250e59123
+2024-10-02 22:16:51 [clientInboundChannel-47] DEBUG : Processing DISCONNECT session=81097b57-11bb-4e27-f086-87a250e59123
+2024-10-02 22:16:51 [clientOutboundChannel-16] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=81097b57-11bb-4e27-f086-87a250e59123}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=81097b57-11bb-4e27-f086-87a250e59123}]
+2024-10-02 22:19:01 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 16 total, 0 closed abnormally (0 connect failure, 0 send limit, 11 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 48], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 16], sockJsScheduler[pool size = 16, active threads = 1, queued tasks = 0, completed tasks = 16]
+2024-10-02 22:19:05 [tomcat-handler-302] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:19:05 [tomcat-handler-302] DEBUG : GET /ws
+2024-10-02 22:19:05 [tomcat-handler-302] DEBUG : New StandardWebSocketSession[id=64d2119c-d2bc-288d-fa5a-febb3917e67b, uri=wss://192.168.0.13/ws]
+2024-10-02 22:19:22 [tomcat-handler-307] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=85, last=true] in session 64d2119c-d2bc-288d-fa5a-febb3917e67b. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:19:22 [tomcat-handler-307] DEBUG : Closing StandardWebSocketSession[id=64d2119c-d2bc-288d-fa5a-febb3917e67b, uri=wss://192.168.0.13/ws]
+2024-10-02 22:19:22 [tomcat-handler-307] DEBUG : StandardWebSocketSession[id=64d2119c-d2bc-288d-fa5a-febb3917e67b, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 22:19:22 [tomcat-handler-307] DEBUG : Clearing session 64d2119c-d2bc-288d-fa5a-febb3917e67b
+2024-10-02 22:19:22 [clientInboundChannel-50] DEBUG : Processing DISCONNECT session=64d2119c-d2bc-288d-fa5a-febb3917e67b
+2024-10-02 22:19:22 [clientOutboundChannel-17] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=64d2119c-d2bc-288d-fa5a-febb3917e67b}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=64d2119c-d2bc-288d-fa5a-febb3917e67b}]
+2024-10-02 22:22:21 [tomcat-handler-317] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:22:21 [tomcat-handler-317] DEBUG : GET /ws
+2024-10-02 22:22:21 [tomcat-handler-317] DEBUG : New StandardWebSocketSession[id=f5d5ce15-4c26-ba7e-bcaa-c52fb6d05ca7, uri=wss://192.168.0.13/ws]
+2024-10-02 22:22:39 [tomcat-handler-322] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=85, last=true] in session f5d5ce15-4c26-ba7e-bcaa-c52fb6d05ca7. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:22:39 [tomcat-handler-322] DEBUG : Closing StandardWebSocketSession[id=f5d5ce15-4c26-ba7e-bcaa-c52fb6d05ca7, uri=wss://192.168.0.13/ws]
+2024-10-02 22:22:39 [tomcat-handler-322] DEBUG : StandardWebSocketSession[id=f5d5ce15-4c26-ba7e-bcaa-c52fb6d05ca7, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 22:22:39 [tomcat-handler-322] DEBUG : Clearing session f5d5ce15-4c26-ba7e-bcaa-c52fb6d05ca7
+2024-10-02 22:22:39 [clientInboundChannel-53] DEBUG : Processing DISCONNECT session=f5d5ce15-4c26-ba7e-bcaa-c52fb6d05ca7
+2024-10-02 22:22:39 [clientOutboundChannel-18] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=f5d5ce15-4c26-ba7e-bcaa-c52fb6d05ca7}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=f5d5ce15-4c26-ba7e-bcaa-c52fb6d05ca7}]
+2024-10-02 22:24:39 [tomcat-handler-334] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:24:39 [tomcat-handler-334] DEBUG : GET /ws
+2024-10-02 22:24:39 [tomcat-handler-334] DEBUG : New StandardWebSocketSession[id=1b264176-d27a-0f3c-8244-20ff209a3c3f, uri=wss://192.168.0.13/ws]
+2024-10-02 22:24:48 [tomcat-handler-337] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=85, last=true] in session 1b264176-d27a-0f3c-8244-20ff209a3c3f. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:24:48 [tomcat-handler-337] DEBUG : Closing StandardWebSocketSession[id=1b264176-d27a-0f3c-8244-20ff209a3c3f, uri=wss://192.168.0.13/ws]
+2024-10-02 22:24:48 [tomcat-handler-337] DEBUG : StandardWebSocketSession[id=1b264176-d27a-0f3c-8244-20ff209a3c3f, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 22:24:48 [tomcat-handler-337] DEBUG : Clearing session 1b264176-d27a-0f3c-8244-20ff209a3c3f
+2024-10-02 22:24:48 [clientInboundChannel-56] DEBUG : Processing DISCONNECT session=1b264176-d27a-0f3c-8244-20ff209a3c3f
+2024-10-02 22:24:48 [clientOutboundChannel-19] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=1b264176-d27a-0f3c-8244-20ff209a3c3f}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=1b264176-d27a-0f3c-8244-20ff209a3c3f}]
+2024-10-02 22:25:29 [tomcat-handler-345] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:25:29 [tomcat-handler-345] DEBUG : GET /ws
+2024-10-02 22:25:29 [tomcat-handler-345] DEBUG : New StandardWebSocketSession[id=0fcf5b8f-1485-d9b7-a4ed-b1785dfaae49, uri=wss://192.168.0.13/ws]
+2024-10-02 22:25:33 [tomcat-handler-352] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=86, last=true] in session 0fcf5b8f-1485-d9b7-a4ed-b1785dfaae49. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:25:33 [tomcat-handler-352] DEBUG : Closing StandardWebSocketSession[id=0fcf5b8f-1485-d9b7-a4ed-b1785dfaae49, uri=wss://192.168.0.13/ws]
+2024-10-02 22:25:33 [tomcat-handler-352] DEBUG : StandardWebSocketSession[id=0fcf5b8f-1485-d9b7-a4ed-b1785dfaae49, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 22:25:33 [tomcat-handler-352] DEBUG : Clearing session 0fcf5b8f-1485-d9b7-a4ed-b1785dfaae49
+2024-10-02 22:25:33 [clientInboundChannel-59] DEBUG : Processing DISCONNECT session=0fcf5b8f-1485-d9b7-a4ed-b1785dfaae49
+2024-10-02 22:25:33 [clientOutboundChannel-20] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=0fcf5b8f-1485-d9b7-a4ed-b1785dfaae49}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=0fcf5b8f-1485-d9b7-a4ed-b1785dfaae49}]
+2024-10-02 22:26:04 [tomcat-handler-354] DEBUG : Transport error in StandardWebSocketSession[id=0fcf5b8f-1485-d9b7-a4ed-b1785dfaae49, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:26:07 [tomcat-handler-365] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:26:07 [tomcat-handler-365] DEBUG : GET /ws
+2024-10-02 22:26:07 [tomcat-handler-365] DEBUG : New StandardWebSocketSession[id=62c0d563-d525-4d03-301d-70e0ba461f4a, uri=wss://192.168.0.13/ws]
+2024-10-02 22:26:53 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s872ms935µs500ns).
+2024-10-02 22:27:13 [tomcat-handler-369] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=86, last=true] in session 62c0d563-d525-4d03-301d-70e0ba461f4a. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:27:13 [tomcat-handler-369] DEBUG : Closing StandardWebSocketSession[id=62c0d563-d525-4d03-301d-70e0ba461f4a, uri=wss://192.168.0.13/ws]
+2024-10-02 22:27:13 [tomcat-handler-369] DEBUG : StandardWebSocketSession[id=62c0d563-d525-4d03-301d-70e0ba461f4a, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 22:27:13 [tomcat-handler-369] DEBUG : Clearing session 62c0d563-d525-4d03-301d-70e0ba461f4a
+2024-10-02 22:27:13 [clientInboundChannel-62] DEBUG : Processing DISCONNECT session=62c0d563-d525-4d03-301d-70e0ba461f4a
+2024-10-02 22:27:13 [clientOutboundChannel-21] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=62c0d563-d525-4d03-301d-70e0ba461f4a}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=62c0d563-d525-4d03-301d-70e0ba461f4a}]
+2024-10-02 22:27:27 [tomcat-handler-370] DEBUG : Transport error in StandardWebSocketSession[id=62c0d563-d525-4d03-301d-70e0ba461f4a, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:27:31 [tomcat-handler-377] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:27:31 [tomcat-handler-377] DEBUG : GET /ws
+2024-10-02 22:27:31 [tomcat-handler-377] DEBUG : New StandardWebSocketSession[id=44c2b0bd-e0d9-a4b8-c63c-113cfd1b16cb, uri=wss://192.168.0.13/ws]
+2024-10-02 22:27:47 [tomcat-handler-384] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=86, last=true] in session 44c2b0bd-e0d9-a4b8-c63c-113cfd1b16cb. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:27:47 [tomcat-handler-384] DEBUG : Closing StandardWebSocketSession[id=44c2b0bd-e0d9-a4b8-c63c-113cfd1b16cb, uri=wss://192.168.0.13/ws]
+2024-10-02 22:27:47 [tomcat-handler-384] DEBUG : StandardWebSocketSession[id=44c2b0bd-e0d9-a4b8-c63c-113cfd1b16cb, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 22:27:47 [tomcat-handler-384] DEBUG : Clearing session 44c2b0bd-e0d9-a4b8-c63c-113cfd1b16cb
+2024-10-02 22:27:47 [clientInboundChannel-65] DEBUG : Processing DISCONNECT session=44c2b0bd-e0d9-a4b8-c63c-113cfd1b16cb
+2024-10-02 22:27:47 [clientOutboundChannel-22] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=44c2b0bd-e0d9-a4b8-c63c-113cfd1b16cb}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=44c2b0bd-e0d9-a4b8-c63c-113cfd1b16cb}]
+2024-10-02 22:28:32 [tomcat-handler-394] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:28:32 [tomcat-handler-394] DEBUG : GET /ws
+2024-10-02 22:28:32 [tomcat-handler-394] DEBUG : New StandardWebSocketSession[id=02fbe305-3c2b-6090-c393-b452bad42a13, uri=wss://192.168.0.13/ws]
+2024-10-02 22:28:46 [tomcat-handler-398] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=86, last=true] in session 02fbe305-3c2b-6090-c393-b452bad42a13. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:28:46 [tomcat-handler-398] DEBUG : Closing StandardWebSocketSession[id=02fbe305-3c2b-6090-c393-b452bad42a13, uri=wss://192.168.0.13/ws]
+2024-10-02 22:28:46 [tomcat-handler-398] DEBUG : StandardWebSocketSession[id=02fbe305-3c2b-6090-c393-b452bad42a13, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 22:28:46 [tomcat-handler-398] DEBUG : Clearing session 02fbe305-3c2b-6090-c393-b452bad42a13
+2024-10-02 22:28:46 [clientInboundChannel-68] DEBUG : Processing DISCONNECT session=02fbe305-3c2b-6090-c393-b452bad42a13
+2024-10-02 22:28:46 [clientOutboundChannel-23] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=02fbe305-3c2b-6090-c393-b452bad42a13}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=02fbe305-3c2b-6090-c393-b452bad42a13}]
+2024-10-02 22:29:32 [tomcat-handler-405] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@61aaec51
+2024-10-02 22:29:32 [tomcat-handler-405] DEBUG : GET /ws
+2024-10-02 22:29:32 [tomcat-handler-405] DEBUG : New StandardWebSocketSession[id=d0c8ea2c-9e81-6c76-a240-7b1de5906526, uri=wss://192.168.0.13/ws]
+2024-10-02 22:39:11 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m48s180ms176µs200ns).
+2024-10-02 22:39:11 [tomcat-handler-412] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=86, last=true] in session d0c8ea2c-9e81-6c76-a240-7b1de5906526. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 22:39:11 [tomcat-handler-412] DEBUG : Closing StandardWebSocketSession[id=d0c8ea2c-9e81-6c76-a240-7b1de5906526, uri=wss://192.168.0.13/ws]
+2024-10-02 22:39:11 [tomcat-handler-412] DEBUG : StandardWebSocketSession[id=d0c8ea2c-9e81-6c76-a240-7b1de5906526, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 22:39:11 [tomcat-handler-412] DEBUG : Clearing session d0c8ea2c-9e81-6c76-a240-7b1de5906526
+2024-10-02 22:39:11 [clientInboundChannel-71] DEBUG : Processing DISCONNECT session=d0c8ea2c-9e81-6c76-a240-7b1de5906526
+2024-10-02 22:39:11 [clientOutboundChannel-24] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=d0c8ea2c-9e81-6c76-a240-7b1de5906526}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=d0c8ea2c-9e81-6c76-a240-7b1de5906526}]
+2024-10-02 22:39:11 [tomcat-handler-411] WARN  : Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.io.IOException: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście]
+2024-10-02 22:39:13 [SpringApplicationShutdownHook] DEBUG : clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-10-02 22:39:13 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-10-02 22:39:13 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-10-02 22:39:13 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@78fb8a66]]
+2024-10-02 22:39:13 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@78fb8a66]
+2024-10-02 22:39:13 [SpringApplicationShutdownHook] DEBUG : brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@78fb8a66]
+2024-10-02 22:39:13 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-10-02 22:39:13 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-10-02 22:39:13 [SpringApplicationShutdownHook] DEBUG : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-10-02 22:39:13 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-02 22:39:13 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-10-02 22:39:13 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-10-02 23:02:30 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-10-02 23:02:30 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 19864 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-10-02 23:02:30 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-10-02 23:02:30 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-02 23:02:30 [main] INFO  : Finished Spring Data repository scanning in 100 ms. Found 4 JPA repository interfaces.
+2024-10-02 23:02:31 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-10-02 23:02:31 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-02 23:02:31 [main] INFO  : Starting service [Tomcat]
+2024-10-02 23:02:31 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-10-02 23:02:31 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-10-02 23:02:31 [main] INFO  : Root WebApplicationContext: initialization completed in 1298 ms
+2024-10-02 23:02:31 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-02 23:02:31 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-02 23:02:31 [main] INFO  : HHH000026: Second-level cache disabled
+2024-10-02 23:02:31 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-02 23:02:31 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-10-02 23:02:31 [main] INFO  : HikariPool-1 - Starting...
+2024-10-02 23:02:32 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15c3585
+2024-10-02 23:02:32 [main] INFO  : HikariPool-1 - Start completed.
+2024-10-02 23:02:32 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-02 23:02:32 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-02 23:02:33 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-02 23:02:33 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-02 23:02:33 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-10-02 23:02:33 [main] DEBUG : Patterns [/ws] in 'stompWebSocketHandlerMapping'
+2024-10-02 23:02:33 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-02 23:02:33 [main] DEBUG : 
+	p.k.s.c.AmountTypeController:
+	
+2024-10-02 23:02:33 [main] DEBUG : 
+	p.k.s.c.CategoryController:
+	
+2024-10-02 23:02:33 [main] DEBUG : 
+	p.k.s.c.ExceptionController:
+	
+2024-10-02 23:02:33 [main] DEBUG : 
+	p.k.s.c.ShoppingItemController:
+	
+2024-10-02 23:02:33 [main] DEBUG : 
+	p.k.s.c.UserController:
+	
+2024-10-02 23:02:33 [main] DEBUG : 
+	p.k.s.c.UtilController:
+	
+2024-10-02 23:02:33 [main] DEBUG : 
+	p.k.s.c.w.WebSocketUtilController:
+	{[MESSAGE],[/synchronizeData]}: synchronizeData(Dto)
+2024-10-02 23:02:33 [main] DEBUG : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2024-10-02 23:02:34 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-02 23:02:34 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-10-02 23:02:34 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-10-02 23:02:34 [main] DEBUG : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-10-02 23:02:34 [main] DEBUG : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-10-02 23:02:34 [main] INFO  : Starting...
+2024-10-02 23:02:34 [main] DEBUG : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7a845f91]
+2024-10-02 23:02:34 [main] DEBUG : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7a845f91]
+2024-10-02 23:02:34 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7a845f91]]
+2024-10-02 23:02:34 [main] INFO  : Started.
+2024-10-02 23:02:34 [main] DEBUG : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-10-02 23:02:34 [main] DEBUG : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-10-02 23:02:34 [main] INFO  : Started ShoppingListServiceApplication in 4.467 seconds (process running for 5.447)
+2024-10-02 23:02:34 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-02 23:02:34 [RMI TCP Connection(1)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-10-02 23:02:34 [RMI TCP Connection(1)-192.168.0.13] INFO  : Completed initialization in 1 ms
+2024-10-02 23:03:25 [tomcat-handler-8] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@3237522b
+2024-10-02 23:03:25 [tomcat-handler-8] DEBUG : GET /ws
+2024-10-02 23:03:25 [tomcat-handler-8] DEBUG : New StandardWebSocketSession[id=55653755-ef0d-93c3-e588-6e5d78bc449b, uri=wss://192.168.0.13/ws]
+2024-10-02 23:04:26 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m24s456ms133µs400ns).
+2024-10-02 23:04:26 [MessageBroker-1] INFO  : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-02 23:04:26 [tomcat-handler-8] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=86, last=true] in session 55653755-ef0d-93c3-e588-6e5d78bc449b. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 23:04:26 [tomcat-handler-8] DEBUG : Closing StandardWebSocketSession[id=55653755-ef0d-93c3-e588-6e5d78bc449b, uri=wss://192.168.0.13/ws]
+2024-10-02 23:04:26 [tomcat-handler-8] DEBUG : StandardWebSocketSession[id=55653755-ef0d-93c3-e588-6e5d78bc449b, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 23:04:26 [tomcat-handler-8] DEBUG : Clearing session 55653755-ef0d-93c3-e588-6e5d78bc449b
+2024-10-02 23:04:26 [clientInboundChannel-2] DEBUG : Processing DISCONNECT session=55653755-ef0d-93c3-e588-6e5d78bc449b
+2024-10-02 23:04:26 [tomcat-handler-8] DEBUG : Transport error in StandardWebSocketSession[id=55653755-ef0d-93c3-e588-6e5d78bc449b, uri=wss://192.168.0.13/ws]
+java.io.IOException: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:46)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:340)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:306)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:269)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:425)
+	at org.apache.tomcat.util.net.SecureNioChannel.read(SecureNioChannel.java:602)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1291)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 23:04:26 [clientOutboundChannel-1] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=55653755-ef0d-93c3-e588-6e5d78bc449b}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=55653755-ef0d-93c3-e588-6e5d78bc449b}]
+2024-10-02 23:04:28 [tomcat-handler-18] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@3237522b
+2024-10-02 23:04:28 [tomcat-handler-18] DEBUG : GET /ws
+2024-10-02 23:04:28 [tomcat-handler-18] DEBUG : New StandardWebSocketSession[id=8424a3ec-38c3-a9b5-4ec0-2f279b2508e5, uri=wss://192.168.0.13/ws]
+2024-10-02 23:05:48 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s180ms399µs100ns).
+2024-10-02 23:08:37 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m45s191ms871µs100ns).
+2024-10-02 23:08:38 [tomcat-handler-22] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=86, last=true] in session 8424a3ec-38c3-a9b5-4ec0-2f279b2508e5. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 23:08:38 [tomcat-handler-22] DEBUG : Closing StandardWebSocketSession[id=8424a3ec-38c3-a9b5-4ec0-2f279b2508e5, uri=wss://192.168.0.13/ws]
+2024-10-02 23:08:38 [tomcat-handler-22] DEBUG : StandardWebSocketSession[id=8424a3ec-38c3-a9b5-4ec0-2f279b2508e5, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 23:08:38 [tomcat-handler-22] DEBUG : Clearing session 8424a3ec-38c3-a9b5-4ec0-2f279b2508e5
+2024-10-02 23:08:38 [clientInboundChannel-5] DEBUG : Processing DISCONNECT session=8424a3ec-38c3-a9b5-4ec0-2f279b2508e5
+2024-10-02 23:08:38 [tomcat-handler-22] DEBUG : Transport error in StandardWebSocketSession[id=8424a3ec-38c3-a9b5-4ec0-2f279b2508e5, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 23:08:38 [clientOutboundChannel-2] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=8424a3ec-38c3-a9b5-4ec0-2f279b2508e5}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=8424a3ec-38c3-a9b5-4ec0-2f279b2508e5}]
+2024-10-02 23:08:38 [tomcat-handler-33] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@3237522b
+2024-10-02 23:08:38 [tomcat-handler-33] DEBUG : GET /ws
+2024-10-02 23:08:38 [tomcat-handler-33] DEBUG : New StandardWebSocketSession[id=b34ba163-54b1-e4d0-b3b8-2335e15bd7e0, uri=wss://192.168.0.13/ws]
+2024-10-02 23:09:08 [tomcat-handler-35] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=86, last=true] in session b34ba163-54b1-e4d0-b3b8-2335e15bd7e0. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 23:09:08 [tomcat-handler-35] DEBUG : Closing StandardWebSocketSession[id=b34ba163-54b1-e4d0-b3b8-2335e15bd7e0, uri=wss://192.168.0.13/ws]
+2024-10-02 23:09:08 [tomcat-handler-35] DEBUG : StandardWebSocketSession[id=b34ba163-54b1-e4d0-b3b8-2335e15bd7e0, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 23:09:08 [tomcat-handler-35] DEBUG : Clearing session b34ba163-54b1-e4d0-b3b8-2335e15bd7e0
+2024-10-02 23:09:08 [clientInboundChannel-8] DEBUG : Processing DISCONNECT session=b34ba163-54b1-e4d0-b3b8-2335e15bd7e0
+2024-10-02 23:09:08 [clientOutboundChannel-3] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=b34ba163-54b1-e4d0-b3b8-2335e15bd7e0}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=b34ba163-54b1-e4d0-b3b8-2335e15bd7e0}]
+2024-10-02 23:34:26 [MessageBroker-1] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 3 total, 0 closed abnormally (0 connect failure, 0 send limit, 2 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2024-10-02 23:48:05 [tomcat-handler-43] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@3237522b
+2024-10-02 23:48:05 [tomcat-handler-43] DEBUG : GET /ws
+2024-10-02 23:48:05 [tomcat-handler-43] DEBUG : New StandardWebSocketSession[id=e34efab5-e60f-f9bf-4293-53853f047ee3, uri=wss://192.168.0.13/ws]
+2024-10-02 23:54:47 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m37s597ms804µs800ns).
+2024-10-02 23:54:47 [tomcat-handler-49] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=86, last=true] in session e34efab5-e60f-f9bf-4293-53853f047ee3. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 23:54:47 [tomcat-handler-49] DEBUG : Closing StandardWebSocketSession[id=e34efab5-e60f-f9bf-4293-53853f047ee3, uri=wss://192.168.0.13/ws]
+2024-10-02 23:54:47 [tomcat-handler-49] DEBUG : StandardWebSocketSession[id=e34efab5-e60f-f9bf-4293-53853f047ee3, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 23:54:47 [tomcat-handler-49] DEBUG : Clearing session e34efab5-e60f-f9bf-4293-53853f047ee3
+2024-10-02 23:54:47 [tomcat-handler-49] DEBUG : Transport error in StandardWebSocketSession[id=e34efab5-e60f-f9bf-4293-53853f047ee3, uri=wss://192.168.0.13/ws]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1244)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1188)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 23:54:47 [clientInboundChannel-11] DEBUG : Processing DISCONNECT session=e34efab5-e60f-f9bf-4293-53853f047ee3
+2024-10-02 23:54:47 [clientOutboundChannel-4] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=e34efab5-e60f-f9bf-4293-53853f047ee3}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=e34efab5-e60f-f9bf-4293-53853f047ee3}]
+2024-10-02 23:54:56 [tomcat-handler-63] DEBUG : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@3237522b
+2024-10-02 23:54:56 [tomcat-handler-63] DEBUG : GET /ws
+2024-10-02 23:54:56 [tomcat-handler-63] DEBUG : New StandardWebSocketSession[id=660adef1-3b9a-d6ec-915c-5d37667524c3, uri=wss://192.168.0.13/ws]
+2024-10-02 23:59:33 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m14s179ms451µs900ns).
+2024-10-02 23:59:33 [tomcat-handler-65] ERROR : Failed to parse TextMessage payload=[SEND
+desti..], byteCount=86, last=true] in session 660adef1-3b9a-d6ec-915c-5d37667524c3. Sending STOMP ERROR to client.
+org.springframework.messaging.simp.stomp.StompConversionException: Illegal header: ' SEND'. A header must be of the form <name>:[<value>].
+	at org.springframework.messaging.simp.stomp.StompDecoder.readHeaders(StompDecoder.java:239)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decodeMessage(StompDecoder.java:146)
+	at org.springframework.messaging.simp.stomp.StompDecoder.decode(StompDecoder.java:114)
+	at org.springframework.messaging.simp.stomp.BufferingStompDecoder.decode(BufferingStompDecoder.java:114)
+	at org.springframework.web.socket.messaging.StompSubProtocolHandler.handleMessageFromClient(StompSubProtocolHandler.java:279)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.handleMessage(SubProtocolWebSocketHandler.java:356)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:390)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:484)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:284)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-10-02 23:59:33 [tomcat-handler-65] DEBUG : Closing StandardWebSocketSession[id=660adef1-3b9a-d6ec-915c-5d37667524c3, uri=wss://192.168.0.13/ws]
+2024-10-02 23:59:33 [tomcat-handler-65] DEBUG : StandardWebSocketSession[id=660adef1-3b9a-d6ec-915c-5d37667524c3, uri=wss://192.168.0.13/ws] closed with CloseStatus[code=1002, reason=null]
+2024-10-02 23:59:33 [tomcat-handler-65] DEBUG : Clearing session 660adef1-3b9a-d6ec-915c-5d37667524c3
+2024-10-02 23:59:33 [clientInboundChannel-14] DEBUG : Processing DISCONNECT session=660adef1-3b9a-d6ec-915c-5d37667524c3
+2024-10-02 23:59:33 [clientOutboundChannel-5] DEBUG : No session for GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT_ACK, simpDisconnectMessage=GenericMessage [payload=byte[0], headers={simpMessageType=DISCONNECT, stompCommand=DISCONNECT, simpSessionAttributes={org.springframework.messaging.simp.SimpAttributes.COMPLETED=true}, simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=660adef1-3b9a-d6ec-915c-5d37667524c3}], simpUser=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_ADMIN]], simpSessionId=660adef1-3b9a-d6ec-915c-5d37667524c3}]
+2024-10-02 23:59:33 [SpringApplicationShutdownHook] DEBUG : clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-10-02 23:59:33 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-10-02 23:59:33 [SpringApplicationShutdownHook] INFO  : Stopping...
+2024-10-02 23:59:33 [SpringApplicationShutdownHook] INFO  : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7a845f91]]
+2024-10-02 23:59:33 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7a845f91]
+2024-10-02 23:59:33 [SpringApplicationShutdownHook] DEBUG : brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7a845f91]
+2024-10-02 23:59:33 [SpringApplicationShutdownHook] INFO  : Stopped.
+2024-10-02 23:59:33 [SpringApplicationShutdownHook] DEBUG : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-10-02 23:59:33 [SpringApplicationShutdownHook] DEBUG : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-10-02 23:59:33 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-02 23:59:33 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-10-02 23:59:33 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-10-02 23:59:35 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-10-02 23:59:35 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 22768 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2024-10-02 23:59:35 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-10-02 23:59:35 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-02 23:59:35 [main] INFO  : Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
+2024-10-02 23:59:36 [main] INFO  : Tomcat initialized with port 443 (https)
+2024-10-02 23:59:36 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-02 23:59:36 [main] INFO  : Starting service [Tomcat]
+2024-10-02 23:59:36 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-10-02 23:59:36 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-10-02 23:59:36 [main] INFO  : Root WebApplicationContext: initialization completed in 1167 ms
+2024-10-02 23:59:36 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-02 23:59:36 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-02 23:59:36 [main] INFO  : HHH000026: Second-level cache disabled
+2024-10-02 23:59:36 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-02 23:59:36 [main] WARN  : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2024-10-02 23:59:36 [main] INFO  : HikariPool-1 - Starting...
+2024-10-02 23:59:36 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13ae87a6
+2024-10-02 23:59:36 [main] INFO  : HikariPool-1 - Start completed.
+2024-10-02 23:59:36 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-02 23:59:37 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-02 23:59:37 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-02 23:59:38 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-02 23:59:38 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2024-10-02 23:59:38 [main] DEBUG : Patterns [/ws] in 'stompWebSocketHandlerMapping'
+2024-10-02 23:59:38 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-02 23:59:38 [main] DEBUG : 
+	p.k.s.c.AmountTypeController:
+	
+2024-10-02 23:59:38 [main] DEBUG : 
+	p.k.s.c.CategoryController:
+	
+2024-10-02 23:59:38 [main] DEBUG : 
+	p.k.s.c.ExceptionController:
+	
+2024-10-02 23:59:38 [main] DEBUG : 
+	p.k.s.c.ShoppingItemController:
+	
+2024-10-02 23:59:38 [main] DEBUG : 
+	p.k.s.c.UserController:
+	
+2024-10-02 23:59:38 [main] DEBUG : 
+	p.k.s.c.UtilController:
+	
+2024-10-02 23:59:38 [main] DEBUG : 
+	p.k.s.c.w.WebSocketUtilController:
+	{[MESSAGE],[/synchronizeData]}: synchronizeData(Dto)
+2024-10-02 23:59:38 [main] DEBUG : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2024-10-02 23:59:38 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-0.0.0.0-443"]
+2024-10-02 23:59:38 [main] INFO  : Connector [https-jsse-nio-0.0.0.0-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2024-10-02 23:59:38 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2024-10-02 23:59:38 [main] DEBUG : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-10-02 23:59:38 [main] DEBUG : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-10-02 23:59:38 [main] INFO  : Starting...
+2024-10-02 23:59:38 [main] DEBUG : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2095e085]
+2024-10-02 23:59:38 [main] DEBUG : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2095e085]
+2024-10-02 23:59:38 [main] INFO  : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2095e085]]
+2024-10-02 23:59:38 [main] INFO  : Started.
+2024-10-02 23:59:38 [main] DEBUG : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-10-02 23:59:38 [main] DEBUG : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-10-02 23:59:38 [main] INFO  : Started ShoppingListServiceApplication in 3.988 seconds (process running for 4.445)
+2024-10-02 23:59:39 [RMI TCP Connection(3)-192.168.0.13] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-02 23:59:39 [RMI TCP Connection(3)-192.168.0.13] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-10-02 23:59:39 [RMI TCP Connection(3)-192.168.0.13] INFO  : Completed initialization in 1 ms

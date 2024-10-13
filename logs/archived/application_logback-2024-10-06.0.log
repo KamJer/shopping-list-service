@@ -1,0 +1,724 @@
+2024-10-06 00:00:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:00:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:00:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:00:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:01:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:01:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:01:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:01:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:02:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:02:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:02:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:02:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:03:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:03:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:03:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:03:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:04:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:04:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:04:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:04:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:05:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:05:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:05:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:05:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:06:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:06:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:06:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:06:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:07:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:07:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:07:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:07:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:08:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:08:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:08:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:08:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:09:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:09:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:09:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:09:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:10:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:10:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:10:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:10:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:11:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:11:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:11:26 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@47786772: (connection has passed maxLifetime)
+2024-10-06 00:11:26 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:11:26 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:11:26 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:11:26 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@372bf8a4
+2024-10-06 00:11:26 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:11:34 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3332e67b: (connection has passed maxLifetime)
+2024-10-06 00:11:34 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:11:34 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:11:34 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:11:34 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@693dd80a
+2024-10-06 00:11:34 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:11:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:11:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:11:51 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@30c33dbe: (connection has passed maxLifetime)
+2024-10-06 00:11:51 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:11:51 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:11:51 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:11:51 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11e6e3a2
+2024-10-06 00:11:52 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:11:57 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@447ef6b9: (connection has passed maxLifetime)
+2024-10-06 00:11:57 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:11:57 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:11:57 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:11:57 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5262ab19
+2024-10-06 00:11:57 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:12:01 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@68e3ffe9: (connection has passed maxLifetime)
+2024-10-06 00:12:01 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:12:01 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:12:01 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:12:01 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26bdaf7d
+2024-10-06 00:12:01 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:12:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:12:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:12:08 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@70293a27: (connection has passed maxLifetime)
+2024-10-06 00:12:08 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:12:08 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:12:08 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:12:08 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f33b902
+2024-10-06 00:12:08 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:12:11 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1c064708: (connection has passed maxLifetime)
+2024-10-06 00:12:11 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:12:11 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:12:11 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:12:11 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ba1b89f
+2024-10-06 00:12:11 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:12:15 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5aee7755: (connection has passed maxLifetime)
+2024-10-06 00:12:15 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:12:15 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:12:15 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:12:15 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c907662
+2024-10-06 00:12:15 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:12:22 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@60b3f022: (connection has passed maxLifetime)
+2024-10-06 00:12:22 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:12:22 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:12:22 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:12:22 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33c1f1f2
+2024-10-06 00:12:22 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:12:30 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4980aab1: (connection has passed maxLifetime)
+2024-10-06 00:12:30 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:12:30 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:12:30 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:12:30 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fba043
+2024-10-06 00:12:30 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:12:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:12:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:13:06 [MessageBroker-5] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 12], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 9, active threads = 1, queued tasks = 0, completed tasks = 8]
+2024-10-06 00:13:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:13:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:13:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:13:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:14:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:14:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:14:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:14:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:15:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:15:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:15:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:15:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:16:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:16:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:16:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:16:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:17:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:17:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:17:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:17:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:18:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:18:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:18:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:18:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:19:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:19:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:19:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:19:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:20:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:20:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:20:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:20:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:21:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:21:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:21:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:21:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:22:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:22:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:22:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:22:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:23:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:23:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:23:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:23:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:24:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:24:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:24:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:24:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:25:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:25:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:25:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:25:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:26:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:26:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:26:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:26:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:27:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:27:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:27:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:27:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:28:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:28:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:28:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:28:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:29:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:29:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:29:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:29:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:30:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:30:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:30:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:30:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:31:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:31:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:31:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:31:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:32:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:32:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:32:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:32:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:33:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:33:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:33:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:33:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:34:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:34:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:34:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:34:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:35:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:35:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:35:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:35:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:36:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:36:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:36:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:36:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:37:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:37:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:37:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:37:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:38:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:38:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:38:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:38:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:39:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:39:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:39:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:39:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:40:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:40:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:40:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:40:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:41:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:41:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:41:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:41:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:42:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:42:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:42:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:42:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:43:06 [MessageBroker-3] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 12], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 10, active threads = 1, queued tasks = 0, completed tasks = 9]
+2024-10-06 00:43:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:43:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:43:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:43:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:44:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:44:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:44:22 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@11e6e3a2: (connection has passed maxLifetime)
+2024-10-06 00:44:22 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:44:22 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:44:22 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:44:22 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51b29fd
+2024-10-06 00:44:22 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:44:29 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@372bf8a4: (connection has passed maxLifetime)
+2024-10-06 00:44:29 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:44:29 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:44:29 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:44:29 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6eb59b55
+2024-10-06 00:44:30 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:44:36 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@693dd80a: (connection has passed maxLifetime)
+2024-10-06 00:44:36 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:44:36 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:44:36 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:44:36 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d6c3096
+2024-10-06 00:44:36 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:44:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:44:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:44:43 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5262ab19: (connection has passed maxLifetime)
+2024-10-06 00:44:43 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:44:43 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:44:43 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:44:43 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d0cec0a
+2024-10-06 00:44:43 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:44:48 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5c907662: (connection has passed maxLifetime)
+2024-10-06 00:44:48 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:44:48 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:44:48 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:44:48 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c129d9b
+2024-10-06 00:44:48 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:44:59 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@33c1f1f2: (connection has passed maxLifetime)
+2024-10-06 00:44:59 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:44:59 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:44:59 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:44:59 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71452f5a
+2024-10-06 00:44:59 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:45:01 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@26bdaf7d: (connection has passed maxLifetime)
+2024-10-06 00:45:01 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:45:01 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:45:01 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:45:01 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b92bf9
+2024-10-06 00:45:01 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:45:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:45:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:45:10 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6ba1b89f: (connection has passed maxLifetime)
+2024-10-06 00:45:10 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:45:10 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:45:10 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:45:10 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c15d786
+2024-10-06 00:45:10 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:45:26 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1f33b902: (connection has passed maxLifetime)
+2024-10-06 00:45:26 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:45:26 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:45:26 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:45:26 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@497c25b
+2024-10-06 00:45:26 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:45:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:45:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:45:42 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4fba043: (connection has passed maxLifetime)
+2024-10-06 00:45:42 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:45:42 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 00:45:42 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 00:45:42 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6faac250
+2024-10-06 00:45:42 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:46:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:46:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:46:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:46:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:47:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:47:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:47:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:47:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:48:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:48:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:48:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:48:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:49:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:49:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:49:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:49:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:50:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:50:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:50:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:50:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:51:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:51:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:51:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:51:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:52:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:52:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:52:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:52:38 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:53:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:53:08 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:53:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:53:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:54:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:54:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:54:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:54:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:55:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:55:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:55:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:55:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:56:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:56:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:56:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:56:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:57:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:57:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:57:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:57:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:58:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:58:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:58:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:58:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:59:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:59:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 00:59:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 00:59:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:00:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:00:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:00:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:00:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:01:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:01:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:01:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:01:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:02:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:02:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:02:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:02:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:03:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:03:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:03:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:03:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:04:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:04:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:04:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:04:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:05:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:05:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:05:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:05:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:06:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:06:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:06:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:06:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:07:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:07:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:07:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:07:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:08:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:08:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:08:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:08:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:09:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:09:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:09:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:09:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:10:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:10:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:10:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:10:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:11:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:11:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:11:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:11:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:12:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:12:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:12:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:12:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:13:06 [MessageBroker-6] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 12], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 11, active threads = 1, queued tasks = 0, completed tasks = 10]
+2024-10-06 01:13:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:13:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:13:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:13:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:14:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:14:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:14:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:14:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:15:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:15:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:15:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:15:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:16:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:16:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:16:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:16:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:17:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:17:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:17:17 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3d6c3096: (connection has passed maxLifetime)
+2024-10-06 01:17:17 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:17 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:17 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:17:17 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5aa51edd
+2024-10-06 01:17:17 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:17:25 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@51b29fd: (connection has passed maxLifetime)
+2024-10-06 01:17:25 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:25 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:25 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:17:25 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3499a72c
+2024-10-06 01:17:25 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:17:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:17:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:17:47 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6eb59b55: (connection has passed maxLifetime)
+2024-10-06 01:17:47 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:47 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:47 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:17:47 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6843d856
+2024-10-06 01:17:47 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:17:49 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1c15d786: (connection has passed maxLifetime)
+2024-10-06 01:17:49 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:49 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:49 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:17:49 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c265024
+2024-10-06 01:17:49 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:17:51 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5d0cec0a: (connection has passed maxLifetime)
+2024-10-06 01:17:51 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:51 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:51 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:17:51 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@383e5fa8
+2024-10-06 01:17:51 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:17:58 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5b92bf9: (connection has passed maxLifetime)
+2024-10-06 01:17:58 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:58 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:58 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:17:58 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56b0b75
+2024-10-06 01:17:58 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:17:58 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@71452f5a: (connection has passed maxLifetime)
+2024-10-06 01:17:58 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:58 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:58 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:17:58 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71e35351
+2024-10-06 01:17:58 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:17:59 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4c129d9b: (connection has passed maxLifetime)
+2024-10-06 01:17:59 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:59 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:17:59 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:17:59 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b901b1
+2024-10-06 01:17:59 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:18:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:18:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:18:32 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@497c25b: (connection has passed maxLifetime)
+2024-10-06 01:18:32 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:18:32 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:18:32 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:18:32 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b5dc647
+2024-10-06 01:18:32 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:18:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:18:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:18:47 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6faac250: (connection has passed maxLifetime)
+2024-10-06 01:18:47 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:18:47 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:18:47 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:18:47 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71a3223c
+2024-10-06 01:18:47 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:19:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:19:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:19:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:19:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:20:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:20:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:20:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:20:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:21:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:21:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:21:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:21:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:22:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:22:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:22:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:22:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:23:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:23:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:23:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:23:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:24:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:24:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:24:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:24:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:25:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:25:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:25:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:25:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:26:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:26:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:26:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:26:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:27:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:27:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:27:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:27:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:28:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:28:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:28:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:28:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:29:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:29:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:29:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:29:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:30:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:30:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:30:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:30:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:31:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:31:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:31:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:31:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:32:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:32:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:32:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:32:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:33:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:33:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:33:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:33:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:34:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:34:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:34:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:34:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:35:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:35:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:35:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:35:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:36:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:36:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:36:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:36:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:37:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:37:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:37:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:37:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:38:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:38:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:38:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:38:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:39:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:39:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:39:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:39:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:40:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:40:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:40:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:40:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:41:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:41:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:41:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:41:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:42:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:42:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:42:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:42:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:43:06 [MessageBroker-2] INFO  : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 12], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 0, completed tasks = 11]
+2024-10-06 01:43:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:43:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:43:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:43:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:44:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:44:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:44:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:44:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:45:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:45:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:45:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:45:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:46:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:46:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:46:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:46:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:47:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:47:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:47:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:47:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:48:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:48:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:48:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:48:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:49:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:49:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:49:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:49:39 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:50:00 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5aa51edd: (connection has passed maxLifetime)
+2024-10-06 01:50:00 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:00 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:00 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:50:00 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d06b8bb
+2024-10-06 01:50:00 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:50:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:50:09 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:50:20 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3499a72c: (connection has passed maxLifetime)
+2024-10-06 01:50:20 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:20 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:20 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:50:20 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ac25612
+2024-10-06 01:50:20 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:50:25 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1c265024: (connection has passed maxLifetime)
+2024-10-06 01:50:25 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:25 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:25 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:50:25 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ea55d3f
+2024-10-06 01:50:25 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:50:26 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6843d856: (connection has passed maxLifetime)
+2024-10-06 01:50:26 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:26 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:26 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:50:26 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50b493e1
+2024-10-06 01:50:26 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:50:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:50:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:50:47 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@56b0b75: (connection has passed maxLifetime)
+2024-10-06 01:50:47 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:47 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:47 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:50:47 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12d24969
+2024-10-06 01:50:47 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:50:48 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6b901b1: (connection has passed maxLifetime)
+2024-10-06 01:50:48 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:48 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:48 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:50:48 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@664da559
+2024-10-06 01:50:48 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:50:53 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@383e5fa8: (connection has passed maxLifetime)
+2024-10-06 01:50:53 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:53 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:50:53 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:50:53 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31209a56
+2024-10-06 01:50:53 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:51:06 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@71e35351: (connection has passed maxLifetime)
+2024-10-06 01:51:06 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:51:06 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:51:06 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:51:06 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14842e93
+2024-10-06 01:51:07 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:51:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:51:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:51:36 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@71a3223c: (connection has passed maxLifetime)
+2024-10-06 01:51:36 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:51:36 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:51:36 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:51:36 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11dc2be6
+2024-10-06 01:51:36 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:51:38 [HikariPool-1 connection closer] DEBUG : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5b5dc647: (connection has passed maxLifetime)
+2024-10-06 01:51:38 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:2400218621, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:51:38 [HikariPool-1 connection adder] DEBUG : X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:280827887, Valid from:16.03.2024, 08:53, Valid until:14.03.2034, 08:53
+2024-10-06 01:51:38 [HikariPool-1 connection adder] DEBUG :  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, 2400218621
+2024-10-06 01:51:38 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65c052d3
+2024-10-06 01:51:38 [HikariPool-1 connection adder] DEBUG : HikariPool-1 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:51:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:51:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:52:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:52:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:52:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:52:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:53:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:53:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:53:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:53:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:54:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:54:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:54:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:54:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:55:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:55:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:55:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:55:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:56:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:56:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:56:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:56:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:57:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:57:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:57:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:57:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:58:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:58:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:58:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:58:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:59:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:59:10 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2024-10-06 01:59:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2024-10-06 01:59:40 [HikariPool-1 housekeeper] DEBUG : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.

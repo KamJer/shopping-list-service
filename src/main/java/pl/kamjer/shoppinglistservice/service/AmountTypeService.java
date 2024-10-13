@@ -8,6 +8,8 @@ import pl.kamjer.shoppinglistservice.model.AmountType;
 import pl.kamjer.shoppinglistservice.model.User;
 import pl.kamjer.shoppinglistservice.model.dto.AmountTypeDto;
 import pl.kamjer.shoppinglistservice.model.dto.utilDto.AddDto;
+import pl.kamjer.shoppinglistservice.model.dto.utilDto.Dto;
+import pl.kamjer.shoppinglistservice.model.dto.utilDto.LocalDateTimeDto;
 import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
 import pl.kamjer.shoppinglistservice.repository.UserRepository;
 
@@ -34,15 +36,15 @@ public class AmountTypeService extends CustomService{
                 .build();
     }
     @Transactional
-    public LocalDateTime updateAmountType(AmountTypeDto amountTypeDto) throws NoResourcesFoundException {
+    public LocalDateTimeDto updateAmountType(AmountTypeDto amountTypeDto) throws NoResourcesFoundException {
         LocalDateTime savedTime = LocalDateTime.now();
         User user = updateSaveTimeInUser(savedTime);
         amountTypeRepository.save(DatabaseUtil.toAmountType(user, amountTypeDto, savedTime));
-        return savedTime;
+        return LocalDateTimeDto.builder().savedTime(savedTime).build();
     }
 
     @Transactional
-    public LocalDateTime deleteAmountType(Long amountTypeId) throws NoResourcesFoundException {
+    public LocalDateTimeDto deleteAmountType(Long amountTypeId) throws NoResourcesFoundException {
         LocalDateTime savedTime = LocalDateTime.now();
         User user = updateSaveTimeInUser(savedTime);
         AmountType amountTypeToDelete = amountTypeRepository
@@ -50,6 +52,16 @@ public class AmountTypeService extends CustomService{
                 .orElseThrow(() -> new NoResourcesFoundException("No such AmountType found: " + user.getUserName() + ", " + amountTypeId));
         amountTypeToDelete.setDeleted(true);
         amountTypeRepository.save(amountTypeToDelete);
-        return savedTime;
+        return LocalDateTimeDto.builder().savedTime(savedTime).build();
+    }
+
+    @Transactional
+    public Dto synchronizeAmountTypeDto(AmountTypeDto amountTypeDto) {
+        return switch (amountTypeDto.getModifyState()) {
+            case INSERT -> insertAmountType(amountTypeDto);
+            case UPDATE -> updateAmountType(amountTypeDto);
+            case DELETE -> deleteAmountType(amountTypeDto.getAmountTypeId());
+            case NONE -> null;
+        };
     }
 }

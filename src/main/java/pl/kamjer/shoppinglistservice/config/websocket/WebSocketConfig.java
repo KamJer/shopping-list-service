@@ -1,31 +1,25 @@
 package pl.kamjer.shoppinglistservice.config.websocket;
 
 import lombok.AllArgsConstructor;
+import org.hibernate.Session;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.messaging.simp.config.ChannelRegistration;
-import org.springframework.messaging.simp.config.MessageBrokerRegistry;
-import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
-import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
-import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
+import org.springframework.web.context.request.SessionScope;
+import org.springframework.web.socket.config.annotation.*;
+
+import java.util.HashMap;
 
 @Configuration
-@EnableWebSocketMessageBroker
-public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
+@EnableWebSocket
+@AllArgsConstructor
+public class WebSocketConfig implements WebSocketConfigurer {
+
+    private WebSocketHandler webSocketHandler;
 
     @Override
-    public void configureMessageBroker(MessageBrokerRegistry config) {
-        config.enableSimpleBroker("/queue");
-        config.setApplicationDestinationPrefixes("/app");
-        config.setUserDestinationPrefix("/user");
-    }
-
-    @Override
-    public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/ws").withSockJS();
-    }
-
-    @Override
-    public void configureClientInboundChannel(ChannelRegistration registration) {
-        registration.interceptors(new UserInterceptor());
+    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+        webSocketHandler.registerTopic("/synchronizeData", "/{username}/pip");
+        registry.addHandler(webSocketHandler, "/ws");
     }
 }
