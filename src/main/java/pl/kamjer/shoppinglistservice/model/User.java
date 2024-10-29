@@ -32,7 +32,7 @@ public class User implements Serializable {
         return org.springframework.security.core.userdetails.User.builder()
                 .username(this.getUserName())
                 .password(this.getPassword())
-                .roles("ADMIN")
+                .roles("USER")
                 .build();
     }
 }

@@ -32,6 +32,7 @@ public class WebSocketUtilController {
 
     @MessageMapping("/synchronizeData")
     public void synchronizeData(AllDto allDto) throws IOException {
+        log.info("/synchronizeData connected: User " +  webSocketDataHolder.getCurrentSession().getPrincipal());
         HashMap<Message.Header, String> headers = new HashMap<>();
         headers.put(Message.Header.ID, webSocketDataHolder.getCurrentSession().getId());
         headers.put(Message.Header.DEST, "/synchronizeData");

@@ -1,13 +1,15 @@
 package pl.kamjer.shoppinglistservice.config.websocket;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.java.Log;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.WebSocketMessage;
 import org.springframework.web.socket.WebSocketSession;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 @Component
@@ -20,6 +22,9 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
     private final ConnectionBroker connectionBroker;
     private final WebsocketMessageDecryptor websocketMessageDecryptor;
 
+    private final Map<String, StringBuilder> partialMessagesMap = new HashMap<>();
+
+
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
         log.info("New session connected: {}, user: {}", session.getId(), Optional.ofNullable(session.getPrincipal()).orElseThrow().getName());
@@ -31,22 +36,38 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
         try {
             webSocketDataHolder.setCurrentSession(session);
             if (message.getPayload() instanceof String payload) {
-                log.info("New message - user: {} /n {}", Optional.ofNullable(session.getPrincipal()).orElseThrow().getName(), message.getPayload());
-                Message protocolMessage = websocketMessageDecryptor.decipher(payload);
-                if (!messageValidator.validateMessage(protocolMessage)) {
-                    throw new IllegalArgumentException("Wrong header type for send message");
-                }
+                StringBuilder partialMessage = partialMessagesMap.computeIfAbsent(session.getId(), k -> new StringBuilder());
+                partialMessage.append(payload);
 
-                switch (protocolMessage.getCommand()) {
-                    case CONNECT -> connectionBroker.handleConnect(session);
-                    case MESSAGE -> connectionBroker.handleMessage(session, protocolMessage);
-                    case SUBSCRIBE -> connectionBroker.handleSubscribe(session, protocolMessage);
-                    case UNSUBSCRIBE -> connectionBroker.handleUnsubscribe(session, protocolMessage);
+                if (message.isLast()) {
+                    String fullMessage = partialMessage.toString();
+                    log.info("New message from user: {}", Optional.ofNullable(session.getPrincipal()).orElseThrow().getName());
+
+                    Message protocolMessage = websocketMessageDecryptor.decipher(fullMessage);
+                    if (!messageValidator.validateMessage(protocolMessage)) {
+                        throw new IllegalArgumentException("Wrong header type for send message");
+                    }
+
+                    switch (protocolMessage.getCommand()) {
+                        case CONNECT -> connectionBroker.handleConnect(session);
+                        case MESSAGE -> connectionBroker.handleMessage(session, protocolMessage);
+                        case SUBSCRIBE -> connectionBroker.handleSubscribe(session, protocolMessage);
+                        case UNSUBSCRIBE -> connectionBroker.handleUnsubscribe(session, protocolMessage);
+                    }
+
+                    partialMessagesMap.remove(session.getId());
                 }
             }
         } catch (Exception e) {
-            connectionBroker.handleException(session, e);
+            if (e instanceof InvocationTargetException iE) {
+                log.error(iE.getCause());
+                connectionBroker.handleException(session, iE.getCause());
+            } else {
+                log.error(e);
+                connectionBroker.handleException(session, e);
+            }
         } finally {
+            log.info("End of message processing - session: {} from: {}", session.getId(), session.getPrincipal());
             webSocketDataHolder.clearCurrentSession();
         }
     }
@@ -65,7 +86,7 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
 
     @Override
     public boolean supportsPartialMessages() {
-        return false;
+        return true;
     }
 
     public void registerTopic(String... topic) {
