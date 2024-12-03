@@ -54,7 +54,6 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
                         case SUBSCRIBE -> connectionBroker.handleSubscribe(session, protocolMessage);
                         case UNSUBSCRIBE -> connectionBroker.handleUnsubscribe(session, protocolMessage);
                     }
-
                     partialMessagesMap.remove(session.getId());
                 }
             }
@@ -68,13 +67,15 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
             }
         } finally {
             log.info("End of message processing - session: {} from: {}", session.getId(), session.getPrincipal());
+//            partialMessagesMap.remove(session.getId());
             webSocketDataHolder.clearCurrentSession();
         }
     }
 
     @Override
     public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
-        connectionBroker.handleException(session, exception);
+        log.error("Error {} - session: {} from: {}", exception.getMessage(), session.getId(), session.getPrincipal());
+//        connectionBroker.handleException(session, exception);
         webSocketDataHolder.removeSessionFromTopics(session);
     }
 

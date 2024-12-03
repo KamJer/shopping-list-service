@@ -78,7 +78,7 @@ public class WebSocketDataHolder {
         return Optional.ofNullable(subscribedTopicsAndSessions.get(topic)).orElseThrow();
     }
 
-    void removeSessionFromTopics(WebSocketSession session) {
+    public void removeSessionFromTopics(WebSocketSession session) {
         sessionsConnected.remove(session.getId());
         subscribedTopicsAndSessions.forEach((key, value) -> {
             value.remove(session);

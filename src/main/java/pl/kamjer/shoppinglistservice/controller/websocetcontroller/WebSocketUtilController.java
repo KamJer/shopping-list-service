@@ -53,7 +53,11 @@ public class WebSocketUtilController {
 
             for (WebSocketSession session: sessions) {
                 if (!session.equals(webSocketDataHolder.getCurrentSession())) {
-                    session.sendMessage(new TextMessage(objectMapper.writeValueAsString(messageForOthers)));
+                    if (!session.isOpen()) {
+                        webSocketDataHolder.removeSessionFromTopics(session);
+                    } else {
+                        session.sendMessage(new TextMessage(objectMapper.writeValueAsString(messageForOthers)));
+                    }
                 }
             }
         }

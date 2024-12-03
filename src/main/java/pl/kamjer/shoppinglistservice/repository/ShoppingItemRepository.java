@@ -7,13 +7,16 @@ import pl.kamjer.shoppinglistservice.model.ShoppingItem;
 import pl.kamjer.shoppinglistservice.model.ShoppingItemId;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.Flow;
 
 @Repository
 public interface ShoppingItemRepository extends JpaRepository<ShoppingItem, ShoppingItemId> {
     Optional<ShoppingItem> findByShoppingItemIdUserUserNameAndShoppingItemIdShoppingItemId(String userName, Long shoppingItemId);
     List<ShoppingItem> findShoppingItemByShoppingItemIdUserUserNameAndSavedTimeAfter(String userName, LocalDateTime savedTime);
-
     List<ShoppingItem> findShoppingItemByShoppingItemIdUserUserNameAndItemCategory(String shoppingItemId_user_userName, Category itemCategory);
+
+    void deleteBySavedTimeBeforeAndBoughtIsTrue(LocalDateTime localDateTime);
 }

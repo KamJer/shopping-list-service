@@ -57,14 +57,4 @@ public class CategoryService extends CustomService {
         categoryToDelete.setDeleted(true);
         return LocalDateTimeDto.builder().savedTime(savedTime).build();
     }
-
-    @Transactional
-    public Dto synchronizeCategoryDto(CategoryDto categoryDto) {
-        return switch (categoryDto.getModifyState()) {
-            case INSERT -> insertCategory(categoryDto);
-            case UPDATE -> updateCategory(categoryDto);
-            case DELETE -> deleteCategory(categoryDto.getCategoryId());
-            case NONE -> null;
-        };
-    }
 }

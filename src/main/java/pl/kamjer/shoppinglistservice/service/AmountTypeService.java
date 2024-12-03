@@ -54,14 +54,4 @@ public class AmountTypeService extends CustomService{
         amountTypeRepository.save(amountTypeToDelete);
         return LocalDateTimeDto.builder().savedTime(savedTime).build();
     }
-
-    @Transactional
-    public Dto synchronizeAmountTypeDto(AmountTypeDto amountTypeDto) {
-        return switch (amountTypeDto.getModifyState()) {
-            case INSERT -> insertAmountType(amountTypeDto);
-            case UPDATE -> updateAmountType(amountTypeDto);
-            case DELETE -> deleteAmountType(amountTypeDto.getAmountTypeId());
-            case NONE -> null;
-        };
-    }
 }

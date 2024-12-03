@@ -68,14 +68,4 @@ public class ShoppingItemService extends CustomService {
         shoppingItemToDelete.setDeleted(true);
         return LocalDateTimeDto.builder().savedTime(savedTime).build();
     }
-
-    @Transactional
-    public Dto synchronizeShoppingItemDto(ShoppingItemDto shoppingItemDto) {
-        return switch (shoppingItemDto.getModifyState()) {
-            case INSERT -> insertShoppingItem(shoppingItemDto);
-            case UPDATE -> updateShoppingItem(shoppingItemDto);
-            case DELETE -> deleteShoppingItem(shoppingItemDto.getShoppingItemId());
-            case NONE -> null;
-        };
-    }
 }
