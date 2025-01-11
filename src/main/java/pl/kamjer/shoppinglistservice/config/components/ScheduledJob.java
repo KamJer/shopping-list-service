@@ -21,6 +21,11 @@ public class ScheduledJob {
     @Transactional
     public void deleteOldData() {
         log.info("Running scheduled job: {}, : Deleting old data", LocalTime.now());
-        shoppingItemRepository.deleteBySavedTimeBeforeAndBoughtIsTrue(LocalDateTime.now().minusMonths(1));
+        shoppingItemRepository.findShoppingItemBeforeAndBoughtIsTrue(LocalDateTime.now().minusMonths(1))
+                .forEach(shoppingItem -> {
+                    shoppingItem.setDeleted(true);
+                }
+        );
+
     }
 }
