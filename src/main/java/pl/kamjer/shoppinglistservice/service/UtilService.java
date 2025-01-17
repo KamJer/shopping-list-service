@@ -45,10 +45,9 @@ public class UtilService extends CustomService {
         LocalDateTime savedTime = LocalDateTime.now();
         User user = getUserFromAuth();
 
-        //        getting date and time from user, if time from user is null take the oldest possible time
+//        getting date and time from user, if time from user is null take the oldest possible time
         LocalDateTime userSavedTime = Optional.ofNullable(allDto.getSavedTime()).orElseGet(() -> LocalDateTime.of(1000, 1, 1, 0, 0));
-
-        //        handling saving data from client
+//        handling saving data from client
         List<AmountType> amountTypeDtosFromClientProcessed = (allDto.getAmountTypeDtoList())
                 .stream()
                 .map(amountTypeDto -> {

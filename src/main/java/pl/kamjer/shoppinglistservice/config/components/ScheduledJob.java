@@ -24,6 +24,8 @@ public class ScheduledJob {
         shoppingItemRepository.findBySavedTimeBeforeAndBoughtIsTrue(LocalDateTime.now().minusMonths(1))
                 .forEach(shoppingItem -> {
                     shoppingItem.setDeleted(true);
+                    shoppingItem.setSavedTime(LocalDateTime.now());
+                    log.info("data deleted: {}", shoppingItem.getShoppingItemId());
                 }
         );
 

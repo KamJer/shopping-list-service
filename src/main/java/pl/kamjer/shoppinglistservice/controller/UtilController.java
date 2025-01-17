@@ -15,12 +15,6 @@ public class UtilController {
     private UtilService utilService;
 
     @Deprecated
-    @GetMapping(path = "/message")
-    public ResponseEntity<String> getMessage() {
-        return ResponseEntity.status(HttpStatus.OK).body("Kocham cię");
-    }
-
-    @Deprecated
     @PostMapping
     public ResponseEntity<AllDto> synchronizeData(@RequestBody AllDto allDto){
         return ResponseEntity.ok(utilService.synchronizeDto(allDto));

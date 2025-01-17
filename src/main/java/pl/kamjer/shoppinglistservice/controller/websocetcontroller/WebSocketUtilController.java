@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Level;
 
 @Controller
 @AllArgsConstructor
@@ -56,6 +57,7 @@ public class WebSocketUtilController {
                     if (!session.isOpen()) {
                         webSocketDataHolder.removeSessionFromTopics(session);
                     } else {
+                        log.log(Level.FINE, "sending message: " + session.getId());
                         session.sendMessage(new TextMessage(objectMapper.writeValueAsString(messageForOthers)));
                     }
                 }
