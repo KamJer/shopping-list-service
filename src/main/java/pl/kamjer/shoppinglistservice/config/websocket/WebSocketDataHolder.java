@@ -4,10 +4,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.socket.WebSocketSession;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
@@ -19,7 +16,8 @@ public class WebSocketDataHolder {
 
     private  final ConcurrentHashMap<String, WebSocketSession> sessionsConnected;
 
-    private  final ConcurrentHashMap<String, List<WebSocketSession>> subscribedTopicsAndSessions;
+    // making value of map a map makes it impossible for creating double subscriptions from one session on one topic
+    private  final ConcurrentHashMap<String, HashMap<String, WebSocketSession>> subscribedTopicsAndSessions;
 
     private final CopyOnWriteArrayList<Topic> parameterTopics;
     private final CopyOnWriteArrayList<String> basicTopics;
@@ -34,7 +32,7 @@ public class WebSocketDataHolder {
 
     void menageParameterTopics(Topic baseUrl, String topic, WebSocketSession session) {
         if (parameterTopics.contains(baseUrl) && !subscribedTopicsAndSessions.containsKey(topic)) {
-            this.subscribedTopicsAndSessions.put(topic, new ArrayList<>());
+            this.subscribedTopicsAndSessions.put(topic, new HashMap<>());
             addSessionToTopic(topic, session);
         } else {
             addSessionToTopic(topic, session);
@@ -56,7 +54,7 @@ public class WebSocketDataHolder {
                 parameterTopics.add(new Topic(topic, parameterCount));
             } else {
 //                if topic does not have parameters add to the list of registered topics
-                this.subscribedTopicsAndSessions.put(topic, new ArrayList<>());
+                this.subscribedTopicsAndSessions.put(topic, new HashMap<>());
                 this.basicTopics.add(topic);
             }
         }
@@ -66,15 +64,25 @@ public class WebSocketDataHolder {
         sessionsConnected.put(webSocketSession.getId(), webSocketSession);
     }
 
+    /**
+     * Adds sessions to registered topic
+     * @param topic - topic to subscribe to
+     * @param session - session for subscription
+     */
     void addSessionToTopic(String topic, WebSocketSession session){
-        getSessionsForTopic(topic).add(session);
+        getSessionsForTopic(topic).put(session.getId(), session);
     }
 
+    /**
+     * removes sessions for topics
+     * @param topic - topic to delete session from
+     * @param session - session to remove
+     */
     void removeSubscription(String topic, WebSocketSession session) {
         getSessionsForTopic(topic).remove(session);
     }
 
-    public List<WebSocketSession> getSessionsForTopic(String topic) {
+    public HashMap<String, WebSocketSession> getSessionsForTopic(String topic) {
         return Optional.ofNullable(subscribedTopicsAndSessions.get(topic)).orElseThrow();
     }
 

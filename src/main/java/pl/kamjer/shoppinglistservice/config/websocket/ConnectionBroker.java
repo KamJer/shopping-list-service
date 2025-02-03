@@ -43,8 +43,8 @@ public class ConnectionBroker {
 
             session.sendMessage(new TextMessage(websocketMessageDecryptor.jsonphyMessage(messageBack)));
 
-            List<WebSocketSession> sessions =  webSocketDataHolder.getSessionsForTopic(protocolMessage.getHeaders().get(Message.Header.DEST));
-            for (WebSocketSession webSocketSession : sessions) {
+            HashMap<String, WebSocketSession> sessions =  webSocketDataHolder.getSessionsForTopic(protocolMessage.getHeaders().get(Message.Header.DEST));
+            for (WebSocketSession webSocketSession : sessions.values()) {
                 if (!webSocketSession.equals(session)) {
                     webSocketSession.sendMessage(new TextMessage(websocketMessageDecryptor.jsonphyMessage(messageBack)));
                 }

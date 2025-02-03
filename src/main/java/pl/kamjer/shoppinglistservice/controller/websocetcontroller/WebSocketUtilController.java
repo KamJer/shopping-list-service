@@ -39,6 +39,7 @@ public class WebSocketUtilController {
         headers.put(Message.Header.DEST, "/synchronizeData");
         headers.put(Message.Header.BODY, objectMapper.writeValueAsString(webSocketService.synchronizeWebSocket(allDto)));
         Message message  = new Message(Message.Command.MESSAGE, headers);
+        log.log(Level.INFO, "Sending message to owner: " + webSocketDataHolder.getCurrentSession().getId());
         webSocketDataHolder.getCurrentSession().sendMessage(new TextMessage(objectMapper.writeValueAsString(message)));
 
         String currentUserName = Optional.ofNullable(webSocketDataHolder.getCurrentSession().getPrincipal()).orElseThrow().getName();
@@ -50,14 +51,14 @@ public class WebSocketUtilController {
             headersForOthers.put(Message.Header.BODY, "");
             Message messageForOthers  = new Message(Message.Command.MESSAGE, headersForOthers);
 
-            List<WebSocketSession> sessions = webSocketDataHolder.getSessionsForTopic("/synchronizeData");
+            HashMap<String, WebSocketSession> sessions = webSocketDataHolder.getSessionsForTopic("/synchronizeData");
 
-            for (WebSocketSession session: sessions) {
-                if (!session.equals(webSocketDataHolder.getCurrentSession())) {
+            for (WebSocketSession session: sessions.values()) {
+                if (!session.getId().equals(webSocketDataHolder.getCurrentSession().getId())) {
                     if (!session.isOpen()) {
                         webSocketDataHolder.removeSessionFromTopics(session);
                     } else {
-                        log.log(Level.FINE, "sending message: " + session.getId());
+                        log.log(Level.INFO, "Sending message to: " + session.getId());
                         session.sendMessage(new TextMessage(objectMapper.writeValueAsString(messageForOthers)));
                     }
                 }

@@ -26,7 +26,7 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
 
 
     @Override
-    public void afterConnectionEstablished(WebSocketSession session) throws Exception {
+    public void afterConnectionEstablished(WebSocketSession session) {
         log.info("New session connected: {}, user: {}", session.getId(), Optional.ofNullable(session.getPrincipal()).orElseThrow().getName());
         webSocketDataHolder.putSessionConnected(session);
     }
