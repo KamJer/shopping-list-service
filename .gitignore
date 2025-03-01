@@ -35,5 +35,4 @@ build/
 keystore.jks
 keystore.jks.old
 keystore.p12
-
-!**/src/main/resources/application-secret.properties
+**/src/main/resources/application-secret.properties
