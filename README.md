@@ -41,19 +41,22 @@ Log4J2 do logowania
 
 ## Instalacja i konfiguracja
 
-Klonowanie repozytorium:
+### Klonowanie repozytorium:
 
 git clone https://github.com/user/shopping-list-service.git
 cd shopping-list-service
 
-Konfiguracja bazy danych (MariaDB):
+### Konfiguracja bazy danych (MariaDB):
 
 spring.datasource.url=jdbc:MariaDB://localhost:3306/shopping_list_db
 spring.datasource.username=root
 spring.datasource.password=your_password
 spring.jpa.hibernate.ddl-auto=update
 
-Budowanie i uruchamianie aplikacji:
+### Tworzenie certyfikatu
+
+
+### Budowanie i uruchamianie aplikacji:
 
 mvn clean package
 java -jar target/shopping-list-service.jar
