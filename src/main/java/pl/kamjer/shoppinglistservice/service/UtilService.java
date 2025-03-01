@@ -51,15 +51,14 @@ public class UtilService extends CustomService {
         List<AmountType> amountTypeDtosFromClientProcessed = (allDto.getAmountTypeDtoList())
                 .stream()
                 .map(amountTypeDto -> {
+                    log.log(Level.DEBUG, "Attempting to {} data: {}", amountTypeDto.getModifyState() ,amountTypeDto.getAmountTypeId());
                     switch (amountTypeDto.getModifyState()) {
                         case INSERT -> {
-                            log.log(Level.DEBUG, "Attempting to {} data: {}", amountTypeDto.getModifyState() ,amountTypeDto.getAmountTypeId());
                             AmountType amountTypeFromDb = amountTypeRepository.save(DatabaseUtil.toAmountType(getUserFromAuth(), amountTypeDto, savedTime));
                             amountTypeFromDb.setLocalId(amountTypeDto.getLocalId());
                             return amountTypeFromDb;
                         }
                         case UPDATE -> {
-                            log.log(Level.DEBUG, "Attempting to {} data: {}", amountTypeDto.getModifyState() ,amountTypeDto.getAmountTypeId());
                             return amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(
                                             user.getUserName(), amountTypeDto.getAmountTypeId())
                                     .map(amountType1 -> {
@@ -70,7 +69,6 @@ public class UtilService extends CustomService {
                                     }).orElseThrow();
                         }
                         case DELETE -> {
-                            log.log(Level.DEBUG, "Attempting to {} data: {}", amountTypeDto.getModifyState() ,amountTypeDto.getAmountTypeId());
                             return amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(
                                             user.getUserName(), amountTypeDto.getAmountTypeId())
                                     .map(amountType1 -> {
@@ -87,15 +85,14 @@ public class UtilService extends CustomService {
         List<Category> categoryDtosFromClientProcessed = (allDto.getCategoryDtoList())
                 .stream()
                 .map(categoryDto -> {
+                    log.log(Level.DEBUG, "Attempting to {} data: {}",categoryDto.getModifyState(), categoryDto.getCategoryId());
                     switch (categoryDto.getModifyState()) {
                         case INSERT -> {
-                            log.log(Level.DEBUG, "Attempting to {} data: {}",categoryDto.getModifyState(), categoryDto.getCategoryId());
                             Category categoryFromDb = categoryRepository.save(DatabaseUtil.toCategory(getUserFromAuth(), categoryDto, savedTime));
                             categoryFromDb.setLocalId(categoryDto.getLocalId());
                             return categoryFromDb;
                         }
                         case UPDATE -> {
-                            log.log(Level.DEBUG, "Attempting to {} data: {}",categoryDto.getModifyState(), categoryDto.getCategoryId());
                             return categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(
                                             user.getUserName(), categoryDto.getCategoryId())
                                     .map(category -> {
@@ -106,7 +103,6 @@ public class UtilService extends CustomService {
                                     }).orElseThrow();
                         }
                         case DELETE -> {
-                            log.log(Level.DEBUG, "Attempting to {} data: {}",categoryDto.getModifyState(), categoryDto.getCategoryId());
                             return categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(
                                             user.getUserName(), categoryDto.getCategoryId())
                                     .map(category -> {
@@ -123,9 +119,9 @@ public class UtilService extends CustomService {
         List<ShoppingItem> shoppingItemDtosFromClientProcessed = (allDto.getShoppingItemDtoList())
                 .stream()
                 .map(shoppingItemDto -> {
+                    log.log(Level.DEBUG, "Attempting to {} data: {}", shoppingItemDto.getModifyState() ,shoppingItemDto.getShoppingItemId());
                     switch (shoppingItemDto.getModifyState()) {
                         case INSERT -> {
-                            log.log(Level.DEBUG, "Attempting to {} data: {}", shoppingItemDto.getModifyState() ,shoppingItemDto.getShoppingItemId());
                             ShoppingItem shoppingItemFromDb = shoppingItemRepository.save(DatabaseUtil.toShoppingItem(getUserFromAuth(), amountTypeRepository, categoryRepository, shoppingItemDto, savedTime));
                             shoppingItemFromDb.setLocalShoppingItemId(shoppingItemDto.getLocalId());
                             shoppingItemFromDb.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
@@ -134,7 +130,6 @@ public class UtilService extends CustomService {
                             return shoppingItemFromDb;
                         }
                         case UPDATE -> {
-                            log.log(Level.DEBUG, "Attempting to {} data: {}", shoppingItemDto.getModifyState() ,shoppingItemDto.getShoppingItemId());
                             return shoppingItemRepository.findByShoppingItemIdUserUserNameAndShoppingItemIdShoppingItemId(
                                             user.getUserName(), shoppingItemDto.getShoppingItemId())
                                     .map(shoppingItem -> {
@@ -155,7 +150,6 @@ public class UtilService extends CustomService {
                                     }).orElseThrow();
                         }
                         case DELETE -> {
-                            log.log(Level.DEBUG, "Attempting to {} data: {}", shoppingItemDto.getModifyState() ,shoppingItemDto.getShoppingItemId());
                             return shoppingItemRepository.findByShoppingItemIdUserUserNameAndShoppingItemIdShoppingItemId(
                                             user.getUserName(), shoppingItemDto.getShoppingItemId())
                                     .map(shoppingItem -> {
