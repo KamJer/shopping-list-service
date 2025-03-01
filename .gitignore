@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+keystore.jks
+keystore.jks.old
+keystore.p12
