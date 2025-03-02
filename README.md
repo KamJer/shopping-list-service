@@ -2,62 +2,71 @@
 
 ## Overview
 
-Shopping List Service to aplikacja serwerowa napisana w Spring Boot, służąca do zarządzania listami zakupów. Obsługuje uwierzytelnianie użytkowników, przechowywanie kategorii produktów oraz synchronizację danych między klientami poprzez WebSocket. Dodatkowo aplikacja posiada mechanizmy automatycznego czyszczenia starych danych oraz obsługę logowania błędów.
+Shopping List Service is a Spring Boot server application designed for managing shopping lists. It supports user authentication, product category storage, and data synchronization between clients via WebSocket. Additionally, the application includes mechanisms for automatically cleaning up old data and error logging.
 
+## Technologies
 
-## Technologie
+- Java 17+
 
-Java 17+
+- Spring Boot (Security, Data JPA, Scheduling, WebSockets)
 
-Spring Boot (Security, Data JPA, Scheduling, WebSockets)
+- MariaDB as the database
 
-MariaDB jako baza danych
+- Hibernate as ORM
 
-Hibernate jako ORM
+- Lombok for reducing boilerplate code
 
-Lombok do redukcji boilerplate'u w kodzie
+- Log4J2 for logging
 
-Log4J2 do logowania
+## Features
 
-## Funkcjonalności
+- User authentication and registration
 
-- Autoryzacja i rejestracja użytkowników
+- Spring Security for endpoint protection
 
-- Spring Security do ochrony endpointów
+- Shopping list management: Adding, deleting, and editing
 
-- Zarządzanie listami zakupów
+- Handling categories and quantity units
 
-- Dodawanie, usuwanie i edycja zakupów
+- Automatic deletion of purchased products older than 1 month
 
-- Obsługa kategorii i jednostek ilościowych
+- WebSocket communication for real-time updates
 
-- Automatyczne usuwanie zakupionych produktów starszych niż 1 miesiąc
+- Error logging, diagnostics, and global exception handling
 
-- Komunikacja WebSocket w celu osiągnięcia komunikacji w czasie rzeczywistym
+## Installation and Configuration
 
-- Logowanie błędów i diagnostyka
+### Cloning the repository:
 
-- Obsługa wyjątków globalnych
+    git clone https://github.com/KamJer/shopping-list.git  
+    cd shopping-list  
 
-## Instalacja i konfiguracja
+### Database Configuration (MariaDB):
 
-### Klonowanie repozytorium:
+After adding the appropriate repository to the pom file, installing the server on your machine, and creating the database, configure the server settings in `application.properties`:
 
-git clone https://github.com/user/shopping-list-service.git
-cd shopping-list-service
+    spring.datasource.url=jdbc:MariaDB://localhost:3306/shopping_list_db  
+    spring.datasource.username=your_username  
+    spring.datasource.password=your_password  
+    spring.jpa.hibernate.ddl-auto=update  
 
-### Konfiguracja bazy danych (MariaDB):
+### Creating a Certificate:
 
-spring.datasource.url=jdbc:MariaDB://localhost:3306/shopping_list_db
-spring.datasource.username=root
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
+Create a certificate and specify it in `application.properties`:
 
-### Tworzenie certyfikatu
+    server.ssl.key-store=your_file  
+    server.ssl.key-store-type=PKCS12  
+    server.ssl.key-alias=your_alias  
 
+### Building and Running the Application:
 
-### Budowanie i uruchamianie aplikacji:
+    mvn clean package  
+    java -jar target/shopping-list-service.jar  
 
-mvn clean package
-java -jar target/shopping-list-service.jar
+## Usage
 
+The application exposes three endpoints:
+- **/user** - a REST API endpoint handling the following methods:
+  - `PUT` for adding new users. Currently, the application does not allow deleting or modifying existing users.
+- **/exception** - a REST API URL allowing clients to send their errors for diagnostic purposes.
+- **/ws** - a WebSocket URL for establishing bidirectional communication between the client and the service. The application uses a custom communication protocol based on STOMP but in a simplified form.  
