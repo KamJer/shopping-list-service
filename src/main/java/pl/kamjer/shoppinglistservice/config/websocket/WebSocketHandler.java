@@ -67,7 +67,6 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
             }
         } finally {
             log.info("End of message processing - session: {} from: {}", session.getId(), session.getPrincipal());
-//            partialMessagesMap.remove(session.getId());
             webSocketDataHolder.clearCurrentSession();
         }
     }

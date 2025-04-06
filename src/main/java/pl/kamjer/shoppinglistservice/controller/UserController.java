@@ -31,9 +31,8 @@ public class UserController {
         return ResponseEntity.ok(userService.insertUser(user));
     }
 
-    @Deprecated
-    @GetMapping(path = "/log/{userName}")
-    public ResponseEntity<Boolean> logUser(@PathVariable String userName) {
-        return ResponseEntity.ok(userService.logUser(userName));
+    @PostMapping(path = "/log")
+    public ResponseEntity<Boolean> logUser(@RequestBody UserDto user) {
+        return ResponseEntity.ok(userService.logUser(user));
     }
 }

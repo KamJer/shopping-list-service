@@ -37,14 +37,15 @@ public class UserService extends CustomService {
         User userSec = getUserFromAuth();
         User user = DatabaseUtil.toUser(userDto);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        User userToUpdate = userRepository.findByUserName(userSec.getUserName())
-                .orElseThrow(() -> new NoResourcesFoundException("No such User found: " + userSec.getUserName()));
+        User userToUpdate = userRepository.findByUserName(userSec.getUserName()).orElseThrow(() -> new NoResourcesFoundException("No such User found: " + userSec.getUserName()));
         userToUpdate.setUserName(user.getUserName());
         userToUpdate.setPassword(user.getPassword());
     }
 
-    @Deprecated
-    public Boolean logUser(String userName) {
-        return userRepository.existsByUserName(userName);
+    public Boolean logUser(UserDto userDto) {
+        return userRepository.findByUserName(userDto.getUserName())
+                .map(user ->
+                        passwordEncoder.matches(userDto.getPassword(), user.getPassword()))
+                .orElse(false);
     }
 }

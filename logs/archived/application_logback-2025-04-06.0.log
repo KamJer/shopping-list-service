@@ -1,0 +1,463 @@
+2025-04-06 14:09:29 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-04-06 14:09:29 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 1368 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-04-06 14:09:29 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-04-06 14:09:30 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-06 14:09:30 [main] INFO  : Finished Spring Data repository scanning in 114 ms. Found 4 JPA repository interfaces.
+2025-04-06 14:09:31 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-04-06 14:09:31 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-04-06 14:09:31 [main] INFO  : Starting service [Tomcat]
+2025-04-06 14:09:31 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-06 14:09:31 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-04-06 14:09:31 [main] INFO  : Root WebApplicationContext: initialization completed in 1815 ms
+2025-04-06 14:09:31 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-06 14:09:31 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-06 14:09:31 [main] INFO  : HHH000026: Second-level cache disabled
+2025-04-06 14:09:31 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-06 14:09:32 [main] INFO  : HikariPool-1 - Starting...
+2025-04-06 14:09:33 [main] WARN  : SQL Error: 0, SQLState: 08S01
+2025-04-06 14:09:33 [main] ERROR : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-04-06 14:09:33 [main] WARN  : HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:12)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 48 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 51 common frames omitted
+2025-04-06 14:09:33 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-06 14:09:33 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-06 14:09:33 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-06 14:09:33 [main] INFO  : HikariPool-1 - Starting...
+2025-04-06 14:09:34 [main] WARN  : SQL Error: 0, SQLState: 08S01
+2025-04-06 14:09:34 [main] ERROR : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-04-06 14:09:34 [main] ERROR : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-04-06 14:09:34 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-04-06 14:09:34 [main] INFO  : Stopping service [Tomcat]
+2025-04-06 14:09:34 [main] INFO  : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-06 14:09:34 [main] ERROR : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:12)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:41)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:99)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:77)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:289)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	... 19 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 40 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 53 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 56 common frames omitted
+2025-04-06 14:10:18 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-04-06 14:10:18 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 4148 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-04-06 14:10:18 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-04-06 14:10:19 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-06 14:10:19 [main] INFO  : Finished Spring Data repository scanning in 92 ms. Found 4 JPA repository interfaces.
+2025-04-06 14:10:20 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-04-06 14:10:20 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-04-06 14:10:20 [main] INFO  : Starting service [Tomcat]
+2025-04-06 14:10:20 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-06 14:10:20 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-04-06 14:10:20 [main] INFO  : Root WebApplicationContext: initialization completed in 1508 ms
+2025-04-06 14:10:20 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-06 14:10:20 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-06 14:10:20 [main] INFO  : HHH000026: Second-level cache disabled
+2025-04-06 14:10:21 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-06 14:10:21 [main] INFO  : HikariPool-1 - Starting...
+2025-04-06 14:10:21 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@334d825c
+2025-04-06 14:10:21 [main] INFO  : HikariPool-1 - Start completed.
+2025-04-06 14:10:21 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-06 14:10:21 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-06 14:10:22 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-06 14:10:22 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 14:10:22 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-06 14:10:22 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-04-06 14:10:22 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-04-06 14:10:23 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-04-06 14:10:23 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-04-06 14:10:23 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-04-06 14:10:23 [main] INFO  : Started ShoppingListServiceApplication in 4.791 seconds (process running for 5.092)
+2025-04-06 14:13:31 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-06 14:13:31 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-04-06 14:13:31 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 14:13:31 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-04-06 14:13:31 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2025-04-06 14:13:36 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-04-06 14:13:36 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 3768 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-04-06 14:13:36 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-04-06 14:13:36 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-06 14:13:36 [main] INFO  : Finished Spring Data repository scanning in 96 ms. Found 4 JPA repository interfaces.
+2025-04-06 14:13:37 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-04-06 14:13:37 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-04-06 14:13:37 [main] INFO  : Starting service [Tomcat]
+2025-04-06 14:13:37 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-06 14:13:37 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-04-06 14:13:37 [main] INFO  : Root WebApplicationContext: initialization completed in 1742 ms
+2025-04-06 14:13:38 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-06 14:13:38 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-06 14:13:38 [main] INFO  : HHH000026: Second-level cache disabled
+2025-04-06 14:13:38 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-06 14:13:38 [main] INFO  : HikariPool-1 - Starting...
+2025-04-06 14:13:39 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e2d9923
+2025-04-06 14:13:39 [main] INFO  : HikariPool-1 - Start completed.
+2025-04-06 14:13:39 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-06 14:13:39 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-06 14:13:39 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-06 14:13:39 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 14:13:40 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-06 14:13:40 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-04-06 14:13:41 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-04-06 14:13:41 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-04-06 14:13:41 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-04-06 14:13:41 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-04-06 14:13:41 [main] INFO  : Started ShoppingListServiceApplication in 5.767 seconds (process running for 6.046)
+2025-04-06 14:14:16 [tomcat-handler-4] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-06 14:14:16 [tomcat-handler-4] INFO  : Initializing Servlet 'dispatcherServlet'
+2025-04-06 14:14:16 [tomcat-handler-4] INFO  : Completed initialization in 1 ms
+2025-04-06 14:14:16 [tomcat-handler-4] INFO  : New session connected: e7194ae7-9581-9e2f-0039-0583d9f250ce, user: Jerzynki
+2025-04-06 14:14:16 [tomcat-handler-5] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:17 [tomcat-handler-5] INFO  : End of message processing - session: e7194ae7-9581-9e2f-0039-0583d9f250ce from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:18 [tomcat-handler-6] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:18 [tomcat-handler-6] INFO  : End of message processing - session: e7194ae7-9581-9e2f-0039-0583d9f250ce from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:18 [tomcat-handler-7] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:18 [tomcat-handler-7] INFO  : End of message processing - session: e7194ae7-9581-9e2f-0039-0583d9f250ce from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:18 [tomcat-handler-8] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:19 [tomcat-handler-8] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:19 [tomcat-handler-14] INFO  : New session connected: f682353a-7f30-7d87-4e53-2ba76b4d1100, user: Jerzynki
+2025-04-06 14:14:19 [tomcat-handler-15] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:19 [tomcat-handler-15] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:19 [tomcat-handler-8] INFO  : Sending message to owner: e7194ae7-9581-9e2f-0039-0583d9f250ce
+2025-04-06 14:14:19 [tomcat-handler-15] INFO  : Sending message to owner: f682353a-7f30-7d87-4e53-2ba76b4d1100
+2025-04-06 14:14:19 [tomcat-handler-15] INFO  : End of message processing - session: f682353a-7f30-7d87-4e53-2ba76b4d1100 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:19 [tomcat-handler-15] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:19 [tomcat-handler-15] INFO  : End of message processing - session: f682353a-7f30-7d87-4e53-2ba76b4d1100 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:19 [tomcat-handler-8] INFO  : End of message processing - session: e7194ae7-9581-9e2f-0039-0583d9f250ce from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:19 [tomcat-handler-8] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:19 [tomcat-handler-8] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:19 [tomcat-handler-8] INFO  : Sending message to owner: e7194ae7-9581-9e2f-0039-0583d9f250ce
+2025-04-06 14:14:19 [tomcat-handler-8] INFO  : End of message processing - session: e7194ae7-9581-9e2f-0039-0583d9f250ce from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:25 [tomcat-handler-21] INFO  : New session connected: fa1aab7b-77e5-f9aa-02c0-0b3652cb4c05, user: asds
+2025-04-06 14:14:25 [tomcat-handler-22] INFO  : New message from user: asds
+2025-04-06 14:14:25 [tomcat-handler-22] INFO  : End of message processing - session: fa1aab7b-77e5-f9aa-02c0-0b3652cb4c05 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=asds, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:25 [tomcat-handler-23] INFO  : New message from user: asds
+2025-04-06 14:14:25 [tomcat-handler-23] INFO  : End of message processing - session: fa1aab7b-77e5-f9aa-02c0-0b3652cb4c05 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=asds, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:25 [tomcat-handler-24] INFO  : New message from user: asds
+2025-04-06 14:14:25 [tomcat-handler-24] INFO  : End of message processing - session: fa1aab7b-77e5-f9aa-02c0-0b3652cb4c05 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=asds, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:25 [tomcat-handler-25] INFO  : New message from user: asds
+2025-04-06 14:14:25 [tomcat-handler-25] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=asds, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:25 [tomcat-handler-25] INFO  : Sending message to owner: fa1aab7b-77e5-f9aa-02c0-0b3652cb4c05
+2025-04-06 14:14:25 [tomcat-handler-25] INFO  : End of message processing - session: fa1aab7b-77e5-f9aa-02c0-0b3652cb4c05 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=asds, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:34 [tomcat-handler-31] INFO  : New session connected: 34a934ea-233f-7130-9136-f150ff72fc59, user: Jerzynki
+2025-04-06 14:14:34 [tomcat-handler-32] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:34 [tomcat-handler-32] INFO  : End of message processing - session: 34a934ea-233f-7130-9136-f150ff72fc59 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:34 [tomcat-handler-33] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:34 [tomcat-handler-33] INFO  : End of message processing - session: 34a934ea-233f-7130-9136-f150ff72fc59 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:34 [tomcat-handler-34] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:34 [tomcat-handler-34] INFO  : End of message processing - session: 34a934ea-233f-7130-9136-f150ff72fc59 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:34 [tomcat-handler-35] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:34 [tomcat-handler-35] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:34 [tomcat-handler-35] INFO  : Sending message to owner: 34a934ea-233f-7130-9136-f150ff72fc59
+2025-04-06 14:14:34 [tomcat-handler-35] INFO  : End of message processing - session: 34a934ea-233f-7130-9136-f150ff72fc59 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:41 [tomcat-handler-41] INFO  : New session connected: 8c886d54-b8ca-ecf5-5c9b-98408dc67084, user: Jerzynki
+2025-04-06 14:14:41 [tomcat-handler-42] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:41 [tomcat-handler-42] INFO  : End of message processing - session: 8c886d54-b8ca-ecf5-5c9b-98408dc67084 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:41 [tomcat-handler-43] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:41 [tomcat-handler-43] INFO  : End of message processing - session: 8c886d54-b8ca-ecf5-5c9b-98408dc67084 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:41 [tomcat-handler-44] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:41 [tomcat-handler-44] INFO  : End of message processing - session: 8c886d54-b8ca-ecf5-5c9b-98408dc67084 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:41 [tomcat-handler-45] INFO  : New message from user: Jerzynki
+2025-04-06 14:14:41 [tomcat-handler-45] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:41 [tomcat-handler-45] INFO  : Sending message to owner: 8c886d54-b8ca-ecf5-5c9b-98408dc67084
+2025-04-06 14:14:41 [tomcat-handler-45] INFO  : End of message processing - session: 8c886d54-b8ca-ecf5-5c9b-98408dc67084 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:53 [tomcat-handler-48] ERROR : Error null - session: f682353a-7f30-7d87-4e53-2ba76b4d1100 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:53 [tomcat-handler-46] ERROR : Error null - session: 8c886d54-b8ca-ecf5-5c9b-98408dc67084 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:53 [tomcat-handler-49] ERROR : Error null - session: fa1aab7b-77e5-f9aa-02c0-0b3652cb4c05 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=asds, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:53 [tomcat-handler-47] ERROR : Error null - session: 34a934ea-233f-7130-9136-f150ff72fc59 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:53 [tomcat-handler-47] INFO  : Session closing: 34a934ea-233f-7130-9136-f150ff72fc59 - reason: null
+2025-04-06 14:14:53 [tomcat-handler-49] INFO  : Session closing: fa1aab7b-77e5-f9aa-02c0-0b3652cb4c05 - reason: null
+2025-04-06 14:14:53 [tomcat-handler-46] INFO  : Session closing: 8c886d54-b8ca-ecf5-5c9b-98408dc67084 - reason: null
+2025-04-06 14:14:53 [tomcat-handler-48] INFO  : Session closing: f682353a-7f30-7d87-4e53-2ba76b4d1100 - reason: null
+2025-04-06 14:14:53 [tomcat-handler-50] ERROR : Error null - session: e7194ae7-9581-9e2f-0039-0583d9f250ce from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 14:14:53 [tomcat-handler-50] INFO  : Session closing: e7194ae7-9581-9e2f-0039-0583d9f250ce - reason: null
+2025-04-06 18:44:28 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m13s791ms675µs900ns).
+2025-04-06 18:58:59 [tomcat-handler-56] INFO  : New session connected: e9b0be6d-c074-0497-231b-2e1e24acb056, user: Jerzynki
+2025-04-06 18:58:59 [tomcat-handler-57] INFO  : New message from user: Jerzynki
+2025-04-06 18:58:59 [tomcat-handler-57] INFO  : End of message processing - session: e9b0be6d-c074-0497-231b-2e1e24acb056 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 18:59:00 [tomcat-handler-58] INFO  : New message from user: Jerzynki
+2025-04-06 18:59:00 [tomcat-handler-58] INFO  : End of message processing - session: e9b0be6d-c074-0497-231b-2e1e24acb056 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 18:59:00 [tomcat-handler-59] INFO  : New message from user: Jerzynki
+2025-04-06 18:59:00 [tomcat-handler-59] INFO  : End of message processing - session: e9b0be6d-c074-0497-231b-2e1e24acb056 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 18:59:00 [tomcat-handler-60] INFO  : New message from user: Jerzynki
+2025-04-06 18:59:00 [tomcat-handler-60] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 18:59:00 [tomcat-handler-60] INFO  : Sending message to owner: e9b0be6d-c074-0497-231b-2e1e24acb056
+2025-04-06 18:59:00 [tomcat-handler-60] INFO  : End of message processing - session: e9b0be6d-c074-0497-231b-2e1e24acb056 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 18:59:11 [tomcat-handler-61] ERROR : Error null - session: e9b0be6d-c074-0497-231b-2e1e24acb056 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 18:59:11 [tomcat-handler-61] INFO  : Session closing: e9b0be6d-c074-0497-231b-2e1e24acb056 - reason: null
+2025-04-06 19:15:29 [tomcat-handler-67] INFO  : New session connected: c281c1dc-1cc2-5f67-bc09-3c9da2f833eb, user: Jerzynki
+2025-04-06 19:15:29 [tomcat-handler-68] INFO  : New message from user: Jerzynki
+2025-04-06 19:15:29 [tomcat-handler-68] INFO  : End of message processing - session: c281c1dc-1cc2-5f67-bc09-3c9da2f833eb from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:15:30 [tomcat-handler-69] INFO  : New message from user: Jerzynki
+2025-04-06 19:15:30 [tomcat-handler-69] INFO  : End of message processing - session: c281c1dc-1cc2-5f67-bc09-3c9da2f833eb from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:15:30 [tomcat-handler-70] INFO  : New message from user: Jerzynki
+2025-04-06 19:15:30 [tomcat-handler-70] INFO  : End of message processing - session: c281c1dc-1cc2-5f67-bc09-3c9da2f833eb from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:15:30 [tomcat-handler-71] INFO  : New message from user: Jerzynki
+2025-04-06 19:15:30 [tomcat-handler-71] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:15:30 [tomcat-handler-71] INFO  : Sending message to owner: c281c1dc-1cc2-5f67-bc09-3c9da2f833eb
+2025-04-06 19:15:30 [tomcat-handler-71] INFO  : End of message processing - session: c281c1dc-1cc2-5f67-bc09-3c9da2f833eb from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:15:34 [tomcat-handler-72] ERROR : Error null - session: c281c1dc-1cc2-5f67-bc09-3c9da2f833eb from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:15:34 [tomcat-handler-72] INFO  : Session closing: c281c1dc-1cc2-5f67-bc09-3c9da2f833eb - reason: null
+2025-04-06 19:23:54 [tomcat-handler-78] INFO  : New session connected: f5216c76-4c15-23b2-ff77-1c0c7780e9b6, user: Jerzynki
+2025-04-06 19:23:54 [tomcat-handler-79] INFO  : New message from user: Jerzynki
+2025-04-06 19:23:54 [tomcat-handler-79] INFO  : End of message processing - session: f5216c76-4c15-23b2-ff77-1c0c7780e9b6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:23:54 [tomcat-handler-80] INFO  : New message from user: Jerzynki
+2025-04-06 19:23:54 [tomcat-handler-80] INFO  : End of message processing - session: f5216c76-4c15-23b2-ff77-1c0c7780e9b6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:23:54 [tomcat-handler-81] INFO  : New message from user: Jerzynki
+2025-04-06 19:23:54 [tomcat-handler-81] INFO  : End of message processing - session: f5216c76-4c15-23b2-ff77-1c0c7780e9b6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:23:54 [tomcat-handler-82] INFO  : New message from user: Jerzynki
+2025-04-06 19:23:54 [tomcat-handler-82] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:23:54 [tomcat-handler-82] INFO  : Sending message to owner: f5216c76-4c15-23b2-ff77-1c0c7780e9b6
+2025-04-06 19:23:54 [tomcat-handler-82] INFO  : End of message processing - session: f5216c76-4c15-23b2-ff77-1c0c7780e9b6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:24:39 [tomcat-handler-83] ERROR : Error null - session: f5216c76-4c15-23b2-ff77-1c0c7780e9b6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:24:39 [tomcat-handler-83] INFO  : Session closing: f5216c76-4c15-23b2-ff77-1c0c7780e9b6 - reason: null
+2025-04-06 19:25:56 [tomcat-handler-89] INFO  : New session connected: d78803a8-ee83-9500-04b5-19b4d0d212df, user: Jerzynki
+2025-04-06 19:25:56 [tomcat-handler-90] INFO  : New message from user: Jerzynki
+2025-04-06 19:25:56 [tomcat-handler-90] INFO  : End of message processing - session: d78803a8-ee83-9500-04b5-19b4d0d212df from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:25:56 [tomcat-handler-91] INFO  : New message from user: Jerzynki
+2025-04-06 19:25:56 [tomcat-handler-91] INFO  : End of message processing - session: d78803a8-ee83-9500-04b5-19b4d0d212df from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:25:56 [tomcat-handler-92] INFO  : New message from user: Jerzynki
+2025-04-06 19:25:56 [tomcat-handler-92] INFO  : End of message processing - session: d78803a8-ee83-9500-04b5-19b4d0d212df from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:25:56 [tomcat-handler-93] INFO  : New message from user: Jerzynki
+2025-04-06 19:25:56 [tomcat-handler-93] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:25:56 [tomcat-handler-93] INFO  : Sending message to owner: d78803a8-ee83-9500-04b5-19b4d0d212df
+2025-04-06 19:25:56 [tomcat-handler-93] INFO  : End of message processing - session: d78803a8-ee83-9500-04b5-19b4d0d212df from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:26:06 [tomcat-handler-94] ERROR : Error null - session: d78803a8-ee83-9500-04b5-19b4d0d212df from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:26:06 [tomcat-handler-94] INFO  : Session closing: d78803a8-ee83-9500-04b5-19b4d0d212df - reason: null
+2025-04-06 19:38:59 [tomcat-handler-100] INFO  : New session connected: 8b84fc2c-8400-1064-902e-79acf7027e5d, user: Jerzynki
+2025-04-06 19:38:59 [tomcat-handler-101] INFO  : New message from user: Jerzynki
+2025-04-06 19:38:59 [tomcat-handler-101] INFO  : End of message processing - session: 8b84fc2c-8400-1064-902e-79acf7027e5d from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:38:59 [tomcat-handler-102] INFO  : New message from user: Jerzynki
+2025-04-06 19:38:59 [tomcat-handler-102] INFO  : End of message processing - session: 8b84fc2c-8400-1064-902e-79acf7027e5d from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:38:59 [tomcat-handler-103] INFO  : New message from user: Jerzynki
+2025-04-06 19:38:59 [tomcat-handler-103] INFO  : End of message processing - session: 8b84fc2c-8400-1064-902e-79acf7027e5d from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:38:59 [tomcat-handler-104] INFO  : New message from user: Jerzynki
+2025-04-06 19:38:59 [tomcat-handler-104] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:38:59 [tomcat-handler-104] INFO  : Sending message to owner: 8b84fc2c-8400-1064-902e-79acf7027e5d
+2025-04-06 19:38:59 [tomcat-handler-104] INFO  : End of message processing - session: 8b84fc2c-8400-1064-902e-79acf7027e5d from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:39:07 [tomcat-handler-105] ERROR : Error null - session: 8b84fc2c-8400-1064-902e-79acf7027e5d from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:39:07 [tomcat-handler-105] INFO  : Session closing: 8b84fc2c-8400-1064-902e-79acf7027e5d - reason: null
+2025-04-06 19:39:11 [tomcat-handler-111] INFO  : New session connected: 9751b6c6-7adc-0e69-cb64-6f67f92348f3, user: Jerzynki
+2025-04-06 19:39:11 [tomcat-handler-112] INFO  : New message from user: Jerzynki
+2025-04-06 19:39:11 [tomcat-handler-112] INFO  : End of message processing - session: 9751b6c6-7adc-0e69-cb64-6f67f92348f3 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:39:11 [tomcat-handler-113] INFO  : New message from user: Jerzynki
+2025-04-06 19:39:11 [tomcat-handler-113] INFO  : End of message processing - session: 9751b6c6-7adc-0e69-cb64-6f67f92348f3 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:39:11 [tomcat-handler-114] INFO  : New message from user: Jerzynki
+2025-04-06 19:39:11 [tomcat-handler-114] INFO  : End of message processing - session: 9751b6c6-7adc-0e69-cb64-6f67f92348f3 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:39:11 [tomcat-handler-115] INFO  : New message from user: Jerzynki
+2025-04-06 19:39:11 [tomcat-handler-115] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 19:39:11 [tomcat-handler-115] INFO  : Sending message to owner: 9751b6c6-7adc-0e69-cb64-6f67f92348f3
+2025-04-06 19:39:11 [tomcat-handler-115] INFO  : End of message processing - session: 9751b6c6-7adc-0e69-cb64-6f67f92348f3 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 20:58:34 [tomcat-handler-116] ERROR : Error Connection reset - session: 9751b6c6-7adc-0e69-cb64-6f67f92348f3 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-06 20:58:34 [tomcat-handler-116] INFO  : Session closing: 9751b6c6-7adc-0e69-cb64-6f67f92348f3 - reason: Connection reset
+2025-04-06 20:58:41 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h19m42s764ms150µs400ns).

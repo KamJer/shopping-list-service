@@ -1,0 +1,1221 @@
+2025-04-05 12:46:49 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-04-05 12:46:49 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 9172 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-04-05 12:46:49 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 12:46:50 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 12:46:50 [main] INFO  : Finished Spring Data repository scanning in 110 ms. Found 4 JPA repository interfaces.
+2025-04-05 12:46:50 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-04-05 12:46:51 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-04-05 12:46:51 [main] INFO  : Starting service [Tomcat]
+2025-04-05 12:46:51 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-05 12:46:51 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-04-05 12:46:51 [main] INFO  : Root WebApplicationContext: initialization completed in 1785 ms
+2025-04-05 12:46:51 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 12:46:51 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-05 12:46:51 [main] INFO  : HHH000026: Second-level cache disabled
+2025-04-05 12:46:51 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 12:46:51 [main] INFO  : HikariPool-1 - Starting...
+2025-04-05 12:46:52 [main] WARN  : SQL Error: 0, SQLState: 08000
+2025-04-05 12:46:52 [main] ERROR : Socket fail to connect to address=(host=localhost)(port=3306)(type=primary). Connection refused: getsockopt
+2025-04-05 12:46:52 [main] WARN  : HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Socket fail to connect to address=(host=localhost)(port=3306)(type=primary). Connection refused: getsockopt] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:12)
+Caused by: java.sql.SQLNonTransientConnectionException: Socket fail to connect to address=(host=localhost)(port=3306)(type=primary). Connection refused: getsockopt
+	at org.mariadb.jdbc.client.impl.ConnectionHelper.connectSocket(ConnectionHelper.java:122)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:129)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.mariadb.jdbc.client.impl.ConnectionHelper.connectSocket(ConnectionHelper.java:116)
+	... 49 common frames omitted
+2025-04-05 12:46:52 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 12:46:52 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+	Database driver: undefined/unknown
+	Database version: 10.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 12:46:53 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 12:46:53 [main] INFO  : HikariPool-1 - Starting...
+2025-04-05 12:46:54 [main] WARN  : SQL Error: 0, SQLState: 08000
+2025-04-05 12:46:54 [main] ERROR : Socket fail to connect to address=(host=localhost)(port=3306)(type=primary). Connection refused: getsockopt
+2025-04-05 12:46:54 [main] ERROR : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Socket fail to connect to address=(host=localhost)(port=3306)(type=primary). Connection refused: getsockopt] [n/a]
+2025-04-05 12:46:54 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Socket fail to connect to address=(host=localhost)(port=3306)(type=primary). Connection refused: getsockopt] [n/a]
+2025-04-05 12:46:54 [main] INFO  : Stopping service [Tomcat]
+2025-04-05 12:46:54 [main] INFO  : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-05 12:46:54 [main] ERROR : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Socket fail to connect to address=(host=localhost)(port=3306)(type=primary). Connection refused: getsockopt] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:12)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Socket fail to connect to address=(host=localhost)(port=3306)(type=primary). Connection refused: getsockopt] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Socket fail to connect to address=(host=localhost)(port=3306)(type=primary). Connection refused: getsockopt] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:51)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorMariaDBDatabaseImpl.extractMetadata(SequenceInformationExtractorMariaDBDatabaseImpl.java:46)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:69)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:289)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	... 19 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Socket fail to connect to address=(host=localhost)(port=3306)(type=primary). Connection refused: getsockopt
+	at org.mariadb.jdbc.client.impl.ConnectionHelper.connectSocket(ConnectionHelper.java:122)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:129)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 39 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.mariadb.jdbc.client.impl.ConnectionHelper.connectSocket(ConnectionHelper.java:116)
+	... 53 common frames omitted
+2025-04-05 12:47:49 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-04-05 12:47:49 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 11488 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-04-05 12:47:49 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 12:47:49 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 12:47:50 [main] INFO  : Finished Spring Data repository scanning in 91 ms. Found 4 JPA repository interfaces.
+2025-04-05 12:47:50 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-04-05 12:47:50 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-04-05 12:47:50 [main] INFO  : Starting service [Tomcat]
+2025-04-05 12:47:50 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-05 12:47:50 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-04-05 12:47:50 [main] INFO  : Root WebApplicationContext: initialization completed in 1541 ms
+2025-04-05 12:47:51 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 12:47:51 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-05 12:47:51 [main] INFO  : HHH000026: Second-level cache disabled
+2025-04-05 12:47:51 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 12:47:51 [main] INFO  : HikariPool-1 - Starting...
+2025-04-05 12:47:52 [main] WARN  : SQL Error: 0, SQLState: S1009
+2025-04-05 12:47:52 [main] ERROR : RSA public key is not available client side (option serverRsaPublicKeyFile not set)
+2025-04-05 12:47:52 [main] WARN  : HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [RSA public key is not available client side (option serverRsaPublicKeyFile not set)] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:12)
+Caused by: java.sql.SQLException: RSA public key is not available client side (option serverRsaPublicKeyFile not set)
+	at org.mariadb.jdbc.plugin.authentication.standard.CachingSha2PasswordPlugin.process(CachingSha2PasswordPlugin.java:227)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:295)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+2025-04-05 12:47:52 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 12:47:52 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+	Database driver: undefined/unknown
+	Database version: 10.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 12:47:53 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 12:47:53 [main] INFO  : HikariPool-1 - Starting...
+2025-04-05 12:47:54 [main] WARN  : SQL Error: 0, SQLState: S1009
+2025-04-05 12:47:54 [main] ERROR : RSA public key is not available client side (option serverRsaPublicKeyFile not set)
+2025-04-05 12:47:54 [main] ERROR : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [RSA public key is not available client side (option serverRsaPublicKeyFile not set)] [n/a]
+2025-04-05 12:47:54 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [RSA public key is not available client side (option serverRsaPublicKeyFile not set)] [n/a]
+2025-04-05 12:47:54 [main] INFO  : Stopping service [Tomcat]
+2025-04-05 12:47:54 [main] INFO  : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-05 12:47:54 [main] ERROR : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [RSA public key is not available client side (option serverRsaPublicKeyFile not set)] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:12)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [RSA public key is not available client side (option serverRsaPublicKeyFile not set)] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [RSA public key is not available client side (option serverRsaPublicKeyFile not set)] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorMariaDBDatabaseImpl.extractMetadata(SequenceInformationExtractorMariaDBDatabaseImpl.java:46)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:69)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:289)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	... 19 common frames omitted
+Caused by: java.sql.SQLException: RSA public key is not available client side (option serverRsaPublicKeyFile not set)
+	at org.mariadb.jdbc.plugin.authentication.standard.CachingSha2PasswordPlugin.process(CachingSha2PasswordPlugin.java:227)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:295)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 39 common frames omitted
+2025-04-05 12:51:40 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-04-05 12:51:40 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 19036 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-04-05 12:51:40 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 12:51:41 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 12:51:41 [main] INFO  : Finished Spring Data repository scanning in 104 ms. Found 4 JPA repository interfaces.
+2025-04-05 12:51:41 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-04-05 12:51:41 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-04-05 12:51:41 [main] INFO  : Starting service [Tomcat]
+2025-04-05 12:51:41 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-05 12:51:42 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-04-05 12:51:42 [main] INFO  : Root WebApplicationContext: initialization completed in 1574 ms
+2025-04-05 12:51:42 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 12:51:42 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-05 12:51:42 [main] INFO  : HHH000026: Second-level cache disabled
+2025-04-05 12:51:42 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 12:51:42 [main] INFO  : HikariPool-1 - Starting...
+2025-04-05 12:51:42 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3911fec8
+2025-04-05 12:51:42 [main] INFO  : HikariPool-1 - Start completed.
+2025-04-05 12:51:42 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 12:51:42 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 12:51:43 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 12:51:43 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 12:51:43 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailService' defined in file [C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes\pl\kamjer\shoppinglistservice\config\security\UserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in pl.kamjer.shoppinglistservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); Reason: Failed to create query for method public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); No property 'existsByPassword' found for type 'User'
+2025-04-05 12:51:43 [main] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 12:51:43 [main] INFO  : HikariPool-1 - Shutdown initiated...
+2025-04-05 12:51:43 [main] INFO  : HikariPool-1 - Shutdown completed.
+2025-04-05 12:51:43 [main] INFO  : Stopping service [Tomcat]
+2025-04-05 12:51:43 [main] INFO  : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-05 12:51:43 [main] ERROR : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailService' defined in file [C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes\pl\kamjer\shoppinglistservice\config\security\UserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in pl.kamjer.shoppinglistservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); Reason: Failed to create query for method public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); No property 'existsByPassword' found for type 'User'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:12)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in pl.kamjer.shoppinglistservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); Reason: Failed to create query for method public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); No property 'existsByPassword' found for type 'User'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); Reason: Failed to create query for method public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); No property 'existsByPassword' found for type 'User'
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:120)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:440)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	... 31 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); No property 'existsByPassword' found for type 'User'
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:128)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:262)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116)
+	... 43 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'existsByPassword' found for type 'User'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:384)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:259)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:260)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:389)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:390)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:103)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:101)
+	... 47 common frames omitted
+2025-04-05 12:52:16 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-04-05 12:52:16 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 18368 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-04-05 12:52:16 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 12:52:16 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 12:52:16 [main] INFO  : Finished Spring Data repository scanning in 97 ms. Found 4 JPA repository interfaces.
+2025-04-05 12:52:17 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-04-05 12:52:17 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-04-05 12:52:17 [main] INFO  : Starting service [Tomcat]
+2025-04-05 12:52:17 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-05 12:52:17 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-04-05 12:52:17 [main] INFO  : Root WebApplicationContext: initialization completed in 1529 ms
+2025-04-05 12:52:17 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 12:52:18 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-05 12:52:18 [main] INFO  : HHH000026: Second-level cache disabled
+2025-04-05 12:52:18 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 12:52:18 [main] INFO  : HikariPool-1 - Starting...
+2025-04-05 12:52:18 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@334d825c
+2025-04-05 12:52:18 [main] INFO  : HikariPool-1 - Start completed.
+2025-04-05 12:52:18 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 12:52:18 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 12:52:19 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 12:52:19 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 12:52:19 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailService' defined in file [C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes\pl\kamjer\shoppinglistservice\config\security\UserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in pl.kamjer.shoppinglistservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); Reason: Failed to create query for method public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); No property 'existsByPassword' found for type 'User'
+2025-04-05 12:52:19 [main] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 12:52:19 [main] INFO  : HikariPool-1 - Shutdown initiated...
+2025-04-05 12:52:19 [main] INFO  : HikariPool-1 - Shutdown completed.
+2025-04-05 12:52:19 [main] INFO  : Stopping service [Tomcat]
+2025-04-05 12:52:19 [main] INFO  : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-05 12:52:19 [main] ERROR : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailService' defined in file [C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes\pl\kamjer\shoppinglistservice\config\security\UserDetailService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in pl.kamjer.shoppinglistservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); Reason: Failed to create query for method public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); No property 'existsByPassword' found for type 'User'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:12)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in pl.kamjer.shoppinglistservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); Reason: Failed to create query for method public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); No property 'existsByPassword' found for type 'User'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); Reason: Failed to create query for method public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); No property 'existsByPassword' found for type 'User'
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:120)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:440)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	... 31 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract boolean pl.kamjer.shoppinglistservice.repository.UserRepository.existsByUserNameAndExistsByPassword(java.lang.String,java.lang.String); No property 'existsByPassword' found for type 'User'
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:128)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:262)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116)
+	... 43 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'existsByPassword' found for type 'User'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:94)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:455)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:431)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:384)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:366)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:344)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:259)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:260)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:389)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:390)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:103)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:101)
+	... 47 common frames omitted
+2025-04-05 13:03:56 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-04-05 13:03:56 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 18608 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-04-05 13:03:56 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 13:03:57 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 13:03:57 [main] INFO  : Finished Spring Data repository scanning in 97 ms. Found 4 JPA repository interfaces.
+2025-04-05 13:03:58 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-04-05 13:03:58 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-04-05 13:03:58 [main] INFO  : Starting service [Tomcat]
+2025-04-05 13:03:58 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-05 13:03:58 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-04-05 13:03:58 [main] INFO  : Root WebApplicationContext: initialization completed in 1571 ms
+2025-04-05 13:03:58 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 13:03:58 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-05 13:03:58 [main] INFO  : HHH000026: Second-level cache disabled
+2025-04-05 13:03:58 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 13:03:58 [main] INFO  : HikariPool-1 - Starting...
+2025-04-05 13:03:59 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42a7e7e1
+2025-04-05 13:03:59 [main] INFO  : HikariPool-1 - Start completed.
+2025-04-05 13:03:59 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 13:03:59 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 13:03:59 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 13:03:59 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 13:04:00 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 13:04:00 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-04-05 13:04:00 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed
+2025-04-05 13:04:00 [main] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 13:04:00 [main] INFO  : HikariPool-1 - Shutdown initiated...
+2025-04-05 13:04:00 [main] INFO  : HikariPool-1 - Shutdown completed.
+2025-04-05 13:04:00 [main] INFO  : Stopping service [Tomcat]
+2025-04-05 13:04:00 [main] INFO  : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-05 13:04:00 [main] ERROR : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:12)
+Caused by: java.lang.RuntimeException: Could not postProcess org.springframework.security.config.annotation.web.builders.WebSecurity@5c934077 of type class org.springframework.security.config.annotation.web.builders.WebSecurity
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.postProcess(AutowireBeanFactoryObjectPostProcessor.java:71)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.setFilterChainProxySecurityConfigurer(WebSecurityConfiguration.java:145)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:854)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospectorRequestTransformer': Cannot resolve reference to bean 'mvcHandlerMappingIntrospector' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:206)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:224)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1489)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1450)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$1.getIfUnique(DefaultListableBeanFactory.java:468)
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.setApplicationContext(WebSecurity.java:428)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:110)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:85)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:423)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:413)
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.initializeBeanIfNeeded(AutowireBeanFactoryObjectPostProcessor.java:98)
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.postProcess(AutowireBeanFactoryObjectPostProcessor.java:67)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'userController' method 
+pl.kamjer.shoppinglistservice.controller.UserController#postUser(UserDto)
+to {POST [/user]}: There is already 'userController' bean method
+pl.kamjer.shoppinglistservice.controller.UserController#logUser(UserDto) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'userController' method 
+pl.kamjer.shoppinglistservice.controller.UserController#postUser(UserDto)
+to {POST [/user]}: There is already 'userController' bean method
+pl.kamjer.shoppinglistservice.controller.UserController#logUser(UserDto) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:695)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1426)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:368)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.initHandlerMappings(HandlerMappingIntrospector.java:135)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.afterPropertiesSet(HandlerMappingIntrospector.java:123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	... 55 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+pl.kamjer.shoppinglistservice.controller.UserController#postUser(UserDto)
+to {POST [/user]}: There is already 'userController' bean method
+pl.kamjer.shoppinglistservice.controller.UserController#logUser(UserDto) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:675)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:637)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:509)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:239)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	... 68 common frames omitted
+2025-04-05 13:12:47 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-04-05 13:12:47 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 13008 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-04-05 13:12:47 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 13:12:48 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 13:12:48 [main] INFO  : Finished Spring Data repository scanning in 96 ms. Found 4 JPA repository interfaces.
+2025-04-05 13:12:49 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-04-05 13:12:49 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-04-05 13:12:49 [main] INFO  : Starting service [Tomcat]
+2025-04-05 13:12:49 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-05 13:12:49 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-04-05 13:12:49 [main] INFO  : Root WebApplicationContext: initialization completed in 1544 ms
+2025-04-05 13:12:49 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 13:12:49 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-05 13:12:49 [main] INFO  : HHH000026: Second-level cache disabled
+2025-04-05 13:12:49 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 13:12:49 [main] INFO  : HikariPool-1 - Starting...
+2025-04-05 13:12:49 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c12f54a
+2025-04-05 13:12:49 [main] INFO  : HikariPool-1 - Start completed.
+2025-04-05 13:12:50 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 13:12:50 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 13:12:50 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 13:12:50 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 13:12:51 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 13:12:51 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-04-05 13:12:51 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-04-05 13:12:51 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-04-05 13:12:51 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-04-05 13:12:51 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-04-05 13:12:51 [main] INFO  : Started ShoppingListServiceApplication in 4.628 seconds (process running for 4.897)
+2025-04-05 13:38:17 [tomcat-handler-4] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 13:38:17 [tomcat-handler-4] INFO  : Initializing Servlet 'dispatcherServlet'
+2025-04-05 13:38:17 [tomcat-handler-4] INFO  : Completed initialization in 2 ms
+2025-04-05 13:38:21 [tomcat-handler-10] INFO  : New session connected: 907df353-a3c2-6044-8cde-8b126eb4a7b6, user: Jerzynki
+2025-04-05 13:38:21 [tomcat-handler-11] INFO  : New message from user: Jerzynki
+2025-04-05 13:38:21 [tomcat-handler-11] INFO  : End of message processing - session: 907df353-a3c2-6044-8cde-8b126eb4a7b6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:38:21 [tomcat-handler-12] INFO  : New message from user: Jerzynki
+2025-04-05 13:38:21 [tomcat-handler-12] INFO  : End of message processing - session: 907df353-a3c2-6044-8cde-8b126eb4a7b6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:38:21 [tomcat-handler-13] INFO  : New message from user: Jerzynki
+2025-04-05 13:38:21 [tomcat-handler-13] INFO  : End of message processing - session: 907df353-a3c2-6044-8cde-8b126eb4a7b6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:38:21 [tomcat-handler-14] INFO  : New message from user: Jerzynki
+2025-04-05 13:38:21 [tomcat-handler-14] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:38:21 [tomcat-handler-14] INFO  : Sending message to owner: 907df353-a3c2-6044-8cde-8b126eb4a7b6
+2025-04-05 13:38:21 [tomcat-handler-14] INFO  : End of message processing - session: 907df353-a3c2-6044-8cde-8b126eb4a7b6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:38:42 [tomcat-handler-28] ERROR : Error null - session: 907df353-a3c2-6044-8cde-8b126eb4a7b6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:38:42 [tomcat-handler-28] INFO  : Session closing: 907df353-a3c2-6044-8cde-8b126eb4a7b6 - reason: null
+2025-04-05 13:40:20 [tomcat-handler-42] INFO  : New session connected: e9360df1-2842-9c00-50a0-bfdbc6651a22, user: Jerzynki
+2025-04-05 13:40:20 [tomcat-handler-43] INFO  : New message from user: Jerzynki
+2025-04-05 13:40:20 [tomcat-handler-43] INFO  : End of message processing - session: e9360df1-2842-9c00-50a0-bfdbc6651a22 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:40:20 [tomcat-handler-44] INFO  : New message from user: Jerzynki
+2025-04-05 13:40:20 [tomcat-handler-44] INFO  : End of message processing - session: e9360df1-2842-9c00-50a0-bfdbc6651a22 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:40:20 [tomcat-handler-45] INFO  : New message from user: Jerzynki
+2025-04-05 13:40:20 [tomcat-handler-45] INFO  : End of message processing - session: e9360df1-2842-9c00-50a0-bfdbc6651a22 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:40:20 [tomcat-handler-46] INFO  : New message from user: Jerzynki
+2025-04-05 13:40:20 [tomcat-handler-46] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:40:20 [tomcat-handler-46] INFO  : Sending message to owner: e9360df1-2842-9c00-50a0-bfdbc6651a22
+2025-04-05 13:40:20 [tomcat-handler-46] INFO  : End of message processing - session: e9360df1-2842-9c00-50a0-bfdbc6651a22 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:41:06 [tomcat-handler-53] ERROR : Error null - session: e9360df1-2842-9c00-50a0-bfdbc6651a22 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:41:06 [tomcat-handler-53] INFO  : Session closing: e9360df1-2842-9c00-50a0-bfdbc6651a22 - reason: null
+2025-04-05 13:43:08 [tomcat-handler-61] INFO  : New session connected: 83966aec-58e4-128a-0267-97990c72ccf6, user: Jerzynki
+2025-04-05 13:43:08 [tomcat-handler-62] INFO  : New message from user: Jerzynki
+2025-04-05 13:43:08 [tomcat-handler-62] INFO  : End of message processing - session: 83966aec-58e4-128a-0267-97990c72ccf6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:43:08 [tomcat-handler-63] INFO  : New message from user: Jerzynki
+2025-04-05 13:43:08 [tomcat-handler-63] INFO  : End of message processing - session: 83966aec-58e4-128a-0267-97990c72ccf6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:43:08 [tomcat-handler-64] INFO  : New message from user: Jerzynki
+2025-04-05 13:43:08 [tomcat-handler-64] INFO  : End of message processing - session: 83966aec-58e4-128a-0267-97990c72ccf6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:43:08 [tomcat-handler-65] INFO  : New message from user: Jerzynki
+2025-04-05 13:43:08 [tomcat-handler-65] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:43:08 [tomcat-handler-65] INFO  : Sending message to owner: 83966aec-58e4-128a-0267-97990c72ccf6
+2025-04-05 13:43:08 [tomcat-handler-65] INFO  : End of message processing - session: 83966aec-58e4-128a-0267-97990c72ccf6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:43:12 [tomcat-handler-66] ERROR : Error null - session: 83966aec-58e4-128a-0267-97990c72ccf6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:43:12 [tomcat-handler-66] INFO  : Session closing: 83966aec-58e4-128a-0267-97990c72ccf6 - reason: null
+2025-04-05 13:43:19 [tomcat-handler-72] INFO  : New session connected: 0055a9e6-a562-cf29-8fdc-07d73adb21a9, user: Jerzynki
+2025-04-05 13:43:19 [tomcat-handler-73] INFO  : New message from user: Jerzynki
+2025-04-05 13:43:19 [tomcat-handler-73] INFO  : End of message processing - session: 0055a9e6-a562-cf29-8fdc-07d73adb21a9 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:43:19 [tomcat-handler-74] INFO  : New message from user: Jerzynki
+2025-04-05 13:43:19 [tomcat-handler-74] INFO  : End of message processing - session: 0055a9e6-a562-cf29-8fdc-07d73adb21a9 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:43:19 [tomcat-handler-75] INFO  : New message from user: Jerzynki
+2025-04-05 13:43:19 [tomcat-handler-75] INFO  : End of message processing - session: 0055a9e6-a562-cf29-8fdc-07d73adb21a9 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:43:19 [tomcat-handler-77] INFO  : New message from user: Jerzynki
+2025-04-05 13:43:19 [tomcat-handler-77] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:43:20 [tomcat-handler-77] INFO  : Sending message to owner: 0055a9e6-a562-cf29-8fdc-07d73adb21a9
+2025-04-05 13:43:20 [tomcat-handler-77] INFO  : End of message processing - session: 0055a9e6-a562-cf29-8fdc-07d73adb21a9 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 13:45:56 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s288ms689µs500ns).
+2025-04-05 15:48:45 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h2m6s843ms817µs).
+2025-04-05 15:48:45 [tomcat-handler-87] ERROR : Error null - session: 0055a9e6-a562-cf29-8fdc-07d73adb21a9 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 15:48:45 [tomcat-handler-87] INFO  : Session closing: 0055a9e6-a562-cf29-8fdc-07d73adb21a9 - reason: null
+2025-04-05 16:22:14 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s337ms366µs400ns).
+2025-04-05 17:09:04 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 17:09:04 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-04-05 17:09:04 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 17:09:04 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-04-05 17:09:04 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2025-04-05 17:58:26 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-04-05 17:58:26 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 15576 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-04-05 17:58:26 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 17:58:27 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 17:58:27 [main] INFO  : Finished Spring Data repository scanning in 123 ms. Found 4 JPA repository interfaces.
+2025-04-05 17:58:28 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-04-05 17:58:28 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-04-05 17:58:28 [main] INFO  : Starting service [Tomcat]
+2025-04-05 17:58:28 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-05 17:58:28 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-04-05 17:58:28 [main] INFO  : Root WebApplicationContext: initialization completed in 1994 ms
+2025-04-05 17:58:29 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 17:58:29 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-05 17:58:29 [main] INFO  : HHH000026: Second-level cache disabled
+2025-04-05 17:58:29 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 17:58:29 [main] INFO  : HikariPool-1 - Starting...
+2025-04-05 17:58:30 [main] WARN  : SQL Error: 0, SQLState: 08S01
+2025-04-05 17:58:30 [main] ERROR : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-04-05 17:58:30 [main] WARN  : HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:12)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 48 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 51 common frames omitted
+2025-04-05 17:58:30 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 17:58:30 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 17:58:31 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 17:58:31 [main] INFO  : HikariPool-1 - Starting...
+2025-04-05 17:58:32 [main] WARN  : SQL Error: 0, SQLState: 08S01
+2025-04-05 17:58:32 [main] ERROR : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-04-05 17:58:32 [main] ERROR : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-04-05 17:58:32 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-04-05 17:58:32 [main] INFO  : Stopping service [Tomcat]
+2025-04-05 17:58:32 [main] INFO  : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-05 17:58:32 [main] ERROR : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:12)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:41)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:99)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:77)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:289)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	... 19 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 40 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 53 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 56 common frames omitted
+2025-04-05 18:01:10 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-04-05 18:01:10 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 13160 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-04-05 18:01:10 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 18:01:10 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 18:01:10 [main] INFO  : Finished Spring Data repository scanning in 98 ms. Found 4 JPA repository interfaces.
+2025-04-05 18:01:11 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-04-05 18:01:11 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-04-05 18:01:11 [main] INFO  : Starting service [Tomcat]
+2025-04-05 18:01:11 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-05 18:01:11 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-04-05 18:01:11 [main] INFO  : Root WebApplicationContext: initialization completed in 1665 ms
+2025-04-05 18:01:12 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 18:01:12 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-05 18:01:12 [main] INFO  : HHH000026: Second-level cache disabled
+2025-04-05 18:01:12 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 18:01:12 [main] INFO  : HikariPool-1 - Starting...
+2025-04-05 18:01:12 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@334d825c
+2025-04-05 18:01:12 [main] INFO  : HikariPool-1 - Start completed.
+2025-04-05 18:01:12 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 18:01:12 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 18:01:13 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 18:01:13 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 18:01:13 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 18:01:13 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-04-05 18:01:14 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-04-05 18:01:14 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-04-05 18:01:14 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-04-05 18:01:14 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-04-05 18:01:14 [main] INFO  : Started ShoppingListServiceApplication in 4.982 seconds (process running for 5.273)
+2025-04-05 18:01:24 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 18:01:24 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-04-05 18:01:24 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 18:01:24 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-04-05 18:01:24 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2025-04-05 18:51:36 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-04-05 18:51:37 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 11516 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-04-05 18:51:37 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 18:51:37 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 18:51:37 [main] INFO  : Finished Spring Data repository scanning in 94 ms. Found 4 JPA repository interfaces.
+2025-04-05 18:51:38 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-04-05 18:51:38 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-04-05 18:51:38 [main] INFO  : Starting service [Tomcat]
+2025-04-05 18:51:38 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-05 18:51:38 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-04-05 18:51:38 [main] INFO  : Root WebApplicationContext: initialization completed in 1657 ms
+2025-04-05 18:51:39 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 18:51:39 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-05 18:51:39 [main] INFO  : HHH000026: Second-level cache disabled
+2025-04-05 18:51:39 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 18:51:39 [main] INFO  : HikariPool-1 - Starting...
+2025-04-05 18:51:39 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c12f54a
+2025-04-05 18:51:39 [main] INFO  : HikariPool-1 - Start completed.
+2025-04-05 18:51:39 [main] WARN  : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 18:51:39 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 18:51:40 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 18:51:40 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 18:51:40 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 18:51:40 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-04-05 18:51:41 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-04-05 18:51:41 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-04-05 18:51:41 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-04-05 18:51:41 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-04-05 18:51:41 [main] INFO  : Started ShoppingListServiceApplication in 5.091 seconds (process running for 5.9)
+2025-04-05 18:52:18 [tomcat-handler-4] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 18:52:18 [tomcat-handler-4] INFO  : Initializing Servlet 'dispatcherServlet'
+2025-04-05 18:52:18 [tomcat-handler-4] INFO  : Completed initialization in 1 ms
+2025-04-05 18:52:52 [tomcat-handler-16] INFO  : New session connected: 9627fb7c-e7af-7bd6-dddc-0d344137136f, user: Jerzynki
+2025-04-05 18:52:52 [tomcat-handler-17] INFO  : New message from user: Jerzynki
+2025-04-05 18:52:52 [tomcat-handler-17] INFO  : End of message processing - session: 9627fb7c-e7af-7bd6-dddc-0d344137136f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:52:52 [tomcat-handler-18] INFO  : New message from user: Jerzynki
+2025-04-05 18:52:52 [tomcat-handler-18] INFO  : End of message processing - session: 9627fb7c-e7af-7bd6-dddc-0d344137136f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:52:52 [tomcat-handler-19] INFO  : New message from user: Jerzynki
+2025-04-05 18:52:52 [tomcat-handler-19] INFO  : End of message processing - session: 9627fb7c-e7af-7bd6-dddc-0d344137136f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:52:52 [tomcat-handler-20] INFO  : New message from user: Jerzynki
+2025-04-05 18:52:52 [tomcat-handler-20] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:52:52 [tomcat-handler-20] INFO  : Sending message to owner: 9627fb7c-e7af-7bd6-dddc-0d344137136f
+2025-04-05 18:52:52 [tomcat-handler-20] INFO  : End of message processing - session: 9627fb7c-e7af-7bd6-dddc-0d344137136f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:53:10 [tomcat-handler-32] INFO  : New session connected: 02a866cd-8d70-7f18-cdf1-a1fca1a29678, user: Jerzynki
+2025-04-05 18:53:10 [tomcat-handler-33] INFO  : New message from user: Jerzynki
+2025-04-05 18:53:10 [tomcat-handler-33] INFO  : End of message processing - session: 02a866cd-8d70-7f18-cdf1-a1fca1a29678 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:53:10 [tomcat-handler-34] INFO  : New message from user: Jerzynki
+2025-04-05 18:53:10 [tomcat-handler-34] INFO  : End of message processing - session: 02a866cd-8d70-7f18-cdf1-a1fca1a29678 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:53:10 [tomcat-handler-35] INFO  : New message from user: Jerzynki
+2025-04-05 18:53:10 [tomcat-handler-35] INFO  : End of message processing - session: 02a866cd-8d70-7f18-cdf1-a1fca1a29678 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:53:10 [tomcat-handler-36] INFO  : New message from user: Jerzynki
+2025-04-05 18:53:10 [tomcat-handler-36] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:53:10 [tomcat-handler-36] INFO  : Sending message to owner: 02a866cd-8d70-7f18-cdf1-a1fca1a29678
+2025-04-05 18:53:10 [tomcat-handler-36] INFO  : End of message processing - session: 02a866cd-8d70-7f18-cdf1-a1fca1a29678 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:54:37 [tomcat-handler-48] ERROR : Error null - session: 02a866cd-8d70-7f18-cdf1-a1fca1a29678 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:54:37 [tomcat-handler-50] ERROR : Error null - session: 9627fb7c-e7af-7bd6-dddc-0d344137136f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:54:37 [tomcat-handler-50] INFO  : Session closing: 9627fb7c-e7af-7bd6-dddc-0d344137136f - reason: null
+2025-04-05 18:54:37 [tomcat-handler-48] INFO  : Session closing: 02a866cd-8d70-7f18-cdf1-a1fca1a29678 - reason: null
+2025-04-05 18:55:37 [tomcat-handler-64] INFO  : New session connected: 03c044cf-93a5-022e-0dc1-c19330e63d3b, user: Jerzynki
+2025-04-05 18:55:37 [tomcat-handler-65] INFO  : New message from user: Jerzynki
+2025-04-05 18:55:37 [tomcat-handler-65] INFO  : End of message processing - session: 03c044cf-93a5-022e-0dc1-c19330e63d3b from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:55:37 [tomcat-handler-66] INFO  : New message from user: Jerzynki
+2025-04-05 18:55:37 [tomcat-handler-66] INFO  : End of message processing - session: 03c044cf-93a5-022e-0dc1-c19330e63d3b from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:55:37 [tomcat-handler-67] INFO  : New message from user: Jerzynki
+2025-04-05 18:55:37 [tomcat-handler-67] INFO  : End of message processing - session: 03c044cf-93a5-022e-0dc1-c19330e63d3b from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:55:37 [tomcat-handler-68] INFO  : New message from user: Jerzynki
+2025-04-05 18:55:37 [tomcat-handler-68] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:55:37 [tomcat-handler-68] INFO  : Sending message to owner: 03c044cf-93a5-022e-0dc1-c19330e63d3b
+2025-04-05 18:55:37 [tomcat-handler-68] INFO  : End of message processing - session: 03c044cf-93a5-022e-0dc1-c19330e63d3b from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:55:50 [tomcat-handler-80] ERROR : field:userName : User name is taken, try with different name
+
+2025-04-05 18:55:57 [tomcat-handler-92] INFO  : New session connected: 41d96be8-e373-787f-3aa8-c2cdf6c07152, user: asds
+2025-04-05 18:55:57 [tomcat-handler-93] INFO  : New message from user: asds
+2025-04-05 18:55:57 [tomcat-handler-93] INFO  : End of message processing - session: 41d96be8-e373-787f-3aa8-c2cdf6c07152 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=asds, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:55:57 [tomcat-handler-94] INFO  : New message from user: asds
+2025-04-05 18:55:57 [tomcat-handler-94] INFO  : End of message processing - session: 41d96be8-e373-787f-3aa8-c2cdf6c07152 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=asds, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:55:57 [tomcat-handler-95] INFO  : New message from user: asds
+2025-04-05 18:55:57 [tomcat-handler-95] INFO  : End of message processing - session: 41d96be8-e373-787f-3aa8-c2cdf6c07152 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=asds, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:55:57 [tomcat-handler-96] INFO  : New message from user: asds
+2025-04-05 18:55:57 [tomcat-handler-96] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=asds, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 18:55:57 [tomcat-handler-96] INFO  : Sending message to owner: 41d96be8-e373-787f-3aa8-c2cdf6c07152
+2025-04-05 18:55:57 [tomcat-handler-96] INFO  : End of message processing - session: 41d96be8-e373-787f-3aa8-c2cdf6c07152 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=asds, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-04-05 19:39:29 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s939ms146µs200ns).
