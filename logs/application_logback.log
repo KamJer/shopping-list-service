@@ -1,2 +1,9 @@
-2025-04-07 00:08:25 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-07 00:08:25 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-04-28 02:35:47 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h6m52s926ms514µs900ns).
+2025-04-28 16:17:44 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h42m5s486ms922µs900ns).
+2025-04-28 16:47:18 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m3s885ms312µs200ns).
+2025-04-28 16:48:16 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-28 16:48:16 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-04-28 16:48:16 [scheduling-2] INFO  : Running scheduled job: 16:48:16.474886600, : Deleting old data
+2025-04-28 16:48:16 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-28 16:48:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-04-28 16:48:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.

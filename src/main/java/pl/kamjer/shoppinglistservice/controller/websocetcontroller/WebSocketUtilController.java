@@ -31,15 +31,19 @@ public class WebSocketUtilController {
 
     private WebSocketDataHolder webSocketDataHolder;
 
+    @Deprecated
     @MessageMapping("/synchronizeData")
     public void synchronizeData(AllDto allDto) throws IOException {
         log.info("/synchronizeData connected: User " +  webSocketDataHolder.getCurrentSession().getPrincipal());
+//        generating message for clients
         HashMap<Message.Header, String> headers = new HashMap<>();
         headers.put(Message.Header.ID, webSocketDataHolder.getCurrentSession().getId());
         headers.put(Message.Header.DEST, "/synchronizeData");
+//        generating body for a message
         headers.put(Message.Header.BODY, objectMapper.writeValueAsString(webSocketService.synchronizeWebSocket(allDto)));
         Message message  = new Message(Message.Command.MESSAGE, headers);
         log.log(Level.INFO, "Sending message to owner: " + webSocketDataHolder.getCurrentSession().getId());
+//        sending message to an original sender
         webSocketDataHolder.getCurrentSession().sendMessage(new TextMessage(objectMapper.writeValueAsString(message)));
 
         String currentUserName = Optional.ofNullable(webSocketDataHolder.getCurrentSession().getPrincipal()).orElseThrow().getName();
@@ -83,5 +87,44 @@ public class WebSocketUtilController {
                 .filter(aBoolean -> aBoolean)
                 .toList();
         return !categoryBool.isEmpty() || !amountTypeBool.isEmpty() || !shoppingItemBool.isEmpty();
+    }
+
+    @Deprecated
+    @MessageMapping("/synchronizeData2.0")
+    public void synchronizeData2(AllDto allDto) throws IOException {
+        log.info("/synchronizeData connected: User " +  webSocketDataHolder.getCurrentSession().getPrincipal());
+//        generating message for clients
+        HashMap<Message.Header, String> headers = new HashMap<>();
+        headers.put(Message.Header.ID, webSocketDataHolder.getCurrentSession().getId());
+        headers.put(Message.Header.DEST, "/synchronizeData");
+//        generating body for a message
+        headers.put(Message.Header.BODY, objectMapper.writeValueAsString(webSocketService.synchronizeWebSocket(allDto)));
+        Message message  = new Message(Message.Command.MESSAGE, headers);
+        log.log(Level.INFO, "Sending message to owner: " + webSocketDataHolder.getCurrentSession().getId());
+//        sending message to an original sender
+        webSocketDataHolder.getCurrentSession().sendMessage(new TextMessage(objectMapper.writeValueAsString(message)));
+
+        String currentUserName = Optional.ofNullable(webSocketDataHolder.getCurrentSession().getPrincipal()).orElseThrow().getName();
+
+//        if (newDataBrought(allDto)) {
+//            HashMap<Message.Header, String> headersForOthers = new HashMap<>();
+//            headersForOthers.put(Message.Header.ID, webSocketDataHolder.getCurrentSession().getId());
+//            headersForOthers.put(Message.Header.DEST, "/" + currentUserName + "/pip");
+//            headersForOthers.put(Message.Header.BODY, "");
+//            Message messageForOthers  = new Message(Message.Command.MESSAGE, headersForOthers);
+//
+//            HashMap<String, WebSocketSession> sessions = webSocketDataHolder.getSessionsForTopic("/synchronizeData");
+//
+//            for (WebSocketSession session: sessions.values()) {
+//                if (!session.getId().equals(webSocketDataHolder.getCurrentSession().getId())) {
+//                    if (!session.isOpen()) {
+//                        webSocketDataHolder.removeSessionFromTopics(session);
+//                    } else {
+//                        log.log(Level.INFO, "Sending message to: " + session.getId());
+//                        session.sendMessage(new TextMessage(objectMapper.writeValueAsString(messageForOthers)));
+//                    }
+//                }
+//            }
+//        }
     }
 }

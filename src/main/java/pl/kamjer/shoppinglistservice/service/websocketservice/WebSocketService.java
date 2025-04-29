@@ -22,8 +22,9 @@ import pl.kamjer.shoppinglistservice.service.CustomService;
 import pl.kamjer.shoppinglistservice.service.UtilService;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @Service
 @Log4j2
@@ -61,120 +62,130 @@ public class WebSocketService extends CustomService {
 //        getting date and time from user, if time from user is null take the oldest possible time
         LocalDateTime userSavedTime = Optional.ofNullable(allDto.getSavedTime()).orElseGet(() -> LocalDateTime.of(1000, 1, 1, 0, 0));
 //        handling saving data from client
-        List<AmountType> amountTypeDtosFromClientProcessed = (allDto.getAmountTypeDtoList())
-                .stream()
-                .map(amountTypeDto -> {
-                    log.log(Level.DEBUG, "Attempting to {} data: {}", amountTypeDto.getModifyState() ,amountTypeDto.getAmountTypeId());
-                    switch (amountTypeDto.getModifyState()) {
-                        case INSERT -> {
-                            AmountType amountTypeFromDb = amountTypeRepository.save(DatabaseUtil.toAmountType(getUserFromAuth(), amountTypeDto, savedTime));
-                            amountTypeFromDb.setLocalId(amountTypeDto.getLocalId());
-                            return amountTypeFromDb;
-                        }
-                        case UPDATE -> {
-                            return amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(
-                                            user.getUserName(), amountTypeDto.getAmountTypeId())
-                                    .map(amountType1 -> {
-                                        amountType1.setTypeName(amountTypeDto.getTypeName());
-                                        amountType1.setDeleted(amountTypeDto.isDeleted());
-                                        amountType1.setSavedTime(savedTime);
-                                        return amountType1;
-                                    }).orElseThrow();
-                        }
-                        case DELETE -> {
-                            return amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(
-                                            user.getUserName(), amountTypeDto.getAmountTypeId())
-                                    .map(amountType1 -> {
-                                        amountType1.setDeleted(amountTypeDto.isDeleted());
-                                        amountType1.setSavedTime(savedTime);
-                                        return amountType1;
-                                    }).orElseThrow();
-                        }
-                    }
-                    return DatabaseUtil.toAmountType(getUserFromAuth(), amountTypeDto, savedTime);
-                })
-                .toList();
+        List<AmountType> amountTypeToInsert = new ArrayList<>();
+        Set<AmountType> amountTypeDtosFromClientProcessed = new HashSet<>();
 
-        List<Category> categoryDtosFromClientProcessed = (allDto.getCategoryDtoList())
-                .stream()
-                .map(categoryDto -> {
-                    log.log(Level.DEBUG, "Attempting to {} data: {}",categoryDto.getModifyState(), categoryDto.getCategoryId());
-                    switch (categoryDto.getModifyState()) {
-                        case INSERT -> {
-                            Category categoryFromDb = categoryRepository.save(DatabaseUtil.toCategory(getUserFromAuth(), categoryDto, savedTime));
-                            categoryFromDb.setLocalId(categoryDto.getLocalId());
-                            return categoryFromDb;
-                        }
-                        case UPDATE -> {
-                            return categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(
-                                            user.getUserName(), categoryDto.getCategoryId())
-                                    .map(category -> {
-                                        category.setCategoryName(categoryDto.getCategoryName());
-                                        category.setDeleted(categoryDto.isDeleted());
-                                        category.setSavedTime(savedTime);
-                                        return category;
-                                    }).orElseThrow();
-                        }
-                        case DELETE -> {
-                            return categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(
-                                            user.getUserName(), categoryDto.getCategoryId())
-                                    .map(category -> {
-                                        category.setDeleted(categoryDto.isDeleted());
-                                        category.setSavedTime(savedTime);
-                                        return category;
-                                    }).orElseThrow();
-                        }
-                    }
-                    return DatabaseUtil.toCategory(getUserFromAuth(), categoryDto, savedTime);
-                })
-                .toList();
+        Map<Long, AmountType> existingAmountTypes = amountTypeRepository.findAllById(
+                        allDto.getAmountTypeDtoList().stream()
+                                .map(AmountTypeDto::getAmountTypeId)
+                                .collect(Collectors.toList())
+                ).stream()
+                .collect(Collectors.toMap(a -> a.getAmountTypeId().getAmountTypeId(), Function.identity()));
 
-        List<ShoppingItem> shoppingItemDtosFromClientProcessed = (allDto.getShoppingItemDtoList())
-                .stream()
-                .map(shoppingItemDto -> {
-                    log.log(Level.DEBUG, "Attempting to {} data: {}", shoppingItemDto.getModifyState() ,shoppingItemDto.getShoppingItemId());
-                    switch (shoppingItemDto.getModifyState()) {
-                        case INSERT -> {
-                            ShoppingItem shoppingItemFromDb = shoppingItemRepository.save(DatabaseUtil.toShoppingItem(getUserFromAuth(), amountTypeRepository, categoryRepository, shoppingItemDto, savedTime));
-                            shoppingItemFromDb.setLocalShoppingItemId(shoppingItemDto.getLocalId());
-                            shoppingItemFromDb.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
-                            shoppingItemFromDb.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
-//                            returning update state so client will update with server ids
-                            return shoppingItemFromDb;
-                        }
-                        case UPDATE -> {
-                            return shoppingItemRepository.findByShoppingItemIdUserUserNameAndShoppingItemIdShoppingItemId(
-                                            user.getUserName(), shoppingItemDto.getShoppingItemId())
-                                    .map(shoppingItem -> {
-//                                        finding relevant data
-                                        AmountType amountTypeDb = amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId())
-                                                .orElseThrow(() -> new NoResourcesFoundException("No such AmountType:" + shoppingItemDto.getItemAmountTypeId()));
-                                        Category categoryDb = categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId())
-                                                .orElseThrow(() -> new NoResourcesFoundException("no such Category:" + shoppingItemDto.getItemCategoryId()));
+        for (AmountTypeDto dto : allDto.getAmountTypeDtoList()) {
+            log.log(Level.DEBUG, "Attempting to {} data: {}", dto.getModifyState(), dto.getAmountTypeId());
 
-                                        shoppingItem.setItemAmountType(amountTypeDb);
-                                        shoppingItem.setItemCategory(categoryDb);
-                                        shoppingItem.setBought(shoppingItemDto.isBought());
-                                        shoppingItem.setAmount(shoppingItemDto.getAmount());
-                                        shoppingItem.setItemName(shoppingItemDto.getItemName());
-                                        shoppingItem.setDeleted(shoppingItemDto.isDeleted());
-                                        shoppingItem.setSavedTime(savedTime);
-                                        return shoppingItem;
-                                    }).orElseThrow();
-                        }
-                        case DELETE -> {
-                            return shoppingItemRepository.findByShoppingItemIdUserUserNameAndShoppingItemIdShoppingItemId(
-                                            user.getUserName(), shoppingItemDto.getShoppingItemId())
-                                    .map(shoppingItem -> {
-                                        shoppingItem.setDeleted(shoppingItemDto.isDeleted());
-                                        shoppingItem.setSavedTime(savedTime);
-                                        return shoppingItem;
-                                    }).orElseThrow();
-                        }
-                    }
-                    return DatabaseUtil.toShoppingItem(getUserFromAuth(), amountTypeRepository, categoryRepository, shoppingItemDto, savedTime);
-                })
+            switch (dto.getModifyState()) {
+                case INSERT -> {
+                    AmountType newEntity = DatabaseUtil.toAmountType(user, dto, savedTime);
+                    newEntity.setLocalId(dto.getLocalId());
+                    amountTypeToInsert.add(newEntity);
+                }
+                case UPDATE -> {
+                    AmountType amountTypeToUpdate = existingAmountTypes.get(dto.getAmountTypeId());
+                    amountTypeToUpdate.setTypeName(dto.getTypeName());
+                    amountTypeToUpdate.setDeleted(dto.isDeleted());
+                    amountTypeToUpdate.setSavedTime(savedTime);
+                    amountTypeDtosFromClientProcessed.add(amountTypeToUpdate);
+                }
+                case DELETE -> {
+                    AmountType amountTypeToDelete = existingAmountTypes.get(dto.getAmountTypeId());
+                    amountTypeToDelete.setDeleted(true);
+                    amountTypeToDelete.setSavedTime(savedTime);
+                    amountTypeDtosFromClientProcessed.add(amountTypeToDelete);
+                }
+            }
+        }
+        amountTypeDtosFromClientProcessed.addAll(amountTypeRepository.saveAll(amountTypeToInsert));
+        amountTypeRepository.flush();
+
+        List<Category> categoriesToInsert = new ArrayList<>();
+        Set<Category> categoryDtosFromClientProcessed = new HashSet<>();
+
+        Map<Long, Category> existingCategories = categoryRepository.findAllById(
+                        allDto.getCategoryDtoList().stream()
+                                .map(CategoryDto::getCategoryId)
+                                .collect(Collectors.toList())
+                ).stream()
+                .collect(Collectors.toMap(a -> a.getCategoryId().getCategoryId(), Function.identity()));
+
+        for (CategoryDto dto : allDto.getCategoryDtoList()) {
+            log.log(Level.DEBUG, "Attempting to {} data: {}", dto.getModifyState(), dto.getCategoryId());
+
+            switch (dto.getModifyState()) {
+                case INSERT -> {
+                    Category newEntity = DatabaseUtil.toCategory(user, dto, savedTime);
+                    newEntity.setLocalId(dto.getLocalId());
+                    categoriesToInsert.add(newEntity);
+                }
+                case UPDATE -> {
+                    Category categoryToUpdate = existingCategories.get(dto.getCategoryId());
+                    categoryToUpdate.setCategoryName(dto.getCategoryName());
+                    categoryToUpdate.setDeleted(dto.isDeleted());
+                    categoryToUpdate.setSavedTime(savedTime);
+                    categoryDtosFromClientProcessed.add(categoryToUpdate);
+                }
+                case DELETE -> {
+                    Category categoryToDelete = existingCategories.get(dto.getCategoryId());
+                    categoryToDelete.setDeleted(dto.isDeleted());
+                    categoryToDelete.setSavedTime(savedTime);
+                    categoryDtosFromClientProcessed.add(categoryToDelete);
+                }
+            }
+        }
+        categoryDtosFromClientProcessed.addAll(categoryRepository.saveAll(categoriesToInsert));
+        categoryRepository.flush();
+
+        List<ShoppingItem> shoppingItemToInsert = new ArrayList<>();
+        Set<ShoppingItem> shoppingItemDtosFromClientProcessed = new HashSet<>();
+
+        List<ShoppingItemId> shoppingItemIds = allDto.getShoppingItemDtoList()
+                .stream()
+                .map(shoppingItemDto -> new ShoppingItemId(user, shoppingItemDto.getShoppingItemId()))
                 .toList();
+        Map<Long, ShoppingItem> existingShoppingItems = shoppingItemRepository.findAllById(shoppingItemIds)
+                .stream()
+                .collect(Collectors.toMap(a -> a.getShoppingItemId().getShoppingItemId(), Function.identity()));
+
+        for (ShoppingItemDto dto : allDto.getShoppingItemDtoList()) {
+            log.log(Level.DEBUG, "Attempting to {} data: {}", dto.getModifyState(), dto.getShoppingItemId());
+
+            switch (dto.getModifyState()) {
+                case INSERT -> {
+                    ShoppingItem newEntity = DatabaseUtil.toShoppingItem(user, amountTypeRepository, categoryRepository, dto, savedTime);
+                    newEntity.setLocalShoppingItemId(dto.getLocalId());
+                    newEntity.setLocalCategoryId(dto.getLocalCategoryId());
+                    newEntity.setLocalAmountTypeId(dto.getLocalAmountTypeId());
+                    shoppingItemToInsert.add(newEntity);
+                }
+                case UPDATE -> {
+//                    finding relevant data
+                    ShoppingItem shoppingItem = existingShoppingItems.get(dto.getShoppingItemId());
+
+                    AmountType amountTypeDb = amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(user.getUserName(), dto.getItemAmountTypeId())
+                            .orElseThrow(() -> new NoResourcesFoundException("No such AmountType:" + dto.getItemAmountTypeId()));
+                    Category categoryDb = categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(user.getUserName(), dto.getItemCategoryId())
+                            .orElseThrow(() -> new NoResourcesFoundException("no such Category:" + dto.getItemCategoryId()));
+
+                    shoppingItem.setItemAmountType(amountTypeDb);
+                    shoppingItem.setItemCategory(categoryDb);
+                    shoppingItem.setBought(dto.isBought());
+                    shoppingItem.setAmount(dto.getAmount());
+                    shoppingItem.setItemName(dto.getItemName());
+                    shoppingItem.setDeleted(dto.isDeleted());
+                    shoppingItem.setSavedTime(savedTime);
+                    shoppingItemDtosFromClientProcessed.add(shoppingItem);
+                }
+                case DELETE -> {
+                    ShoppingItem shoppingItem = existingShoppingItems.get(dto.getShoppingItemId());
+                    shoppingItem.setDeleted(dto.isDeleted());
+                    shoppingItem.setSavedTime(savedTime);
+                    shoppingItemDtosFromClientProcessed.add(shoppingItem);
+                }
+            }
+        }
+        shoppingItemDtosFromClientProcessed.addAll(shoppingItemRepository.saveAll(shoppingItemToInsert));
+        shoppingItemRepository.flush();
 
 //        data from database (data user does not have) it needs to be inserted, updated or deleted from local database, server needs to figure that out
         List<AmountType> amountTypesFromDb = amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
