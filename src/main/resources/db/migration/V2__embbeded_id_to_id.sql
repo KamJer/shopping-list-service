@@ -1,11 +1,11 @@
 START TRANSACTION;
 
 -- 1. Rename old tables (for backup/reference)
-RENAME TABLE CATEGORY TO CATEGORY_OLD;
-RENAME TABLE AMOUNT_TYPE TO AMOUNT_TYPE_OLD;
-RENAME TABLE SHOPPING_ITEM TO SHOPPING_ITEM_OLD;
+RENAME TABLE category TO CATEGORY_OLD;
+RENAME TABLE amount_type TO AMOUNT_TYPE_OLD;
+RENAME TABLE shopping_item TO SHOPPING_ITEM_OLD;
 
-CREATE TABLE AMOUNT_TYPE (
+CREATE TABLE amount_type (
     amount_type_id BIGINT NOT NULL AUTO_INCREMENT,
     user_name VARCHAR(255) NOT NULL,
     type_name VARCHAR(255),
@@ -16,11 +16,11 @@ CREATE TABLE AMOUNT_TYPE (
     CONSTRAINT fk_amount_type_user FOREIGN KEY (user_name) REFERENCES `USER`(user_name) ON DELETE CASCADE
 );
 
-INSERT INTO AMOUNT_TYPE (amount_type_id, user_name, type_name, saved_time, deleted)
+INSERT INTO amount_type (amount_type_id, user_name, type_name, saved_time, deleted)
 SELECT amount_type_id, user_name, type_name, saved_time, deleted FROM AMOUNT_TYPE_OLD;
 
 -- 2. Create new `category` table with flat ID
-CREATE TABLE CATEGORY (
+CREATE TABLE category (
     category_id BIGINT PRIMARY KEY AUTO_INCREMENT,
     user_name VARCHAR(255) NOT NULL,
     category_name VARCHAR(255),
@@ -30,11 +30,11 @@ CREATE TABLE CATEGORY (
 );
 
 -- 3. Copy data from old to new
-INSERT INTO CATEGORY (category_id, user_name, category_name, saved_time, deleted)
+INSERT INTO category (category_id, user_name, category_name, saved_time, deleted)
 SELECT category_id, user_name, category_name, saved_time, deleted FROM CATEGORY_OLD;
 
 -- 4. Create new `shopping_item` table with flat ID
-CREATE TABLE SHOPPING_ITEM (
+CREATE TABLE shopping_item (
     shopping_item_id BIGINT PRIMARY KEY AUTO_INCREMENT,
     user_name VARCHAR(255) NOT NULL,
     amount_type_id BIGINT,
@@ -50,7 +50,7 @@ CREATE TABLE SHOPPING_ITEM (
 );
 
 -- 5. Copy data
-INSERT INTO SHOPPING_ITEM (shopping_item_id, user_name, amount_type_id, category_id, item_name, amount, bought, saved_time, deleted)
+INSERT INTO shopping_item (shopping_item_id, user_name, amount_type_id, category_id, item_name, amount, bought, saved_time, deleted)
 SELECT shopping_item_id, user_name, amount_type_id, category_id, item_name, amount, bought, saved_time, deleted
 FROM shopping_item_old;
 
