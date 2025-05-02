@@ -16,9 +16,13 @@ import java.util.List;
 @Table(name = "AMOUNT_TYPE")
 public class AmountType {
 
-    @EmbeddedId
-    @EqualsAndHashCode.Include
-    private AmountTypeId amountTypeId;
+    @Column(name = "amount_type_id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long amountTypeId;
+    @ManyToOne
+    @JoinColumn(name = "user_name", referencedColumnName = "user_name", nullable = false)
+    private User user;
     @Column(name = "type_name")
     private String typeName;
     @Column(name = "saved_time")

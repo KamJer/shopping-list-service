@@ -13,20 +13,21 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Table(name = "SHOPPING_ITEM")
 public class ShoppingItem {
-
-    @EmbeddedId
-    @EqualsAndHashCode.Include
-    private ShoppingItemId shoppingItemId;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_name", referencedColumnName = "user_name")
+    private User user;
+    @Id
+    @Column(name = "shopping_item_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long shoppingItemId;
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumns({
-            @JoinColumn(name = "amount_type_id", referencedColumnName = "amount_type_id"),
-            @JoinColumn(name = "amount_type_user_name", referencedColumnName = "user_name")
+            @JoinColumn(name = "amount_type_id", referencedColumnName = "amount_type_id")
     })
     private AmountType itemAmountType;
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumns({
-            @JoinColumn(name = "category_id", referencedColumnName = "category_id"),
-            @JoinColumn(name = "category_user_name", referencedColumnName = "user_name")
+            @JoinColumn(name = "category_id", referencedColumnName = "category_id")
     })
     private Category itemCategory;
     @Column(name = "item_name")

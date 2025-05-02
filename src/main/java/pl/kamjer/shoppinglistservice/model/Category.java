@@ -16,9 +16,13 @@ import java.util.List;
 @Table(name = "CATEGORY")
 public class Category {
 
-    @EmbeddedId
-    @EqualsAndHashCode.Include
-    private CategoryId categoryId;
+    @Id
+    @Column(name = "category_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long categoryId;
+    @ManyToOne
+    @JoinColumn(name = "user_name", referencedColumnName = "user_name")
+    private User user;
     private String categoryName;
     @Column(name = "saved_time")
     private LocalDateTime savedTime;

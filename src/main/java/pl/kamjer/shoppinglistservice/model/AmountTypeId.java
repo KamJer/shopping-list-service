@@ -16,7 +16,6 @@ import java.io.Serializable;
 public class AmountTypeId implements Serializable {
 
     @ManyToOne
-    @MapsId("user_name")
     @JoinColumn(name = "user_name", referencedColumnName = "user_name", nullable = false)
     private User user;
     @Column(name = "amount_type_id")

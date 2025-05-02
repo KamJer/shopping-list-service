@@ -17,10 +17,8 @@ public class DatabaseUtil {
 
     public static AmountType toAmountType(User user,  AmountTypeDto amountTypeDto, LocalDateTime savedTime) throws NoResourcesFoundException {
         return AmountType.builder()
-                .amountTypeId(AmountTypeId.builder()
-                        .user(user)
-                        .amountTypeId(amountTypeDto.getAmountTypeId())
-                        .build())
+                .amountTypeId(adjustId(amountTypeDto.getAmountTypeId()))
+                .user(user)
                 .typeName(amountTypeDto.getTypeName())
                 .savedTime(savedTime)
                 .deleted(amountTypeDto.isDeleted())
@@ -30,7 +28,7 @@ public class DatabaseUtil {
 
     public static AmountTypeDto toAmountTypeDto(AmountType amountType, ModifyState modifyState) {
         return AmountTypeDto.builder()
-                .amountTypeId(amountType.getAmountTypeId().getAmountTypeId())
+                .amountTypeId(amountType.getAmountTypeId())
                 .typeName(amountType.getTypeName())
                 .modifyState(modifyState)
                 .localId(amountType.getLocalId())
@@ -47,7 +45,7 @@ public class DatabaseUtil {
 
     public static CategoryDto toCategoryDto(Category category, ModifyState modifyState) {
         return CategoryDto.builder()
-                .categoryId(category.getCategoryId().getCategoryId())
+                .categoryId(category.getCategoryId())
                 .categoryName(category.getCategoryName())
                 .modifyState(modifyState)
                 .localId(category.getLocalId())
@@ -56,10 +54,8 @@ public class DatabaseUtil {
 
     public static Category toCategory(User user, CategoryDto categoryDto, LocalDateTime savedTime) throws NoResourcesFoundException {
         return Category.builder()
-                .categoryId(CategoryId.builder()
-                        .user(user)
-                        .categoryId(categoryDto.getCategoryId())
-                        .build())
+                .categoryId(adjustId(categoryDto.getCategoryId()))
+                .user(user)
                 .categoryName(categoryDto.getCategoryName())
                 .savedTime(savedTime)
                 .deleted(categoryDto.isDeleted())
@@ -67,11 +63,21 @@ public class DatabaseUtil {
                 .build();
     }
 
+    /**
+     * Converts 0 in id to nulls for hibernates
+     * @param aLong
+     * @return
+     */
+    public static Long adjustId(Long aLong) {
+        return (aLong != null && aLong > 0) ? aLong : null;
+    }
+
+
     public static ShoppingItemDto toShoppingItemDto(ShoppingItem shoppingItem, ModifyState modifyState) {
         return ShoppingItemDto.builder()
-                .shoppingItemId(shoppingItem.getShoppingItemId().getShoppingItemId())
-                .itemAmountTypeId(shoppingItem.getItemAmountType().getAmountTypeId().getAmountTypeId())
-                .itemCategoryId(shoppingItem.getItemCategory().getCategoryId().getCategoryId())
+                .shoppingItemId(shoppingItem.getShoppingItemId())
+                .itemAmountTypeId(shoppingItem.getItemAmountType().getAmountTypeId())
+                .itemCategoryId(shoppingItem.getItemCategory().getCategoryId())
                 .itemName(shoppingItem.getItemName())
                 .amount(shoppingItem.getAmount())
                 .bought(shoppingItem.isBought())
@@ -84,12 +90,10 @@ public class DatabaseUtil {
 
     public static ShoppingItem toShoppingItem(User user, AmountTypeRepository amountTypeRepository, CategoryRepository categoryRepository, ShoppingItemDto shoppingItemDto, LocalDateTime savedTime) throws NoResourcesFoundException {
         return ShoppingItem.builder()
-                .shoppingItemId(ShoppingItemId.builder()
-                        .user(user)
-                        .shoppingItemId(shoppingItemDto.getShoppingItemId())
-                        .build())
-                .itemAmountType(amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId()).orElseThrow(() -> new NoResourcesFoundException("No such AmountType found")))
-                .itemCategory(categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId()).orElseThrow(() -> new NoResourcesFoundException("No such Category found")))
+                .shoppingItemId(adjustId(shoppingItemDto.getShoppingItemId()))
+                .user(user)
+                .itemAmountType(amountTypeRepository.findAmountTypeByUserUserNameAndAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId()).orElseThrow(() -> new NoResourcesFoundException("No such AmountType found")))
+                .itemCategory(categoryRepository.findCategoryByUserUserNameAndCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId()).orElseThrow(() -> new NoResourcesFoundException("No such Category found")))
                 .itemName(shoppingItemDto.getItemName())
                 .amount(shoppingItemDto.getAmount())
                 .bought(shoppingItemDto.isBought())

@@ -24,7 +24,6 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
 
     private final Map<String, StringBuilder> partialMessagesMap = new HashMap<>();
 
-
     @Override
     public void afterConnectionEstablished(WebSocketSession session) {
         log.info("New session connected: {}, user: {}", session.getId(), Optional.ofNullable(session.getPrincipal()).orElseThrow().getName());

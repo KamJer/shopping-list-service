@@ -36,3 +36,5 @@ keystore.jks
 keystore.p12
 
 **/src/main/resources/application-secret.properties
+
+/logs

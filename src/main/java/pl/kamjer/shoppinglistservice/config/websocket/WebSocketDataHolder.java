@@ -14,20 +14,24 @@ public class WebSocketDataHolder {
 
     private final ThreadLocal<WebSocketSession> currentSession;
 
-    private  final ConcurrentHashMap<String, WebSocketSession> sessionsConnected;
+    private final ConcurrentHashMap<String, WebSocketSession> sessionsConnected;
 
     // making value of map a map makes it impossible for creating double subscriptions from one session on one topic
-    private  final ConcurrentHashMap<String, HashMap<String, WebSocketSession>> subscribedTopicsAndSessions;
+    private final ConcurrentHashMap<String, HashMap<String, WebSocketSession>> subscribedTopicsAndSessions;
 
     private final CopyOnWriteArrayList<Topic> parameterTopics;
     private final CopyOnWriteArrayList<String> basicTopics;
 
-    public WebSocketDataHolder() {
-        this.sessionsConnected = new ConcurrentHashMap<>();
-        this.subscribedTopicsAndSessions = new ConcurrentHashMap<>();
-        this.currentSession = new ThreadLocal<>();
-        this.parameterTopics = new CopyOnWriteArrayList<>();
-        this.basicTopics = new CopyOnWriteArrayList<>();
+    public WebSocketDataHolder(ConcurrentHashMap<String, WebSocketSession> sessionsConnected,
+                               ConcurrentHashMap<String, HashMap<String, WebSocketSession>> subscribedTopicsAndSessions,
+                               ThreadLocal<WebSocketSession> currentSession,
+                               CopyOnWriteArrayList<Topic> parameterTopics,
+                               CopyOnWriteArrayList<String> basicTopics) {
+        this.sessionsConnected = sessionsConnected;
+        this.subscribedTopicsAndSessions = subscribedTopicsAndSessions;
+        this.currentSession = currentSession;
+        this.parameterTopics = parameterTopics;
+        this.basicTopics = basicTopics;
     }
 
     void menageParameterTopics(Topic baseUrl, String topic, WebSocketSession session) {
@@ -66,16 +70,18 @@ public class WebSocketDataHolder {
 
     /**
      * Adds sessions to registered topic
-     * @param topic - topic to subscribe to
+     *
+     * @param topic   - topic to subscribe to
      * @param session - session for subscription
      */
-    void addSessionToTopic(String topic, WebSocketSession session){
+    void addSessionToTopic(String topic, WebSocketSession session) {
         getSessionsForTopic(topic).put(session.getId(), session);
     }
 
     /**
      * removes sessions for topics
-     * @param topic - topic to delete session from
+     *
+     * @param topic   - topic to delete session from
      * @param session - session to remove
      */
     void removeSubscription(String topic, WebSocketSession session) {
@@ -88,9 +94,8 @@ public class WebSocketDataHolder {
 
     public void removeSessionFromTopics(WebSocketSession session) {
         sessionsConnected.remove(session.getId());
-        subscribedTopicsAndSessions.forEach((key, value) -> {
-            value.remove(session);
-        });
+        subscribedTopicsAndSessions.forEach((key, value) ->
+                value.remove(session.getId()));
         subscribedTopicsAndSessions.entrySet()
                 .stream()
                 .filter(stringListEntry -> !stringListEntry.getValue().isEmpty() && !basicTopics.contains(stringListEntry.getKey()))
@@ -103,7 +108,7 @@ public class WebSocketDataHolder {
         return currentSession.get();
     }
 
-     void setCurrentSession(WebSocketSession session) {
+    void setCurrentSession(WebSocketSession session) {
         this.currentSession.set(session);
     }
 

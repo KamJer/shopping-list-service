@@ -1,10 +1,9 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
+import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.Level;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 import pl.kamjer.shoppinglistservice.DatabaseUtil;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
@@ -19,7 +18,6 @@ import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
 import pl.kamjer.shoppinglistservice.repository.UserRepository;
 import pl.kamjer.shoppinglistservice.service.CustomService;
-import pl.kamjer.shoppinglistservice.service.UtilService;
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -30,7 +28,7 @@ import java.util.stream.Collectors;
 @Log4j2
 public class WebSocketService extends CustomService {
 
-    public final WebSocketDataHolder webSocketDataHolder;
+    private final WebSocketDataHolder webSocketDataHolder;
     private final AmountTypeRepository amountTypeRepository;
     private final CategoryRepository categoryRepository;
     private final ShoppingItemRepository shoppingItemRepository;
@@ -39,7 +37,8 @@ public class WebSocketService extends CustomService {
                             AmountTypeRepository amountTypeRepository,
                             CategoryRepository categoryRepository,
                             ShoppingItemRepository shoppingItemRepository,
-                            WebSocketDataHolder webSocketDataHolder) {
+                            WebSocketDataHolder webSocketDataHolder,
+                            EntityManager entityManager) {
         super(userRepository);
         this.amountTypeRepository = amountTypeRepository;
         this.categoryRepository = categoryRepository;
@@ -70,34 +69,52 @@ public class WebSocketService extends CustomService {
                                 .map(AmountTypeDto::getAmountTypeId)
                                 .collect(Collectors.toList())
                 ).stream()
-                .collect(Collectors.toMap(a -> a.getAmountTypeId().getAmountTypeId(), Function.identity()));
+                .collect(Collectors.toMap(AmountType::getAmountTypeId, Function.identity()));
 
         for (AmountTypeDto dto : allDto.getAmountTypeDtoList()) {
             log.log(Level.DEBUG, "Attempting to {} data: {}", dto.getModifyState(), dto.getAmountTypeId());
-
+            AmountType newEntity = DatabaseUtil.toAmountType(user, dto, savedTime);
             switch (dto.getModifyState()) {
                 case INSERT -> {
-                    AmountType newEntity = DatabaseUtil.toAmountType(user, dto, savedTime);
                     newEntity.setLocalId(dto.getLocalId());
                     amountTypeToInsert.add(newEntity);
                 }
                 case UPDATE -> {
-                    AmountType amountTypeToUpdate = existingAmountTypes.get(dto.getAmountTypeId());
-                    amountTypeToUpdate.setTypeName(dto.getTypeName());
-                    amountTypeToUpdate.setDeleted(dto.isDeleted());
-                    amountTypeToUpdate.setSavedTime(savedTime);
-                    amountTypeDtosFromClientProcessed.add(amountTypeToUpdate);
+                    Optional<AmountType> amountTypeToUpdateOptional = Optional.ofNullable(existingAmountTypes.get(dto.getAmountTypeId()));
+                    if (amountTypeToUpdateOptional.isEmpty()) {
+                        newEntity.setLocalId(dto.getLocalId());
+                        amountTypeToInsert.add(newEntity);
+                    } else {
+                        AmountType amountTypeToUpdate = amountTypeToUpdateOptional.get();
+                        amountTypeToUpdate.setTypeName(dto.getTypeName());
+                        amountTypeToUpdate.setDeleted(dto.isDeleted());
+                        amountTypeToUpdate.setSavedTime(savedTime);
+                        amountTypeDtosFromClientProcessed.add(amountTypeToUpdate);
+                    }
                 }
                 case DELETE -> {
-                    AmountType amountTypeToDelete = existingAmountTypes.get(dto.getAmountTypeId());
-                    amountTypeToDelete.setDeleted(true);
-                    amountTypeToDelete.setSavedTime(savedTime);
-                    amountTypeDtosFromClientProcessed.add(amountTypeToDelete);
+                    Optional<AmountType> amountTypeToDeleteOptional = Optional.ofNullable(existingAmountTypes.get(dto.getAmountTypeId()));
+                    if (amountTypeToDeleteOptional.isEmpty()) {
+                        newEntity.setLocalId(dto.getLocalId());
+                        amountTypeToInsert.add(newEntity);
+                    } else {
+                        AmountType amountTypeToDelete = amountTypeToDeleteOptional.get();
+                        amountTypeToDelete.setDeleted(true);
+                        amountTypeToDelete.setSavedTime(savedTime);
+                        amountTypeDtosFromClientProcessed.add(amountTypeToDelete);
+//                        deletes all items that are related to that amount type
+                        List<ShoppingItem> shoppingItemsToDelete = shoppingItemRepository.findShoppingItemByUserUserNameAndItemAmountType(user.getUserName(), amountTypeToDeleteOptional.get());
+                        shoppingItemsToDelete.forEach(shoppingItem -> shoppingItem.setDeleted(true));
+
+                    }
                 }
+                case NONE ->
+//                        adds entities for future reference
+                        Optional.ofNullable(existingAmountTypes.get(dto.getAmountTypeId()))
+                                .ifPresent(amountTypeDtosFromClientProcessed::add);
             }
         }
         amountTypeDtosFromClientProcessed.addAll(amountTypeRepository.saveAll(amountTypeToInsert));
-        amountTypeRepository.flush();
 
         List<Category> categoriesToInsert = new ArrayList<>();
         Set<Category> categoryDtosFromClientProcessed = new HashSet<>();
@@ -107,52 +124,70 @@ public class WebSocketService extends CustomService {
                                 .map(CategoryDto::getCategoryId)
                                 .collect(Collectors.toList())
                 ).stream()
-                .collect(Collectors.toMap(a -> a.getCategoryId().getCategoryId(), Function.identity()));
+                .collect(Collectors.toMap(Category::getCategoryId, Function.identity()));
 
         for (CategoryDto dto : allDto.getCategoryDtoList()) {
             log.log(Level.DEBUG, "Attempting to {} data: {}", dto.getModifyState(), dto.getCategoryId());
-
+            Category newEntity = DatabaseUtil.toCategory(user, dto, savedTime);
             switch (dto.getModifyState()) {
                 case INSERT -> {
-                    Category newEntity = DatabaseUtil.toCategory(user, dto, savedTime);
                     newEntity.setLocalId(dto.getLocalId());
                     categoriesToInsert.add(newEntity);
                 }
                 case UPDATE -> {
-                    Category categoryToUpdate = existingCategories.get(dto.getCategoryId());
-                    categoryToUpdate.setCategoryName(dto.getCategoryName());
-                    categoryToUpdate.setDeleted(dto.isDeleted());
-                    categoryToUpdate.setSavedTime(savedTime);
-                    categoryDtosFromClientProcessed.add(categoryToUpdate);
+                    Optional<Category> categoryToUpdateOptional = Optional.ofNullable(existingCategories.get(dto.getCategoryId()));
+                    if (categoryToUpdateOptional.isEmpty()) {
+                        newEntity.setLocalId(dto.getLocalId());
+                        categoriesToInsert.add(newEntity);
+                    } else {
+                        Category categoryToUpdate = categoryToUpdateOptional.get();
+                        categoryToUpdate.setCategoryName(dto.getCategoryName());
+                        categoryToUpdate.setDeleted(dto.isDeleted());
+                        categoryToUpdate.setSavedTime(savedTime);
+                        categoryDtosFromClientProcessed.add(categoryToUpdate);
+                    }
                 }
                 case DELETE -> {
-                    Category categoryToDelete = existingCategories.get(dto.getCategoryId());
-                    categoryToDelete.setDeleted(dto.isDeleted());
-                    categoryToDelete.setSavedTime(savedTime);
-                    categoryDtosFromClientProcessed.add(categoryToDelete);
+                    Optional<Category> categoryToDeleteOptional = Optional.ofNullable(existingCategories.get(dto.getCategoryId()));
+                    if (categoryToDeleteOptional.isEmpty()) {
+                        newEntity.setLocalId(dto.getLocalId());
+                        categoriesToInsert.add(newEntity);
+                    } else {
+                        Category categoryToDelete = categoryToDeleteOptional.get();
+                        categoryToDelete.setDeleted(dto.isDeleted());
+                        categoryToDelete.setSavedTime(savedTime);
+                        categoryDtosFromClientProcessed.add(categoryToDelete);
+                        List<ShoppingItem> shoppingItemsToDelete = shoppingItemRepository.findShoppingItemByUserUserNameAndItemCategory(user.getUserName(), categoryToDeleteOptional.get());
+                        shoppingItemsToDelete.forEach(shoppingItem -> shoppingItem.setDeleted(true));
+                    }
                 }
+                case NONE ->
+//                        adds entities for future reference
+                        Optional.ofNullable(existingCategories.get(dto.getCategoryId()))
+                                .ifPresent(categoryDtosFromClientProcessed::add);
+
             }
         }
+
         categoryDtosFromClientProcessed.addAll(categoryRepository.saveAll(categoriesToInsert));
-        categoryRepository.flush();
 
         List<ShoppingItem> shoppingItemToInsert = new ArrayList<>();
         Set<ShoppingItem> shoppingItemDtosFromClientProcessed = new HashSet<>();
 
-        List<ShoppingItemId> shoppingItemIds = allDto.getShoppingItemDtoList()
+        Map<Long, ShoppingItem> existingShoppingItems = shoppingItemRepository.findAllById(
+                        allDto.getShoppingItemDtoList()
+                                .stream()
+                                .map(ShoppingItemDto::getShoppingItemId)
+                                .toList())
                 .stream()
-                .map(shoppingItemDto -> new ShoppingItemId(user, shoppingItemDto.getShoppingItemId()))
-                .toList();
-        Map<Long, ShoppingItem> existingShoppingItems = shoppingItemRepository.findAllById(shoppingItemIds)
-                .stream()
-                .collect(Collectors.toMap(a -> a.getShoppingItemId().getShoppingItemId(), Function.identity()));
+                .collect(Collectors.toMap(ShoppingItem::getShoppingItemId, Function.identity()));
 
         for (ShoppingItemDto dto : allDto.getShoppingItemDtoList()) {
             log.log(Level.DEBUG, "Attempting to {} data: {}", dto.getModifyState(), dto.getShoppingItemId());
+            ShoppingItem newEntity = DatabaseUtil.toShoppingItem(user, amountTypeRepository, categoryRepository, dto, savedTime);
 
             switch (dto.getModifyState()) {
                 case INSERT -> {
-                    ShoppingItem newEntity = DatabaseUtil.toShoppingItem(user, amountTypeRepository, categoryRepository, dto, savedTime);
                     newEntity.setLocalShoppingItemId(dto.getLocalId());
                     newEntity.setLocalCategoryId(dto.getLocalCategoryId());
                     newEntity.setLocalAmountTypeId(dto.getLocalAmountTypeId());
@@ -160,39 +195,57 @@ public class WebSocketService extends CustomService {
                 }
                 case UPDATE -> {
 //                    finding relevant data
-                    ShoppingItem shoppingItem = existingShoppingItems.get(dto.getShoppingItemId());
+                    Optional<ShoppingItem> shoppingItemOptional = Optional.ofNullable(existingShoppingItems.get(dto.getShoppingItemId()));
+                    if (shoppingItemOptional.isEmpty()) {
+                        newEntity.setLocalShoppingItemId(dto.getLocalId());
+                        newEntity.setLocalCategoryId(dto.getLocalCategoryId());
+                        newEntity.setLocalAmountTypeId(dto.getLocalAmountTypeId());
+                        shoppingItemToInsert.add(newEntity);
+                    } else {
+                        ShoppingItem shoppingItemToUpdate = shoppingItemOptional.get();
+                        AmountType amountTypeDb = amountTypeRepository.findAmountTypeByUserUserNameAndAmountTypeId(user.getUserName(), dto.getItemAmountTypeId())
+                                .orElseThrow(() -> new NoResourcesFoundException("No such AmountType:" + dto.getItemAmountTypeId()));
+                        Category categoryDb = categoryRepository.findCategoryByUserUserNameAndCategoryId(user.getUserName(), dto.getItemCategoryId())
+                                .orElseThrow(() -> new NoResourcesFoundException("no such Category:" + dto.getItemCategoryId()));
 
-                    AmountType amountTypeDb = amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(user.getUserName(), dto.getItemAmountTypeId())
-                            .orElseThrow(() -> new NoResourcesFoundException("No such AmountType:" + dto.getItemAmountTypeId()));
-                    Category categoryDb = categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(user.getUserName(), dto.getItemCategoryId())
-                            .orElseThrow(() -> new NoResourcesFoundException("no such Category:" + dto.getItemCategoryId()));
-
-                    shoppingItem.setItemAmountType(amountTypeDb);
-                    shoppingItem.setItemCategory(categoryDb);
-                    shoppingItem.setBought(dto.isBought());
-                    shoppingItem.setAmount(dto.getAmount());
-                    shoppingItem.setItemName(dto.getItemName());
-                    shoppingItem.setDeleted(dto.isDeleted());
-                    shoppingItem.setSavedTime(savedTime);
-                    shoppingItemDtosFromClientProcessed.add(shoppingItem);
+                        shoppingItemToUpdate.setItemAmountType(amountTypeDb);
+                        shoppingItemToUpdate.setItemCategory(categoryDb);
+                        shoppingItemToUpdate.setBought(dto.isBought());
+                        shoppingItemToUpdate.setAmount(dto.getAmount());
+                        shoppingItemToUpdate.setItemName(dto.getItemName());
+                        shoppingItemToUpdate.setDeleted(dto.isDeleted());
+                        shoppingItemToUpdate.setSavedTime(savedTime);
+                        shoppingItemDtosFromClientProcessed.add(shoppingItemToUpdate);
+                    }
                 }
                 case DELETE -> {
-                    ShoppingItem shoppingItem = existingShoppingItems.get(dto.getShoppingItemId());
-                    shoppingItem.setDeleted(dto.isDeleted());
-                    shoppingItem.setSavedTime(savedTime);
-                    shoppingItemDtosFromClientProcessed.add(shoppingItem);
+                    Optional<ShoppingItem> shoppingItemOptional = Optional.ofNullable(existingShoppingItems.get(dto.getShoppingItemId()));
+                    if (shoppingItemOptional.isEmpty()) {
+                        newEntity.setLocalShoppingItemId(dto.getLocalId());
+                        newEntity.setLocalCategoryId(dto.getLocalCategoryId());
+                        newEntity.setLocalAmountTypeId(dto.getLocalAmountTypeId());
+                        shoppingItemToInsert.add(newEntity);
+                    } else {
+                        ShoppingItem shoppingItemToDelete = shoppingItemOptional.get();
+                        shoppingItemToDelete.setDeleted(dto.isDeleted());
+                        shoppingItemToDelete.setSavedTime(savedTime);
+                        shoppingItemDtosFromClientProcessed.add(shoppingItemToDelete);
+                    }
                 }
+                case NONE ->
+//                        adds entities for future reference
+                        Optional.ofNullable(existingShoppingItems.get(dto.getShoppingItemId()))
+                                .ifPresent(shoppingItemDtosFromClientProcessed::add);
             }
         }
         shoppingItemDtosFromClientProcessed.addAll(shoppingItemRepository.saveAll(shoppingItemToInsert));
-        shoppingItemRepository.flush();
 
-//        data from database (data user does not have) it needs to be inserted, updated or deleted from local database, server needs to figure that out
-        List<AmountType> amountTypesFromDb = amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
-        List<Category> categoriesFromDb = categoryRepository.findCategoryByCategoryIdUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
-        List<ShoppingItem> shoppingItemsFromDb = shoppingItemRepository.findShoppingItemByShoppingItemIdUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
+        //        data from database (data user does not have) it needs to be inserted, updated or deleted from local database, server needs to figure that out
+        List<AmountType> amountTypesFromDb = amountTypeRepository.findAmountTypeByUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
+        List<Category> categoriesFromDb = categoryRepository.findCategoryByUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
+        List<ShoppingItem> shoppingItemsFromDb = shoppingItemRepository.findShoppingItemByUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
 
-//        data after processing can be sent to a client
+        //        data after processing can be sent to a client
         List<AmountTypeDto> amountTypesFromDbProcessed = (amountTypesFromDb)
                 .stream()
                 .filter(amountType -> {
