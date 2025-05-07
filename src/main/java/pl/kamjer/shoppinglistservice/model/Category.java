@@ -19,6 +19,7 @@ public class Category {
     @Id
     @Column(name = "category_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @EqualsAndHashCode.Include
     private Long categoryId;
     @ManyToOne
     @JoinColumn(name = "user_name", referencedColumnName = "user_name")

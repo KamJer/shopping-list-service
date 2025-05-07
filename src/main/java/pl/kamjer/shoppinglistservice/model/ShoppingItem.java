@@ -19,6 +19,7 @@ public class ShoppingItem {
     @Id
     @Column(name = "shopping_item_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @EqualsAndHashCode.Include
     private Long shoppingItemId;
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumns({
