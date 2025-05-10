@@ -13,6 +13,7 @@ import java.util.Optional;
 public interface CategoryRepository extends JpaRepository<Category, Long> {
     List<Category> findAllByUserUserName(String userName);
     Optional<Category> findCategoryByUserUserNameAndCategoryId(String userName, long categoryId_categoryId);
+    List<Category> findByUserUserName(String userName);
     @Transactional
     void deleteByCategoryIdAndUserUserName(Long categoryId, String userName);
 

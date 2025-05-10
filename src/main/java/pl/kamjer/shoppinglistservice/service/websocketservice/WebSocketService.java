@@ -60,15 +60,29 @@ public class WebSocketService extends CustomService {
 
 //        getting date and time from user, if time from user is null take the oldest possible time
         LocalDateTime userSavedTime = Optional.ofNullable(allDto.getSavedTime()).orElseGet(() -> LocalDateTime.of(1000, 1, 1, 0, 0));
-//        handling saving data from client
-        List<AmountType> amountTypeToInsert = new ArrayList<>();
-        Set<AmountType> amountTypeDtosFromClientProcessed = new HashSet<>();
 
-        Map<Long, AmountType> existingAmountTypes = amountTypeRepository.findAllById(
-                        allDto.getAmountTypeDtoList().stream()
-                                .map(AmountTypeDto::getAmountTypeId)
-                                .collect(Collectors.toList())
-                ).stream()
+        List<AmountType> amountTypesFromDb = amountTypeRepository.findByUserUserName(user.getUserName());
+        List<Category> categoriesFromDb = categoryRepository.findByUserUserName(user.getUserName());
+        List<ShoppingItem> shoppingItemsFromDb = shoppingItemRepository.findByUserUserName(user.getUserName());
+
+//        list of entities that does exist on a connected device;
+        Set<AmountType> amountTypesBeforeAndSend = new HashSet<>();
+//        list of entities that does not exist on a connected device (list of entities to insert and update)
+        List<AmountType> amountTypesAfterAndSend = new ArrayList<>();
+
+        amountTypesFromDb.forEach(amountType -> {
+            if (amountType.getSavedTime().isAfter(userSavedTime)) {
+                amountTypesAfterAndSend.add(amountType);
+            } else {
+                amountTypesBeforeAndSend.add(amountType);
+            }
+        });
+
+        //        handling saving data from client
+        List<AmountType> amountTypeToInsert = new ArrayList<>();
+
+        Map<Long, AmountType> existingAmountTypes = amountTypesFromDb
+                .stream()
                 .collect(Collectors.toMap(AmountType::getAmountTypeId, Function.identity()));
 
         for (AmountTypeDto dto : allDto.getAmountTypeDtoList()) {
@@ -89,7 +103,8 @@ public class WebSocketService extends CustomService {
                         amountTypeToUpdate.setTypeName(dto.getTypeName());
                         amountTypeToUpdate.setDeleted(dto.isDeleted());
                         amountTypeToUpdate.setSavedTime(savedTime);
-                        amountTypeDtosFromClientProcessed.add(amountTypeToUpdate);
+                        amountTypesBeforeAndSend.add(amountTypeToUpdate);
+                        amountTypesAfterAndSend.add(amountTypeToUpdate);
                     }
                 }
                 case DELETE -> {
@@ -101,29 +116,45 @@ public class WebSocketService extends CustomService {
                         AmountType amountTypeToDelete = amountTypeToDeleteOptional.get();
                         amountTypeToDelete.setDeleted(true);
                         amountTypeToDelete.setSavedTime(savedTime);
-                        amountTypeDtosFromClientProcessed.add(amountTypeToDelete);
+                        amountTypesBeforeAndSend.add(amountTypeToDelete);
+                        amountTypesAfterAndSend.add(amountTypeToDelete);
+
 //                        deletes all items that are related to that amount type
-                        List<ShoppingItem> shoppingItemsToDelete = shoppingItemRepository.findShoppingItemByUserUserNameAndItemAmountType(user.getUserName(), amountTypeToDeleteOptional.get());
+                        List<ShoppingItem> shoppingItemsToDelete = shoppingItemsFromDb
+                                .stream()
+                                .filter(shoppingItem -> shoppingItem.getItemAmountType()
+                                        .equals(amountTypeToDelete))
+                                .toList();
                         shoppingItemsToDelete.forEach(shoppingItem -> shoppingItem.setDeleted(true));
 
                     }
                 }
-                case NONE ->
-//                        adds entities for future reference
-                        Optional.ofNullable(existingAmountTypes.get(dto.getAmountTypeId()))
-                                .ifPresent(amountTypeDtosFromClientProcessed::add);
             }
         }
-        amountTypeDtosFromClientProcessed.addAll(amountTypeRepository.saveAll(amountTypeToInsert));
+//        list of entities from client (this device)
+        List<AmountType> amountTypes = amountTypeRepository.saveAll(amountTypeToInsert);
+//        adding send data to the list
+        amountTypesBeforeAndSend.addAll(amountTypes);
+//        updated list of entities on server to send to client
+        amountTypesAfterAndSend.addAll(amountTypes);
+
+//        list of entities that does exist on a connected device;
+        Set<Category> categoriesBeforeAndSend = new HashSet<>();
+//        list of entities that does not exist on a connected device (list of entities to insert and update)
+        List<Category> categoriesAfterAndSend = new ArrayList<>();
+
+        categoriesFromDb.forEach(category -> {
+            if (category.getSavedTime().isAfter(userSavedTime)) {
+                categoriesAfterAndSend.add(category);
+            } else {
+                categoriesBeforeAndSend.add(category);
+            }
+        });
 
         List<Category> categoriesToInsert = new ArrayList<>();
-        Set<Category> categoryDtosFromClientProcessed = new HashSet<>();
 
-        Map<Long, Category> existingCategories = categoryRepository.findAllById(
-                        allDto.getCategoryDtoList().stream()
-                                .map(CategoryDto::getCategoryId)
-                                .collect(Collectors.toList())
-                ).stream()
+        Map<Long, Category> existingCategories = categoriesFromDb
+                .stream()
                 .collect(Collectors.toMap(Category::getCategoryId, Function.identity()));
 
         for (CategoryDto dto : allDto.getCategoryDtoList()) {
@@ -144,7 +175,8 @@ public class WebSocketService extends CustomService {
                         categoryToUpdate.setCategoryName(dto.getCategoryName());
                         categoryToUpdate.setDeleted(dto.isDeleted());
                         categoryToUpdate.setSavedTime(savedTime);
-                        categoryDtosFromClientProcessed.add(categoryToUpdate);
+                        categoriesAfterAndSend.add(categoryToUpdate);
+                        categoriesBeforeAndSend.add(categoryToUpdate);
                     }
                 }
                 case DELETE -> {
@@ -156,29 +188,38 @@ public class WebSocketService extends CustomService {
                         Category categoryToDelete = categoryToDeleteOptional.get();
                         categoryToDelete.setDeleted(dto.isDeleted());
                         categoryToDelete.setSavedTime(savedTime);
-                        categoryDtosFromClientProcessed.add(categoryToDelete);
-                        List<ShoppingItem> shoppingItemsToDelete = shoppingItemRepository.findShoppingItemByUserUserNameAndItemCategory(user.getUserName(), categoryToDeleteOptional.get());
+                        categoriesAfterAndSend.add(categoryToDelete);
+                        categoriesBeforeAndSend.add(categoryToDelete);
+                        List<ShoppingItem> shoppingItemsToDelete = shoppingItemsFromDb
+                                .stream()
+                                .filter(shoppingItem -> shoppingItem.getItemCategory().equals(categoryToDelete))
+                                .toList();
                         shoppingItemsToDelete.forEach(shoppingItem -> shoppingItem.setDeleted(true));
                     }
                 }
-                case NONE ->
-//                        adds entities for future reference
-                        Optional.ofNullable(existingCategories.get(dto.getCategoryId()))
-                                .ifPresent(categoryDtosFromClientProcessed::add);
-
             }
         }
+//        list of entities from client (this device)
+        List<Category> categories = categoryRepository.saveAll(categoriesToInsert);
+        categoriesBeforeAndSend.addAll(categories);
+//        updated list of entities on server
+        categoriesAfterAndSend.addAll(categories);
 
-        categoryDtosFromClientProcessed.addAll(categoryRepository.saveAll(categoriesToInsert));
+//        list of entities that does exist on a connected device;
+        Set<ShoppingItem> shoppingItemsBeforeAndSend = new HashSet<>();
+//        list of entities that does not exist on a connected device (list of entities to insert and update)
+        List<ShoppingItem> shoppingItemsAfterAndSend = new ArrayList<>();
+
+        shoppingItemsFromDb.forEach(shoppingItem -> {
+            if (shoppingItem.getSavedTime().isAfter(userSavedTime)) {
+                shoppingItemsAfterAndSend.add(shoppingItem);
+            } else {
+                shoppingItemsBeforeAndSend.add(shoppingItem);
+            }
+        });
 
         List<ShoppingItem> shoppingItemToInsert = new ArrayList<>();
-        Set<ShoppingItem> shoppingItemDtosFromClientProcessed = new HashSet<>();
-
-        Map<Long, ShoppingItem> existingShoppingItems = shoppingItemRepository.findAllById(
-                        allDto.getShoppingItemDtoList()
-                                .stream()
-                                .map(ShoppingItemDto::getShoppingItemId)
-                                .toList())
+        Map<Long, ShoppingItem> existingShoppingItems = shoppingItemsFromDb
                 .stream()
                 .collect(Collectors.toMap(ShoppingItem::getShoppingItemId, Function.identity()));
 
@@ -203,9 +244,10 @@ public class WebSocketService extends CustomService {
                         shoppingItemToInsert.add(newEntity);
                     } else {
                         ShoppingItem shoppingItemToUpdate = shoppingItemOptional.get();
-                        AmountType amountTypeDb = amountTypeRepository.findAmountTypeByUserUserNameAndAmountTypeId(user.getUserName(), dto.getItemAmountTypeId())
+//                        getting potential new amount types
+                        AmountType amountTypeDb = Optional.ofNullable(existingAmountTypes.get(dto.getItemAmountTypeId()))
                                 .orElseThrow(() -> new NoResourcesFoundException("No such AmountType:" + dto.getItemAmountTypeId()));
-                        Category categoryDb = categoryRepository.findCategoryByUserUserNameAndCategoryId(user.getUserName(), dto.getItemCategoryId())
+                        Category categoryDb = Optional.ofNullable(existingCategories.get(dto.getItemCategoryId()))
                                 .orElseThrow(() -> new NoResourcesFoundException("no such Category:" + dto.getItemCategoryId()));
 
                         shoppingItemToUpdate.setItemAmountType(amountTypeDb);
@@ -215,7 +257,8 @@ public class WebSocketService extends CustomService {
                         shoppingItemToUpdate.setItemName(dto.getItemName());
                         shoppingItemToUpdate.setDeleted(dto.isDeleted());
                         shoppingItemToUpdate.setSavedTime(savedTime);
-                        shoppingItemDtosFromClientProcessed.add(shoppingItemToUpdate);
+                        shoppingItemsBeforeAndSend.add(shoppingItemToUpdate);
+                        shoppingItemsAfterAndSend.add(shoppingItemToUpdate);
                     }
                 }
                 case DELETE -> {
@@ -229,31 +272,25 @@ public class WebSocketService extends CustomService {
                         ShoppingItem shoppingItemToDelete = shoppingItemOptional.get();
                         shoppingItemToDelete.setDeleted(dto.isDeleted());
                         shoppingItemToDelete.setSavedTime(savedTime);
-                        shoppingItemDtosFromClientProcessed.add(shoppingItemToDelete);
+                        shoppingItemsBeforeAndSend.add(shoppingItemToDelete);
+                        shoppingItemsAfterAndSend.add(shoppingItemToDelete);
                     }
                 }
-                case NONE ->
-//                        adds entities for future reference
-                        Optional.ofNullable(existingShoppingItems.get(dto.getShoppingItemId()))
-                                .ifPresent(shoppingItemDtosFromClientProcessed::add);
             }
         }
-        shoppingItemDtosFromClientProcessed.addAll(shoppingItemRepository.saveAll(shoppingItemToInsert));
+        List<ShoppingItem> shoppingItems = shoppingItemRepository.saveAll(shoppingItemToInsert);
+        shoppingItemsBeforeAndSend.addAll(shoppingItems);
+        shoppingItemsAfterAndSend.addAll(shoppingItems);
 
-        //        data from database (data user does not have) it needs to be inserted, updated or deleted from local database, server needs to figure that out
-        List<AmountType> amountTypesFromDb = amountTypeRepository.findAmountTypeByUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
-        List<Category> categoriesFromDb = categoryRepository.findCategoryByUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
-        List<ShoppingItem> shoppingItemsFromDb = shoppingItemRepository.findShoppingItemByUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
-
-        //        data after processing can be sent to a client
-        List<AmountTypeDto> amountTypesFromDbProcessed = (amountTypesFromDb)
+//        data after processing can be sent to a client
+        List<AmountTypeDto> amountTypesFromDbProcessed = (amountTypesAfterAndSend)
                 .stream()
                 .filter(amountType -> {
 //                    if entity is deleted check if it exists on a list from client, if it does exist it means
 //                    client still has that entity, and it needs to be deleted, if client doesn't have that data
 //                    it means it was already deleted and can be filtered, if it is not deleted return pass data further
                     if (amountType.isDeleted()) {
-                        return amountTypeDtosFromClientProcessed.contains(amountType);
+                        return amountTypesBeforeAndSend.contains(amountType);
                     }
                     return true;
                 })
@@ -264,21 +301,21 @@ public class WebSocketService extends CustomService {
                         modifyState = ModifyState.DELETE;
 //                        if clients database contains that data but its timestamp happens later than the last
 //                        contact client had with server it needs to be updated (data was updated)
-                    } else if (amountTypeDtosFromClientProcessed.contains(amountType)) {
+                    } else if (amountTypesBeforeAndSend.contains(amountType)) {
                         modifyState = ModifyState.UPDATE;
                     }
                     return DatabaseUtil.toAmountTypeDto(amountType, modifyState);
                 })
                 .toList();
 
-        List<CategoryDto> categoriesFromDatabaseProcessed = (categoriesFromDb)
+        List<CategoryDto> categoriesFromDatabaseProcessed = (categoriesAfterAndSend)
                 .stream()
                 .filter(category -> {
 //                    if entity is deleted check if it exists on a list from client, if it does exist it means
 //                    client still has that entity, and it needs to be deleted, if client doesn't have that data
 //                    it means it was already deleted and can be filtered, if it is not deleted return pass data further
                     if (category.isDeleted()) {
-                        return categoryDtosFromClientProcessed.contains(category);
+                        return categoriesBeforeAndSend.contains(category);
                     }
                     return true;
                 })
@@ -286,21 +323,21 @@ public class WebSocketService extends CustomService {
                     ModifyState modifyState = ModifyState.INSERT;
                     if (category.isDeleted()) {
                         modifyState = ModifyState.DELETE;
-                    } else if (categoryDtosFromClientProcessed.contains(category)) {
+                    } else if (categoriesBeforeAndSend.contains(category)) {
                         modifyState = ModifyState.UPDATE;
                     }
                     return DatabaseUtil.toCategoryDto(category, modifyState);
                 })
                 .toList();
 
-        List<ShoppingItemDto> shoppingItemsFromDataBaseProcessed = (shoppingItemsFromDb)
+        List<ShoppingItemDto> shoppingItemsFromDataBaseProcessed = (shoppingItemsAfterAndSend)
                 .stream()
                 .filter(shoppingItem -> {
 //                    if entity is deleted check if it exists on a list from client, if it does exist it means
 //                    client still has that entity, and it needs to be deleted, if client doesn't have that data
 //                    it means it was already deleted and can be filtered, if it is not deleted return pass data further
                     if (shoppingItem.isDeleted()) {
-                        return shoppingItemDtosFromClientProcessed.contains(shoppingItem);
+                        return shoppingItemsBeforeAndSend.contains(shoppingItem);
                     }
                     return true;
                 })
@@ -308,7 +345,7 @@ public class WebSocketService extends CustomService {
                     ModifyState modifyState = ModifyState.INSERT;
                     if (shoppingItem.isDeleted()) {
                         modifyState = ModifyState.DELETE;
-                    } else if (shoppingItemDtosFromClientProcessed.contains(shoppingItem)) {
+                    } else if (shoppingItemsBeforeAndSend.contains(shoppingItem)) {
                         modifyState = ModifyState.UPDATE;
                     }
                     return DatabaseUtil.toShoppingItemDto(shoppingItem, modifyState);

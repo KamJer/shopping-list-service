@@ -14,6 +14,7 @@ public interface AmountTypeRepository extends JpaRepository<AmountType, Long> {
     List<AmountType> findAllAmountTypeByUserUserName(String userName);
     Optional<AmountType> findAmountTypeByUserUserNameAndAmountTypeId(String userName, long amountTypeId_amountTypeId);
     List<AmountType> findAmountTypeByUserUserNameAndSavedTimeAfter(String userNAme, LocalDateTime localDateTime);
+    List<AmountType> findByUserUserName(String userName);
     List<AmountType> findAmountTypeByUserUserNameAndSavedTimeAfterAndDeletedIsFalse(String userNAme, LocalDateTime localDateTime);
     @Transactional
     void deleteByAmountTypeIdAndUserUserName(Long amountTypeId, String userName);

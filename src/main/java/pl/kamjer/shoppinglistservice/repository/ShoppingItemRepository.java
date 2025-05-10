@@ -18,4 +18,5 @@ public interface ShoppingItemRepository extends JpaRepository<ShoppingItem, Long
     List<ShoppingItem> findShoppingItemByUserUserNameAndItemAmountType(String user_userName, AmountType itemAmountType);
 
     List<ShoppingItem> findBySavedTimeBeforeAndBoughtIsTrue(LocalDateTime deleteTime);
+    List<ShoppingItem> findByUserUserName(String userName);
 }
