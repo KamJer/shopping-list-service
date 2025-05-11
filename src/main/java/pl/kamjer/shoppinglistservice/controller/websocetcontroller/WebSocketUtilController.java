@@ -10,12 +10,10 @@ import org.springframework.web.socket.WebSocketSession;
 import pl.kamjer.shoppinglistservice.config.websocket.Message;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
 import pl.kamjer.shoppinglistservice.model.ModifyState;
-import pl.kamjer.shoppinglistservice.model.User;
 import pl.kamjer.shoppinglistservice.model.dto.utilDto.AllDto;
-import pl.kamjer.shoppinglistservice.service.websocketservice.WebSocketService;
+import pl.kamjer.shoppinglistservice.service.websocketservice.WebSocketUtilService;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
@@ -26,12 +24,11 @@ import java.util.logging.Level;
 @Log
 public class WebSocketUtilController {
 
-    private WebSocketService webSocketService;
+    private WebSocketUtilService webSocketService;
     private ObjectMapper objectMapper;
 
     private WebSocketDataHolder webSocketDataHolder;
 
-    @Deprecated
     @MessageMapping("/synchronizeData")
     public void synchronizeData(AllDto allDto) throws IOException {
         log.info("/synchronizeData connected: User " +  webSocketDataHolder.getCurrentSession().getPrincipal());

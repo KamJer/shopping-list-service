@@ -1,31 +1,9 @@
 package pl.kamjer.shoppinglistservice;
 
-import jakarta.persistence.EntityManager;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
-import org.springframework.web.socket.WebSocketSession;
-import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
-import pl.kamjer.shoppinglistservice.model.ModifyState;
-import pl.kamjer.shoppinglistservice.model.dto.AmountTypeDto;
-import pl.kamjer.shoppinglistservice.model.dto.CategoryDto;
-import pl.kamjer.shoppinglistservice.model.dto.utilDto.AllDto;
-import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
-import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
-import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
-import pl.kamjer.shoppinglistservice.repository.UserRepository;
-import pl.kamjer.shoppinglistservice.service.websocketservice.WebSocketService;
-
-import java.security.Principal;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
