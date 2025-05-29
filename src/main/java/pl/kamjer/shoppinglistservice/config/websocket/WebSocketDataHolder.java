@@ -3,11 +3,11 @@ package pl.kamjer.shoppinglistservice.config.websocket;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.socket.WebSocketSession;
+import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.stream.Collectors;
 
 @Component
 public class WebSocketDataHolder {
@@ -34,12 +34,12 @@ public class WebSocketDataHolder {
         this.basicTopics = basicTopics;
     }
 
-    void menageParameterTopics(Topic baseUrl, String topic, WebSocketSession session) {
-        if (parameterTopics.contains(baseUrl) && !subscribedTopicsAndSessions.containsKey(topic)) {
-            this.subscribedTopicsAndSessions.put(topic, new HashMap<>());
-            addSessionToTopic(topic, session);
+    void menageParameterTopics(Topic baseUrl, WebSocketSession session) {
+        if (parameterTopics.contains(baseUrl) && !subscribedTopicsAndSessions.containsKey(baseUrl.getParameterizedUrl())) {
+            this.subscribedTopicsAndSessions.put(baseUrl.getParameterizedUrl(), new HashMap<>());
+            addSessionToTopic(baseUrl, session);
         } else {
-            addSessionToTopic(topic, session);
+            addSessionToTopic(baseUrl, session);
         }
     }
 
@@ -55,7 +55,7 @@ public class WebSocketDataHolder {
                     throw new IllegalArgumentException("Wrong parameter definition");
                 }
 //                add to the list of parameterTopics to look through later in creation of them (those topics are created when subscribed)
-                parameterTopics.add(new Topic(topic, parameterCount));
+                parameterTopics.add(new Topic(topic, new String[parameterCount]));
             } else {
 //                if topic does not have parameters add to the list of registered topics
                 this.subscribedTopicsAndSessions.put(topic, new HashMap<>());
@@ -74,28 +74,28 @@ public class WebSocketDataHolder {
      * @param topic   - topic to subscribe to
      * @param session - session for subscription
      */
-    void addSessionToTopic(String topic, WebSocketSession session) {
+    void addSessionToTopic(Topic topic, WebSocketSession session) {
         getSessionsForTopic(topic).put(session.getId(), session);
     }
 
     /**
-     * removes sessions for topics
+     * removes sessions for topic
      *
      * @param topic   - topic to delete session from
      * @param session - session to remove
      */
-    void removeSubscription(String topic, WebSocketSession session) {
-        getSessionsForTopic(topic).remove(session);
+    void removeSubscription(Topic topic, WebSocketSession session) {
+        getSessionsForTopic(topic).remove(session.getId());
     }
 
-    public HashMap<String, WebSocketSession> getSessionsForTopic(String topic) {
-        return Optional.ofNullable(subscribedTopicsAndSessions.get(topic)).orElseThrow();
+    public HashMap<String, WebSocketSession> getSessionsForTopic(Topic topic) {
+        Optional<HashMap<String, WebSocketSession>> optional = Optional.ofNullable(subscribedTopicsAndSessions.get(topic.getParameterizedUrl()));
+        return optional.orElseThrow(() -> new NoResourcesFoundException("No such topic exists"));
     }
 
     public void removeSessionFromTopics(WebSocketSession session) {
         sessionsConnected.remove(session.getId());
-        subscribedTopicsAndSessions.forEach((key, value) ->
-                value.remove(session.getId()));
+        subscribedTopicsAndSessions.forEach((key, value) -> value.remove(session.getId()));
         subscribedTopicsAndSessions.entrySet()
                 .stream()
                 .filter(stringListEntry -> !stringListEntry.getValue().isEmpty() && !basicTopics.contains(stringListEntry.getKey()))

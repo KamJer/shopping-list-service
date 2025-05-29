@@ -7,7 +7,7 @@ import pl.kamjer.shoppinglistservice.model.dto.utilDto.Dto;
 
 @Builder
 @Getter
-public class CategoryDto extends Dto {
+public class CategoryDto {
 
     private long categoryId;
     private String categoryName;

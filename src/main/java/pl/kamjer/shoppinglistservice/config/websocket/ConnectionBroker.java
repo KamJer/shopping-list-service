@@ -30,20 +30,38 @@ public class ConnectionBroker {
     }
 
     public void handleMessage(WebSocketSession session, Message protocolMessage) throws IOException, InvocationTargetException, IllegalAccessException {
+        // Split the message body by semicolon to extract method parameters
         String[] body = protocolMessage.getHeaders().get(Message.Header.BODY).split(";");
-        String dest = protocolMessage.getHeaders().get(Message.Header.DEST);
-        Optional<String> processedBody = beanInspector.findControllerMethodAndCall(dest, body);
 
+        // Get the destination header to determine which controller method to call
+        Topic topic = null;
+        if (isMessageParametrized(protocolMessage)) {
+            topic = new Topic(protocolMessage.getHeaders().get(Message.Header.DEST), extractParameters(protocolMessage.getHeaders().get(Message.Header.PARA)));
+        } else {
+            topic = new Topic(protocolMessage.getHeaders().get(Message.Header.DEST), new String[]{});
+        }
+
+        // Use reflection to find and call the appropriate controller method based on destination and parameters
+        Optional<String> processedBody = beanInspector.findControllerMethodAndCall(topic, body);
+
+        // If the controller method returned a value, send it to all clients subscribed to the same topic
         if (processedBody.isPresent()) {
+            // Create headers for the message to be sent back
             HashMap<Message.Header, String> headersSource = new HashMap<>();
-            headersSource.put(Message.Header.ID, session.getId());
-            headersSource.put(Message.Header.DEST, protocolMessage.getHeaders().get(Message.Header.DEST));
-            headersSource.put(Message.Header.BODY, processedBody.get());
+            headersSource.put(Message.Header.ID, session.getId()); // ID of the sender session
+            headersSource.put(Message.Header.DEST, protocolMessage.getHeaders().get(Message.Header.DEST)); // Destination topic
+            headersSource.put(Message.Header.BODY, processedBody.get()); // The body returned from the method call
+
+            // Create a new message with the given command and headers
             Message messageBack = new Message(Message.Command.MESSAGE, headersSource);
 
+            // Send the message back to the sender
             session.sendMessage(new TextMessage(websocketMessageDecryptor.jsonphyMessage(messageBack)));
 
-            HashMap<String, WebSocketSession> sessions =  webSocketDataHolder.getSessionsForTopic(protocolMessage.getHeaders().get(Message.Header.DEST));
+            // Get all sessions subscribed to the same topic
+            HashMap<String, WebSocketSession> sessions = webSocketDataHolder.getSessionsForTopic(topic);
+
+            // Broadcast the message to all other subscribers except the sender
             for (WebSocketSession webSocketSession : sessions.values()) {
                 if (!webSocketSession.equals(session)) {
                     webSocketSession.sendMessage(new TextMessage(websocketMessageDecryptor.jsonphyMessage(messageBack)));
@@ -68,11 +86,11 @@ public class ConnectionBroker {
 //            splitting url on elements
             StringBuilder subUrlBuilder = getSubUrlBuilder(dest, parameters);
             headersSubscribed.put(Message.Header.DEST, subUrlBuilder.toString());
-            webSocketDataHolder.menageParameterTopics(new Topic(dest, parameters.length), subUrlBuilder.toString(), session);
-            webSocketDataHolder.addSessionToTopic(subUrlBuilder.toString(), session);
+            webSocketDataHolder.menageParameterTopics(new Topic(dest, parameters), session);
+            webSocketDataHolder.addSessionToTopic(new Topic(dest, parameters), session);
         } else {
             headersSubscribed.put(Message.Header.DEST, dest);
-            webSocketDataHolder.addSessionToTopic(dest, session);
+            webSocketDataHolder.addSessionToTopic(new Topic(dest, new String[]{}), session);
         }
         Message subscribedMessage = new Message(Message.Command.SUBSCRIBED, headersSubscribed);
         session.sendMessage(new TextMessage(websocketMessageDecryptor.jsonphyMessage(subscribedMessage)));
@@ -88,7 +106,7 @@ public class ConnectionBroker {
 //                if element of url is parameter replace it with passed parameter
             if (urlElements[i].startsWith("{") && urlElements[i].endsWith("}")) {
                 subUrlBuilder.append(parameters[parameterCount]);
-                parameterCount ++;
+                parameterCount++;
             } else {
 //                    if element is not parameter add it back at its place
                 subUrlBuilder.append(urlElements[i]);
@@ -103,7 +121,9 @@ public class ConnectionBroker {
 
     public void handleUnsubscribe(WebSocketSession session, Message protocolMessage) throws IOException {
         String dest = protocolMessage.getHeaders().get(Message.Header.DEST);
-        webSocketDataHolder.removeSubscription(dest, session);
+        String[] parameters = extractParameters(protocolMessage.getHeaders().get(Message.Header.PARA));
+
+        webSocketDataHolder.removeSubscription(new Topic(dest, parameters), session);
 
         HashMap<Message.Header, String> headersSubscribed = new HashMap<>();
         Message unsubscribedMessage = new Message(Message.Command.UNSUBSCRIBED, headersSubscribed);
@@ -115,5 +135,13 @@ public class ConnectionBroker {
         headers.put(Message.Header.BODY, t.getMessage());
 
         session.sendMessage(new TextMessage(websocketMessageDecryptor.jsonphyMessage(new Message(Message.Command.ERROR, headers))));
+    }
+
+    private boolean isMessageParametrized(Message protocolMessage) {
+        return Optional.ofNullable(protocolMessage.getHeaders().get(Message.Header.PARA)).isPresent();
+    }
+
+    private String[] extractParameters(String parameters) {
+        return parameters.split(";");
     }
 }

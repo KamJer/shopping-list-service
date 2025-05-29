@@ -26,6 +26,15 @@ public class DatabaseUtil {
                 .build();
     }
 
+    public static AmountTypeDto amountTypeDtoToAmountTypeDto(AmountTypeDto amountTypeDto, ModifyState modifyState) {
+        return AmountTypeDto.builder()
+                .amountTypeId(amountTypeDto.getAmountTypeId())
+                .typeName(amountTypeDto.getTypeName())
+                .modifyState(modifyState)
+                .localId(amountTypeDto.getLocalId())
+                .build();
+    }
+
     public static AmountTypeDto toAmountTypeDto(AmountType amountType, ModifyState modifyState) {
         return AmountTypeDto.builder()
                 .amountTypeId(amountType.getAmountTypeId())
@@ -49,6 +58,15 @@ public class DatabaseUtil {
                 .categoryName(category.getCategoryName())
                 .modifyState(modifyState)
                 .localId(category.getLocalId())
+                .build();
+    }
+
+    public static CategoryDto categoryDtoToCategoryDto(CategoryDto categoryDto, ModifyState modifyState) {
+        return CategoryDto.builder()
+                .categoryId(categoryDto.getCategoryId())
+                .categoryName(categoryDto.getCategoryName())
+                .modifyState(modifyState)
+                .localId(categoryDto.getLocalId())
                 .build();
     }
 
@@ -85,6 +103,21 @@ public class DatabaseUtil {
                 .localId(shoppingItem.getLocalShoppingItemId())
                 .localAmountTypeId(shoppingItem.getLocalAmountTypeId())
                 .localCategoryId(shoppingItem.getLocalCategoryId())
+                .build();
+    }
+
+    public static ShoppingItemDto fromShoppingItemDtoToShoppingItemDto(ShoppingItemDto shoppingItemDto, ModifyState modifyState) {
+        return ShoppingItemDto.builder()
+                .shoppingItemId(shoppingItemDto.getShoppingItemId())
+                .itemAmountTypeId(shoppingItemDto.getItemAmountTypeId())
+                .itemCategoryId(shoppingItemDto.getItemCategoryId())
+                .itemName(shoppingItemDto.getItemName())
+                .amount(shoppingItemDto.getAmount())
+                .bought(shoppingItemDto.isBought())
+                .modifyState(modifyState)
+                .localId(shoppingItemDto.getLocalId())
+                .localAmountTypeId(shoppingItemDto.getLocalAmountTypeId())
+                .localCategoryId(shoppingItemDto.getLocalCategoryId())
                 .build();
     }
 

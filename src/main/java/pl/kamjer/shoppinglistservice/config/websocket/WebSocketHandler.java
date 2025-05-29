@@ -36,13 +36,22 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
             webSocketDataHolder.setCurrentSession(session);
             if (message.getPayload() instanceof String payload) {
                 StringBuilder partialMessage = partialMessagesMap.computeIfAbsent(session.getId(), k -> new StringBuilder());
+                if (partialMessage.toString().endsWith(Message.MESSAGE_ENDER)) {
+                    StringBuilder stringBuilder = new StringBuilder();
+                    partialMessagesMap.put(session.getId(), stringBuilder);
+                    partialMessage = stringBuilder;
+                }
                 partialMessage.append(payload);
 
                 if (message.isLast()) {
                     String fullMessage = partialMessage.toString();
                     log.info("New message from user: {}", Optional.ofNullable(session.getPrincipal()).orElseThrow().getName());
 
-                    Message protocolMessage = websocketMessageDecryptor.decipher(fullMessage);
+                    String[] test = fullMessage.split(Message.MESSAGE_ENDER);
+                    
+
+                    Message protocolMessage = websocketMessageDecryptor.decipher(test[test.length-1]);
+
                     if (!messageValidator.validateMessage(protocolMessage)) {
                         throw new IllegalArgumentException("Wrong header type for send message");
                     }

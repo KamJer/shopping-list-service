@@ -52,7 +52,17 @@ public class Message {
         PARA
     }
 
+    public final static String MESSAGE_ENDER = "\0";
+
     private final Command command;
 
     private final HashMap<Header, String> headers;
+
+    //how it should look ex 1.
+    //{"command":"CONNECT",
+    //"headers":{""}}
+    //
+    //{"command":"SUBSCRIBE",
+    //"headers":{"PARA":"test";,"DEST":"{"/{test}/test"}}
+
 }

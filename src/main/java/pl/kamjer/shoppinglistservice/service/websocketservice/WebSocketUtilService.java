@@ -26,9 +26,8 @@ import java.util.stream.Collectors;
 
 @Service
 @Log4j2
-public class WebSocketUtilService extends CustomService {
+public class WebSocketUtilService extends WebsocketCustomService {
 
-    private final WebSocketDataHolder webSocketDataHolder;
     private final AmountTypeRepository amountTypeRepository;
     private final CategoryRepository categoryRepository;
     private final ShoppingItemRepository shoppingItemRepository;
@@ -37,19 +36,11 @@ public class WebSocketUtilService extends CustomService {
                                 AmountTypeRepository amountTypeRepository,
                                 CategoryRepository categoryRepository,
                                 ShoppingItemRepository shoppingItemRepository,
-                                WebSocketDataHolder webSocketDataHolder,
-                                EntityManager entityManager) {
-        super(userRepository);
+                                WebSocketDataHolder webSocketDataHolder) {
+        super(userRepository, webSocketDataHolder);
         this.amountTypeRepository = amountTypeRepository;
         this.categoryRepository = categoryRepository;
         this.shoppingItemRepository = shoppingItemRepository;
-        this.webSocketDataHolder = webSocketDataHolder;
-    }
-
-    @Override
-    public User getUserFromAuth() throws NoResourcesFoundException {
-        String userName = Optional.ofNullable(webSocketDataHolder.getCurrentSession().getPrincipal()).orElseThrow().getName();
-        return userRepository.findByUserName(userName).orElseThrow(() -> new NoResourcesFoundException("No such User"));
     }
 
     @Transactional
