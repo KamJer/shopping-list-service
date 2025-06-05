@@ -1,9 +1,6 @@
     package pl.kamjer.shoppinglistservice.model;
 
-    import jakarta.persistence.Column;
-    import jakarta.persistence.Entity;
-    import jakarta.persistence.Id;
-    import jakarta.persistence.Table;
+    import jakarta.persistence.*;
     import lombok.*;
     import org.springframework.security.core.userdetails.UserDetails;
 
@@ -25,6 +22,7 @@
         private String userName;
         @Column(name = "password")
         private String password;
+        @Version
         @Column(name = "saved_time")
         private LocalDateTime savedTime;
 

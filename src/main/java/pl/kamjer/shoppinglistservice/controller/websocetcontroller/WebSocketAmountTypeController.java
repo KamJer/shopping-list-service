@@ -39,7 +39,7 @@ public class WebSocketAmountTypeController extends WebsocketCustomController {
     @MessageMapping("/{userName}/postAmountType")
     public AmountTypeDto postAmountType(@DestinationVariable String userName, AmountTypeDto amountTypeDto) throws IOException {
         log.info("/postAmountType connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
-        AmountTypeDto amountTypeDtoProcessed = webSocketAmountTypeService.putAmountType(amountTypeDto);
+        AmountTypeDto amountTypeDtoProcessed = webSocketAmountTypeService.postAmountType(amountTypeDto);
         notifyClients(AllDto.builder()
                 .amountTypeDtoList(List.of(amountTypeDtoProcessed))
                 .categoryDtoList(List.of())

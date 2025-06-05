@@ -44,6 +44,16 @@ public class DatabaseUtil {
                 .build();
     }
 
+    public static AmountTypeDto toAmountTypeDto(AmountType amountType, ModifyState modifyState, LocalDateTime savedTime) {
+        return AmountTypeDto.builder()
+                .amountTypeId(amountType.getAmountTypeId())
+                .typeName(amountType.getTypeName())
+                .modifyState(modifyState)
+                .localId(amountType.getLocalId())
+                .savedTime(savedTime)
+                .build();
+    }
+
     public static User toUser(UserDto userDto) {
         return User.builder()
                 .userName(userDto.getUserName())
@@ -58,6 +68,16 @@ public class DatabaseUtil {
                 .categoryName(category.getCategoryName())
                 .modifyState(modifyState)
                 .localId(category.getLocalId())
+                .build();
+    }
+
+    public static CategoryDto toCategoryDto(Category category, ModifyState modifyState, LocalDateTime savedTime) {
+        return CategoryDto.builder()
+                .categoryId(category.getCategoryId())
+                .categoryName(category.getCategoryName())
+                .modifyState(modifyState)
+                .localId(category.getLocalId())
+                .savedTime(savedTime)
                 .build();
     }
 
@@ -106,7 +126,23 @@ public class DatabaseUtil {
                 .build();
     }
 
-    public static ShoppingItemDto fromShoppingItemDtoToShoppingItemDto(ShoppingItemDto shoppingItemDto, ModifyState modifyState) {
+    public static ShoppingItemDto toShoppingItemDto(ShoppingItem shoppingItem, ModifyState modifyState, LocalDateTime savedTime) {
+        return ShoppingItemDto.builder()
+                .shoppingItemId(shoppingItem.getShoppingItemId())
+                .itemAmountTypeId(shoppingItem.getItemAmountType().getAmountTypeId())
+                .itemCategoryId(shoppingItem.getItemCategory().getCategoryId())
+                .itemName(shoppingItem.getItemName())
+                .amount(shoppingItem.getAmount())
+                .bought(shoppingItem.isBought())
+                .modifyState(modifyState)
+                .localId(shoppingItem.getLocalShoppingItemId())
+                .localAmountTypeId(shoppingItem.getLocalAmountTypeId())
+                .localCategoryId(shoppingItem.getLocalCategoryId())
+                .savedTime(savedTime)
+                .build();
+    }
+
+    public static ShoppingItemDto fromShoppingItemDtoToShoppingItemDto(ShoppingItemDto shoppingItemDto, ModifyState modifyState, LocalDateTime savedTime) {
         return ShoppingItemDto.builder()
                 .shoppingItemId(shoppingItemDto.getShoppingItemId())
                 .itemAmountTypeId(shoppingItemDto.getItemAmountTypeId())
@@ -118,6 +154,7 @@ public class DatabaseUtil {
                 .localId(shoppingItemDto.getLocalId())
                 .localAmountTypeId(shoppingItemDto.getLocalAmountTypeId())
                 .localCategoryId(shoppingItemDto.getLocalCategoryId())
+                .savedTime(savedTime)
                 .build();
     }
 

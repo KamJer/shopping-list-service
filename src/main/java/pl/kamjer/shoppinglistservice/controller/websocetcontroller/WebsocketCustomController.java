@@ -33,8 +33,9 @@ public class WebsocketCustomController {
         if (newDataBrought(allDto)) {
             HashMap<Message.Header, String> headersForOthers = new HashMap<>();
             headersForOthers.put(Message.Header.ID, webSocketDataHolder.getCurrentSession().getId());
-            headersForOthers.put(Message.Header.DEST, "/" + currentUserName + "/pip");
+            headersForOthers.put(Message.Header.DEST, "/{userName}/pip");
             headersForOthers.put(Message.Header.BODY, "");
+            headersForOthers.put(Message.Header.PARA, currentUserName);
             Message messageForOthers  = new Message(Message.Command.MESSAGE, headersForOthers);
 
             HashMap<String, WebSocketSession> sessions = webSocketDataHolder.getSessionsForTopic(new Topic("/synchronizeData", new String[]{}));

@@ -14,8 +14,19 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        webSocketHandler.registerTopic("/synchronizeData", "/{username}/pip", "/{userName}/putAmountType");
+        webSocketHandler.registerTopic(
+                "/synchronizeData",
+                "/{userName}/pip",
+                "/{userName}/putAmountType",
+                "/{userName}/postAmountType",
+                "/{userName}/deleteAmountType",
+                "/{userName}/putCategory",
+                "/{userName}/postCategory",
+                "/{userName}/deleteCategory",
+                "/{userName}/putShoppingItem",
+                "/{userName}/postShoppingItem",
+                "/{userName}/deleteShoppingItem"
+                );
         registry.addHandler(webSocketHandler, "/ws");
     }
-
 }

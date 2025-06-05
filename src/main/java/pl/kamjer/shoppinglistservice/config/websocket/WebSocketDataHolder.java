@@ -90,7 +90,7 @@ public class WebSocketDataHolder {
 
     public HashMap<String, WebSocketSession> getSessionsForTopic(Topic topic) {
         Optional<HashMap<String, WebSocketSession>> optional = Optional.ofNullable(subscribedTopicsAndSessions.get(topic.getParameterizedUrl()));
-        return optional.orElseThrow(() -> new NoResourcesFoundException("No such topic exists"));
+        return optional.orElseThrow(() ->   new NoResourcesFoundException("No such topic exists"));
     }
 
     public void removeSessionFromTopics(WebSocketSession session) {

@@ -6,6 +6,8 @@ import lombok.Getter;
 import pl.kamjer.shoppinglistservice.model.ModifyState;
 import pl.kamjer.shoppinglistservice.model.dto.utilDto.Dto;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Builder
 public class ShoppingItemDto extends Dto {
@@ -23,4 +25,5 @@ public class ShoppingItemDto extends Dto {
     private long localId;
     private long localAmountTypeId;
     protected long localCategoryId;
+    private LocalDateTime savedTime;
 }

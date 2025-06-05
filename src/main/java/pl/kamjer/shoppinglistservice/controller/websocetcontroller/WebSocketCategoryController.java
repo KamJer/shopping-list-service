@@ -6,7 +6,6 @@ import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
-import pl.kamjer.shoppinglistservice.model.dto.AmountTypeDto;
 import pl.kamjer.shoppinglistservice.model.dto.CategoryDto;
 import pl.kamjer.shoppinglistservice.model.dto.utilDto.AllDto;
 import pl.kamjer.shoppinglistservice.service.websocketservice.WebSocketCategoryService;
@@ -38,7 +37,7 @@ public class WebSocketCategoryController extends WebsocketCustomController{
     }
 
     @MessageMapping("/{userName}/postCategory")
-    public CategoryDto postAmountType(@DestinationVariable String userName, CategoryDto categoryDto) throws IOException {
+    public CategoryDto postCategory(@DestinationVariable String userName, CategoryDto categoryDto) throws IOException {
         log.info("/postCategory connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
         CategoryDto categoryDtoProcessed = webSocketCategoryService.postCategory(categoryDto);
         notifyClients(AllDto.builder()
