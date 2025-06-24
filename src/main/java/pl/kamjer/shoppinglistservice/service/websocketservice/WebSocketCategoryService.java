@@ -12,11 +12,13 @@ import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.AmountType;
 import pl.kamjer.shoppinglistservice.model.Category;
 import pl.kamjer.shoppinglistservice.model.ModifyState;
+import pl.kamjer.shoppinglistservice.model.ShoppingItem;
 import pl.kamjer.shoppinglistservice.model.dto.CategoryDto;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 import pl.kamjer.shoppinglistservice.repository.UserRepository;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -67,6 +69,7 @@ public class WebSocketCategoryService extends WebsocketCustomService{
             categoryToDelete.setDeleted(categoryDto.isDeleted());
             categoryToDelete.setLocalId(categoryDto.getLocalId());
             categoryToDelete.setSavedTime(savedTime);
+            categoryToDelete.getShoppingItemList().forEach(shoppingItem -> shoppingItem.setDeleted(true));
             return DatabaseUtil.toCategoryDto(categoryToDelete, ModifyState.DELETE, savedTime);
         }
 //        if data does not exist in a database send it to client to delete anyway since it does not exist no action necessary

@@ -61,6 +61,7 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
             amountTypeToDelete.setDeleted(amountTypeDto.isDeleted());
             amountTypeToDelete.setLocalId(amountTypeDto.getLocalId());
             amountTypeToDelete.setSavedTime(savedTime);
+            amountTypeToDelete.getShoppingItemList().forEach(shoppingItem -> shoppingItem.setDeleted(true));
             return DatabaseUtil.toAmountTypeDto(amountTypeToDelete, ModifyState.DELETE, savedTime);
         }
 //        if data does not exist in a database send it to client to delete anyway since it does not exist no action necessary
