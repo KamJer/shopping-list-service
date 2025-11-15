@@ -62,6 +62,14 @@ public class DatabaseUtil {
                 .build();
     }
 
+    public static UserDto toUserDto(User user) {
+        return UserDto.builder()
+                .userName(user.getUserName())
+                .password(user.getPassword())
+                .savedTime(user.getSavedTime())
+                .build();
+    }
+
     public static CategoryDto toCategoryDto(Category category, ModifyState modifyState) {
         return CategoryDto.builder()
                 .categoryId(category.getCategoryId())
@@ -103,8 +111,6 @@ public class DatabaseUtil {
 
     /**
      * Converts 0 in id to nulls for hibernates
-     * @param aLong
-     * @return
      */
     public static Long adjustId(Long aLong) {
         return (aLong != null && aLong > 0) ? aLong : null;

@@ -1,11 +1,11 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
-import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.Level;
 import org.springframework.stereotype.Service;
 import pl.kamjer.shoppinglistservice.DatabaseUtil;
+import pl.kamjer.shoppinglistservice.client.SecClient;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.*;
@@ -16,8 +16,6 @@ import pl.kamjer.shoppinglistservice.model.dto.utilDto.AllDto;
 import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
-import pl.kamjer.shoppinglistservice.repository.UserRepository;
-import pl.kamjer.shoppinglistservice.service.CustomService;
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -32,19 +30,19 @@ public class WebSocketUtilService extends WebsocketCustomService {
     private final CategoryRepository categoryRepository;
     private final ShoppingItemRepository shoppingItemRepository;
 
-    public WebSocketUtilService(UserRepository userRepository,
+    public WebSocketUtilService(SecClient secClient,
                                 AmountTypeRepository amountTypeRepository,
                                 CategoryRepository categoryRepository,
                                 ShoppingItemRepository shoppingItemRepository,
                                 WebSocketDataHolder webSocketDataHolder) {
-        super(userRepository, webSocketDataHolder);
+        super(webSocketDataHolder, secClient);
         this.amountTypeRepository = amountTypeRepository;
         this.categoryRepository = categoryRepository;
         this.shoppingItemRepository = shoppingItemRepository;
     }
 
     @Transactional
-    public AllDto synchronizeWebSocket(AllDto allDto) {
+    public AllDto synchronizeWebSocket(AllDto allDto, String auth) {
 //        saving time and getting user
         LocalDateTime savedTime = LocalDateTime.now();
         User user = getUserFromAuth();
@@ -69,14 +67,6 @@ public class WebSocketUtilService extends WebsocketCustomService {
             List<AmountType> amountTypesAfterAndSend = new ArrayList<>(amountTypesFromDb.stream()
                     .filter(amountType -> amountType.getSavedTime().isAfter(userSavedTime))
                     .toList());
-
-//            amountTypesFromDb.forEach(amountType -> {
-//                if (amountType.getSavedTime().isAfter(userSavedTime)) {
-//                    amountTypesAfterAndSend.add(amountType);
-//                } else {
-//                    amountTypesBeforeAndSend.add(amountType);
-//                }
-//            });
 
             //        handling saving data from client
             List<AmountType> amountTypeToInsert = new ArrayList<>();
@@ -126,7 +116,6 @@ public class WebSocketUtilService extends WebsocketCustomService {
                                             .equals(amountTypeToDelete))
                                     .toList();
                             shoppingItemsToDelete.forEach(shoppingItem -> shoppingItem.setDeleted(true));
-
                         }
                     }
                 }
@@ -151,14 +140,6 @@ public class WebSocketUtilService extends WebsocketCustomService {
                     .filter(category ->
                             category.getSavedTime().isAfter(userSavedTime))
                     .toList());
-
-//            categoriesFromDb.forEach(category -> {
-//                if (category.getSavedTime().isAfter(userSavedTime)) {
-//                    categoriesAfterAndSend.add(category);
-//                } else {
-//                    categoriesBeforeAndSend.add(category);
-//                }
-//            });
 
             List<Category> categoriesToInsert = new ArrayList<>();
 
@@ -227,14 +208,6 @@ public class WebSocketUtilService extends WebsocketCustomService {
                     .filter(shoppingItem -> shoppingItem.getSavedTime()
                             .isAfter(userSavedTime))
                     .toList());
-
-//            shoppingItemsFromDb.forEach(shoppingItem -> {
-//                if (shoppingItem.getSavedTime().isAfter(userSavedTime)) {
-//                    shoppingItemsAfterAndSend.add(shoppingItem);
-//                } else {
-//                    shoppingItemsBeforeAndSend.add(shoppingItem);
-//                }
-//            });
 
             List<ShoppingItem> shoppingItemToInsert = new ArrayList<>();
             Map<Long, ShoppingItem> existingShoppingItems = shoppingItemsFromDb
@@ -372,7 +345,7 @@ public class WebSocketUtilService extends WebsocketCustomService {
                     .toList();
 
             user.setSavedTime(savedTime);
-            userRepository.save(user);
+            secClient.putUser(DatabaseUtil.toUserDto(user), auth);
 
             return AllDto.builder()
                     .amountTypeDtoList(amountTypesFromDbProcessed)

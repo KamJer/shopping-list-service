@@ -5,6 +5,7 @@ import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.Level;
 import org.springframework.stereotype.Service;
 import pl.kamjer.shoppinglistservice.DatabaseUtil;
+import pl.kamjer.shoppinglistservice.client.SecClient;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.*;
 import pl.kamjer.shoppinglistservice.model.dto.AmountTypeDto;
@@ -14,7 +15,6 @@ import pl.kamjer.shoppinglistservice.model.dto.utilDto.AllDto;
 import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
-import pl.kamjer.shoppinglistservice.repository.UserRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -29,11 +29,11 @@ public class UtilService extends CustomService {
     private final CategoryRepository categoryRepository;
     private final ShoppingItemRepository shoppingItemRepository;
 
-    public UtilService(UserRepository userRepository,
+    public UtilService(SecClient secClient,
                        AmountTypeRepository amountTypeRepository,
                        CategoryRepository categoryRepository,
                        ShoppingItemRepository shoppingItemRepository) {
-        super(userRepository);
+        super(secClient);
         this.amountTypeRepository = amountTypeRepository;
         this.categoryRepository = categoryRepository;
         this.shoppingItemRepository = shoppingItemRepository;
@@ -239,7 +239,7 @@ public class UtilService extends CustomService {
                 .toList();
 
         user.setSavedTime(savedTime);
-        userRepository.save(user);
+        secClient.putUser(DatabaseUtil.toUserDto(user), "");
 
         return AllDto.builder()
                 .amountTypeDtoList(amountTypesFromDbProcessed)

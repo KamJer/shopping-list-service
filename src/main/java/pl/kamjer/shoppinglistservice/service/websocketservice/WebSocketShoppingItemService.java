@@ -3,6 +3,7 @@ package pl.kamjer.shoppinglistservice.service.websocketservice;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import pl.kamjer.shoppinglistservice.DatabaseUtil;
+import pl.kamjer.shoppinglistservice.client.SecClient;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.AmountType;
@@ -10,14 +11,11 @@ import pl.kamjer.shoppinglistservice.model.Category;
 import pl.kamjer.shoppinglistservice.model.ModifyState;
 import pl.kamjer.shoppinglistservice.model.ShoppingItem;
 import pl.kamjer.shoppinglistservice.model.dto.ShoppingItemDto;
-import pl.kamjer.shoppinglistservice.model.dto.utilDto.AllDto;
 import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
-import pl.kamjer.shoppinglistservice.repository.UserRepository;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -27,8 +25,8 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
     private final AmountTypeRepository amountTypeRepository;
     private final CategoryRepository categoryRepository;
 
-    public WebSocketShoppingItemService(UserRepository userRepository, WebSocketDataHolder webSocketDataHolder, ShoppingItemRepository shoppingItemRepository, AmountTypeRepository amountTypeRepository, CategoryRepository categoryRepository) {
-        super(userRepository, webSocketDataHolder);
+    public WebSocketShoppingItemService(SecClient secClient, WebSocketDataHolder webSocketDataHolder, ShoppingItemRepository shoppingItemRepository, AmountTypeRepository amountTypeRepository, CategoryRepository categoryRepository) {
+        super(webSocketDataHolder, secClient);
         this.shoppingItemRepository = shoppingItemRepository;
         this.amountTypeRepository = amountTypeRepository;
         this.categoryRepository = categoryRepository;

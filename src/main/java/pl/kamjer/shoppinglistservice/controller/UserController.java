@@ -20,17 +20,6 @@ public class UserController {
 
     private UserService userService;
 
-    @PutMapping
-    public ResponseEntity<?> putUser(@RequestBody UserDto user) {
-        userService.updateUser(user);
-        return ResponseEntity.ok().build();
-    }
-
-    @PostMapping
-    public ResponseEntity<LocalDateTime> postUser(@Valid @RequestBody UserDto user) {
-        return ResponseEntity.ok(userService.insertUser(user));
-    }
-
     @PostMapping(path = "/log")
     public ResponseEntity<Boolean> logUser(@RequestBody UserDto user) {
         return ResponseEntity.ok(userService.logUser(user));

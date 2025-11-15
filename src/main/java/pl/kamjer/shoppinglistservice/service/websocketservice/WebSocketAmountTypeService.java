@@ -3,14 +3,12 @@ package pl.kamjer.shoppinglistservice.service.websocketservice;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import pl.kamjer.shoppinglistservice.DatabaseUtil;
+import pl.kamjer.shoppinglistservice.client.SecClient;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
-import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.AmountType;
 import pl.kamjer.shoppinglistservice.model.ModifyState;
 import pl.kamjer.shoppinglistservice.model.dto.AmountTypeDto;
 import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
-import pl.kamjer.shoppinglistservice.repository.UserRepository;
-import pl.kamjer.shoppinglistservice.service.CustomService;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -20,8 +18,8 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
 
     private final AmountTypeRepository amountTypeRepository;
 
-    public WebSocketAmountTypeService(UserRepository userRepository, WebSocketDataHolder webSocketDataHolder, AmountTypeRepository amountTypeRepository) {
-        super(userRepository, webSocketDataHolder);
+    public WebSocketAmountTypeService(SecClient secClient, WebSocketDataHolder webSocketDataHolder, AmountTypeRepository amountTypeRepository) {
+        super(webSocketDataHolder, secClient);
         this.amountTypeRepository = amountTypeRepository;
     }
 

@@ -17,7 +17,7 @@ import java.util.List;
 @Log
 public class WebSocketAmountTypeController extends WebsocketCustomController {
 
-    private WebSocketAmountTypeService webSocketAmountTypeService;
+    private final WebSocketAmountTypeService webSocketAmountTypeService;
 
     public WebSocketAmountTypeController(WebSocketAmountTypeService webSocketAmountTypeService, WebSocketDataHolder webSocketDataHolder, ObjectMapper objectMapper) {
         super(webSocketDataHolder, objectMapper);

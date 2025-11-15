@@ -29,7 +29,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 public class WebSecurityConfiguration {
 
     private static final String USER_URL = "/user";
-    private static final String USER_LOG_URL = "/user/log/**";
+    private static final String USER_LOG_URL = "/user/log";
     private static final String UTIL_MASSAGE_URL = "/util/message";
 
     private static final List<String> urlPertmit = List.of(USER_URL, USER_LOG_URL, UTIL_MASSAGE_URL);

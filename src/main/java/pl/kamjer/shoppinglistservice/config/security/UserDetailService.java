@@ -5,18 +5,18 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import pl.kamjer.shoppinglistservice.repository.UserRepository;
+import pl.kamjer.shoppinglistservice.DatabaseUtil;
+import pl.kamjer.shoppinglistservice.client.SecClient;
 
 @AllArgsConstructor
 @Service
 public class UserDetailService implements UserDetailsService {
 
-    private final UserRepository userRepository;
+    private final SecClient secClient;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return  userRepository.findByUserName(username)
-                .orElseThrow(() -> new UsernameNotFoundException("No such user found"))
+        return DatabaseUtil.toUser(secClient.getUserByUserName(username))
                 .convertToSpringUser();
     }
 }

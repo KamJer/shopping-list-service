@@ -1,24 +1,17 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
-import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
-import lombok.Setter;
 import lombok.extern.java.Log;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.kamjer.shoppinglistservice.DatabaseUtil;
+import pl.kamjer.shoppinglistservice.client.SecClient;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
-import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
-import pl.kamjer.shoppinglistservice.model.AmountType;
 import pl.kamjer.shoppinglistservice.model.Category;
 import pl.kamjer.shoppinglistservice.model.ModifyState;
-import pl.kamjer.shoppinglistservice.model.ShoppingItem;
 import pl.kamjer.shoppinglistservice.model.dto.CategoryDto;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
-import pl.kamjer.shoppinglistservice.repository.UserRepository;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -27,11 +20,8 @@ public class WebSocketCategoryService extends WebsocketCustomService{
 
     private final CategoryRepository categoryRepository;
 
-    @Autowired
-    private EntityManager entityManager;
-
-    public WebSocketCategoryService(UserRepository userRepository, WebSocketDataHolder webSocketDataHolder, CategoryRepository categoryRepository) {
-        super(userRepository, webSocketDataHolder);
+    public WebSocketCategoryService(SecClient secClient, WebSocketDataHolder webSocketDataHolder, CategoryRepository categoryRepository) {
+        super(webSocketDataHolder, secClient);
         this.categoryRepository = categoryRepository;
     }
 

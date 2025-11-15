@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Table(name = "SHOPPING_ITEM")
 public class ShoppingItem {
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @JoinColumn(name = "user_name", referencedColumnName = "user_name")
     private User user;
     @Id
