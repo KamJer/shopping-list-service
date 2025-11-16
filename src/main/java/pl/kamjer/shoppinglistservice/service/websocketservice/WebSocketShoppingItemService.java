@@ -49,10 +49,10 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
     @Transactional
     public ShoppingItemDto postShoppingItem(ShoppingItemDto shoppingItemDto) {
         LocalDateTime savedTime = LocalDateTime.now();
-        Optional<ShoppingItem> shoppingItemOptional = shoppingItemRepository.findShoppingItemByUserUserNameAndShoppingItemId(getUserFromAuth().getUserName(), shoppingItemDto.getShoppingItemId());
+        Optional<ShoppingItem> shoppingItemOptional = shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(getUserFromAuth().getUserName(), shoppingItemDto.getShoppingItemId());
         if (shoppingItemOptional.isPresent()) {
-            Optional<AmountType> amountTypeOptional = amountTypeRepository.findAmountTypeByUserUserNameAndAmountTypeId(getUserFromAuth().getUserName(), shoppingItemDto.getItemAmountTypeId());
-            Optional<Category> categoryOptional = categoryRepository.findCategoryByUserUserNameAndCategoryId(getUserFromAuth().getUserName(), shoppingItemDto.getItemCategoryId());
+            Optional<AmountType> amountTypeOptional = amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(getUserFromAuth().getUserName(), shoppingItemDto.getItemAmountTypeId());
+            Optional<Category> categoryOptional = categoryRepository.findCategoryByUserNameAndCategoryId(getUserFromAuth().getUserName(), shoppingItemDto.getItemCategoryId());
             if (amountTypeOptional.isPresent() && categoryOptional.isPresent()) {
                 ShoppingItem shoppingItem = shoppingItemOptional.get();
                 shoppingItem.setItemName(shoppingItemDto.getItemName());
@@ -80,7 +80,7 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
     public ShoppingItemDto deleteShoppingItem(ShoppingItemDto shoppingItemDto) {
         LocalDateTime savedTime = LocalDateTime.now();
         getUserFromAuth().setSavedTime(savedTime);
-        Optional<ShoppingItem> amountTypeOptional = shoppingItemRepository.findShoppingItemByUserUserNameAndShoppingItemId(getUserFromAuth().getUserName(), shoppingItemDto.getShoppingItemId());
+        Optional<ShoppingItem> amountTypeOptional = shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(getUserFromAuth().getUserName(), shoppingItemDto.getShoppingItemId());
         if (amountTypeOptional.isPresent()) {
             ShoppingItem amountTypeToDelete = amountTypeOptional.get();
             amountTypeToDelete.setDeleted(shoppingItemDto.isDeleted());

@@ -59,7 +59,7 @@ public class UtilService extends CustomService {
                             return amountTypeFromDb;
                         }
                         case UPDATE -> {
-                            return amountTypeRepository.findAmountTypeByUserUserNameAndAmountTypeId(
+                            return amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(
                                             user.getUserName(), amountTypeDto.getAmountTypeId())
                                     .map(amountType1 -> {
                                         amountType1.setTypeName(amountTypeDto.getTypeName());
@@ -69,7 +69,7 @@ public class UtilService extends CustomService {
                                     }).orElseThrow();
                         }
                         case DELETE -> {
-                            return amountTypeRepository.findAmountTypeByUserUserNameAndAmountTypeId(
+                            return amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(
                                             user.getUserName(), amountTypeDto.getAmountTypeId())
                                     .map(amountType1 -> {
                                         amountType1.setDeleted(amountTypeDto.isDeleted());
@@ -93,7 +93,7 @@ public class UtilService extends CustomService {
                             return categoryFromDb;
                         }
                         case UPDATE -> {
-                            return categoryRepository.findCategoryByUserUserNameAndCategoryId(
+                            return categoryRepository.findCategoryByUserNameAndCategoryId(
                                             user.getUserName(), categoryDto.getCategoryId())
                                     .map(category -> {
                                         category.setCategoryName(categoryDto.getCategoryName());
@@ -103,7 +103,7 @@ public class UtilService extends CustomService {
                                     }).orElseThrow();
                         }
                         case DELETE -> {
-                            return categoryRepository.findCategoryByUserUserNameAndCategoryId(
+                            return categoryRepository.findCategoryByUserNameAndCategoryId(
                                             user.getUserName(), categoryDto.getCategoryId())
                                     .map(category -> {
                                         category.setDeleted(categoryDto.isDeleted());
@@ -130,13 +130,13 @@ public class UtilService extends CustomService {
                             return shoppingItemFromDb;
                         }
                         case UPDATE -> {
-                            return shoppingItemRepository.findShoppingItemByUserUserNameAndShoppingItemId(
+                            return shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(
                                             user.getUserName(), shoppingItemDto.getShoppingItemId())
                                     .map(shoppingItem -> {
 //                                        finding relevant data
-                                        AmountType amountTypeDb = amountTypeRepository.findAmountTypeByUserUserNameAndAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId())
+                                        AmountType amountTypeDb = amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId())
                                                 .orElseThrow(() -> new NoResourcesFoundException("No such AmountType:" + shoppingItemDto.getItemAmountTypeId()));
-                                        Category categoryDb = categoryRepository.findCategoryByUserUserNameAndCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId())
+                                        Category categoryDb = categoryRepository.findCategoryByUserNameAndCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId())
                                                 .orElseThrow(() -> new NoResourcesFoundException("no such Category:" + shoppingItemDto.getItemCategoryId()));
 
                                         shoppingItem.setItemAmountType(amountTypeDb);
@@ -150,7 +150,7 @@ public class UtilService extends CustomService {
                                     }).orElseThrow();
                         }
                         case DELETE -> {
-                            return shoppingItemRepository.findShoppingItemByUserUserNameAndShoppingItemId(
+                            return shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(
                                             user.getUserName(), shoppingItemDto.getShoppingItemId())
                                     .map(shoppingItem -> {
                                         shoppingItem.setDeleted(shoppingItemDto.isDeleted());
@@ -164,9 +164,9 @@ public class UtilService extends CustomService {
                 .toList();
 
 //        data from database (data user does not have) it needs to be inserted, updated or deleted from local database, server needs to figure that out
-        List<AmountType> amountTypesFromDb = amountTypeRepository.findAmountTypeByUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
-        List<Category> categoriesFromDb = categoryRepository.findCategoryByUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
-        List<ShoppingItem> shoppingItemsFromDb = shoppingItemRepository.findShoppingItemByUserUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
+        List<AmountType> amountTypesFromDb = amountTypeRepository.findAmountTypeByUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
+        List<Category> categoriesFromDb = categoryRepository.findCategoryByUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
+        List<ShoppingItem> shoppingItemsFromDb = shoppingItemRepository.findShoppingItemByUserNameAndSavedTimeAfter(user.getUserName(), userSavedTime);
 
 //        data after processing can be sent to a client
         List<AmountTypeDto> amountTypesFromDbProcessed = (amountTypesFromDb)

@@ -10,13 +10,10 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class User implements Serializable {
 
-    @Id
-    @Column(name = "user_name")
     @EqualsAndHashCode.Include
     private String userName;
     @Column(name = "password")

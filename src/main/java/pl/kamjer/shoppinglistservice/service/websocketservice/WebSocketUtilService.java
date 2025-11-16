@@ -52,9 +52,9 @@ public class WebSocketUtilService extends WebsocketCustomService {
 
         if (user.getSavedTime().isAfter(userSavedTime) || !allDto.getAmountTypeDtoList().isEmpty() || !allDto.getCategoryDtoList().isEmpty() || !allDto.getShoppingItemDtoList().isEmpty()) {
 
-            List<AmountType> amountTypesFromDb = amountTypeRepository.findByUserUserName(user.getUserName());
-            List<Category> categoriesFromDb = categoryRepository.findByUserUserName(user.getUserName());
-            List<ShoppingItem> shoppingItemsFromDb = shoppingItemRepository.findByUserUserName(user.getUserName());
+            List<AmountType> amountTypesFromDb = amountTypeRepository.findByUserName(user.getUserName());
+            List<Category> categoriesFromDb = categoryRepository.findByUserName(user.getUserName());
+            List<ShoppingItem> shoppingItemsFromDb = shoppingItemRepository.findByUserName(user.getUserName());
 
 //        list of entities that does exist on a connected device;
             Set<AmountType> amountTypesBeforeAndSend = new HashSet<>(allDto

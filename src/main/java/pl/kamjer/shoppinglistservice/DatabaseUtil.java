@@ -18,7 +18,7 @@ public class DatabaseUtil {
     public static AmountType toAmountType(User user,  AmountTypeDto amountTypeDto, LocalDateTime savedTime) throws NoResourcesFoundException {
         return AmountType.builder()
                 .amountTypeId(adjustId(amountTypeDto.getAmountTypeId()))
-                .user(user)
+                .userName(user.getUserName())
                 .typeName(amountTypeDto.getTypeName())
                 .savedTime(savedTime)
                 .deleted(amountTypeDto.isDeleted())
@@ -101,7 +101,7 @@ public class DatabaseUtil {
     public static Category toCategory(User user, CategoryDto categoryDto, LocalDateTime savedTime) throws NoResourcesFoundException {
         return Category.builder()
                 .categoryId(adjustId(categoryDto.getCategoryId()))
-                .user(user)
+                .userName(user.getUserName())
                 .categoryName(categoryDto.getCategoryName())
                 .savedTime(savedTime)
                 .deleted(categoryDto.isDeleted())
@@ -167,9 +167,9 @@ public class DatabaseUtil {
     public static ShoppingItem toShoppingItem(User user, AmountTypeRepository amountTypeRepository, CategoryRepository categoryRepository, ShoppingItemDto shoppingItemDto, LocalDateTime savedTime) throws NoResourcesFoundException {
         return ShoppingItem.builder()
                 .shoppingItemId(adjustId(shoppingItemDto.getShoppingItemId()))
-                .user(user)
-                .itemAmountType(amountTypeRepository.findAmountTypeByUserUserNameAndAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId()).orElseThrow(() -> new NoResourcesFoundException("No such AmountType found")))
-                .itemCategory(categoryRepository.findCategoryByUserUserNameAndCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId()).orElseThrow(() -> new NoResourcesFoundException("No such Category found")))
+                .userName(user.getUserName())
+                .itemAmountType(amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId()).orElseThrow(() -> new NoResourcesFoundException("No such AmountType found")))
+                .itemCategory(categoryRepository.findCategoryByUserNameAndCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId()).orElseThrow(() -> new NoResourcesFoundException("No such Category found")))
                 .itemName(shoppingItemDto.getItemName())
                 .amount(shoppingItemDto.getAmount())
                 .bought(shoppingItemDto.isBought())

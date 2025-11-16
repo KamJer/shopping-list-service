@@ -38,7 +38,7 @@ public class WebSocketCategoryService extends WebsocketCustomService{
     @Transactional
     public CategoryDto postCategory(CategoryDto categoryDto) {
         LocalDateTime savedTime = LocalDateTime.now();
-        Optional<Category> optionalCategory = categoryRepository.findCategoryByUserUserNameAndCategoryId(getUserFromAuth().getUserName(), categoryDto.getCategoryId());
+        Optional<Category> optionalCategory = categoryRepository.findCategoryByUserNameAndCategoryId(getUserFromAuth().getUserName(), categoryDto.getCategoryId());
         if (optionalCategory.isPresent()) {
             Category categoryToPost = optionalCategory.get();
             categoryToPost.setCategoryName(categoryDto.getCategoryName());
@@ -53,7 +53,7 @@ public class WebSocketCategoryService extends WebsocketCustomService{
     @Transactional
     public CategoryDto deleteCategory(CategoryDto categoryDto) {
         LocalDateTime savedTime = LocalDateTime.now();
-        Optional<Category> amountTypeOptional = categoryRepository.findCategoryByUserUserNameAndCategoryId(getUserFromAuth().getUserName(), categoryDto.getCategoryId());
+        Optional<Category> amountTypeOptional = categoryRepository.findCategoryByUserNameAndCategoryId(getUserFromAuth().getUserName(), categoryDto.getCategoryId());
         if (amountTypeOptional.isPresent()) {
             Category categoryToDelete = amountTypeOptional.get();
             categoryToDelete.setDeleted(categoryDto.isDeleted());

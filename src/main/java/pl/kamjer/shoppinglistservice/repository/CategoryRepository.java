@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
-    Optional<Category> findCategoryByUserUserNameAndCategoryId(String userName, long categoryId_categoryId);
-    List<Category> findByUserUserName(String userName);
-    List<Category> findCategoryByUserUserNameAndSavedTimeAfter(String userName, LocalDateTime localDateTime);
+    Optional<Category> findCategoryByUserNameAndCategoryId(String userName, long categoryId_categoryId);
+    List<Category> findByUserName(String userName);
+    List<Category> findCategoryByUserNameAndSavedTimeAfter(String userName, LocalDateTime localDateTime);
 }

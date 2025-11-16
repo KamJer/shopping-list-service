@@ -36,7 +36,7 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
     @Transactional
     public AmountTypeDto postAmountType(AmountTypeDto amountTypeDto) {
         LocalDateTime savedTime = LocalDateTime.now();
-        Optional<AmountType> amountTypeOptional = amountTypeRepository.findAmountTypeByUserUserNameAndAmountTypeId(getUserFromAuth().getUserName(), amountTypeDto.getAmountTypeId());
+        Optional<AmountType> amountTypeOptional = amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(getUserFromAuth().getUserName(), amountTypeDto.getAmountTypeId());
         if (amountTypeOptional.isPresent()) {
             AmountType amountType = amountTypeOptional.get();
             amountType.setTypeName(amountTypeDto.getTypeName());
@@ -53,7 +53,7 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
     @Transactional
     public AmountTypeDto deleteAmountType(AmountTypeDto amountTypeDto) {
         LocalDateTime savedTime = LocalDateTime.now();
-        Optional<AmountType> amountTypeOptional = amountTypeRepository.findAmountTypeByUserUserNameAndAmountTypeId(getUserFromAuth().getUserName(), amountTypeDto.getAmountTypeId());
+        Optional<AmountType> amountTypeOptional = amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(getUserFromAuth().getUserName(), amountTypeDto.getAmountTypeId());
         if (amountTypeOptional.isPresent()) {
             AmountType amountTypeToDelete = amountTypeOptional.get();
             amountTypeToDelete.setDeleted(amountTypeDto.isDeleted());

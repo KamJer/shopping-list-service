@@ -21,9 +21,8 @@ public class AmountType {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @EqualsAndHashCode.Include
     private Long amountTypeId;
-    @ManyToOne()
-    @JoinColumn(name = "user_name", referencedColumnName = "user_name", nullable = false)
-    private User user;
+    @Column(name = "user_name")
+    private String userName;
     @Column(name = "type_name")
     private String typeName;
     @Column(name = "saved_time")

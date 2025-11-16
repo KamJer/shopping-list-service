@@ -33,9 +33,11 @@ build/
 .vscode/
 
 keystore.jks
-**/src/main/resources/shopping_list_keystore.p12
-**/src/main/resources/shopping_list.cer
 
-**/src/main/resources/application-secret.properties
+src/main/resources/*.p12
+src/main/resources/*.cer
+src/main/resources/*.pem
 
-**/logs/
+src/main/resources/application-secret.properties
+
+logs/**
