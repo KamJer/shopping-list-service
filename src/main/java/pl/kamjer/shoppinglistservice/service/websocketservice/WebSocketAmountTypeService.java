@@ -1,5 +1,6 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import pl.kamjer.shoppinglistservice.DatabaseUtil;
@@ -18,8 +19,8 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
 
     private final AmountTypeRepository amountTypeRepository;
 
-    public WebSocketAmountTypeService(SecClient secClient, WebSocketDataHolder webSocketDataHolder, AmountTypeRepository amountTypeRepository) {
-        super(webSocketDataHolder, secClient);
+    public WebSocketAmountTypeService(SecClient secClient, WebSocketDataHolder webSocketDataHolder, AmountTypeRepository amountTypeRepository, ObjectMapper objectMapper) {
+        super(webSocketDataHolder, secClient, objectMapper);
         this.amountTypeRepository = amountTypeRepository;
     }
 

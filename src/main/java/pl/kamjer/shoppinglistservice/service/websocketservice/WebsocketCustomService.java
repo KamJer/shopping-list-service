@@ -1,5 +1,6 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 import pl.kamjer.shoppinglistservice.DatabaseUtil;
 import pl.kamjer.shoppinglistservice.client.SecClient;
@@ -15,14 +16,14 @@ public class WebsocketCustomService extends CustomService {
 
     private final WebSocketDataHolder webSocketDataHolder;
 
-    public WebsocketCustomService(WebSocketDataHolder webSocketDataHolder, SecClient secClient) {
-        super(secClient);
+    public WebsocketCustomService(WebSocketDataHolder webSocketDataHolder, SecClient secClient, ObjectMapper objectMapper) {
+        super(secClient, objectMapper);
         this.webSocketDataHolder = webSocketDataHolder;
     }
 
     @Override
     public User getUserFromAuth() throws NoResourcesFoundException {
         String userName = Optional.ofNullable(webSocketDataHolder.getCurrentSession().getPrincipal()).orElseThrow().getName();
-        return DatabaseUtil.toUser(secClient.getUserByUserName(userName));
+        return objectMapper.convertValue(secClient.getUserByUserName(userName), User.class);
     }
 }

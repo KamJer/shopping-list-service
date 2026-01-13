@@ -1,5 +1,6 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
 import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.Level;
@@ -34,8 +35,9 @@ public class WebSocketUtilService extends WebsocketCustomService {
                                 AmountTypeRepository amountTypeRepository,
                                 CategoryRepository categoryRepository,
                                 ShoppingItemRepository shoppingItemRepository,
-                                WebSocketDataHolder webSocketDataHolder) {
-        super(webSocketDataHolder, secClient);
+                                WebSocketDataHolder webSocketDataHolder,
+                                ObjectMapper objectMapper) {
+        super(webSocketDataHolder, secClient, objectMapper);
         this.amountTypeRepository = amountTypeRepository;
         this.categoryRepository = categoryRepository;
         this.shoppingItemRepository = shoppingItemRepository;

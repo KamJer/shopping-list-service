@@ -29,7 +29,7 @@ public class Category {
     private LocalDateTime savedTime;
     @Column(name = "deleted", columnDefinition = "BIT(1) NOT NULL DEFAULT b'0'")
     private boolean deleted;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "itemCategory", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "itemCategory")
     private List<ShoppingItem> shoppingItemList;
 
     @Transient

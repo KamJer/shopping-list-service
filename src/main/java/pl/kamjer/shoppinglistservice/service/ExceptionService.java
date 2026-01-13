@@ -1,5 +1,6 @@
 package pl.kamjer.shoppinglistservice.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 import pl.kamjer.shoppinglistservice.client.SecClient;
@@ -10,8 +11,8 @@ import pl.kamjer.shoppinglistservice.model.dto.utilDto.ExceptionDto;
 @Log4j2
 public class ExceptionService extends CustomService{
 
-    public ExceptionService(SecClient secClient) {
-        super(secClient);
+    public ExceptionService(SecClient secClient, ObjectMapper objectMapper) {
+        super(secClient, objectMapper);
     }
 
     public void insertLog(ExceptionDto e) {

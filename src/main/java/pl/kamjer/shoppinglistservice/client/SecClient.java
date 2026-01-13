@@ -5,6 +5,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 import pl.kamjer.shoppinglistservice.model.dto.UserDto;
+import pl.kamjer.shoppinglistservice.model.dto.UserRequestDto;
 
 import java.time.LocalDateTime;
 
@@ -33,7 +34,7 @@ public class SecClient {
                 .toBodilessEntity();
     }
 
-    public Boolean logUser(UserDto userDto) {
+    public Boolean logUser(UserRequestDto userDto) {
         return userRestClient
                 .post()
                 .uri("/log")

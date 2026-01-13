@@ -54,18 +54,9 @@ public class DatabaseUtil {
                 .build();
     }
 
-    public static User toUser(UserDto userDto) {
-        return User.builder()
-                .userName(userDto.getUserName())
-                .password(userDto.getPassword())
-                .savedTime(LocalDateTime.now())
-                .build();
-    }
-
     public static UserDto toUserDto(User user) {
         return UserDto.builder()
                 .userName(user.getUserName())
-                .password(user.getPassword())
                 .savedTime(user.getSavedTime())
                 .build();
     }
@@ -168,8 +159,8 @@ public class DatabaseUtil {
         return ShoppingItem.builder()
                 .shoppingItemId(adjustId(shoppingItemDto.getShoppingItemId()))
                 .userName(user.getUserName())
-                .itemAmountType(amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId()).orElseThrow(() -> new NoResourcesFoundException("No such AmountType found")))
-                .itemCategory(categoryRepository.findCategoryByUserNameAndCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId()).orElseThrow(() -> new NoResourcesFoundException("No such Category found")))
+                .itemAmountType(amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId()).orElseThrow(() -> new NoResourcesFoundException("No such AmountType found: " + shoppingItemDto.getItemAmountTypeId())))
+                .itemCategory(categoryRepository.findCategoryByUserNameAndCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId()).orElseThrow(() -> new NoResourcesFoundException("No such Category found: " + shoppingItemDto.getItemCategoryId())))
                 .itemName(shoppingItemDto.getItemName())
                 .amount(shoppingItemDto.getAmount())
                 .bought(shoppingItemDto.isBought())

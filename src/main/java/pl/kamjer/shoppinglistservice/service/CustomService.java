@@ -1,5 +1,6 @@
 package pl.kamjer.shoppinglistservice.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,9 +15,10 @@ import pl.kamjer.shoppinglistservice.model.*;
 public class CustomService {
 
     protected SecClient secClient;
+    protected ObjectMapper objectMapper;
 
     public User getUserFromAuth() throws NoResourcesFoundException {
         String userName = ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
-        return DatabaseUtil.toUser(secClient.getUserByUserName(userName));
+        return objectMapper.convertValue(secClient.getUserByUserName(userName), User.class);
     }
 }

@@ -1,5 +1,6 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
 import lombok.extern.java.Log;
 import org.springframework.stereotype.Service;
@@ -16,12 +17,15 @@ import java.util.Optional;
 
 @Service
 @Log
-public class WebSocketCategoryService extends WebsocketCustomService{
+public class WebSocketCategoryService extends WebsocketCustomService {
 
     private final CategoryRepository categoryRepository;
 
-    public WebSocketCategoryService(SecClient secClient, WebSocketDataHolder webSocketDataHolder, CategoryRepository categoryRepository) {
-        super(webSocketDataHolder, secClient);
+    public WebSocketCategoryService(SecClient secClient,
+                                    WebSocketDataHolder webSocketDataHolder,
+                                    CategoryRepository categoryRepository,
+                                    ObjectMapper objectMapper) {
+        super(webSocketDataHolder, secClient, objectMapper);
         this.categoryRepository = categoryRepository;
     }
 
