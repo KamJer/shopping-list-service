@@ -11,11 +11,13 @@ import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Map;
 
 @Slf4j
 public class DatabaseUtil {
 
-    public static AmountType toAmountType(User user,  AmountTypeDto amountTypeDto, LocalDateTime savedTime) throws NoResourcesFoundException {
+    public static AmountType toAmountType(User user, AmountTypeDto amountTypeDto, LocalDateTime savedTime) {
         return AmountType.builder()
                 .amountTypeId(adjustId(amountTypeDto.getAmountTypeId()))
                 .userName(user.getUserName())
@@ -89,7 +91,7 @@ public class DatabaseUtil {
                 .build();
     }
 
-    public static Category toCategory(User user, CategoryDto categoryDto, LocalDateTime savedTime) throws NoResourcesFoundException {
+    public static Category toCategory(User user, CategoryDto categoryDto, LocalDateTime savedTime) {
         return Category.builder()
                 .categoryId(adjustId(categoryDto.getCategoryId()))
                 .userName(user.getUserName())
@@ -155,12 +157,20 @@ public class DatabaseUtil {
                 .build();
     }
 
-    public static ShoppingItem toShoppingItem(User user, AmountTypeRepository amountTypeRepository, CategoryRepository categoryRepository, ShoppingItemDto shoppingItemDto, LocalDateTime savedTime) throws NoResourcesFoundException {
+    public static ShoppingItem toShoppingItem(
+            User user,
+            AmountTypeRepository amountTypeRepository,
+            Map<Long, AmountType> at,
+            CategoryRepository categoryRepository,
+            Map<Long, Category> ct,
+            ShoppingItemDto shoppingItemDto,
+            LocalDateTime savedTime)
+            throws NoResourcesFoundException {
         return ShoppingItem.builder()
                 .shoppingItemId(adjustId(shoppingItemDto.getShoppingItemId()))
                 .userName(user.getUserName())
-                .itemAmountType(amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId()).orElseThrow(() -> new NoResourcesFoundException("No such AmountType found: " + shoppingItemDto.getItemAmountTypeId())))
-                .itemCategory(categoryRepository.findCategoryByUserNameAndCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId()).orElseThrow(() -> new NoResourcesFoundException("No such Category found: " + shoppingItemDto.getItemCategoryId())))
+                .itemAmountType(amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId()).orElseGet(() -> at.get(shoppingItemDto.getLocalAmountTypeId())))
+                .itemCategory(categoryRepository.findCategoryByUserNameAndCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId()).orElseGet(() -> ct.get(shoppingItemDto.getLocalCategoryId())))
                 .itemName(shoppingItemDto.getItemName())
                 .amount(shoppingItemDto.getAmount())
                 .bought(shoppingItemDto.isBought())

@@ -17,6 +17,7 @@ import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.Optional;
 
 @Service
@@ -41,7 +42,7 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
     @Transactional
     public ShoppingItemDto putShoppingItem(ShoppingItemDto shoppingItemDto) {
         LocalDateTime savedTime = LocalDateTime.now();
-        ShoppingItem shoppingItem = DatabaseUtil.toShoppingItem(getUserFromAuth(), amountTypeRepository, categoryRepository, shoppingItemDto, LocalDateTime.now());
+        ShoppingItem shoppingItem = DatabaseUtil.toShoppingItem(getUserFromAuth(), amountTypeRepository, new HashMap<>(), categoryRepository, new HashMap<>(), shoppingItemDto, LocalDateTime.now());
         shoppingItemRepository.save(shoppingItem);
         shoppingItem.setLocalShoppingItemId(shoppingItemDto.getLocalId());
         shoppingItem.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());

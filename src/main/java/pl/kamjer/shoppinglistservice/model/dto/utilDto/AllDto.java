@@ -20,5 +20,5 @@ public class AllDto extends Dto{
     private List<CategoryDto> categoryDtoList;
     private List<ShoppingItemDto> shoppingItemDtoList;
     private LocalDateTime savedTime;
-
+    private Boolean dirty;
 }
