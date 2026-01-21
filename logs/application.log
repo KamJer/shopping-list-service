@@ -1,483 +1,216 @@
-2026-01-20T23:07:56.521+01:00  INFO 19192 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 19192 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
-2026-01-20T23:07:56.535+01:00  INFO 19192 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
-2026-01-20T23:07:58.151+01:00  INFO 19192 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-20T23:07:58.414+01:00  INFO 19192 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 252 ms. Found 1 JPA repository interface.
-2026-01-20T23:07:59.857+01:00  INFO 19192 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
-2026-01-20T23:07:59.889+01:00  INFO 19192 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-20T23:07:59.889+01:00  INFO 19192 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2026-01-20T23:08:00.005+01:00  INFO 19192 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-01-20T23:08:00.006+01:00  INFO 19192 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3404 ms
-2026-01-20T23:08:00.983+01:00  WARN 19192 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
-2026-01-20T23:08:01.004+01:00  INFO 19192 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
-2026-01-20T23:08:01.016+01:00  WARN 19192 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
-2026-01-20T23:08:01.059+01:00  WARN 19192 --- [ShoppingListServices] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 0
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-2026-01-20T23:08:01.063+01:00  INFO 19192 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-01-20T23:08:01.091+01:00  INFO 19192 --- [ShoppingListServices] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-01-20T23:08:01.120+01:00 ERROR 19192 --- [ShoppingListServices] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 0
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
-	at pl.kamjer.ShoppingSecService.ShoppingSecurityServiceApplication.main(ShoppingSecurityServiceApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 0
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 10 common frames omitted
-Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 0
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.flywaydb.core.Flyway.lambda$migrate$1(Flyway.java:189) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.Flyway.migrate(Flyway.java:176) ~[flyway-core-10.20.1.jar:na]
-	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 17 common frames omitted
-
-2026-01-20T23:11:10.752+01:00  INFO 8796 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 8796 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
-2026-01-20T23:11:10.754+01:00  INFO 8796 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
-2026-01-20T23:11:12.128+01:00  INFO 8796 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-20T23:11:12.261+01:00  INFO 8796 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 1 JPA repository interface.
-2026-01-20T23:11:13.298+01:00  INFO 8796 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
-2026-01-20T23:11:13.315+01:00  INFO 8796 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-20T23:11:13.315+01:00  INFO 8796 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2026-01-20T23:11:13.397+01:00  INFO 8796 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-01-20T23:11:13.399+01:00  INFO 8796 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2589 ms
-2026-01-20T23:11:14.121+01:00  WARN 8796 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
-2026-01-20T23:11:14.138+01:00  INFO 8796 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
-2026-01-20T23:11:14.146+01:00  WARN 8796 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
-2026-01-20T23:11:14.184+01:00  WARN 8796 --- [ShoppingListServices] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-2026-01-20T23:11:14.188+01:00  INFO 8796 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-01-20T23:11:14.203+01:00  INFO 8796 --- [ShoppingListServices] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-01-20T23:11:14.217+01:00 ERROR 8796 --- [ShoppingListServices] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
-	at pl.kamjer.ShoppingSecService.ShoppingSecurityServiceApplication.main(ShoppingSecurityServiceApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 10 common frames omitted
-Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.flywaydb.core.Flyway.lambda$migrate$1(Flyway.java:189) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.Flyway.migrate(Flyway.java:176) ~[flyway-core-10.20.1.jar:na]
-	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 17 common frames omitted
-
-2026-01-20T23:13:18.274+01:00  INFO 8992 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 8992 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
-2026-01-20T23:13:18.277+01:00  INFO 8992 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
-2026-01-20T23:13:19.681+01:00  INFO 8992 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-20T23:13:19.826+01:00  INFO 8992 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 1 JPA repository interface.
-2026-01-20T23:13:20.715+01:00  INFO 8992 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
-2026-01-20T23:13:20.741+01:00  INFO 8992 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-20T23:13:20.741+01:00  INFO 8992 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2026-01-20T23:13:20.823+01:00  INFO 8992 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-01-20T23:13:20.824+01:00  INFO 8992 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2472 ms
-2026-01-20T23:13:21.532+01:00  WARN 8992 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
-2026-01-20T23:13:21.548+01:00  INFO 8992 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
-2026-01-20T23:13:21.554+01:00  WARN 8992 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
-2026-01-20T23:13:21.591+01:00  WARN 8992 --- [ShoppingListServices] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-2026-01-20T23:13:21.597+01:00  INFO 8992 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-01-20T23:13:21.623+01:00  INFO 8992 --- [ShoppingListServices] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-01-20T23:13:21.640+01:00 ERROR 8992 --- [ShoppingListServices] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
-	at pl.kamjer.ShoppingSecService.ShoppingSecurityServiceApplication.main(ShoppingSecurityServiceApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 10 common frames omitted
-Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.flywaydb.core.Flyway.lambda$migrate$1(Flyway.java:189) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.Flyway.migrate(Flyway.java:176) ~[flyway-core-10.20.1.jar:na]
-	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 17 common frames omitted
-
-2026-01-20T23:14:36.336+01:00  INFO 21308 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 21308 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
-2026-01-20T23:14:36.340+01:00  INFO 21308 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
-2026-01-20T23:14:38.158+01:00  INFO 21308 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-20T23:14:38.375+01:00  INFO 21308 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 201 ms. Found 1 JPA repository interface.
-2026-01-20T23:14:39.657+01:00  INFO 21308 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
-2026-01-20T23:14:39.688+01:00  INFO 21308 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-20T23:14:39.688+01:00  INFO 21308 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2026-01-20T23:14:39.773+01:00  INFO 21308 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-01-20T23:14:39.774+01:00  INFO 21308 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3346 ms
-2026-01-20T23:14:40.661+01:00  WARN 21308 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
-2026-01-20T23:14:40.682+01:00  INFO 21308 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
-2026-01-20T23:14:40.692+01:00  WARN 21308 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
-2026-01-20T23:14:40.746+01:00  WARN 21308 --- [ShoppingListServices] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-2026-01-20T23:14:40.751+01:00  INFO 21308 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-01-20T23:14:40.771+01:00  INFO 21308 --- [ShoppingListServices] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-01-20T23:14:40.793+01:00 ERROR 21308 --- [ShoppingListServices] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
-	at pl.kamjer.ShoppingSecService.ShoppingSecurityServiceApplication.main(ShoppingSecurityServiceApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 10 common frames omitted
-Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.flywaydb.core.Flyway.lambda$migrate$1(Flyway.java:189) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.Flyway.migrate(Flyway.java:176) ~[flyway-core-10.20.1.jar:na]
-	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 17 common frames omitted
-
-2026-01-20T23:16:29.691+01:00  INFO 12520 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 12520 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
-2026-01-20T23:16:29.693+01:00  INFO 12520 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
-2026-01-20T23:16:30.456+01:00  INFO 12520 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-20T23:16:30.555+01:00  INFO 12520 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 1 JPA repository interface.
-2026-01-20T23:16:31.290+01:00  INFO 12520 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
-2026-01-20T23:16:31.302+01:00  INFO 12520 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-20T23:16:31.303+01:00  INFO 12520 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2026-01-20T23:16:31.356+01:00  INFO 12520 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-01-20T23:16:31.356+01:00  INFO 12520 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1629 ms
-2026-01-20T23:16:31.873+01:00  WARN 12520 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
-2026-01-20T23:16:31.889+01:00  INFO 12520 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
-2026-01-20T23:16:31.894+01:00  WARN 12520 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
-2026-01-20T23:16:31.916+01:00  WARN 12520 --- [ShoppingListServices] [main] org.flywaydb.core.Flyway                 : cleanOnValidationError is deprecated and will be removed in a later release
-2026-01-20T23:16:31.919+01:00  WARN 12520 --- [ShoppingListServices] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to execute clean as it has been disabled with the 'flyway.cleanDisabled' property.
-2026-01-20T23:16:31.922+01:00  INFO 12520 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-01-20T23:16:31.936+01:00  INFO 12520 --- [ShoppingListServices] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-01-20T23:16:31.948+01:00 ERROR 12520 --- [ShoppingListServices] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to execute clean as it has been disabled with the 'flyway.cleanDisabled' property.
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
-	at pl.kamjer.ShoppingSecService.ShoppingSecurityServiceApplication.main(ShoppingSecurityServiceApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to execute clean as it has been disabled with the 'flyway.cleanDisabled' property.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 10 common frames omitted
-Caused by: org.flywaydb.core.api.FlywayException: Unable to execute clean as it has been disabled with the 'flyway.cleanDisabled' property.
-	at org.flywaydb.core.internal.command.clean.DbClean.clean(DbClean.java:62) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.Flyway.doClean(Flyway.java:488) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.Flyway.doValidate(Flyway.java:500) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.Flyway.lambda$migrate$1(Flyway.java:187) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.Flyway.migrate(Flyway.java:176) ~[flyway-core-10.20.1.jar:na]
-	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 17 common frames omitted
-
-2026-01-20T23:18:27.202+01:00  INFO 2224 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 2224 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
-2026-01-20T23:18:27.203+01:00  INFO 2224 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
-2026-01-20T23:18:27.968+01:00  INFO 2224 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-20T23:18:28.070+01:00  INFO 2224 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 1 JPA repository interface.
-2026-01-20T23:18:28.851+01:00  INFO 2224 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
-2026-01-20T23:18:28.868+01:00  INFO 2224 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-20T23:18:28.869+01:00  INFO 2224 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2026-01-20T23:18:28.928+01:00  INFO 2224 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-01-20T23:18:28.929+01:00  INFO 2224 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1697 ms
-2026-01-20T23:18:29.381+01:00  WARN 2224 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
-2026-01-20T23:18:29.395+01:00  INFO 2224 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
-2026-01-20T23:18:29.401+01:00  WARN 2224 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
-2026-01-20T23:18:29.425+01:00  WARN 2224 --- [ShoppingListServices] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-2026-01-20T23:18:29.428+01:00  INFO 2224 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-01-20T23:18:29.445+01:00  INFO 2224 --- [ShoppingListServices] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-01-20T23:18:29.456+01:00 ERROR 2224 --- [ShoppingListServices] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
-	at pl.kamjer.ShoppingSecService.ShoppingSecurityServiceApplication.main(ShoppingSecurityServiceApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 10 common frames omitted
-Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
-Migration checksum mismatch for migration version 1
--> Applied to database : -2144262299
--> Resolved locally    : 506787052
-Either revert the changes to the migration, or run repair to update the schema history.
-Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
-	at org.flywaydb.core.Flyway.lambda$migrate$1(Flyway.java:189) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-10.20.1.jar:na]
-	at org.flywaydb.core.Flyway.migrate(Flyway.java:176) ~[flyway-core-10.20.1.jar:na]
-	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 17 common frames omitted
-
-2026-01-20T23:32:58.161+01:00  INFO 21856 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 21856 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
-2026-01-20T23:32:58.162+01:00  INFO 21856 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
-2026-01-20T23:32:58.901+01:00  INFO 21856 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-20T23:32:58.995+01:00  INFO 21856 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interface.
-2026-01-20T23:32:59.727+01:00  INFO 21856 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
-2026-01-20T23:32:59.750+01:00  INFO 21856 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-20T23:32:59.750+01:00  INFO 21856 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2026-01-20T23:32:59.813+01:00  INFO 21856 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-01-20T23:32:59.814+01:00  INFO 21856 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1624 ms
-2026-01-20T23:33:00.258+01:00  WARN 21856 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
-2026-01-20T23:33:00.273+01:00  INFO 21856 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_users_db?user=root&password=******** (MariaDB 11.7)
-2026-01-20T23:33:00.278+01:00  WARN 21856 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
-2026-01-20T23:33:00.292+01:00  INFO 21856 --- [ShoppingListServices] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `shopping_list_users_db`.`flyway_schema_history` does not exist yet
-2026-01-20T23:33:00.293+01:00  INFO 21856 --- [ShoppingListServices] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.009s)
-2026-01-20T23:33:00.314+01:00  INFO 21856 --- [ShoppingListServices] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `shopping_list_users_db`.`flyway_schema_history` ...
-2026-01-20T23:33:00.376+01:00  INFO 21856 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `shopping_list_users_db`: << Empty Schema >>
-2026-01-20T23:33:00.379+01:00  INFO 21856 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `shopping_list_users_db` to version "1 - create tables"
-2026-01-20T23:33:00.405+01:00  INFO 21856 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `shopping_list_users_db`, now at version v1 (execution time 00:00.014s)
-2026-01-20T23:33:00.477+01:00  INFO 21856 --- [ShoppingListServices] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-20T23:33:00.520+01:00  INFO 21856 --- [ShoppingListServices] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2026-01-20T23:33:00.550+01:00  INFO 21856 --- [ShoppingListServices] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-01-20T23:33:00.755+01:00  INFO 21856 --- [ShoppingListServices] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-20T23:33:00.778+01:00  INFO 21856 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-20T23:33:00.793+01:00  INFO 21856 --- [ShoppingListServices] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@4fcedf83
-2026-01-20T23:33:00.794+01:00  INFO 21856 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-20T23:33:00.817+01:00  WARN 21856 --- [ShoppingListServices] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-01-20T23:33:01.342+01:00  INFO 21856 --- [ShoppingListServices] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-20T23:33:01.344+01:00  INFO 21856 --- [ShoppingListServices] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-20T23:33:01.699+01:00  WARN 21856 --- [ShoppingListServices] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-20T23:33:01.724+01:00  INFO 21856 --- [ShoppingListServices] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
-2026-01-20T23:33:01.954+01:00  INFO 21856 --- [ShoppingListServices] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoints beneath base path '/actuator'
-2026-01-20T23:33:02.549+01:00  INFO 21856 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4443 (http) with context path '/'
-2026-01-20T23:33:02.559+01:00  INFO 21856 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Started ShoppingSecurityServiceApplication in 4.731 seconds (process running for 5.068)
-2026-01-20T23:33:29.809+01:00  INFO 21856 --- [ShoppingListServices] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-20T23:33:29.809+01:00  INFO 21856 --- [ShoppingListServices] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-20T23:33:29.811+01:00  INFO 21856 --- [ShoppingListServices] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-01-20T23:40:59.631+01:00  INFO 21856 --- [ShoppingListServices] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-20T23:40:59.635+01:00  INFO 21856 --- [ShoppingListServices] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-01-20T23:40:59.653+01:00  INFO 21856 --- [ShoppingListServices] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-20T23:40:59.655+01:00  INFO 21856 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-20T23:40:59.658+01:00  INFO 21856 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-20T23:42:56.797+01:00  INFO 10820 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 10820 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
-2026-01-20T23:42:56.800+01:00  INFO 10820 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
-2026-01-20T23:42:58.145+01:00  INFO 10820 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-20T23:42:58.265+01:00  INFO 10820 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interface.
-2026-01-20T23:42:59.268+01:00  INFO 10820 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
-2026-01-20T23:42:59.291+01:00  INFO 10820 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-20T23:42:59.292+01:00  INFO 10820 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2026-01-20T23:42:59.426+01:00  INFO 10820 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-01-20T23:42:59.427+01:00  INFO 10820 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2563 ms
-2026-01-20T23:43:00.113+01:00  WARN 10820 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
-2026-01-20T23:43:00.131+01:00  INFO 10820 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_users_db?user=root&password=******** (MariaDB 11.7)
-2026-01-20T23:43:00.139+01:00  WARN 10820 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
-2026-01-20T23:43:00.171+01:00  INFO 10820 --- [ShoppingListServices] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.023s)
-2026-01-20T23:43:00.181+01:00  INFO 10820 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `shopping_list_users_db`: 1
-2026-01-20T23:43:00.184+01:00  INFO 10820 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Schema `shopping_list_users_db` is up to date. No migration necessary.
-2026-01-20T23:43:00.301+01:00  INFO 10820 --- [ShoppingListServices] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-20T23:43:00.368+01:00  INFO 10820 --- [ShoppingListServices] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2026-01-20T23:43:00.422+01:00  INFO 10820 --- [ShoppingListServices] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-01-20T23:43:00.786+01:00  INFO 10820 --- [ShoppingListServices] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-20T23:43:00.819+01:00  INFO 10820 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-20T23:43:00.836+01:00  INFO 10820 --- [ShoppingListServices] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@89465d9
-2026-01-20T23:43:00.838+01:00  INFO 10820 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-20T23:43:00.868+01:00  WARN 10820 --- [ShoppingListServices] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-01-20T23:43:01.452+01:00  INFO 10820 --- [ShoppingListServices] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-20T23:43:01.454+01:00  INFO 10820 --- [ShoppingListServices] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-20T23:43:01.819+01:00  WARN 10820 --- [ShoppingListServices] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-20T23:43:01.843+01:00  INFO 10820 --- [ShoppingListServices] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
-2026-01-20T23:43:02.061+01:00  INFO 10820 --- [ShoppingListServices] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoints beneath base path '/actuator'
-2026-01-20T23:43:02.638+01:00  INFO 10820 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4443 (http) with context path '/'
-2026-01-20T23:43:02.647+01:00  INFO 10820 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Started ShoppingSecurityServiceApplication in 6.592 seconds (process running for 7.394)
-2026-01-20T23:43:21.189+01:00  INFO 10820 --- [ShoppingListServices] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-20T23:43:21.190+01:00  INFO 10820 --- [ShoppingListServices] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-20T23:43:21.191+01:00  INFO 10820 --- [ShoppingListServices] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-01-20T23:46:44.416+01:00  INFO 10820 --- [ShoppingListServices] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-20T23:46:44.420+01:00  INFO 10820 --- [ShoppingListServices] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-01-20T23:46:44.439+01:00  INFO 10820 --- [ShoppingListServices] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-20T23:46:44.440+01:00  INFO 10820 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-20T23:46:44.443+01:00  INFO 10820 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-21T17:25:22.878+01:00  INFO 24808 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 24808 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21T17:25:22.884+01:00  INFO 24808 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
+2026-01-21T17:25:23.700+01:00  INFO 24808 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21T17:25:23.822+01:00  INFO 24808 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interface.
+2026-01-21T17:25:24.594+01:00  INFO 24808 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
+2026-01-21T17:25:24.614+01:00  INFO 24808 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-21T17:25:24.614+01:00  INFO 24808 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-21T17:25:24.664+01:00  INFO 24808 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-21T17:25:24.664+01:00  INFO 24808 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1747 ms
+2026-01-21T17:25:25.157+01:00  WARN 24808 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-01-21T17:25:25.169+01:00  INFO 24808 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_users_db?user=root&password=******** (MariaDB 11.7)
+2026-01-21T17:25:25.174+01:00  WARN 24808 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-01-21T17:25:25.195+01:00  INFO 24808 --- [ShoppingListServices] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.015s)
+2026-01-21T17:25:25.200+01:00  INFO 24808 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `shopping_list_users_db`: 1
+2026-01-21T17:25:25.202+01:00  INFO 24808 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Schema `shopping_list_users_db` is up to date. No migration necessary.
+2026-01-21T17:25:25.276+01:00  INFO 24808 --- [ShoppingListServices] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21T17:25:25.319+01:00  INFO 24808 --- [ShoppingListServices] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-01-21T17:25:25.350+01:00  INFO 24808 --- [ShoppingListServices] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-21T17:25:25.600+01:00  INFO 24808 --- [ShoppingListServices] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21T17:25:25.620+01:00  INFO 24808 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-21T17:25:25.633+01:00  INFO 24808 --- [ShoppingListServices] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@64e3bc2
+2026-01-21T17:25:25.634+01:00  INFO 24808 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-21T17:25:25.657+01:00  WARN 24808 --- [ShoppingListServices] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21T17:25:26.221+01:00  INFO 24808 --- [ShoppingListServices] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21T17:25:26.223+01:00  INFO 24808 --- [ShoppingListServices] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T17:25:26.607+01:00  WARN 24808 --- [ShoppingListServices] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-21T17:25:26.638+01:00  INFO 24808 --- [ShoppingListServices] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2026-01-21T17:25:26.874+01:00  INFO 24808 --- [ShoppingListServices] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoints beneath base path '/actuator'
+2026-01-21T17:25:27.563+01:00  INFO 24808 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4443 (http) with context path '/'
+2026-01-21T17:25:27.571+01:00  INFO 24808 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Started ShoppingSecurityServiceApplication in 5.071 seconds (process running for 5.446)
+2026-01-21T17:25:35.060+01:00  INFO 24808 --- [ShoppingListServices] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-21T17:25:35.063+01:00  INFO 24808 --- [ShoppingListServices] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-21T17:25:35.085+01:00  INFO 24808 --- [ShoppingListServices] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T17:25:35.086+01:00  INFO 24808 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-21T17:25:35.088+01:00  INFO 24808 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-21T17:27:01.309+01:00  INFO 20772 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 20772 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21T17:27:01.310+01:00  INFO 20772 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
+2026-01-21T17:27:02.072+01:00  INFO 20772 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21T17:27:02.168+01:00  INFO 20772 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 1 JPA repository interface.
+2026-01-21T17:27:03.017+01:00  INFO 20772 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
+2026-01-21T17:27:03.036+01:00  INFO 20772 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-21T17:27:03.037+01:00  INFO 20772 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-21T17:27:03.115+01:00  INFO 20772 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-21T17:27:03.115+01:00  INFO 20772 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1778 ms
+2026-01-21T17:27:03.751+01:00  WARN 20772 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-01-21T17:27:03.770+01:00  INFO 20772 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_users_db?user=root&password=******** (MariaDB 11.7)
+2026-01-21T17:27:03.777+01:00  WARN 20772 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-01-21T17:27:03.805+01:00  INFO 20772 --- [ShoppingListServices] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.020s)
+2026-01-21T17:27:03.813+01:00  INFO 20772 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `shopping_list_users_db`: 1
+2026-01-21T17:27:03.815+01:00  INFO 20772 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Schema `shopping_list_users_db` is up to date. No migration necessary.
+2026-01-21T17:27:03.910+01:00  INFO 20772 --- [ShoppingListServices] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21T17:27:03.958+01:00  INFO 20772 --- [ShoppingListServices] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-01-21T17:27:03.986+01:00  INFO 20772 --- [ShoppingListServices] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-21T17:27:04.228+01:00  INFO 20772 --- [ShoppingListServices] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21T17:27:04.258+01:00  INFO 20772 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-21T17:27:04.274+01:00  INFO 20772 --- [ShoppingListServices] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@406808eb
+2026-01-21T17:27:04.276+01:00  INFO 20772 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-21T17:27:04.302+01:00  WARN 20772 --- [ShoppingListServices] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21T17:27:04.999+01:00  INFO 20772 --- [ShoppingListServices] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21T17:27:05.002+01:00  INFO 20772 --- [ShoppingListServices] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T17:27:05.566+01:00  WARN 20772 --- [ShoppingListServices] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-21T17:27:05.614+01:00  INFO 20772 --- [ShoppingListServices] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2026-01-21T17:27:05.937+01:00  INFO 20772 --- [ShoppingListServices] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoints beneath base path '/actuator'
+2026-01-21T17:27:06.521+01:00  INFO 20772 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4443 (http) with context path '/'
+2026-01-21T17:27:06.534+01:00  INFO 20772 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Started ShoppingSecurityServiceApplication in 5.561 seconds (process running for 5.908)
+2026-01-21T17:27:16.888+01:00  INFO 20772 --- [ShoppingListServices] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-21T17:27:16.891+01:00  INFO 20772 --- [ShoppingListServices] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-21T17:27:16.908+01:00  INFO 20772 --- [ShoppingListServices] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T17:27:16.909+01:00  INFO 20772 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-21T17:27:16.911+01:00  INFO 20772 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-21T17:27:44.972+01:00  INFO 23200 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 23200 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21T17:27:44.974+01:00  INFO 23200 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
+2026-01-21T17:27:45.886+01:00  INFO 23200 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21T17:27:46.002+01:00  INFO 23200 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 1 JPA repository interface.
+2026-01-21T17:27:47.060+01:00  INFO 23200 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
+2026-01-21T17:27:47.073+01:00  INFO 23200 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-21T17:27:47.074+01:00  INFO 23200 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-21T17:27:47.150+01:00  INFO 23200 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-21T17:27:47.151+01:00  INFO 23200 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2145 ms
+2026-01-21T17:27:47.886+01:00  WARN 23200 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-01-21T17:27:47.906+01:00  INFO 23200 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_users_db?user=root&password=******** (MariaDB 11.7)
+2026-01-21T17:27:47.914+01:00  WARN 23200 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-01-21T17:27:47.951+01:00  INFO 23200 --- [ShoppingListServices] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.027s)
+2026-01-21T17:27:47.962+01:00  INFO 23200 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `shopping_list_users_db`: 1
+2026-01-21T17:27:47.965+01:00  INFO 23200 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Schema `shopping_list_users_db` is up to date. No migration necessary.
+2026-01-21T17:27:48.068+01:00  INFO 23200 --- [ShoppingListServices] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21T17:27:48.159+01:00  INFO 23200 --- [ShoppingListServices] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-01-21T17:27:48.207+01:00  INFO 23200 --- [ShoppingListServices] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-21T17:27:48.480+01:00  INFO 23200 --- [ShoppingListServices] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21T17:27:48.506+01:00  INFO 23200 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-21T17:27:48.520+01:00  INFO 23200 --- [ShoppingListServices] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@406808eb
+2026-01-21T17:27:48.521+01:00  INFO 23200 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-21T17:27:48.543+01:00  WARN 23200 --- [ShoppingListServices] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21T17:27:49.107+01:00  INFO 23200 --- [ShoppingListServices] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21T17:27:49.110+01:00  INFO 23200 --- [ShoppingListServices] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T17:27:49.489+01:00  WARN 23200 --- [ShoppingListServices] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-21T17:27:49.519+01:00  INFO 23200 --- [ShoppingListServices] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2026-01-21T17:27:49.744+01:00  INFO 23200 --- [ShoppingListServices] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoints beneath base path '/actuator'
+2026-01-21T17:27:50.298+01:00  INFO 23200 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4443 (http) with context path '/'
+2026-01-21T17:27:50.307+01:00  INFO 23200 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Started ShoppingSecurityServiceApplication in 5.753 seconds (process running for 6.329)
+2026-01-21T17:29:02.659+01:00  INFO 23200 --- [ShoppingListServices] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-21T17:29:02.663+01:00  INFO 23200 --- [ShoppingListServices] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-21T17:29:02.684+01:00  INFO 23200 --- [ShoppingListServices] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T17:29:02.686+01:00  INFO 23200 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-21T17:29:02.688+01:00  INFO 23200 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-21T17:36:07.269+01:00  INFO 7068 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 7068 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21T17:36:07.270+01:00  INFO 7068 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
+2026-01-21T17:36:08.047+01:00  INFO 7068 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21T17:36:08.152+01:00  INFO 7068 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
+2026-01-21T17:36:08.970+01:00  INFO 7068 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
+2026-01-21T17:36:08.985+01:00  INFO 7068 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-21T17:36:08.985+01:00  INFO 7068 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-21T17:36:09.044+01:00  INFO 7068 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-21T17:36:09.045+01:00  INFO 7068 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1745 ms
+2026-01-21T17:36:09.622+01:00  WARN 7068 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-01-21T17:36:09.636+01:00  INFO 7068 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_users_db?user=root&password=******** (MariaDB 11.7)
+2026-01-21T17:36:09.642+01:00  WARN 7068 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-01-21T17:36:09.670+01:00  INFO 7068 --- [ShoppingListServices] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.020s)
+2026-01-21T17:36:09.678+01:00  INFO 7068 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `shopping_list_users_db`: 1
+2026-01-21T17:36:09.681+01:00  INFO 7068 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Schema `shopping_list_users_db` is up to date. No migration necessary.
+2026-01-21T17:36:09.774+01:00  INFO 7068 --- [ShoppingListServices] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21T17:36:09.842+01:00  INFO 7068 --- [ShoppingListServices] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-01-21T17:36:09.898+01:00  INFO 7068 --- [ShoppingListServices] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-21T17:36:10.218+01:00  INFO 7068 --- [ShoppingListServices] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21T17:36:10.245+01:00  INFO 7068 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-21T17:36:10.262+01:00  INFO 7068 --- [ShoppingListServices] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@406808eb
+2026-01-21T17:36:10.264+01:00  INFO 7068 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-21T17:36:10.295+01:00  WARN 7068 --- [ShoppingListServices] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21T17:36:10.957+01:00  INFO 7068 --- [ShoppingListServices] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21T17:36:10.959+01:00  INFO 7068 --- [ShoppingListServices] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T17:36:11.406+01:00  WARN 7068 --- [ShoppingListServices] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-21T17:36:11.438+01:00  INFO 7068 --- [ShoppingListServices] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2026-01-21T17:36:11.760+01:00  INFO 7068 --- [ShoppingListServices] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoints beneath base path '/actuator'
+2026-01-21T17:36:12.531+01:00  INFO 7068 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4443 (http) with context path '/'
+2026-01-21T17:36:12.539+01:00  INFO 7068 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Started ShoppingSecurityServiceApplication in 5.634 seconds (process running for 6.002)
+2026-01-21T17:37:12.693+01:00  INFO 7068 --- [ShoppingListServices] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-21T17:37:12.693+01:00  INFO 7068 --- [ShoppingListServices] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-21T17:37:12.694+01:00  INFO 7068 --- [ShoppingListServices] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-21T17:47:33.623+01:00  INFO 7068 --- [ShoppingListServices] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-21T17:47:33.690+01:00  INFO 7068 --- [ShoppingListServices] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-21T17:47:33.718+01:00  INFO 7068 --- [ShoppingListServices] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T17:47:33.720+01:00  INFO 7068 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-21T17:47:33.723+01:00  INFO 7068 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-21T17:48:48.183+01:00  INFO 21972 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 21972 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21T17:48:48.185+01:00  INFO 21972 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
+2026-01-21T17:48:49.014+01:00  INFO 21972 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21T17:48:49.126+01:00  INFO 21972 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interface.
+2026-01-21T17:48:49.912+01:00  INFO 21972 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
+2026-01-21T17:48:49.927+01:00  INFO 21972 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-21T17:48:49.927+01:00  INFO 21972 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-21T17:48:49.980+01:00  INFO 21972 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-21T17:48:49.980+01:00  INFO 21972 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1765 ms
+2026-01-21T17:48:50.491+01:00  WARN 21972 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-01-21T17:48:50.504+01:00  INFO 21972 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_users_db?user=root&password=******** (MariaDB 11.7)
+2026-01-21T17:48:50.508+01:00  WARN 21972 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-01-21T17:48:50.530+01:00  INFO 21972 --- [ShoppingListServices] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.015s)
+2026-01-21T17:48:50.537+01:00  INFO 21972 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `shopping_list_users_db`: 1
+2026-01-21T17:48:50.539+01:00  INFO 21972 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Schema `shopping_list_users_db` is up to date. No migration necessary.
+2026-01-21T17:48:50.607+01:00  INFO 21972 --- [ShoppingListServices] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21T17:48:50.653+01:00  INFO 21972 --- [ShoppingListServices] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-01-21T17:48:50.684+01:00  INFO 21972 --- [ShoppingListServices] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-21T17:48:50.915+01:00  INFO 21972 --- [ShoppingListServices] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21T17:48:50.939+01:00  INFO 21972 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-21T17:48:50.952+01:00  INFO 21972 --- [ShoppingListServices] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@14e93c46
+2026-01-21T17:48:50.953+01:00  INFO 21972 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-21T17:48:50.976+01:00  WARN 21972 --- [ShoppingListServices] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21T17:48:51.558+01:00  INFO 21972 --- [ShoppingListServices] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21T17:48:51.560+01:00  INFO 21972 --- [ShoppingListServices] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T17:48:51.931+01:00  WARN 21972 --- [ShoppingListServices] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-21T17:48:51.960+01:00  INFO 21972 --- [ShoppingListServices] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2026-01-21T17:48:52.156+01:00  INFO 21972 --- [ShoppingListServices] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoints beneath base path '/actuator'
+2026-01-21T17:48:52.740+01:00  INFO 21972 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4443 (http) with context path '/'
+2026-01-21T17:48:52.749+01:00  INFO 21972 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Started ShoppingSecurityServiceApplication in 4.93 seconds (process running for 5.293)
+2026-01-21T17:49:14.025+01:00  INFO 21972 --- [ShoppingListServices] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-21T17:49:14.025+01:00  INFO 21972 --- [ShoppingListServices] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-21T17:49:14.026+01:00  INFO 21972 --- [ShoppingListServices] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-21T18:02:30.643+01:00  INFO 21972 --- [ShoppingListServices] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-21T18:02:30.647+01:00  INFO 21972 --- [ShoppingListServices] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-21T18:02:30.665+01:00  INFO 21972 --- [ShoppingListServices] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T18:02:30.666+01:00  INFO 21972 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-21T18:02:30.668+01:00  INFO 21972 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-21T18:03:19.912+01:00  INFO 14736 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 14736 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21T18:03:19.915+01:00  INFO 14736 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
+2026-01-21T18:03:20.943+01:00  INFO 14736 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21T18:03:21.055+01:00  INFO 14736 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 1 JPA repository interface.
+2026-01-21T18:03:22.022+01:00  INFO 14736 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
+2026-01-21T18:03:22.037+01:00  INFO 14736 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-21T18:03:22.037+01:00  INFO 14736 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-21T18:03:22.108+01:00  INFO 14736 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-21T18:03:22.108+01:00  INFO 14736 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2138 ms
+2026-01-21T18:03:22.881+01:00  WARN 14736 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-01-21T18:03:22.904+01:00  INFO 14736 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_users_db?user=root&password=******** (MariaDB 11.7)
+2026-01-21T18:03:22.915+01:00  WARN 14736 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-01-21T18:03:22.961+01:00  INFO 14736 --- [ShoppingListServices] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.034s)
+2026-01-21T18:03:22.975+01:00  INFO 14736 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `shopping_list_users_db`: 1
+2026-01-21T18:03:22.979+01:00  INFO 14736 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Schema `shopping_list_users_db` is up to date. No migration necessary.
+2026-01-21T18:03:23.110+01:00  INFO 14736 --- [ShoppingListServices] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21T18:03:23.175+01:00  INFO 14736 --- [ShoppingListServices] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-01-21T18:03:23.217+01:00  INFO 14736 --- [ShoppingListServices] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-21T18:03:23.553+01:00  INFO 14736 --- [ShoppingListServices] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21T18:03:23.605+01:00  INFO 14736 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-21T18:03:23.625+01:00  INFO 14736 --- [ShoppingListServices] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@14e93c46
+2026-01-21T18:03:23.628+01:00  INFO 14736 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-21T18:03:23.666+01:00  WARN 14736 --- [ShoppingListServices] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21T18:03:24.637+01:00  INFO 14736 --- [ShoppingListServices] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21T18:03:24.640+01:00  INFO 14736 --- [ShoppingListServices] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T18:03:25.175+01:00  WARN 14736 --- [ShoppingListServices] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-21T18:03:25.215+01:00  INFO 14736 --- [ShoppingListServices] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2026-01-21T18:03:25.529+01:00  INFO 14736 --- [ShoppingListServices] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoints beneath base path '/actuator'
+2026-01-21T18:03:26.166+01:00  INFO 14736 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4443 (http) with context path '/'
+2026-01-21T18:03:26.174+01:00  INFO 14736 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Started ShoppingSecurityServiceApplication in 6.839 seconds (process running for 7.341)
+2026-01-21T18:03:36.820+01:00  INFO 14736 --- [ShoppingListServices] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-21T18:03:36.823+01:00  INFO 14736 --- [ShoppingListServices] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-21T18:03:36.838+01:00  INFO 14736 --- [ShoppingListServices] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21T18:03:36.840+01:00  INFO 14736 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-21T18:03:36.843+01:00  INFO 14736 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

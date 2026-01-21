@@ -1051,3 +1051,1075 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 2026-01-20 23:46:46 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-01-20 23:46:46 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
 2026-01-20 23:46:46 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2026-01-21 17:27:55 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-01-21 17:27:55 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 22712 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21 17:27:55 [main] INFO  : The following 1 profile is active: "dev"
+2026-01-21 17:27:56 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [pl.kamjer.shoppinglistservice.ShoppingListServiceApplication]
+2026-01-21 17:27:56 [main] ERROR : Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [pl.kamjer.shoppinglistservice.ShoppingListServiceApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:194)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:10)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'webSocketConfig' for bean class [pl.kamjer.shoppinglistservice.config.websocket.WebSocketConfig] conflicts with existing, non-compatible bean definition of same name and class [pl.kamjer.shoppinglistservice.config.websocket.config.WebSocketConfig]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:346)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:204)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:172)
+	... 13 common frames omitted
+2026-01-21 17:30:01 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-01-21 17:30:01 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 24964 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21 17:30:01 [main] INFO  : The following 1 profile is active: "dev"
+2026-01-21 17:30:01 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [pl.kamjer.shoppinglistservice.ShoppingListServiceApplication]
+2026-01-21 17:30:01 [main] ERROR : Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [pl.kamjer.shoppinglistservice.ShoppingListServiceApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:194)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:10)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'webSocketConfig' for bean class [pl.kamjer.shoppinglistservice.config.websocket.WebSocketConfig] conflicts with existing, non-compatible bean definition of same name and class [pl.kamjer.shoppinglistservice.config.websocket.config.WebSocketConfig]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:346)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:204)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:172)
+	... 13 common frames omitted
+2026-01-21 17:31:13 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-01-21 17:31:13 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 23556 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21 17:31:13 [main] INFO  : The following 1 profile is active: "dev"
+2026-01-21 17:31:14 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 17:31:14 [main] INFO  : Finished Spring Data repository scanning in 95 ms. Found 4 JPA repository interfaces.
+2026-01-21 17:31:15 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-01-21 17:31:15 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-01-21 17:31:15 [main] INFO  : Starting service [Tomcat]
+2026-01-21 17:31:15 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-21 17:31:15 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-01-21 17:31:15 [main] INFO  : Root WebApplicationContext: initialization completed in 1647 ms
+2026-01-21 17:31:16 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-01-21 17:31:16 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-01-21 17:31:16 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-01-21 17:31:16 [main] INFO  : Successfully validated 1 migration (execution time 00:00.016s)
+2026-01-21 17:31:16 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-01-21 17:31:16 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-01-21 17:31:16 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 17:31:16 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-01-21 17:31:16 [main] INFO  : HHH000026: Second-level cache disabled
+2026-01-21 17:31:16 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21 17:31:16 [main] INFO  : HikariPool-1 - Starting...
+2026-01-21 17:31:16 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@28fef9a2
+2026-01-21 17:31:16 [main] INFO  : HikariPool-1 - Start completed.
+2026-01-21 17:31:16 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21 17:31:17 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21 17:31:17 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:31:17 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'connectionBroker' defined in file [C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes\pl\kamjer\shoppinglistservice\config\websocket\ConnectionBroker.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'webSocketDataHolder' defined in file [C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes\pl\kamjer\shoppinglistservice\config\websocket\WebSocketDataHolder.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.util.concurrent.ConcurrentHashMap<java.lang.String, org.springframework.web.socket.WebSocketSession>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-01-21 17:31:17 [main] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:31:17 [main] INFO  : HikariPool-1 - Shutdown initiated...
+2026-01-21 17:31:17 [main] INFO  : HikariPool-1 - Shutdown completed.
+2026-01-21 17:31:17 [main] INFO  : Stopping service [Tomcat]
+2026-01-21 17:31:17 [main] INFO  : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-21 17:31:17 [main] ERROR : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder required a bean of type 'java.util.concurrent.ConcurrentHashMap' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.util.concurrent.ConcurrentHashMap' in your configuration.
+
+2026-01-21 17:33:29 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-01-21 17:33:29 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 24784 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21 17:33:29 [main] INFO  : The following 1 profile is active: "dev"
+2026-01-21 17:33:30 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 17:33:30 [main] INFO  : Finished Spring Data repository scanning in 107 ms. Found 4 JPA repository interfaces.
+2026-01-21 17:33:31 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-01-21 17:33:31 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-01-21 17:33:31 [main] INFO  : Starting service [Tomcat]
+2026-01-21 17:33:31 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-21 17:33:31 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-01-21 17:33:31 [main] INFO  : Root WebApplicationContext: initialization completed in 1649 ms
+2026-01-21 17:33:31 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-01-21 17:33:31 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-01-21 17:33:31 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-01-21 17:33:31 [main] INFO  : Successfully validated 1 migration (execution time 00:00.016s)
+2026-01-21 17:33:31 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-01-21 17:33:31 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-01-21 17:33:31 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 17:33:31 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-01-21 17:33:31 [main] INFO  : HHH000026: Second-level cache disabled
+2026-01-21 17:33:32 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21 17:33:32 [main] INFO  : HikariPool-1 - Starting...
+2026-01-21 17:33:32 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@368d51ca
+2026-01-21 17:33:32 [main] INFO  : HikariPool-1 - Start completed.
+2026-01-21 17:33:32 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21 17:33:32 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21 17:33:32 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:33:33 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSocketConfig' defined in file [C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes\pl\kamjer\shoppinglistservice\config\websocket\config\WebSocketConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'webSocketHandler' defined in file [C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes\pl\kamjer\shoppinglistservice\config\websocket\WebSocketHandler.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'webSocketDataHolder' defined in file [C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes\pl\kamjer\shoppinglistservice\config\websocket\WebSocketDataHolder.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.util.concurrent.ConcurrentHashMap<java.lang.String, org.springframework.web.socket.WebSocketSession>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-01-21 17:33:33 [main] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:33:33 [main] INFO  : HikariPool-1 - Shutdown initiated...
+2026-01-21 17:33:33 [main] INFO  : HikariPool-1 - Shutdown completed.
+2026-01-21 17:33:33 [main] INFO  : Stopping service [Tomcat]
+2026-01-21 17:33:33 [main] INFO  : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-21 17:33:33 [main] ERROR : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder required a bean of type 'java.util.concurrent.ConcurrentHashMap' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.util.concurrent.ConcurrentHashMap' in your configuration.
+
+2026-01-21 17:34:22 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-01-21 17:34:22 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 11948 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21 17:34:22 [main] INFO  : The following 1 profile is active: "dev"
+2026-01-21 17:34:23 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 17:34:23 [main] INFO  : Finished Spring Data repository scanning in 102 ms. Found 4 JPA repository interfaces.
+2026-01-21 17:34:24 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-01-21 17:34:24 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-01-21 17:34:24 [main] INFO  : Starting service [Tomcat]
+2026-01-21 17:34:24 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-21 17:34:24 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-01-21 17:34:24 [main] INFO  : Root WebApplicationContext: initialization completed in 1757 ms
+2026-01-21 17:34:24 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-01-21 17:34:24 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-01-21 17:34:24 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-01-21 17:34:24 [main] INFO  : Successfully validated 1 migration (execution time 00:00.016s)
+2026-01-21 17:34:24 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-01-21 17:34:24 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-01-21 17:34:24 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 17:34:24 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-01-21 17:34:24 [main] INFO  : HHH000026: Second-level cache disabled
+2026-01-21 17:34:25 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21 17:34:25 [main] INFO  : HikariPool-1 - Starting...
+2026-01-21 17:34:25 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@301f9aa0
+2026-01-21 17:34:25 [main] INFO  : HikariPool-1 - Start completed.
+2026-01-21 17:34:25 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21 17:34:25 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21 17:34:25 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:34:26 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'uniqUserNameConstraintValidator' defined in file [C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes\pl\kamjer\shoppinglistservice\validation\UniqUserNameConstraintValidator.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in pl.kamjer.shoppinglistservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class pl.kamjer.shoppinglistservice.model.User
+2026-01-21 17:34:26 [main] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:34:26 [main] INFO  : HikariPool-1 - Shutdown initiated...
+2026-01-21 17:34:26 [main] INFO  : HikariPool-1 - Shutdown completed.
+2026-01-21 17:34:26 [main] INFO  : Stopping service [Tomcat]
+2026-01-21 17:34:26 [main] INFO  : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-21 17:34:26 [main] ERROR : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'uniqUserNameConstraintValidator' defined in file [C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes\pl\kamjer\shoppinglistservice\validation\UniqUserNameConstraintValidator.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in pl.kamjer.shoppinglistservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class pl.kamjer.shoppinglistservice.model.User
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1122)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at pl.kamjer.shoppinglistservice.ShoppingListServiceApplication.main(ShoppingListServiceApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in pl.kamjer.shoppinglistservice.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class pl.kamjer.shoppinglistservice.model.User
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1681)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class pl.kamjer.shoppinglistservice.model.User
+	at org.hibernate.metamodel.model.domain.internal.JpaMetamodelImpl.managedType(JpaMetamodelImpl.java:194)
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.managedType(MappingMetamodelImpl.java:469)
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.managedType(MappingMetamodelImpl.java:99)
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:82)
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:69)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:251)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:215)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:198)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:1)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:377)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814)
+	... 31 common frames omitted
+2026-01-21 17:35:55 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-01-21 17:35:55 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 5308 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21 17:35:55 [main] INFO  : The following 1 profile is active: "dev"
+2026-01-21 17:35:56 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 17:35:56 [main] INFO  : Finished Spring Data repository scanning in 103 ms. Found 3 JPA repository interfaces.
+2026-01-21 17:35:57 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-01-21 17:35:57 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-01-21 17:35:57 [main] INFO  : Starting service [Tomcat]
+2026-01-21 17:35:57 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-21 17:35:57 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-01-21 17:35:57 [main] INFO  : Root WebApplicationContext: initialization completed in 1727 ms
+2026-01-21 17:35:57 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-01-21 17:35:57 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-01-21 17:35:57 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-01-21 17:35:57 [main] INFO  : Successfully validated 1 migration (execution time 00:00.014s)
+2026-01-21 17:35:57 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-01-21 17:35:57 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-01-21 17:35:58 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 17:35:58 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-01-21 17:35:58 [main] INFO  : HHH000026: Second-level cache disabled
+2026-01-21 17:35:58 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21 17:35:58 [main] INFO  : HikariPool-1 - Starting...
+2026-01-21 17:35:58 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2fce8243
+2026-01-21 17:35:58 [main] INFO  : HikariPool-1 - Start completed.
+2026-01-21 17:35:58 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21 17:35:59 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21 17:35:59 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:35:59 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-21 17:35:59 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name remoteAuthProvider
+2026-01-21 17:35:59 [main] WARN  : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-21 17:35:59 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-01-21 17:36:00 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-01-21 17:36:00 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-01-21 17:36:00 [main] INFO  : Started ShoppingListServiceApplication in 5.13 seconds (process running for 5.428)
+2026-01-21 17:37:12 [tomcat-handler-0] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-21 17:37:12 [tomcat-handler-0] INFO  : Initializing Servlet 'dispatcherServlet'
+2026-01-21 17:37:12 [tomcat-handler-0] INFO  : Completed initialization in 1 ms
+2026-01-21 17:37:13 [tomcat-handler-1] INFO  : New session connected: 8528cc52-d2f4-c812-d32a-4c3b4c423524, user: t1
+2026-01-21 17:37:13 [tomcat-handler-0] INFO  : New session connected: a1591068-c990-c871-d269-cf954954b7fd, user: t1
+2026-01-21 17:37:13 [tomcat-handler-2] INFO  : New message from user: t1
+2026-01-21 17:37:13 [tomcat-handler-3] INFO  : New message from user: t1
+2026-01-21 17:37:13 [tomcat-handler-2] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:13 [tomcat-handler-3] INFO  : End of message processing - session: a1591068-c990-c871-d269-cf954954b7fd from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:13 [tomcat-handler-4] INFO  : New message from user: t1
+2026-01-21 17:37:13 [tomcat-handler-4] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:13 [tomcat-handler-5] INFO  : New message from user: t1
+2026-01-21 17:37:13 [tomcat-handler-5] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:13 [tomcat-handler-6] INFO  : New message from user: t1
+2026-01-21 17:37:13 [tomcat-handler-6] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:13 [tomcat-handler-7] INFO  : New message from user: t1
+2026-01-21 17:37:13 [tomcat-handler-7] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:13 [tomcat-handler-8] INFO  : New message from user: t1
+2026-01-21 17:37:13 [tomcat-handler-8] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:13 [tomcat-handler-9] INFO  : New message from user: t1
+2026-01-21 17:37:13 [tomcat-handler-9] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:13 [tomcat-handler-10] INFO  : New message from user: t1
+2026-01-21 17:37:13 [tomcat-handler-10] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:14 [tomcat-handler-11] INFO  : New message from user: t1
+2026-01-21 17:37:14 [tomcat-handler-11] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:14 [tomcat-handler-12] INFO  : New message from user: t1
+2026-01-21 17:37:14 [tomcat-handler-12] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:14 [tomcat-handler-13] INFO  : New message from user: t1
+2026-01-21 17:37:14 [tomcat-handler-13] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:14 [tomcat-handler-14] INFO  : New message from user: t1
+2026-01-21 17:37:14 [tomcat-handler-14] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:14 [tomcat-handler-15] INFO  : New message from user: t1
+2026-01-21 17:37:14 [tomcat-handler-15] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:14 [tomcat-handler-15] INFO  : Attempting to NONE data: 3
+2026-01-21 17:37:14 [tomcat-handler-15] INFO  : Attempting to NONE data: 4
+2026-01-21 17:37:14 [tomcat-handler-15] INFO  : Attempting to NONE data: 5
+2026-01-21 17:37:14 [tomcat-handler-15] INFO  : Sending message to owner: 8528cc52-d2f4-c812-d32a-4c3b4c423524
+2026-01-21 17:37:14 [tomcat-handler-15] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:48 [tomcat-handler-16] INFO  : New message from user: t1
+2026-01-21 17:37:48 [tomcat-handler-16] INFO  : /putShoppingItem connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:37:48 [tomcat-handler-16] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:29 [tomcat-handler-17] INFO  : New message from user: t1
+2026-01-21 17:38:29 [tomcat-handler-17] INFO  : /putShoppingItem connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:29 [tomcat-handler-17] INFO  : End of message processing - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:36 [tomcat-handler-18] ERROR : Error null - session: 8528cc52-d2f4-c812-d32a-4c3b4c423524 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:36 [tomcat-handler-19] ERROR : Error null - session: a1591068-c990-c871-d269-cf954954b7fd from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:36 [tomcat-handler-18] INFO  : Session closing: 8528cc52-d2f4-c812-d32a-4c3b4c423524 - reason: null
+2026-01-21 17:38:36 [tomcat-handler-19] INFO  : Session closing: a1591068-c990-c871-d269-cf954954b7fd - reason: null
+2026-01-21 17:38:41 [tomcat-handler-20] INFO  : New session connected: c7077451-e449-8a42-f71f-59190f585108, user: t1
+2026-01-21 17:38:41 [tomcat-handler-21] INFO  : New message from user: t1
+2026-01-21 17:38:41 [tomcat-handler-21] INFO  : End of message processing - session: c7077451-e449-8a42-f71f-59190f585108 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:41 [tomcat-handler-22] INFO  : New session connected: b3475426-261f-5d95-48af-2bd5ca5dc501, user: t1
+2026-01-21 17:38:41 [tomcat-handler-23] INFO  : New message from user: t1
+2026-01-21 17:38:41 [tomcat-handler-23] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:41 [tomcat-handler-23] INFO  : New message from user: t1
+2026-01-21 17:38:41 [tomcat-handler-23] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:41 [tomcat-handler-24] INFO  : New message from user: t1
+2026-01-21 17:38:41 [tomcat-handler-24] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:41 [tomcat-handler-25] INFO  : New message from user: t1
+2026-01-21 17:38:41 [tomcat-handler-25] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:41 [tomcat-handler-26] INFO  : New message from user: t1
+2026-01-21 17:38:41 [tomcat-handler-26] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:42 [tomcat-handler-27] INFO  : New message from user: t1
+2026-01-21 17:38:42 [tomcat-handler-27] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:42 [tomcat-handler-28] INFO  : New message from user: t1
+2026-01-21 17:38:42 [tomcat-handler-28] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:42 [tomcat-handler-29] INFO  : New message from user: t1
+2026-01-21 17:38:42 [tomcat-handler-29] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:42 [tomcat-handler-30] INFO  : New message from user: t1
+2026-01-21 17:38:42 [tomcat-handler-30] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:42 [tomcat-handler-31] INFO  : New message from user: t1
+2026-01-21 17:38:42 [tomcat-handler-31] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:42 [tomcat-handler-32] INFO  : New message from user: t1
+2026-01-21 17:38:42 [tomcat-handler-32] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:42 [tomcat-handler-33] INFO  : New message from user: t1
+2026-01-21 17:38:42 [tomcat-handler-33] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:42 [tomcat-handler-34] INFO  : New message from user: t1
+2026-01-21 17:38:42 [tomcat-handler-34] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:38:50 [tomcat-handler-34] INFO  : Attempting to NONE data: 3
+2026-01-21 17:38:50 [tomcat-handler-34] INFO  : Attempting to NONE data: 2
+2026-01-21 17:38:50 [tomcat-handler-34] INFO  : Attempting to NONE data: 4
+2026-01-21 17:38:50 [tomcat-handler-34] INFO  : Attempting to NONE data: 5
+2026-01-21 17:38:50 [tomcat-handler-34] INFO  : Attempting to NONE data: 4
+2026-01-21 17:38:50 [tomcat-handler-34] INFO  : Attempting to NONE data: 5
+2026-01-21 17:38:50 [tomcat-handler-34] INFO  : Sending message to owner: b3475426-261f-5d95-48af-2bd5ca5dc501
+2026-01-21 17:38:50 [tomcat-handler-34] INFO  : End of message processing - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:02 [tomcat-handler-35] ERROR : Error null - session: b3475426-261f-5d95-48af-2bd5ca5dc501 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:02 [tomcat-handler-36] ERROR : Error null - session: c7077451-e449-8a42-f71f-59190f585108 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:02 [tomcat-handler-35] INFO  : Session closing: b3475426-261f-5d95-48af-2bd5ca5dc501 - reason: null
+2026-01-21 17:39:02 [tomcat-handler-36] INFO  : Session closing: c7077451-e449-8a42-f71f-59190f585108 - reason: null
+2026-01-21 17:39:06 [tomcat-handler-37] INFO  : New session connected: ee96516a-ae45-ea61-5178-ffe2836a091b, user: t1
+2026-01-21 17:39:06 [tomcat-handler-38] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-38] INFO  : End of message processing - session: ee96516a-ae45-ea61-5178-ffe2836a091b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-39] INFO  : New session connected: dc65b56c-12fa-b404-2900-4de2c7b9d67e, user: t1
+2026-01-21 17:39:06 [tomcat-handler-40] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-40] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-41] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-41] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-42] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-42] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-43] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-43] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-44] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-44] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-45] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-45] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-45] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-45] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-45] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-45] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-46] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-46] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-47] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-47] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-48] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-48] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-49] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-49] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:06 [tomcat-handler-50] INFO  : New message from user: t1
+2026-01-21 17:39:06 [tomcat-handler-50] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:09 [tomcat-handler-50] INFO  : Attempting to NONE data: 3
+2026-01-21 17:39:09 [tomcat-handler-50] INFO  : Attempting to NONE data: 2
+2026-01-21 17:39:09 [tomcat-handler-50] INFO  : Attempting to NONE data: 4
+2026-01-21 17:39:09 [tomcat-handler-50] INFO  : Attempting to NONE data: 5
+2026-01-21 17:39:09 [tomcat-handler-50] INFO  : Attempting to NONE data: 4
+2026-01-21 17:39:09 [tomcat-handler-50] INFO  : Attempting to NONE data: 5
+2026-01-21 17:39:09 [tomcat-handler-50] INFO  : Sending message to owner: dc65b56c-12fa-b404-2900-4de2c7b9d67e
+2026-01-21 17:39:09 [tomcat-handler-50] INFO  : End of message processing - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:12 [tomcat-handler-52] ERROR : Error null - session: ee96516a-ae45-ea61-5178-ffe2836a091b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:12 [tomcat-handler-51] ERROR : Error null - session: dc65b56c-12fa-b404-2900-4de2c7b9d67e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:12 [tomcat-handler-52] INFO  : Session closing: ee96516a-ae45-ea61-5178-ffe2836a091b - reason: null
+2026-01-21 17:39:12 [tomcat-handler-51] INFO  : Session closing: dc65b56c-12fa-b404-2900-4de2c7b9d67e - reason: null
+2026-01-21 17:39:16 [tomcat-handler-53] INFO  : New session connected: 459cd279-3f93-9d9a-b099-f07396a815b2, user: t1
+2026-01-21 17:39:16 [tomcat-handler-54] INFO  : New message from user: t1
+2026-01-21 17:39:16 [tomcat-handler-54] INFO  : End of message processing - session: 459cd279-3f93-9d9a-b099-f07396a815b2 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:16 [tomcat-handler-55] INFO  : New session connected: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3, user: t1
+2026-01-21 17:39:16 [tomcat-handler-56] INFO  : New message from user: t1
+2026-01-21 17:39:16 [tomcat-handler-56] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:16 [tomcat-handler-56] INFO  : New message from user: t1
+2026-01-21 17:39:16 [tomcat-handler-56] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:16 [tomcat-handler-57] INFO  : New message from user: t1
+2026-01-21 17:39:16 [tomcat-handler-57] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:16 [tomcat-handler-58] INFO  : New message from user: t1
+2026-01-21 17:39:16 [tomcat-handler-58] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:16 [tomcat-handler-59] INFO  : New message from user: t1
+2026-01-21 17:39:16 [tomcat-handler-59] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:16 [tomcat-handler-60] INFO  : New message from user: t1
+2026-01-21 17:39:16 [tomcat-handler-60] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:17 [tomcat-handler-61] INFO  : New message from user: t1
+2026-01-21 17:39:17 [tomcat-handler-61] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:17 [tomcat-handler-62] INFO  : New message from user: t1
+2026-01-21 17:39:17 [tomcat-handler-62] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:17 [tomcat-handler-63] INFO  : New message from user: t1
+2026-01-21 17:39:17 [tomcat-handler-63] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:17 [tomcat-handler-64] INFO  : New message from user: t1
+2026-01-21 17:39:17 [tomcat-handler-64] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:17 [tomcat-handler-65] INFO  : New message from user: t1
+2026-01-21 17:39:17 [tomcat-handler-65] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:17 [tomcat-handler-66] INFO  : New message from user: t1
+2026-01-21 17:39:17 [tomcat-handler-66] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:17 [tomcat-handler-67] INFO  : New message from user: t1
+2026-01-21 17:39:17 [tomcat-handler-67] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:39:18 [tomcat-handler-67] INFO  : Attempting to NONE data: 3
+2026-01-21 17:39:18 [tomcat-handler-67] INFO  : Attempting to NONE data: 2
+2026-01-21 17:39:18 [tomcat-handler-67] INFO  : Attempting to NONE data: 4
+2026-01-21 17:39:18 [tomcat-handler-67] INFO  : Attempting to NONE data: 5
+2026-01-21 17:39:18 [tomcat-handler-67] INFO  : Attempting to NONE data: 4
+2026-01-21 17:39:18 [tomcat-handler-67] INFO  : Attempting to NONE data: 5
+2026-01-21 17:39:18 [tomcat-handler-67] INFO  : Sending message to owner: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3
+2026-01-21 17:39:18 [tomcat-handler-67] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:01 [tomcat-handler-68] INFO  : New message from user: t1
+2026-01-21 17:40:01 [tomcat-handler-68] INFO  : /postAmountType connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:01 [tomcat-handler-68] INFO  : End of message processing - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:08 [tomcat-handler-70] ERROR : Error null - session: 459cd279-3f93-9d9a-b099-f07396a815b2 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:08 [tomcat-handler-69] ERROR : Error null - session: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:08 [tomcat-handler-69] INFO  : Session closing: 36858d1f-88ca-df7a-180e-a16a9e0d7aa3 - reason: null
+2026-01-21 17:40:08 [tomcat-handler-70] INFO  : Session closing: 459cd279-3f93-9d9a-b099-f07396a815b2 - reason: null
+2026-01-21 17:40:12 [tomcat-handler-71] INFO  : New session connected: 25151cb2-01f1-245d-a7c9-095eac60900e, user: t1
+2026-01-21 17:40:12 [tomcat-handler-72] INFO  : New message from user: t1
+2026-01-21 17:40:12 [tomcat-handler-72] INFO  : End of message processing - session: 25151cb2-01f1-245d-a7c9-095eac60900e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-73] INFO  : New session connected: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5, user: t1
+2026-01-21 17:40:13 [tomcat-handler-74] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-74] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-75] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-75] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-76] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-76] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-77] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-77] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-78] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-78] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-79] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-79] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-80] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-80] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-81] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-81] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-82] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-82] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-83] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-83] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-84] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-84] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-85] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-85] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:13 [tomcat-handler-86] INFO  : New message from user: t1
+2026-01-21 17:40:13 [tomcat-handler-86] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:40:16 [tomcat-handler-86] INFO  : Attempting to NONE data: 3
+2026-01-21 17:40:16 [tomcat-handler-86] INFO  : Attempting to NONE data: 2
+2026-01-21 17:40:16 [tomcat-handler-86] INFO  : Attempting to NONE data: 4
+2026-01-21 17:40:16 [tomcat-handler-86] INFO  : Attempting to NONE data: 5
+2026-01-21 17:40:16 [tomcat-handler-86] INFO  : Attempting to NONE data: 4
+2026-01-21 17:40:16 [tomcat-handler-86] INFO  : Attempting to NONE data: 5
+2026-01-21 17:40:16 [tomcat-handler-86] INFO  : Sending message to owner: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5
+2026-01-21 17:40:16 [tomcat-handler-86] INFO  : End of message processing - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:41 [tomcat-handler-87] ERROR : Error null - session: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:41 [tomcat-handler-88] ERROR : Error null - session: 25151cb2-01f1-245d-a7c9-095eac60900e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:41 [tomcat-handler-87] INFO  : Session closing: 58ee0141-0ea6-f3d8-ba90-d4f35f6531a5 - reason: null
+2026-01-21 17:42:41 [tomcat-handler-88] INFO  : Session closing: 25151cb2-01f1-245d-a7c9-095eac60900e - reason: null
+2026-01-21 17:42:44 [tomcat-handler-89] INFO  : New session connected: 86c79d9e-36e3-4b7e-0c01-2b4c1e4d79bf, user: t1
+2026-01-21 17:42:45 [tomcat-handler-90] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-90] INFO  : End of message processing - session: 86c79d9e-36e3-4b7e-0c01-2b4c1e4d79bf from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-91] INFO  : New session connected: be18d439-3c71-d7f4-3863-f8184b84ba02, user: t1
+2026-01-21 17:42:45 [tomcat-handler-92] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-92] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-92] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-92] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-93] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-93] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-94] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-94] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-95] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-95] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-96] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-96] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-97] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-97] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-98] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-98] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-99] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-99] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-100] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-100] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-101] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-101] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-102] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-102] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-103] INFO  : New message from user: t1
+2026-01-21 17:42:45 [tomcat-handler-103] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:42:45 [tomcat-handler-103] INFO  : Attempting to NONE data: 3
+2026-01-21 17:42:45 [tomcat-handler-103] INFO  : Attempting to NONE data: 2
+2026-01-21 17:42:45 [tomcat-handler-103] INFO  : Attempting to NONE data: 4
+2026-01-21 17:42:45 [tomcat-handler-103] INFO  : Attempting to NONE data: 5
+2026-01-21 17:42:45 [tomcat-handler-103] INFO  : Attempting to NONE data: 4
+2026-01-21 17:42:45 [tomcat-handler-103] INFO  : Attempting to NONE data: 5
+2026-01-21 17:42:45 [tomcat-handler-103] INFO  : Sending message to owner: be18d439-3c71-d7f4-3863-f8184b84ba02
+2026-01-21 17:42:45 [tomcat-handler-103] INFO  : End of message processing - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:12 [tomcat-handler-104] ERROR : Error null - session: be18d439-3c71-d7f4-3863-f8184b84ba02 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:12 [tomcat-handler-105] ERROR : Error null - session: 86c79d9e-36e3-4b7e-0c01-2b4c1e4d79bf from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:12 [tomcat-handler-104] INFO  : Session closing: be18d439-3c71-d7f4-3863-f8184b84ba02 - reason: null
+2026-01-21 17:43:12 [tomcat-handler-105] INFO  : Session closing: 86c79d9e-36e3-4b7e-0c01-2b4c1e4d79bf - reason: null
+2026-01-21 17:43:16 [tomcat-handler-106] INFO  : New session connected: 8732bd9b-701a-0475-7c90-b8f4b89eb302, user: t1
+2026-01-21 17:43:16 [tomcat-handler-107] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-107] INFO  : End of message processing - session: 8732bd9b-701a-0475-7c90-b8f4b89eb302 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-108] INFO  : New session connected: 4823fb10-422e-de3d-bff0-28875a17d388, user: t1
+2026-01-21 17:43:16 [tomcat-handler-109] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-109] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-110] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-110] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-111] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-111] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-112] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-112] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-113] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-113] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-114] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-114] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-115] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-115] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-116] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-116] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-117] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-117] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-117] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-117] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-118] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-118] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-118] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-118] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:16 [tomcat-handler-119] INFO  : New message from user: t1
+2026-01-21 17:43:16 [tomcat-handler-119] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:43:48 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s636ms27µs100ns).
+2026-01-21 17:43:48 [tomcat-handler-119] INFO  : Attempting to NONE data: 3
+2026-01-21 17:43:48 [tomcat-handler-119] INFO  : Attempting to NONE data: 2
+2026-01-21 17:43:48 [tomcat-handler-119] INFO  : Attempting to NONE data: 4
+2026-01-21 17:43:48 [tomcat-handler-119] INFO  : Attempting to NONE data: 5
+2026-01-21 17:43:48 [tomcat-handler-119] INFO  : Attempting to NONE data: 4
+2026-01-21 17:43:48 [tomcat-handler-119] INFO  : Attempting to NONE data: 5
+2026-01-21 17:47:33 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m45s349ms868µs700ns).
+2026-01-21 17:47:33 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-21 17:47:33 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2026-01-21 17:47:33 [reactor-http-nio-12] WARN  : [b7cfb279-1, L:/127.0.0.1:16927 ! R:localhost/127.0.0.1:4443] The connection observed an error
+reactor.netty.http.client.PrematureCloseException: Connection prematurely closed BEFORE response
+2026-01-21 17:47:33 [tomcat-handler-119] ERROR : org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:4443/user/savedTime": Connection prematurely closed BEFORE response
+2026-01-21 17:47:33 [tomcat-handler-119] ERROR : Error java.nio.channels.ClosedChannelException - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:47:33 [tomcat-handler-119] INFO  : Session closing: 4823fb10-422e-de3d-bff0-28875a17d388 - reason: null
+2026-01-21 17:47:33 [tomcat-handler-119] INFO  : End of message processing - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:47:33 [tomcat-handler-119] ERROR : Closing session due to exception for StandardWebSocketSession[id=4823fb10-422e-de3d-bff0-28875a17d388, uri=ws://192.168.0.13:5443/ws]
+java.io.IOException: java.nio.channels.ClosedChannelException
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:326)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:223)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:137)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleMessage(WebSocketHandler.java:71)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$1.onMessage(StandardWebSocketHandlerAdapter.java:70)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$1.onMessage(StandardWebSocketHandlerAdapter.java:67)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:386)
+	at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:130)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:483)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:283)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:129)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:85)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+Caused by: java.nio.channels.ClosedChannelException: null
+	at org.apache.tomcat.util.net.NioChannel$1.write(NioChannel.java:272)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1634)
+	at org.apache.tomcat.util.net.SocketWrapperBase$OperationState.start(SocketWrapperBase.java:1037)
+	at org.apache.tomcat.util.net.SocketWrapperBase.vectoredOperation(SocketWrapperBase.java:1426)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1352)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1323)
+	at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer.doWrite(WsRemoteEndpointImplServer.java:171)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:521)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:313)
+	... 29 common frames omitted
+2026-01-21 17:47:33 [tomcat-handler-119] ERROR : Error null - session: 4823fb10-422e-de3d-bff0-28875a17d388 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:47:35 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:47:35 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2026-01-21 17:47:35 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2026-01-21 17:47:35 [SpringApplicationShutdownHook] ERROR : Error java.nio.channels.ClosedChannelException - session: 8732bd9b-701a-0475-7c90-b8f4b89eb302 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:47:35 [SpringApplicationShutdownHook] INFO  : Session closing: 8732bd9b-701a-0475-7c90-b8f4b89eb302 - reason: The web application is stopping
+2026-01-21 17:48:58 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-01-21 17:48:58 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 16992 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21 17:48:58 [main] INFO  : The following 1 profile is active: "dev"
+2026-01-21 17:48:59 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 17:48:59 [main] INFO  : Finished Spring Data repository scanning in 115 ms. Found 3 JPA repository interfaces.
+2026-01-21 17:49:00 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-01-21 17:49:00 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-01-21 17:49:00 [main] INFO  : Starting service [Tomcat]
+2026-01-21 17:49:00 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-21 17:49:00 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-01-21 17:49:00 [main] INFO  : Root WebApplicationContext: initialization completed in 1882 ms
+2026-01-21 17:49:00 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-01-21 17:49:00 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-01-21 17:49:00 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-01-21 17:49:00 [main] INFO  : Successfully validated 1 migration (execution time 00:00.017s)
+2026-01-21 17:49:00 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-01-21 17:49:00 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-01-21 17:49:01 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 17:49:01 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-01-21 17:49:01 [main] INFO  : HHH000026: Second-level cache disabled
+2026-01-21 17:49:01 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21 17:49:01 [main] INFO  : HikariPool-1 - Starting...
+2026-01-21 17:49:01 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@52fe87e0
+2026-01-21 17:49:01 [main] INFO  : HikariPool-1 - Start completed.
+2026-01-21 17:49:01 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21 17:49:02 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21 17:49:02 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:49:02 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-21 17:49:02 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name remoteAuthProvider
+2026-01-21 17:49:02 [main] WARN  : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-21 17:49:02 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-01-21 17:49:03 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-01-21 17:49:03 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-01-21 17:49:03 [main] INFO  : Started ShoppingListServiceApplication in 5.542 seconds (process running for 10.254)
+2026-01-21 17:49:13 [tomcat-handler-0] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-21 17:49:13 [tomcat-handler-0] INFO  : Initializing Servlet 'dispatcherServlet'
+2026-01-21 17:49:13 [tomcat-handler-0] INFO  : Completed initialization in 1 ms
+2026-01-21 17:49:14 [tomcat-handler-0] INFO  : New session connected: 6af99ef2-f470-8d62-89a9-af15b3228d40, user: t1
+2026-01-21 17:49:14 [tomcat-handler-1] INFO  : New session connected: 01619902-4abf-1cbd-5dd7-938d37b16cbb, user: t1
+2026-01-21 17:49:14 [tomcat-handler-3] INFO  : New message from user: t1
+2026-01-21 17:49:14 [tomcat-handler-2] INFO  : New message from user: t1
+2026-01-21 17:49:14 [tomcat-handler-3] INFO  : End of message processing - session: 6af99ef2-f470-8d62-89a9-af15b3228d40 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:14 [tomcat-handler-2] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:14 [tomcat-handler-4] INFO  : New message from user: t1
+2026-01-21 17:49:14 [tomcat-handler-4] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:14 [tomcat-handler-5] INFO  : New message from user: t1
+2026-01-21 17:49:14 [tomcat-handler-5] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:14 [tomcat-handler-6] INFO  : New message from user: t1
+2026-01-21 17:49:14 [tomcat-handler-6] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:14 [tomcat-handler-7] INFO  : New message from user: t1
+2026-01-21 17:49:14 [tomcat-handler-7] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:15 [tomcat-handler-8] INFO  : New message from user: t1
+2026-01-21 17:49:15 [tomcat-handler-8] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:15 [tomcat-handler-9] INFO  : New message from user: t1
+2026-01-21 17:49:15 [tomcat-handler-9] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:15 [tomcat-handler-10] INFO  : New message from user: t1
+2026-01-21 17:49:15 [tomcat-handler-10] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:15 [tomcat-handler-11] INFO  : New message from user: t1
+2026-01-21 17:49:15 [tomcat-handler-11] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:15 [tomcat-handler-12] INFO  : New message from user: t1
+2026-01-21 17:49:15 [tomcat-handler-12] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:15 [tomcat-handler-13] INFO  : New message from user: t1
+2026-01-21 17:49:15 [tomcat-handler-13] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:15 [tomcat-handler-14] INFO  : New message from user: t1
+2026-01-21 17:49:15 [tomcat-handler-14] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:15 [tomcat-handler-15] INFO  : New message from user: t1
+2026-01-21 17:49:15 [tomcat-handler-15] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:20 [tomcat-handler-15] INFO  : Attempting to NONE data: 3
+2026-01-21 17:49:20 [tomcat-handler-15] INFO  : Attempting to NONE data: 2
+2026-01-21 17:49:20 [tomcat-handler-15] INFO  : Attempting to NONE data: 4
+2026-01-21 17:49:20 [tomcat-handler-15] INFO  : Attempting to NONE data: 5
+2026-01-21 17:49:20 [tomcat-handler-15] INFO  : Attempting to NONE data: 4
+2026-01-21 17:49:20 [tomcat-handler-15] INFO  : Attempting to NONE data: 5
+2026-01-21 17:49:20 [tomcat-handler-15] INFO  : Sending message to owner: 01619902-4abf-1cbd-5dd7-938d37b16cbb
+2026-01-21 17:49:20 [tomcat-handler-15] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:35 [tomcat-handler-16] INFO  : New message from user: t1
+2026-01-21 17:49:35 [tomcat-handler-16] INFO  : /postShoppingItem connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:49:36 [tomcat-handler-16] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:50:00 [tomcat-handler-17] INFO  : New message from user: t1
+2026-01-21 17:50:00 [tomcat-handler-17] INFO  : /postShoppingItem connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:50:00 [tomcat-handler-17] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:50:04 [tomcat-handler-18] INFO  : New message from user: t1
+2026-01-21 17:50:04 [tomcat-handler-18] INFO  : /postShoppingItem connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:50:04 [tomcat-handler-18] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:50:06 [tomcat-handler-19] INFO  : New message from user: t1
+2026-01-21 17:50:06 [tomcat-handler-19] INFO  : /postShoppingItem connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:50:06 [tomcat-handler-19] INFO  : End of message processing - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:50:08 [tomcat-handler-20] ERROR : Error null - session: 01619902-4abf-1cbd-5dd7-938d37b16cbb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:50:08 [tomcat-handler-20] INFO  : Session closing: 01619902-4abf-1cbd-5dd7-938d37b16cbb - reason: null
+2026-01-21 17:50:08 [tomcat-handler-21] ERROR : Error null - session: 6af99ef2-f470-8d62-89a9-af15b3228d40 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-01-21 17:50:08 [tomcat-handler-21] INFO  : Session closing: 6af99ef2-f470-8d62-89a9-af15b3228d40 - reason: null
+2026-01-21 18:01:00 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-01-21 18:01:00 [main] INFO  : Starting ShoppingListServiceApplicationTests using Java 21.0.3 with PID 8508 (started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21 18:01:00 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2026-01-21 18:01:01 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 18:01:01 [main] INFO  : Finished Spring Data repository scanning in 112 ms. Found 3 JPA repository interfaces.
+2026-01-21 18:01:02 [main] WARN  : Error: 1045-28000: Access denied for user 'kjerz'@'localhost' (using password: NO)
+2026-01-21 18:01:02 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+----------------------------------------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1045
+Message    : (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+
+2026-01-21 18:01:02 [main] INFO  : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-21 18:01:02 [main] ERROR : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+----------------------------------------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1045
+Message    : (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1462)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:194)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+----------------------------------------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1045
+Message    : (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	... 90 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+----------------------------------------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1045
+Message    : (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:71)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:137)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:176)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814)
+	... 97 common frames omitted
+Caused by: java.sql.SQLInvalidAuthorizationSpecException: (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at org.springframework.jdbc.datasource.SimpleDriverDataSource.getConnectionFromDriver(SimpleDriverDataSource.java:144)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:205)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:169)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59)
+	... 103 common frames omitted
+2026-01-21 18:01:02 [main] WARN  : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [pl.kamjer.shoppinglistservice.ShoppingListServiceApplicationTests@35f01759]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@4e61a863 testClass = pl.kamjer.shoppinglistservice.ShoppingListServiceApplicationTests, locations = [], classes = [pl.kamjer.shoppinglistservice.ShoppingListServiceApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@24105dc5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@50029372, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7fd7a283, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@18317edc, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@4ef74c30, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@4bff7da0, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@452e19ca, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@1d019d24], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:194)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+----------------------------------------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1045
+Message    : (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1462)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 75 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+----------------------------------------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1045
+Message    : (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	... 90 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+----------------------------------------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1045
+Message    : (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:71)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:137)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:176)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814)
+	... 97 common frames omitted
+Caused by: java.sql.SQLInvalidAuthorizationSpecException: (conn=1993) Access denied for user 'kjerz'@'localhost' (using password: NO)
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:293)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.StandardClient.authenticationHandler(StandardClient.java:306)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:226)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:68)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at org.springframework.jdbc.datasource.SimpleDriverDataSource.getConnectionFromDriver(SimpleDriverDataSource.java:144)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:205)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:169)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:59)
+	... 103 common frames omitted
+2026-01-21 18:02:30 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-21 18:02:30 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2026-01-21 18:02:32 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 18:02:32 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2026-01-21 18:02:32 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2026-01-21 18:03:17 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-01-21 18:03:17 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 11332 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-01-21 18:03:17 [main] INFO  : The following 1 profile is active: "dev"
+2026-01-21 18:03:18 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 18:03:18 [main] INFO  : Finished Spring Data repository scanning in 107 ms. Found 3 JPA repository interfaces.
+2026-01-21 18:03:19 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-01-21 18:03:19 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-01-21 18:03:19 [main] INFO  : Starting service [Tomcat]
+2026-01-21 18:03:19 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-01-21 18:03:19 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-01-21 18:03:19 [main] INFO  : Root WebApplicationContext: initialization completed in 2079 ms
+2026-01-21 18:03:20 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-01-21 18:03:20 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-01-21 18:03:20 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-01-21 18:03:20 [main] INFO  : Successfully validated 1 migration (execution time 00:00.026s)
+2026-01-21 18:03:20 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-01-21 18:03:20 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-01-21 18:03:20 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 18:03:20 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-01-21 18:03:20 [main] INFO  : HHH000026: Second-level cache disabled
+2026-01-21 18:03:20 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21 18:03:20 [main] INFO  : HikariPool-1 - Starting...
+2026-01-21 18:03:20 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2fce8243
+2026-01-21 18:03:20 [main] INFO  : HikariPool-1 - Start completed.
+2026-01-21 18:03:20 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21 18:03:21 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21 18:03:21 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 18:03:23 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-21 18:03:23 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name remoteAuthProvider
+2026-01-21 18:03:23 [main] WARN  : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-01-21 18:03:23 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-01-21 18:03:24 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-01-21 18:03:24 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-01-21 18:03:24 [main] INFO  : Started ShoppingListServiceApplication in 7.135 seconds (process running for 7.46)
+2026-01-21 18:03:36 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-21 18:03:36 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2026-01-21 18:03:36 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 18:03:36 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2026-01-21 18:03:36 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.

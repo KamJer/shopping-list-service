@@ -107,7 +107,6 @@ public class WebSocketUtilService extends WebsocketCustomService {
 
                 Map<Long, AmountType> existingAmountTypes = amountTypesFromDb
                         .stream()
-                        .filter(amountType -> amountType.getSavedTime().isAfter(userSavedTime))
                         .collect(Collectors.toMap(AmountType::getAmountTypeId, Function.identity()));
 
                 for (AmountTypeDto dto : allDto.getAmountTypeDtoList()) {
@@ -311,6 +310,7 @@ public class WebSocketUtilService extends WebsocketCustomService {
 //        data after processing can be sent to a client
                 List<AmountTypeDto> amountTypesFromDbProcessed = (amountTypesAfterAndSend)
                         .stream()
+                        .filter(amountType -> amountType.getSavedTime().isAfter(userSavedTime))
                         .filter(amountType -> {
 //                    if entity is deleted check if it exists on a list from client, if it does exist it means
 //                    client still has that entity, and it needs to be deleted, if client doesn't have that data
