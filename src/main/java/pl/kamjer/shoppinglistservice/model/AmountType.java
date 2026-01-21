@@ -16,16 +16,20 @@ import java.util.List;
 @Table(name = "AMOUNT_TYPE")
 public class AmountType {
 
-    @EmbeddedId
+    @Column(name = "amount_type_id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private AmountTypeId amountTypeId;
+    private Long amountTypeId;
+    @Column(name = "user_name")
+    private String userName;
     @Column(name = "type_name")
     private String typeName;
     @Column(name = "saved_time")
     private LocalDateTime savedTime;
     @Column(name = "deleted", columnDefinition = "BIT(1) NOT NULL DEFAULT b'0'")
     private boolean deleted;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "itemAmountType", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "itemAmountType")
     private List<ShoppingItem> shoppingItemList;
 
     @Transient

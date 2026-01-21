@@ -1,0 +1,7 @@
+2025-05-21 00:14:04 [tomcat-handler-147] ERROR : Error null - session: 5320567a-ab1c-f4a8-cd9d-eb1eff863476 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.43.9, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-21 00:14:04 [tomcat-handler-147] INFO  : Session closing: 5320567a-ab1c-f4a8-cd9d-eb1eff863476 - reason: null
+2025-05-21 00:14:11 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-21 00:14:11 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-05-21 00:14:11 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-21 00:14:11 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-05-21 00:14:11 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.

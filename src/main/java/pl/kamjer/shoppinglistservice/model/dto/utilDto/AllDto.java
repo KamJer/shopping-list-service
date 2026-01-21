@@ -15,10 +15,10 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-public class AllDto {
+public class AllDto extends Dto{
     private List<AmountTypeDto> amountTypeDtoList;
     private List<CategoryDto> categoryDtoList;
     private List<ShoppingItemDto> shoppingItemDtoList;
     private LocalDateTime savedTime;
-
+    private Boolean dirty;
 }

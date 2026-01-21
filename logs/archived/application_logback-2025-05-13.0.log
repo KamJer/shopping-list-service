@@ -1,0 +1,55 @@
+2025-05-13 18:54:42 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-05-13 18:54:42 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 17684 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-05-13 18:54:42 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-05-13 18:54:43 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13 18:54:43 [main] INFO  : Finished Spring Data repository scanning in 161 ms. Found 4 JPA repository interfaces.
+2025-05-13 18:54:44 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-05-13 18:54:44 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-05-13 18:54:44 [main] INFO  : Starting service [Tomcat]
+2025-05-13 18:54:44 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-13 18:54:44 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-05-13 18:54:44 [main] INFO  : Root WebApplicationContext: initialization completed in 2499 ms
+2025-05-13 18:54:45 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2025-05-13 18:54:45 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2025-05-13 18:54:45 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2025-05-13 18:54:45 [main] INFO  : Successfully validated 1 migration (execution time 00:00.028s)
+2025-05-13 18:54:45 [main] INFO  : Current version of schema `shopping_list_db`: 2
+2025-05-13 18:54:45 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2025-05-13 18:54:45 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13 18:54:45 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-13 18:54:45 [main] INFO  : HHH000026: Second-level cache disabled
+2025-05-13 18:54:46 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13 18:54:46 [main] INFO  : HikariPool-1 - Starting...
+2025-05-13 18:54:46 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1bcf2c64
+2025-05-13 18:54:46 [main] INFO  : HikariPool-1 - Start completed.
+2025-05-13 18:54:46 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-13 18:54:47 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-13 18:54:47 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 18:54:48 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 18:54:48 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-05-13 18:54:49 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-13 18:54:50 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-05-13 18:54:50 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-05-13 18:54:50 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-05-13 18:54:51 [main] INFO  : Started ShoppingListServiceApplication in 9.314 seconds (process running for 11.513)
+2025-05-13 19:00:47 [tomcat-handler-4] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-13 19:00:47 [tomcat-handler-4] INFO  : Initializing Servlet 'dispatcherServlet'
+2025-05-13 19:00:47 [tomcat-handler-4] INFO  : Completed initialization in 2 ms
+2025-05-13 19:00:48 [tomcat-handler-10] INFO  : New session connected: 431c0f76-662f-037b-75ec-892bbfb9604a, user: Jerzynki
+2025-05-13 19:00:48 [tomcat-handler-10] INFO  : New message from user: Jerzynki
+2025-05-13 19:00:48 [tomcat-handler-10] INFO  : End of message processing - session: 431c0f76-662f-037b-75ec-892bbfb9604a from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.106, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-13 19:00:48 [tomcat-handler-11] INFO  : New message from user: Jerzynki
+2025-05-13 19:01:29 [tomcat-handler-11] INFO  : End of message processing - session: 431c0f76-662f-037b-75ec-892bbfb9604a from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.106, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-13 19:01:29 [tomcat-handler-11] INFO  : New message from user: Jerzynki
+2025-05-13 19:01:31 [tomcat-handler-11] INFO  : End of message processing - session: 431c0f76-662f-037b-75ec-892bbfb9604a from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.106, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-13 19:01:31 [tomcat-handler-11] INFO  : New message from user: Jerzynki
+2025-05-13 19:01:37 [tomcat-handler-11] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.106, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-13 19:01:40 [tomcat-handler-11] INFO  : Sending message to owner: 431c0f76-662f-037b-75ec-892bbfb9604a
+2025-05-13 19:01:40 [tomcat-handler-11] INFO  : End of message processing - session: 431c0f76-662f-037b-75ec-892bbfb9604a from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.106, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-13 19:01:47 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-13 19:01:47 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-05-13 19:01:47 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13 19:01:47 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-05-13 19:01:47 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2025-05-13 19:01:47 [SpringApplicationShutdownHook] ERROR : Error java.nio.channels.ClosedChannelException - session: 431c0f76-662f-037b-75ec-892bbfb9604a from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.106, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-13 19:01:47 [SpringApplicationShutdownHook] INFO  : Session closing: 431c0f76-662f-037b-75ec-892bbfb9604a - reason: The web application is stopping

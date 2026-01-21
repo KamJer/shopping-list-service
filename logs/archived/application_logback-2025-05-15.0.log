@@ -1,0 +1,7 @@
+2025-05-15 00:46:35 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-15 00:46:35 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-05-15 00:46:35 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15 00:46:35 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-05-15 00:46:35 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2025-05-15 00:46:35 [SpringApplicationShutdownHook] ERROR : Error java.nio.channels.ClosedChannelException - session: 7902567f-acff-19f4-ff63-035a5df3f2c6 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.106, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-15 00:46:35 [SpringApplicationShutdownHook] INFO  : Session closing: 7902567f-acff-19f4-ff63-035a5df3f2c6 - reason: The web application is stopping

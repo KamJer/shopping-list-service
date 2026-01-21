@@ -1,0 +1,362 @@
+2025-05-19 18:23:44 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-05-19 18:23:44 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 11888 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-05-19 18:23:44 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-05-19 18:23:46 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-19 18:23:46 [main] INFO  : Finished Spring Data repository scanning in 180 ms. Found 4 JPA repository interfaces.
+2025-05-19 18:23:47 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-05-19 18:23:47 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-05-19 18:23:47 [main] INFO  : Starting service [Tomcat]
+2025-05-19 18:23:47 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 18:23:47 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-05-19 18:23:47 [main] INFO  : Root WebApplicationContext: initialization completed in 3628 ms
+2025-05-19 18:23:48 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2025-05-19 18:23:48 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2025-05-19 18:23:48 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2025-05-19 18:23:48 [main] INFO  : Successfully validated 1 migration (execution time 00:00.036s)
+2025-05-19 18:23:48 [main] INFO  : Current version of schema `shopping_list_db`: 2
+2025-05-19 18:23:48 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2025-05-19 18:23:48 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-19 18:23:49 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-19 18:23:49 [main] INFO  : HHH000026: Second-level cache disabled
+2025-05-19 18:23:49 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-19 18:23:49 [main] INFO  : HikariPool-1 - Starting...
+2025-05-19 18:23:49 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2681185e
+2025-05-19 18:23:49 [main] INFO  : HikariPool-1 - Start completed.
+2025-05-19 18:23:49 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-19 18:23:50 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-19 18:23:50 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-19 18:23:51 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-19 18:23:51 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-05-19 18:23:51 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-19 18:23:52 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-05-19 18:23:52 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-05-19 18:23:53 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-05-19 18:23:53 [main] INFO  : Started ShoppingListServiceApplication in 10.153 seconds (process running for 11.789)
+2025-05-19 18:27:27 [tomcat-handler-4] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 18:27:27 [tomcat-handler-4] INFO  : Initializing Servlet 'dispatcherServlet'
+2025-05-19 18:27:27 [tomcat-handler-4] INFO  : Completed initialization in 2 ms
+2025-05-19 18:27:28 [tomcat-handler-4] INFO  : New session connected: 87d1c2ff-3c3c-6a09-7b7b-11390656b52d, user: Jerzynki
+2025-05-19 18:27:28 [tomcat-handler-5] INFO  : New message from user: Jerzynki
+2025-05-19 18:27:28 [tomcat-handler-5] INFO  : End of message processing - session: 87d1c2ff-3c3c-6a09-7b7b-11390656b52d from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 18:27:28 [tomcat-handler-6] INFO  : New message from user: Jerzynki
+2025-05-19 18:27:28 [tomcat-handler-6] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 18:27:28 [tomcat-handler-6] INFO  : End of message processing - session: 87d1c2ff-3c3c-6a09-7b7b-11390656b52d from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 18:27:28 [tomcat-handler-6] INFO  : New message from user: Jerzynki
+2025-05-19 18:27:28 [tomcat-handler-6] INFO  : End of message processing - session: 87d1c2ff-3c3c-6a09-7b7b-11390656b52d from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 18:27:28 [tomcat-handler-7] INFO  : New message from user: Jerzynki
+2025-05-19 18:27:28 [tomcat-handler-7] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 18:27:28 [tomcat-handler-7] INFO  : End of message processing - session: 87d1c2ff-3c3c-6a09-7b7b-11390656b52d from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 18:27:28 [tomcat-handler-8] INFO  : New message from user: Jerzynki
+2025-05-19 18:27:41 [tomcat-handler-8] INFO  : /putAmountType connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 18:27:41 [tomcat-handler-8] ERROR : java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getPrincipal()" because the return value of "org.springframework.security.core.context.SecurityContext.getAuthentication()" is null
+2025-05-19 18:27:41 [tomcat-handler-8] INFO  : End of message processing - session: 87d1c2ff-3c3c-6a09-7b7b-11390656b52d from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 18:27:49 [tomcat-handler-9] ERROR : Error null - session: 87d1c2ff-3c3c-6a09-7b7b-11390656b52d from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 18:27:49 [tomcat-handler-9] INFO  : Session closing: 87d1c2ff-3c3c-6a09-7b7b-11390656b52d - reason: null
+2025-05-19 19:01:15 [tomcat-handler-15] INFO  : New session connected: 7f08f3b1-98f5-0ba0-a701-a18fea640a2f, user: Jerzynki
+2025-05-19 19:01:15 [tomcat-handler-16] INFO  : New message from user: Jerzynki
+2025-05-19 19:01:15 [tomcat-handler-16] INFO  : End of message processing - session: 7f08f3b1-98f5-0ba0-a701-a18fea640a2f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:01:15 [tomcat-handler-17] INFO  : New message from user: Jerzynki
+2025-05-19 19:01:15 [tomcat-handler-17] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:01:15 [tomcat-handler-17] INFO  : End of message processing - session: 7f08f3b1-98f5-0ba0-a701-a18fea640a2f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:01:15 [tomcat-handler-18] INFO  : New message from user: Jerzynki
+2025-05-19 19:01:15 [tomcat-handler-18] INFO  : End of message processing - session: 7f08f3b1-98f5-0ba0-a701-a18fea640a2f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:01:15 [tomcat-handler-19] INFO  : New message from user: Jerzynki
+2025-05-19 19:01:15 [tomcat-handler-19] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:01:15 [tomcat-handler-19] INFO  : End of message processing - session: 7f08f3b1-98f5-0ba0-a701-a18fea640a2f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:01:15 [tomcat-handler-20] INFO  : New message from user: Jerzynki
+2025-05-19 19:01:22 [tomcat-handler-20] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:01:22 [tomcat-handler-20] INFO  : Sending message to owner: 7f08f3b1-98f5-0ba0-a701-a18fea640a2f
+2025-05-19 19:01:22 [tomcat-handler-20] INFO  : End of message processing - session: 7f08f3b1-98f5-0ba0-a701-a18fea640a2f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:01:38 [tomcat-handler-21] ERROR : Error null - session: 7f08f3b1-98f5-0ba0-a701-a18fea640a2f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:01:38 [tomcat-handler-21] INFO  : Session closing: 7f08f3b1-98f5-0ba0-a701-a18fea640a2f - reason: null
+2025-05-19 19:01:43 [tomcat-handler-27] INFO  : New session connected: 5b17d2cf-258d-b3b5-b2ee-1231e611bb2a, user: Jerzynki
+2025-05-19 19:01:43 [tomcat-handler-28] INFO  : New message from user: Jerzynki
+2025-05-19 19:01:43 [tomcat-handler-28] INFO  : End of message processing - session: 5b17d2cf-258d-b3b5-b2ee-1231e611bb2a from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:01:43 [tomcat-handler-29] INFO  : New message from user: Jerzynki
+2025-05-19 19:01:43 [tomcat-handler-29] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:01:43 [tomcat-handler-29] INFO  : End of message processing - session: 5b17d2cf-258d-b3b5-b2ee-1231e611bb2a from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:01:43 [tomcat-handler-30] INFO  : New message from user: Jerzynki
+2025-05-19 19:01:43 [tomcat-handler-30] INFO  : End of message processing - session: 5b17d2cf-258d-b3b5-b2ee-1231e611bb2a from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:01:43 [tomcat-handler-31] INFO  : New message from user: Jerzynki
+2025-05-19 19:01:43 [tomcat-handler-31] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:01:43 [tomcat-handler-31] INFO  : End of message processing - session: 5b17d2cf-258d-b3b5-b2ee-1231e611bb2a from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:01:43 [tomcat-handler-32] INFO  : New message from user: Jerzynki
+2025-05-19 19:01:43 [tomcat-handler-32] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:01:44 [tomcat-handler-32] INFO  : Sending message to owner: 5b17d2cf-258d-b3b5-b2ee-1231e611bb2a
+2025-05-19 19:01:44 [tomcat-handler-32] INFO  : End of message processing - session: 5b17d2cf-258d-b3b5-b2ee-1231e611bb2a from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:02:00 [tomcat-handler-33] INFO  : New message from user: Jerzynki
+2025-05-19 19:02:19 [tomcat-handler-33] INFO  : /putAmountType connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:03:16 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s556ms481µs800ns).
+2025-05-19 19:03:16 [tomcat-handler-33] ERROR : java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getPrincipal()" because the return value of "org.springframework.security.core.context.SecurityContext.getAuthentication()" is null
+2025-05-19 19:03:16 [tomcat-handler-33] INFO  : End of message processing - session: 5b17d2cf-258d-b3b5-b2ee-1231e611bb2a from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:03:16 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 19:03:16 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-05-19 19:03:16 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-19 19:03:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-05-19 19:03:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2025-05-19 19:03:16 [SpringApplicationShutdownHook] ERROR : Error java.nio.channels.ClosedChannelException - session: 5b17d2cf-258d-b3b5-b2ee-1231e611bb2a from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:03:16 [SpringApplicationShutdownHook] INFO  : Session closing: 5b17d2cf-258d-b3b5-b2ee-1231e611bb2a - reason: The web application is stopping
+2025-05-19 19:03:32 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-05-19 19:03:32 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 9680 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-05-19 19:03:32 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-05-19 19:03:34 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-19 19:03:34 [main] INFO  : Finished Spring Data repository scanning in 136 ms. Found 4 JPA repository interfaces.
+2025-05-19 19:03:35 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-05-19 19:03:35 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-05-19 19:03:35 [main] INFO  : Starting service [Tomcat]
+2025-05-19 19:03:35 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 19:03:35 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-05-19 19:03:35 [main] INFO  : Root WebApplicationContext: initialization completed in 2463 ms
+2025-05-19 19:03:36 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2025-05-19 19:03:36 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2025-05-19 19:03:36 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2025-05-19 19:03:36 [main] INFO  : Successfully validated 1 migration (execution time 00:00.023s)
+2025-05-19 19:03:36 [main] INFO  : Current version of schema `shopping_list_db`: 2
+2025-05-19 19:03:36 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2025-05-19 19:03:36 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-19 19:03:36 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-19 19:03:36 [main] INFO  : HHH000026: Second-level cache disabled
+2025-05-19 19:03:36 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-19 19:03:36 [main] INFO  : HikariPool-1 - Starting...
+2025-05-19 19:03:36 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@b5bddfe
+2025-05-19 19:03:36 [main] INFO  : HikariPool-1 - Start completed.
+2025-05-19 19:03:36 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-19 19:03:37 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-19 19:03:37 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-19 19:03:38 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-19 19:03:38 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-05-19 19:03:39 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-19 19:03:39 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-05-19 19:03:40 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-05-19 19:03:40 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-05-19 19:03:40 [main] INFO  : Started ShoppingListServiceApplication in 7.768 seconds (process running for 8.921)
+2025-05-19 19:09:29 [tomcat-handler-4] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 19:09:29 [tomcat-handler-4] INFO  : Initializing Servlet 'dispatcherServlet'
+2025-05-19 19:09:29 [tomcat-handler-4] INFO  : Completed initialization in 2 ms
+2025-05-19 19:09:30 [tomcat-handler-4] INFO  : New session connected: d42ce5c0-4128-cbcb-d61d-27ac7b44250f, user: Jerzynki
+2025-05-19 19:09:30 [tomcat-handler-5] INFO  : New message from user: Jerzynki
+2025-05-19 19:09:30 [tomcat-handler-5] INFO  : End of message processing - session: d42ce5c0-4128-cbcb-d61d-27ac7b44250f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:09:30 [tomcat-handler-6] INFO  : New message from user: Jerzynki
+2025-05-19 19:09:31 [tomcat-handler-6] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:09:31 [tomcat-handler-6] INFO  : End of message processing - session: d42ce5c0-4128-cbcb-d61d-27ac7b44250f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:09:31 [tomcat-handler-7] INFO  : New message from user: Jerzynki
+2025-05-19 19:09:31 [tomcat-handler-7] INFO  : End of message processing - session: d42ce5c0-4128-cbcb-d61d-27ac7b44250f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:09:31 [tomcat-handler-8] INFO  : New message from user: Jerzynki
+2025-05-19 19:09:31 [tomcat-handler-8] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:09:31 [tomcat-handler-8] INFO  : End of message processing - session: d42ce5c0-4128-cbcb-d61d-27ac7b44250f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:09:31 [tomcat-handler-9] INFO  : New message from user: Jerzynki
+2025-05-19 19:09:31 [tomcat-handler-9] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:09:31 [tomcat-handler-9] INFO  : Sending message to owner: d42ce5c0-4128-cbcb-d61d-27ac7b44250f
+2025-05-19 19:09:31 [tomcat-handler-9] INFO  : End of message processing - session: d42ce5c0-4128-cbcb-d61d-27ac7b44250f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:10:21 [tomcat-handler-10] INFO  : New message from user: Jerzynki
+2025-05-19 19:10:29 [tomcat-handler-10] INFO  : /putAmountType connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:10:54 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s855ms707µs600ns).
+2025-05-19 19:11:45 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s616ms343µs100ns).
+2025-05-19 19:11:45 [tomcat-handler-10] ERROR : java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getPrincipal()" because the return value of "org.springframework.security.core.context.SecurityContext.getAuthentication()" is null
+2025-05-19 19:11:45 [tomcat-handler-10] INFO  : End of message processing - session: d42ce5c0-4128-cbcb-d61d-27ac7b44250f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:11:52 [tomcat-handler-11] INFO  : New message from user: Jerzynki
+2025-05-19 19:11:52 [tomcat-handler-11] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:11:52 [tomcat-handler-11] INFO  : Sending message to owner: d42ce5c0-4128-cbcb-d61d-27ac7b44250f
+2025-05-19 19:11:52 [tomcat-handler-11] INFO  : End of message processing - session: d42ce5c0-4128-cbcb-d61d-27ac7b44250f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:11:56 [tomcat-handler-12] INFO  : New message from user: Jerzynki
+2025-05-19 19:11:58 [tomcat-handler-12] INFO  : /putAmountType connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:15:34 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m48s652ms882µs500ns).
+2025-05-19 19:15:34 [tomcat-handler-12] ERROR : java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getPrincipal()" because the return value of "org.springframework.security.core.context.SecurityContext.getAuthentication()" is null
+2025-05-19 19:15:34 [tomcat-handler-12] INFO  : End of message processing - session: d42ce5c0-4128-cbcb-d61d-27ac7b44250f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:15:34 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 19:15:34 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-05-19 19:15:34 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-19 19:15:34 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-05-19 19:15:34 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2025-05-19 19:15:34 [SpringApplicationShutdownHook] ERROR : Error java.nio.channels.ClosedChannelException - session: d42ce5c0-4128-cbcb-d61d-27ac7b44250f from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:15:34 [SpringApplicationShutdownHook] INFO  : Session closing: d42ce5c0-4128-cbcb-d61d-27ac7b44250f - reason: The web application is stopping
+2025-05-19 19:25:41 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-05-19 19:25:41 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 6172 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-05-19 19:25:41 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-05-19 19:25:42 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-19 19:25:43 [main] INFO  : Finished Spring Data repository scanning in 131 ms. Found 4 JPA repository interfaces.
+2025-05-19 19:25:44 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-05-19 19:25:44 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-05-19 19:25:44 [main] INFO  : Starting service [Tomcat]
+2025-05-19 19:25:44 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 19:25:44 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-05-19 19:25:44 [main] INFO  : Root WebApplicationContext: initialization completed in 2730 ms
+2025-05-19 19:25:44 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2025-05-19 19:25:45 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2025-05-19 19:25:45 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2025-05-19 19:25:45 [main] INFO  : Successfully validated 1 migration (execution time 00:00.034s)
+2025-05-19 19:25:45 [main] INFO  : Current version of schema `shopping_list_db`: 2
+2025-05-19 19:25:45 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2025-05-19 19:25:45 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-19 19:25:45 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-19 19:25:45 [main] INFO  : HHH000026: Second-level cache disabled
+2025-05-19 19:25:45 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-19 19:25:45 [main] INFO  : HikariPool-1 - Starting...
+2025-05-19 19:25:45 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1701beb3
+2025-05-19 19:25:45 [main] INFO  : HikariPool-1 - Start completed.
+2025-05-19 19:25:45 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-19 19:25:46 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-19 19:25:46 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-19 19:25:47 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-19 19:25:47 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-05-19 19:25:47 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-19 19:25:49 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-05-19 19:25:49 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-05-19 19:25:49 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-05-19 19:25:49 [main] INFO  : Started ShoppingListServiceApplication in 8.936 seconds (process running for 9.589)
+2025-05-19 19:27:40 [tomcat-handler-4] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 19:27:40 [tomcat-handler-4] INFO  : Initializing Servlet 'dispatcherServlet'
+2025-05-19 19:27:40 [tomcat-handler-4] INFO  : Completed initialization in 1 ms
+2025-05-19 19:27:40 [tomcat-handler-4] INFO  : New session connected: 66f1084e-3b59-83f9-0b2a-07bd607e779b, user: Jerzynki
+2025-05-19 19:27:40 [tomcat-handler-4] INFO  : New message from user: Jerzynki
+2025-05-19 19:27:40 [tomcat-handler-4] INFO  : End of message processing - session: 66f1084e-3b59-83f9-0b2a-07bd607e779b from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:27:40 [tomcat-handler-5] INFO  : New message from user: Jerzynki
+2025-05-19 19:27:50 [tomcat-handler-5] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:27:50 [tomcat-handler-5] INFO  : End of message processing - session: 66f1084e-3b59-83f9-0b2a-07bd607e779b from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:27:50 [tomcat-handler-5] INFO  : New message from user: Jerzynki
+2025-05-19 19:27:50 [tomcat-handler-5] INFO  : End of message processing - session: 66f1084e-3b59-83f9-0b2a-07bd607e779b from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:27:50 [tomcat-handler-5] INFO  : New message from user: Jerzynki
+2025-05-19 19:27:55 [tomcat-handler-5] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:27:55 [tomcat-handler-5] INFO  : End of message processing - session: 66f1084e-3b59-83f9-0b2a-07bd607e779b from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:27:55 [tomcat-handler-5] INFO  : New message from user: Jerzynki
+2025-05-19 19:27:55 [tomcat-handler-5] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:27:56 [tomcat-handler-5] INFO  : Sending message to owner: 66f1084e-3b59-83f9-0b2a-07bd607e779b
+2025-05-19 19:27:56 [tomcat-handler-5] INFO  : End of message processing - session: 66f1084e-3b59-83f9-0b2a-07bd607e779b from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:28:06 [tomcat-handler-6] INFO  : New message from user: Jerzynki
+2025-05-19 19:28:12 [tomcat-handler-6] INFO  : /putAmountType connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:29:45 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m23s710ms80µs100ns).
+2025-05-19 19:29:45 [tomcat-handler-6] ERROR : java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "pl.kamjer.shoppinglistservice.model.dto.utilDto.AllDto.getCategoryDtoList()" is null
+2025-05-19 19:29:45 [tomcat-handler-6] INFO  : End of message processing - session: 66f1084e-3b59-83f9-0b2a-07bd607e779b from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:29:56 [tomcat-handler-7] INFO  : New message from user: Jerzynki
+2025-05-19 19:29:57 [tomcat-handler-7] INFO  : /putAmountType connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:30:44 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s479ms392µs200ns).
+2025-05-19 19:32:09 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s40ms867µs900ns).
+2025-05-19 19:32:10 [tomcat-handler-7] ERROR : java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because the return value of "pl.kamjer.shoppinglistservice.model.dto.utilDto.AllDto.getCategoryDtoList()" is null
+2025-05-19 19:32:10 [tomcat-handler-7] INFO  : End of message processing - session: 66f1084e-3b59-83f9-0b2a-07bd607e779b from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:32:13 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 19:32:13 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-05-19 19:32:13 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-19 19:32:13 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-05-19 19:32:13 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2025-05-19 19:32:13 [SpringApplicationShutdownHook] ERROR : Error java.nio.channels.ClosedChannelException - session: 66f1084e-3b59-83f9-0b2a-07bd607e779b from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:32:13 [SpringApplicationShutdownHook] INFO  : Session closing: 66f1084e-3b59-83f9-0b2a-07bd607e779b - reason: The web application is stopping
+2025-05-19 19:32:18 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-05-19 19:32:18 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 8520 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-05-19 19:32:18 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-05-19 19:32:19 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-19 19:32:19 [main] INFO  : Finished Spring Data repository scanning in 128 ms. Found 4 JPA repository interfaces.
+2025-05-19 19:32:20 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-05-19 19:32:20 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-05-19 19:32:20 [main] INFO  : Starting service [Tomcat]
+2025-05-19 19:32:20 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 19:32:20 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-05-19 19:32:20 [main] INFO  : Root WebApplicationContext: initialization completed in 2405 ms
+2025-05-19 19:32:21 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2025-05-19 19:32:21 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2025-05-19 19:32:21 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2025-05-19 19:32:21 [main] INFO  : Successfully validated 1 migration (execution time 00:00.025s)
+2025-05-19 19:32:21 [main] INFO  : Current version of schema `shopping_list_db`: 2
+2025-05-19 19:32:21 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2025-05-19 19:32:21 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-19 19:32:21 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-19 19:32:21 [main] INFO  : HHH000026: Second-level cache disabled
+2025-05-19 19:32:21 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-19 19:32:21 [main] INFO  : HikariPool-1 - Starting...
+2025-05-19 19:32:21 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3a012678
+2025-05-19 19:32:21 [main] INFO  : HikariPool-1 - Start completed.
+2025-05-19 19:32:21 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-19 19:32:22 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-19 19:32:22 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-19 19:32:23 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-19 19:32:23 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-05-19 19:32:23 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-19 19:32:24 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-05-19 19:32:24 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-05-19 19:32:24 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-05-19 19:32:24 [main] INFO  : Started ShoppingListServiceApplication in 7.126 seconds (process running for 7.584)
+2025-05-19 19:33:42 [tomcat-handler-4] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 19:33:42 [tomcat-handler-4] INFO  : Initializing Servlet 'dispatcherServlet'
+2025-05-19 19:33:42 [tomcat-handler-4] INFO  : Completed initialization in 3 ms
+2025-05-19 19:33:44 [tomcat-handler-4] INFO  : New session connected: 901a77ee-164b-8142-9194-61610b39be33, user: Jerzynki
+2025-05-19 19:33:44 [tomcat-handler-4] INFO  : New message from user: Jerzynki
+2025-05-19 19:33:44 [tomcat-handler-4] INFO  : End of message processing - session: 901a77ee-164b-8142-9194-61610b39be33 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:33:44 [tomcat-handler-5] INFO  : New message from user: Jerzynki
+2025-05-19 19:33:52 [tomcat-handler-5] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:33:52 [tomcat-handler-5] INFO  : End of message processing - session: 901a77ee-164b-8142-9194-61610b39be33 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:33:52 [tomcat-handler-5] INFO  : New message from user: Jerzynki
+2025-05-19 19:33:52 [tomcat-handler-5] INFO  : End of message processing - session: 901a77ee-164b-8142-9194-61610b39be33 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:33:52 [tomcat-handler-5] INFO  : New message from user: Jerzynki
+2025-05-19 19:33:54 [tomcat-handler-5] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:33:54 [tomcat-handler-5] INFO  : End of message processing - session: 901a77ee-164b-8142-9194-61610b39be33 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:33:54 [tomcat-handler-5] INFO  : New message from user: Jerzynki
+2025-05-19 19:33:54 [tomcat-handler-5] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:33:55 [tomcat-handler-5] INFO  : Sending message to owner: 901a77ee-164b-8142-9194-61610b39be33
+2025-05-19 19:34:02 [tomcat-handler-5] INFO  : End of message processing - session: 901a77ee-164b-8142-9194-61610b39be33 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:34:28 [tomcat-handler-6] INFO  : New message from user: Jerzynki
+2025-05-19 19:34:28 [tomcat-handler-6] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:34:28 [tomcat-handler-6] INFO  : Sending message to owner: 901a77ee-164b-8142-9194-61610b39be33
+2025-05-19 19:34:32 [tomcat-handler-6] INFO  : End of message processing - session: 901a77ee-164b-8142-9194-61610b39be33 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:34:35 [tomcat-handler-7] INFO  : New message from user: Jerzynki
+2025-05-19 19:34:35 [tomcat-handler-7] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:34:35 [tomcat-handler-7] INFO  : Sending message to owner: 901a77ee-164b-8142-9194-61610b39be33
+2025-05-19 19:34:40 [tomcat-handler-7] INFO  : End of message processing - session: 901a77ee-164b-8142-9194-61610b39be33 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:34:43 [tomcat-handler-9] INFO  : New message from user: Jerzynki
+2025-05-19 19:34:43 [tomcat-handler-9] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:34:44 [tomcat-handler-9] INFO  : Sending message to owner: 901a77ee-164b-8142-9194-61610b39be33
+2025-05-19 19:34:44 [tomcat-handler-9] INFO  : End of message processing - session: 901a77ee-164b-8142-9194-61610b39be33 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:34:49 [tomcat-handler-10] INFO  : New message from user: Jerzynki
+2025-05-19 19:34:53 [tomcat-handler-10] INFO  : /putAmountType connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:35:02 [tomcat-handler-10] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:35:02 [tomcat-handler-10] INFO  : End of message processing - session: 901a77ee-164b-8142-9194-61610b39be33 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:35:02 [tomcat-handler-10] ERROR : Error Unable to unwrap data, invalid status [CLOSED] - session: 901a77ee-164b-8142-9194-61610b39be33 from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:35:02 [tomcat-handler-10] INFO  : Session closing: 901a77ee-164b-8142-9194-61610b39be33 - reason: Unable to unwrap data, invalid status [CLOSED]
+2025-05-19 19:35:50 [tomcat-handler-16] INFO  : New session connected: f96390b4-7349-52e8-df71-f84321830fbe, user: Jerzynki
+2025-05-19 19:35:50 [tomcat-handler-17] INFO  : New message from user: Jerzynki
+2025-05-19 19:35:50 [tomcat-handler-17] INFO  : End of message processing - session: f96390b4-7349-52e8-df71-f84321830fbe from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:35:50 [tomcat-handler-18] INFO  : New message from user: Jerzynki
+2025-05-19 19:35:54 [tomcat-handler-18] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:35:54 [tomcat-handler-18] INFO  : End of message processing - session: f96390b4-7349-52e8-df71-f84321830fbe from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:35:54 [tomcat-handler-18] INFO  : New message from user: Jerzynki
+2025-05-19 19:35:54 [tomcat-handler-18] INFO  : End of message processing - session: f96390b4-7349-52e8-df71-f84321830fbe from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:35:54 [tomcat-handler-18] INFO  : New message from user: Jerzynki
+2025-05-19 19:35:57 [tomcat-handler-18] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:35:57 [tomcat-handler-18] INFO  : End of message processing - session: f96390b4-7349-52e8-df71-f84321830fbe from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:35:57 [tomcat-handler-18] INFO  : New message from user: Jerzynki
+2025-05-19 19:35:57 [tomcat-handler-18] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:35:57 [tomcat-handler-18] INFO  : Sending message to owner: f96390b4-7349-52e8-df71-f84321830fbe
+2025-05-19 19:35:57 [tomcat-handler-18] INFO  : End of message processing - session: f96390b4-7349-52e8-df71-f84321830fbe from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:36:02 [tomcat-handler-24] ERROR : Jerzynki: 
+pl.kamjer.shoppinglistservice.exception.LogException: null
+	at .nativeExecuteForLastInsertedRowId(Native Method)
+	at .executeForLastInsertedRowId(SQLiteConnection.java:879)
+	at .executeForLastInsertedRowId(SQLiteSession.java:790)
+	at .executeInsert(SQLiteStatement.java:88)
+	at .executeInsert(FrameworkSQLiteStatement.kt:42)
+	at .insertAndReturnId(EntityInsertionAdapter.kt:101)
+	at .insertAmountType(UtilDao_Impl.java:330)
+	at .lambda$getLocalAmountTypeId$16(UtilDao.java:225)
+	at .$r8$lambda$cvq1T5mHSgXOSefCyIsQMFVkHyM(:0)
+	at .get(D8$$SyntheticClass:0)
+	at .orElseGet(Optional.java:263)
+	at .getLocalAmountTypeId(UtilDao.java:225)
+	at .lambda$deleteAllElements$4(UtilDao.java:125)
+	at .$r8$lambda$q6oHda4TqRzPlySaad8Krnrrp_s(:0)
+	at .accept(D8$$SyntheticClass:0)
+	at .forEach(ArrayList.java:1262)
+	at .deleteAllElements(UtilDao.java:124)
+	at .deleteAllElements(UtilDao_Impl.java:477)
+	at .synchronizeData(UtilDao.java:183)
+	at .synchronizeData(UtilDao_Impl.java:503)
+	at .lambda$synchronizeData$14(ShoppingRepository.java:247)
+	at .$r8$lambda$K0XUGTS8bj35AhgpyGn141XNERY(:0)
+	at .run(D8$$SyntheticClass:0)
+	at .runWorker(ThreadPoolExecutor.java:1167)
+	at .run(ThreadPoolExecutor.java:641)
+	at .run(Thread.java:919)
+2025-05-19 19:36:22 [tomcat-handler-25] INFO  : New message from user: Jerzynki
+2025-05-19 19:36:25 [tomcat-handler-25] INFO  : /putAmountType connected: User UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:36:28 [tomcat-handler-25] ERROR : java.util.NoSuchElementException: No value present
+2025-05-19 19:36:28 [tomcat-handler-25] INFO  : End of message processing - session: f96390b4-7349-52e8-df71-f84321830fbe from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:36:28 [tomcat-handler-25] ERROR : Error Unable to unwrap data, invalid status [CLOSED] - session: f96390b4-7349-52e8-df71-f84321830fbe from: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Jerzynki, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.8.103, SessionId=null], Granted Authorities=[ROLE_USER]]
+2025-05-19 19:36:28 [tomcat-handler-25] INFO  : Session closing: f96390b4-7349-52e8-df71-f84321830fbe - reason: Unable to unwrap data, invalid status [CLOSED]
+2025-05-19 20:54:49 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m52s819ms418µs100ns).

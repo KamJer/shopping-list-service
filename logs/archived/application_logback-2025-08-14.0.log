@@ -1,0 +1,127 @@
+2025-08-14 01:23:40 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-08-14 01:23:40 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 22084 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-08-14 01:23:40 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-08-14 01:23:41 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-14 01:23:41 [main] INFO  : Finished Spring Data repository scanning in 109 ms. Found 4 JPA repository interfaces.
+2025-08-14 01:23:42 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-08-14 01:23:42 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-08-14 01:23:42 [main] INFO  : Starting service [Tomcat]
+2025-08-14 01:23:42 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-14 01:23:42 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-08-14 01:23:42 [main] INFO  : Root WebApplicationContext: initialization completed in 1895 ms
+2025-08-14 01:23:43 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2025-08-14 01:23:43 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2025-08-14 01:23:43 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2025-08-14 01:23:43 [main] INFO  : Successfully validated 1 migration (execution time 00:00.019s)
+2025-08-14 01:23:43 [main] INFO  : Current version of schema `shopping_list_db`: 2
+2025-08-14 01:23:43 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2025-08-14 01:23:43 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-14 01:23:43 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-08-14 01:23:43 [main] INFO  : HHH000026: Second-level cache disabled
+2025-08-14 01:23:43 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-14 01:23:43 [main] INFO  : HikariPool-1 - Starting...
+2025-08-14 01:23:43 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@5ef7ae2f
+2025-08-14 01:23:43 [main] INFO  : HikariPool-1 - Start completed.
+2025-08-14 01:23:43 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-14 01:23:44 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-14 01:23:44 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 01:23:44 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-14 01:23:44 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-08-14 01:23:45 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-14 01:23:45 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-08-14 01:23:45 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-08-14 01:23:45 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-08-14 01:23:45 [main] INFO  : Started ShoppingListServiceApplication in 5.61 seconds (process running for 6.335)
+2025-08-14 01:23:52 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-14 01:23:52 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-08-14 01:23:52 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 01:23:52 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-08-14 01:23:52 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2025-08-14 01:24:13 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-08-14 01:24:13 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 8180 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-08-14 01:24:13 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-08-14 01:24:14 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-14 01:24:14 [main] INFO  : Finished Spring Data repository scanning in 105 ms. Found 4 JPA repository interfaces.
+2025-08-14 01:24:15 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-08-14 01:24:15 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-08-14 01:24:15 [main] INFO  : Starting service [Tomcat]
+2025-08-14 01:24:15 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-14 01:24:15 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-08-14 01:24:15 [main] INFO  : Root WebApplicationContext: initialization completed in 1870 ms
+2025-08-14 01:24:15 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2025-08-14 01:24:15 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2025-08-14 01:24:15 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2025-08-14 01:24:15 [main] INFO  : Successfully validated 1 migration (execution time 00:00.017s)
+2025-08-14 01:24:15 [main] INFO  : Current version of schema `shopping_list_db`: 2
+2025-08-14 01:24:15 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2025-08-14 01:24:15 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-14 01:24:15 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-08-14 01:24:15 [main] INFO  : HHH000026: Second-level cache disabled
+2025-08-14 01:24:16 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-14 01:24:16 [main] INFO  : HikariPool-1 - Starting...
+2025-08-14 01:24:16 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@4fe3f9ef
+2025-08-14 01:24:16 [main] INFO  : HikariPool-1 - Start completed.
+2025-08-14 01:24:16 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-14 01:24:16 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-14 01:24:16 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 01:24:17 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-14 01:24:17 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-08-14 01:24:17 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-14 01:24:18 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-08-14 01:24:18 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-08-14 01:24:18 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-08-14 01:24:18 [main] INFO  : Started ShoppingListServiceApplication in 5.708 seconds (process running for 6.007)
+2025-08-14 01:24:31 [tomcat-handler-7] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-14 01:24:31 [tomcat-handler-7] INFO  : Initializing Servlet 'dispatcherServlet'
+2025-08-14 01:24:31 [tomcat-handler-7] INFO  : Completed initialization in 1 ms
+2025-08-14 01:24:57 [tomcat-handler-8] ERROR : field:userName : User name is taken, try with different name
+
+2025-08-14 01:28:45 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-14 01:28:45 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-08-14 01:28:45 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 01:28:45 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-08-14 01:28:45 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2025-08-14 01:30:22 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2025-08-14 01:30:22 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.2 with PID 20212 (C:\Users\kjerz\Desktop\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\projekty\ShoppingListService)
+2025-08-14 01:30:22 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2025-08-14 01:30:23 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-14 01:30:23 [main] INFO  : Finished Spring Data repository scanning in 99 ms. Found 4 JPA repository interfaces.
+2025-08-14 01:30:24 [main] INFO  : Tomcat initialized with port 443 (https)
+2025-08-14 01:30:24 [main] INFO  : Initializing ProtocolHandler ["https-jsse-nio-443"]
+2025-08-14 01:30:24 [main] INFO  : Starting service [Tomcat]
+2025-08-14 01:30:24 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-14 01:30:24 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2025-08-14 01:30:24 [main] INFO  : Root WebApplicationContext: initialization completed in 1814 ms
+2025-08-14 01:30:24 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2025-08-14 01:30:24 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2025-08-14 01:30:24 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2025-08-14 01:30:24 [main] INFO  : Successfully validated 1 migration (execution time 00:00.019s)
+2025-08-14 01:30:24 [main] INFO  : Current version of schema `shopping_list_db`: 2
+2025-08-14 01:30:24 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2025-08-14 01:30:24 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-14 01:30:24 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-08-14 01:30:24 [main] INFO  : HHH000026: Second-level cache disabled
+2025-08-14 01:30:25 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-14 01:30:25 [main] INFO  : HikariPool-1 - Starting...
+2025-08-14 01:30:25 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1ba98508
+2025-08-14 01:30:25 [main] INFO  : HikariPool-1 - Start completed.
+2025-08-14 01:30:25 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-14 01:30:25 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-14 01:30:25 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 01:30:26 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-14 01:30:26 [main] INFO  : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2025-08-14 01:30:26 [main] INFO  : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-14 01:30:27 [main] INFO  : Starting ProtocolHandler ["https-jsse-nio-443"]
+2025-08-14 01:30:27 [main] INFO  : Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\kjerz\.keystore] using alias [shoppingListKey] with trust store [null]
+2025-08-14 01:30:27 [main] INFO  : Tomcat started on port 443 (https) with context path '/'
+2025-08-14 01:30:27 [main] INFO  : Started ShoppingListServiceApplication in 5.439 seconds (process running for 5.728)
+2025-08-14 01:31:59 [tomcat-handler-5] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-14 01:31:59 [tomcat-handler-5] INFO  : Initializing Servlet 'dispatcherServlet'
+2025-08-14 01:31:59 [tomcat-handler-5] INFO  : Completed initialization in 1 ms
+2025-08-14 01:31:59 [tomcat-handler-5] ERROR : field:userName : User name is taken, try with different name
+
+2025-08-14 01:32:54 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-14 01:32:54 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2025-08-14 01:32:54 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14 01:32:54 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2025-08-14 01:32:54 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.

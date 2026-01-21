@@ -11,16 +11,16 @@ import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Map;
 
 @Slf4j
 public class DatabaseUtil {
 
-    public static AmountType toAmountType(User user,  AmountTypeDto amountTypeDto, LocalDateTime savedTime) throws NoResourcesFoundException {
+    public static AmountType toAmountType(User user, AmountTypeDto amountTypeDto, LocalDateTime savedTime) {
         return AmountType.builder()
-                .amountTypeId(AmountTypeId.builder()
-                        .user(user)
-                        .amountTypeId(amountTypeDto.getAmountTypeId())
-                        .build())
+                .amountTypeId(adjustId(amountTypeDto.getAmountTypeId()))
+                .userName(user.getUserName())
                 .typeName(amountTypeDto.getTypeName())
                 .savedTime(savedTime)
                 .deleted(amountTypeDto.isDeleted())
@@ -28,38 +28,73 @@ public class DatabaseUtil {
                 .build();
     }
 
+    public static AmountTypeDto amountTypeDtoToAmountTypeDto(AmountTypeDto amountTypeDto, ModifyState modifyState) {
+        return AmountTypeDto.builder()
+                .amountTypeId(amountTypeDto.getAmountTypeId())
+                .typeName(amountTypeDto.getTypeName())
+                .modifyState(modifyState)
+                .localId(amountTypeDto.getLocalId())
+                .build();
+    }
+
     public static AmountTypeDto toAmountTypeDto(AmountType amountType, ModifyState modifyState) {
         return AmountTypeDto.builder()
-                .amountTypeId(amountType.getAmountTypeId().getAmountTypeId())
+                .amountTypeId(amountType.getAmountTypeId())
                 .typeName(amountType.getTypeName())
                 .modifyState(modifyState)
                 .localId(amountType.getLocalId())
                 .build();
     }
 
-    public static User toUser(UserDto userDto) {
-        return User.builder()
-                .userName(userDto.getUserName())
-                .password(userDto.getPassword())
-                .savedTime(LocalDateTime.now())
+    public static AmountTypeDto toAmountTypeDto(AmountType amountType, ModifyState modifyState, LocalDateTime savedTime) {
+        return AmountTypeDto.builder()
+                .amountTypeId(amountType.getAmountTypeId())
+                .typeName(amountType.getTypeName())
+                .modifyState(modifyState)
+                .localId(amountType.getLocalId())
+                .savedTime(savedTime)
+                .build();
+    }
+
+    public static UserDto toUserDto(User user) {
+        return UserDto.builder()
+                .userName(user.getUserName())
+                .savedTime(user.getSavedTime())
                 .build();
     }
 
     public static CategoryDto toCategoryDto(Category category, ModifyState modifyState) {
         return CategoryDto.builder()
-                .categoryId(category.getCategoryId().getCategoryId())
+                .categoryId(category.getCategoryId())
                 .categoryName(category.getCategoryName())
                 .modifyState(modifyState)
                 .localId(category.getLocalId())
                 .build();
     }
 
-    public static Category toCategory(User user, CategoryDto categoryDto, LocalDateTime savedTime) throws NoResourcesFoundException {
+    public static CategoryDto toCategoryDto(Category category, ModifyState modifyState, LocalDateTime savedTime) {
+        return CategoryDto.builder()
+                .categoryId(category.getCategoryId())
+                .categoryName(category.getCategoryName())
+                .modifyState(modifyState)
+                .localId(category.getLocalId())
+                .savedTime(savedTime)
+                .build();
+    }
+
+    public static CategoryDto categoryDtoToCategoryDto(CategoryDto categoryDto, ModifyState modifyState) {
+        return CategoryDto.builder()
+                .categoryId(categoryDto.getCategoryId())
+                .categoryName(categoryDto.getCategoryName())
+                .modifyState(modifyState)
+                .localId(categoryDto.getLocalId())
+                .build();
+    }
+
+    public static Category toCategory(User user, CategoryDto categoryDto, LocalDateTime savedTime) {
         return Category.builder()
-                .categoryId(CategoryId.builder()
-                        .user(user)
-                        .categoryId(categoryDto.getCategoryId())
-                        .build())
+                .categoryId(adjustId(categoryDto.getCategoryId()))
+                .userName(user.getUserName())
                 .categoryName(categoryDto.getCategoryName())
                 .savedTime(savedTime)
                 .deleted(categoryDto.isDeleted())
@@ -67,11 +102,19 @@ public class DatabaseUtil {
                 .build();
     }
 
+    /**
+     * Converts 0 in id to nulls for hibernates
+     */
+    public static Long adjustId(Long aLong) {
+        return (aLong != null && aLong > 0) ? aLong : null;
+    }
+
+
     public static ShoppingItemDto toShoppingItemDto(ShoppingItem shoppingItem, ModifyState modifyState) {
         return ShoppingItemDto.builder()
-                .shoppingItemId(shoppingItem.getShoppingItemId().getShoppingItemId())
-                .itemAmountTypeId(shoppingItem.getItemAmountType().getAmountTypeId().getAmountTypeId())
-                .itemCategoryId(shoppingItem.getItemCategory().getCategoryId().getCategoryId())
+                .shoppingItemId(shoppingItem.getShoppingItemId())
+                .itemAmountTypeId(shoppingItem.getItemAmountType().getAmountTypeId())
+                .itemCategoryId(shoppingItem.getItemCategory().getCategoryId())
                 .itemName(shoppingItem.getItemName())
                 .amount(shoppingItem.getAmount())
                 .bought(shoppingItem.isBought())
@@ -82,14 +125,52 @@ public class DatabaseUtil {
                 .build();
     }
 
-    public static ShoppingItem toShoppingItem(User user, AmountTypeRepository amountTypeRepository, CategoryRepository categoryRepository, ShoppingItemDto shoppingItemDto, LocalDateTime savedTime) throws NoResourcesFoundException {
+    public static ShoppingItemDto toShoppingItemDto(ShoppingItem shoppingItem, ModifyState modifyState, LocalDateTime savedTime) {
+        return ShoppingItemDto.builder()
+                .shoppingItemId(shoppingItem.getShoppingItemId())
+                .itemAmountTypeId(shoppingItem.getItemAmountType().getAmountTypeId())
+                .itemCategoryId(shoppingItem.getItemCategory().getCategoryId())
+                .itemName(shoppingItem.getItemName())
+                .amount(shoppingItem.getAmount())
+                .bought(shoppingItem.isBought())
+                .modifyState(modifyState)
+                .localId(shoppingItem.getLocalShoppingItemId())
+                .localAmountTypeId(shoppingItem.getLocalAmountTypeId())
+                .localCategoryId(shoppingItem.getLocalCategoryId())
+                .savedTime(savedTime)
+                .build();
+    }
+
+    public static ShoppingItemDto fromShoppingItemDtoToShoppingItemDto(ShoppingItemDto shoppingItemDto, ModifyState modifyState, LocalDateTime savedTime) {
+        return ShoppingItemDto.builder()
+                .shoppingItemId(shoppingItemDto.getShoppingItemId())
+                .itemAmountTypeId(shoppingItemDto.getItemAmountTypeId())
+                .itemCategoryId(shoppingItemDto.getItemCategoryId())
+                .itemName(shoppingItemDto.getItemName())
+                .amount(shoppingItemDto.getAmount())
+                .bought(shoppingItemDto.isBought())
+                .modifyState(modifyState)
+                .localId(shoppingItemDto.getLocalId())
+                .localAmountTypeId(shoppingItemDto.getLocalAmountTypeId())
+                .localCategoryId(shoppingItemDto.getLocalCategoryId())
+                .savedTime(savedTime)
+                .build();
+    }
+
+    public static ShoppingItem toShoppingItem(
+            User user,
+            AmountTypeRepository amountTypeRepository,
+            Map<Long, AmountType> at,
+            CategoryRepository categoryRepository,
+            Map<Long, Category> ct,
+            ShoppingItemDto shoppingItemDto,
+            LocalDateTime savedTime)
+            throws NoResourcesFoundException {
         return ShoppingItem.builder()
-                .shoppingItemId(ShoppingItemId.builder()
-                        .user(user)
-                        .shoppingItemId(shoppingItemDto.getShoppingItemId())
-                        .build())
-                .itemAmountType(amountTypeRepository.findAmountTypeByAmountTypeIdUserUserNameAndAmountTypeIdAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId()).orElseThrow(() -> new NoResourcesFoundException("No such AmountType found")))
-                .itemCategory(categoryRepository.findCategoryByCategoryIdUserUserNameAndCategoryIdCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId()).orElseThrow(() -> new NoResourcesFoundException("No such Category found")))
+                .shoppingItemId(adjustId(shoppingItemDto.getShoppingItemId()))
+                .userName(user.getUserName())
+                .itemAmountType(amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId()).orElseGet(() -> at.get(shoppingItemDto.getLocalAmountTypeId())))
+                .itemCategory(categoryRepository.findCategoryByUserNameAndCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId()).orElseGet(() -> ct.get(shoppingItemDto.getLocalCategoryId())))
                 .itemName(shoppingItemDto.getItemName())
                 .amount(shoppingItemDto.getAmount())
                 .bought(shoppingItemDto.isBought())

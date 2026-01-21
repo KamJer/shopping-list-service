@@ -16,15 +16,20 @@ import java.util.List;
 @Table(name = "CATEGORY")
 public class Category {
 
-    @EmbeddedId
+    @Id
+    @Column(name = "category_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private CategoryId categoryId;
+    private Long categoryId;
+    @Column(name = "user_name")
+    private String userName;
+    @Column(name = "category_name")
     private String categoryName;
     @Column(name = "saved_time")
     private LocalDateTime savedTime;
     @Column(name = "deleted", columnDefinition = "BIT(1) NOT NULL DEFAULT b'0'")
     private boolean deleted;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "itemCategory", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "itemCategory")
     private List<ShoppingItem> shoppingItemList;
 
     @Transient
