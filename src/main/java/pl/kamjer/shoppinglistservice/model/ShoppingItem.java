@@ -17,7 +17,7 @@
         private String userName;
         @Id
         @Column(name = "shopping_item_id")
-        @GeneratedValue(strategy = GenerationType.AUTO)
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         @EqualsAndHashCode.Include
         private Long shoppingItemId;
         @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)

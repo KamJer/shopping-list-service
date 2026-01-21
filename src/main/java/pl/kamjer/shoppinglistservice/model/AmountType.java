@@ -18,7 +18,7 @@ public class AmountType {
 
     @Column(name = "amount_type_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long amountTypeId;
     @Column(name = "user_name")
