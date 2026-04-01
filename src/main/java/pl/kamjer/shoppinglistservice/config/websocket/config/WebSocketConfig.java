@@ -3,7 +3,9 @@ package pl.kamjer.shoppinglistservice.config.websocket.config;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.*;
+import pl.kamjer.shoppinglistservice.client.SecClient;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler;
+import pl.kamjer.shoppinglistservice.model.User;
 
 @Configuration
 @EnableWebSocket
@@ -11,6 +13,7 @@ import pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler;
 public class WebSocketConfig implements WebSocketConfigurer {
 
     private WebSocketHandler webSocketHandler;
+    private SecClient secClient;
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
@@ -26,7 +29,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
                 "/{userName}/putShoppingItem",
                 "/{userName}/postShoppingItem",
                 "/{userName}/deleteShoppingItem"
-                );
-        registry.addHandler(webSocketHandler, "/ws");
+        );
+        registry.addHandler(webSocketHandler, "/ws").setAllowedOriginPatterns("*");
     }
 }

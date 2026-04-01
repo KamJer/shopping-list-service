@@ -1,0 +1,914 @@
+2026-02-17 19:55:14 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-02-17 19:55:14 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 17724 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-02-17 19:55:14 [main] INFO  : The following 1 profile is active: "dev"
+2026-02-17 19:55:16 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-17 19:55:16 [main] INFO  : Finished Spring Data repository scanning in 123 ms. Found 3 JPA repository interfaces.
+2026-02-17 19:55:17 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-02-17 19:55:17 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-02-17 19:55:17 [main] INFO  : Starting service [Tomcat]
+2026-02-17 19:55:17 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-02-17 19:55:17 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-02-17 19:55:17 [main] INFO  : Root WebApplicationContext: initialization completed in 2777 ms
+2026-02-17 19:55:18 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-02-17 19:55:18 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-02-17 19:55:18 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-02-17 19:55:18 [main] INFO  : Successfully validated 1 migration (execution time 00:00.022s)
+2026-02-17 19:55:18 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-02-17 19:55:18 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-02-17 19:55:18 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-17 19:55:18 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-02-17 19:55:18 [main] INFO  : HHH000026: Second-level cache disabled
+2026-02-17 19:55:19 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-17 19:55:19 [main] INFO  : HikariPool-1 - Starting...
+2026-02-17 19:55:19 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@32c08610
+2026-02-17 19:55:19 [main] INFO  : HikariPool-1 - Start completed.
+2026-02-17 19:55:19 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-17 19:55:19 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-17 19:55:19 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17 19:55:20 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-17 19:55:20 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name remoteAuthProvider
+2026-02-17 19:55:20 [main] WARN  : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-17 19:55:21 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-02-17 19:55:22 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-02-17 19:55:22 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-02-17 19:55:22 [main] INFO  : Started ShoppingListServiceApplication in 8.091 seconds (process running for 8.788)
+2026-02-17 22:12:15 [tomcat-handler-0] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-17 22:12:15 [tomcat-handler-0] INFO  : Initializing Servlet 'dispatcherServlet'
+2026-02-17 22:12:15 [tomcat-handler-0] INFO  : Completed initialization in 3 ms
+2026-02-17 22:12:18 [tomcat-handler-0] INFO  : New session connected: 8f2cf0a9-c79b-ec18-018a-dcdaeaceb9ce, user: t1
+2026-02-17 22:12:18 [tomcat-handler-1] INFO  : New session connected: bf7e7cd6-8725-bf8f-59b2-19e495358b6d, user: t1
+2026-02-17 22:12:18 [tomcat-handler-2] INFO  : New message from user: t1
+2026-02-17 22:12:18 [tomcat-handler-3] INFO  : New message from user: t1
+2026-02-17 22:12:18 [tomcat-handler-2] INFO  : End of message processing - session: 8f2cf0a9-c79b-ec18-018a-dcdaeaceb9ce from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:18 [tomcat-handler-3] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:19 [tomcat-handler-4] INFO  : New message from user: t1
+2026-02-17 22:12:19 [tomcat-handler-4] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:19 [tomcat-handler-5] INFO  : New message from user: t1
+2026-02-17 22:12:19 [tomcat-handler-5] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:19 [tomcat-handler-6] INFO  : New message from user: t1
+2026-02-17 22:12:19 [tomcat-handler-6] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:19 [tomcat-handler-7] INFO  : New message from user: t1
+2026-02-17 22:12:19 [tomcat-handler-7] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:19 [tomcat-handler-8] INFO  : New message from user: t1
+2026-02-17 22:12:19 [tomcat-handler-8] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:19 [tomcat-handler-9] INFO  : New message from user: t1
+2026-02-17 22:12:19 [tomcat-handler-9] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:19 [tomcat-handler-10] INFO  : New message from user: t1
+2026-02-17 22:12:19 [tomcat-handler-10] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:19 [tomcat-handler-11] INFO  : New message from user: t1
+2026-02-17 22:12:19 [tomcat-handler-11] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:19 [tomcat-handler-12] INFO  : New message from user: t1
+2026-02-17 22:12:19 [tomcat-handler-12] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:19 [tomcat-handler-13] INFO  : New message from user: t1
+2026-02-17 22:12:19 [tomcat-handler-13] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:19 [tomcat-handler-14] INFO  : New message from user: t1
+2026-02-17 22:12:19 [tomcat-handler-14] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:19 [tomcat-handler-15] INFO  : New message from user: t1
+2026-02-17 22:12:19 [tomcat-handler-15] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:12:20 [tomcat-handler-15] INFO  : Attempting to NONE data: 2
+2026-02-17 22:12:20 [tomcat-handler-15] INFO  : Attempting to NONE data: 3
+2026-02-17 22:12:20 [tomcat-handler-15] INFO  : Attempting to NONE data: 4
+2026-02-17 22:12:20 [tomcat-handler-15] INFO  : Attempting to NONE data: 5
+2026-02-17 22:12:20 [tomcat-handler-15] INFO  : Attempting to NONE data: 4
+2026-02-17 22:12:20 [tomcat-handler-15] INFO  : Attempting to NONE data: 5
+2026-02-17 22:12:20 [tomcat-handler-15] INFO  : Sending message to owner: bf7e7cd6-8725-bf8f-59b2-19e495358b6d
+2026-02-17 22:12:20 [tomcat-handler-15] INFO  : End of message processing - session: bf7e7cd6-8725-bf8f-59b2-19e495358b6d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:24:30 [tomcat-handler-16] INFO  : New session connected: 37af72cd-6c93-6221-10ff-ce313d77f4a8, user: t1
+2026-02-17 22:24:30 [tomcat-handler-17] INFO  : New message from user: t1
+2026-02-17 22:24:30 [tomcat-handler-17] INFO  : End of message processing - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:24:30 [tomcat-handler-18] INFO  : New message from user: t1
+2026-02-17 22:24:30 [tomcat-handler-18] INFO  : End of message processing - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:24:30 [tomcat-handler-19] INFO  : New message from user: t1
+2026-02-17 22:24:30 [tomcat-handler-19] INFO  : End of message processing - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:24:30 [tomcat-handler-20] INFO  : New message from user: t1
+2026-02-17 22:24:30 [tomcat-handler-20] INFO  : End of message processing - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:24:30 [tomcat-handler-21] INFO  : New message from user: t1
+2026-02-17 22:24:30 [tomcat-handler-21] INFO  : End of message processing - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:24:30 [tomcat-handler-22] INFO  : New message from user: t1
+2026-02-17 22:24:30 [tomcat-handler-22] INFO  : End of message processing - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:24:30 [tomcat-handler-23] INFO  : New message from user: t1
+2026-02-17 22:24:30 [tomcat-handler-23] INFO  : End of message processing - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:24:30 [tomcat-handler-24] INFO  : New message from user: t1
+2026-02-17 22:24:30 [tomcat-handler-24] INFO  : End of message processing - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:24:30 [tomcat-handler-25] INFO  : New message from user: t1
+2026-02-17 22:24:30 [tomcat-handler-25] INFO  : End of message processing - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:24:30 [tomcat-handler-26] INFO  : New message from user: t1
+2026-02-17 22:24:30 [tomcat-handler-26] INFO  : End of message processing - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:24:30 [tomcat-handler-27] INFO  : New message from user: t1
+2026-02-17 22:24:30 [tomcat-handler-27] INFO  : End of message processing - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:24:30 [tomcat-handler-28] INFO  : New message from user: t1
+2026-02-17 22:24:30 [tomcat-handler-28] INFO  : End of message processing - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:29:40 [tomcat-handler-29] ERROR : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.lang.String cannot be cast to class org.springframework.security.core.userdetails.UserDetails (java.lang.String is in module java.base of loader 'bootstrap'; org.springframework.security.core.userdetails.UserDetails is in unnamed module of loader 'app')] with root cause
+java.lang.ClassCastException: class java.lang.String cannot be cast to class org.springframework.security.core.userdetails.UserDetails (java.lang.String is in module java.base of loader 'bootstrap'; org.springframework.security.core.userdetails.UserDetails is in unnamed module of loader 'app')
+	at pl.kamjer.shoppinglistservice.service.CustomService.getUserFromAuth(CustomService.java:21)
+	at pl.kamjer.shoppinglistservice.service.ExceptionService.insertLog(ExceptionService.java:19)
+	at pl.kamjer.shoppinglistservice.controller.ExceptionController.sendLog(ExceptionController.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:213)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at pl.kamjer.shoppinglistservice.config.components.SkipAuthorizationFilter.doFilterInternal(SkipAuthorizationFilter.java:30)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2026-02-17 22:30:09 [tomcat-handler-30] ERROR : Error null - session: 37af72cd-6c93-6221-10ff-ce313d77f4a8 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:09 [tomcat-handler-30] INFO  : Session closing: 37af72cd-6c93-6221-10ff-ce313d77f4a8 - reason: null
+2026-02-17 22:30:15 [tomcat-handler-31] INFO  : New session connected: 0a7f87d1-d051-a578-7cf8-452ddf0c1150, user: t1
+2026-02-17 22:30:15 [tomcat-handler-32] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-32] INFO  : End of message processing - session: 0a7f87d1-d051-a578-7cf8-452ddf0c1150 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-33] INFO  : New session connected: b2a6fe08-d04d-77f7-257f-4db99fd5997b, user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : Attempting to NONE data: 2
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : Attempting to NONE data: 3
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : Attempting to NONE data: 4
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : Attempting to NONE data: 5
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : Attempting to NONE data: 4
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : Attempting to NONE data: 5
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : Sending message to owner: b2a6fe08-d04d-77f7-257f-4db99fd5997b
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : New message from user: t1
+2026-02-17 22:30:15 [tomcat-handler-34] INFO  : End of message processing - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:30:29 [tomcat-handler-35] ERROR : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.lang.String cannot be cast to class org.springframework.security.core.userdetails.UserDetails (java.lang.String is in module java.base of loader 'bootstrap'; org.springframework.security.core.userdetails.UserDetails is in unnamed module of loader 'app')] with root cause
+java.lang.ClassCastException: class java.lang.String cannot be cast to class org.springframework.security.core.userdetails.UserDetails (java.lang.String is in module java.base of loader 'bootstrap'; org.springframework.security.core.userdetails.UserDetails is in unnamed module of loader 'app')
+	at pl.kamjer.shoppinglistservice.service.CustomService.getUserFromAuth(CustomService.java:21)
+	at pl.kamjer.shoppinglistservice.service.ExceptionService.insertLog(ExceptionService.java:19)
+	at pl.kamjer.shoppinglistservice.controller.ExceptionController.sendLog(ExceptionController.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:213)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at pl.kamjer.shoppinglistservice.config.components.SkipAuthorizationFilter.doFilterInternal(SkipAuthorizationFilter.java:30)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2026-02-17 22:31:02 [tomcat-handler-36] ERROR : Error null - session: 0a7f87d1-d051-a578-7cf8-452ddf0c1150 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:02 [tomcat-handler-37] ERROR : Error null - session: b2a6fe08-d04d-77f7-257f-4db99fd5997b from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:02 [tomcat-handler-36] INFO  : Session closing: 0a7f87d1-d051-a578-7cf8-452ddf0c1150 - reason: null
+2026-02-17 22:31:02 [tomcat-handler-37] INFO  : Session closing: b2a6fe08-d04d-77f7-257f-4db99fd5997b - reason: null
+2026-02-17 22:31:08 [tomcat-handler-38] INFO  : New session connected: fe20372c-2e17-edc4-e011-32f058e50072, user: t1
+2026-02-17 22:31:08 [tomcat-handler-39] INFO  : New session connected: 4bb1bc7a-79bc-38b4-1ce1-ab3a53379df9, user: t1
+2026-02-17 22:31:08 [tomcat-handler-40] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-40] INFO  : End of message processing - session: 4bb1bc7a-79bc-38b4-1ce1-ab3a53379df9 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-41] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-41] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-42] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-42] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-43] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-43] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-44] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-44] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-45] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-45] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-46] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-46] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-47] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-47] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-48] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-48] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-49] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-49] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-50] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-50] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-51] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-51] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-52] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-52] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-53] INFO  : New message from user: t1
+2026-02-17 22:31:08 [tomcat-handler-53] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:08 [tomcat-handler-53] INFO  : Attempting to NONE data: 2
+2026-02-17 22:31:08 [tomcat-handler-53] INFO  : Attempting to NONE data: 3
+2026-02-17 22:31:08 [tomcat-handler-53] INFO  : Attempting to NONE data: 4
+2026-02-17 22:31:08 [tomcat-handler-53] INFO  : Attempting to NONE data: 5
+2026-02-17 22:31:08 [tomcat-handler-53] INFO  : Attempting to NONE data: 4
+2026-02-17 22:31:08 [tomcat-handler-53] INFO  : Attempting to NONE data: 5
+2026-02-17 22:31:08 [tomcat-handler-53] INFO  : Sending message to owner: fe20372c-2e17-edc4-e011-32f058e50072
+2026-02-17 22:31:08 [tomcat-handler-53] INFO  : End of message processing - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:40 [tomcat-handler-54] ERROR : Error null - session: 4bb1bc7a-79bc-38b4-1ce1-ab3a53379df9 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:40 [tomcat-handler-55] ERROR : Error null - session: fe20372c-2e17-edc4-e011-32f058e50072 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:31:40 [tomcat-handler-54] INFO  : Session closing: 4bb1bc7a-79bc-38b4-1ce1-ab3a53379df9 - reason: null
+2026-02-17 22:31:40 [tomcat-handler-55] INFO  : Session closing: fe20372c-2e17-edc4-e011-32f058e50072 - reason: null
+2026-02-17 22:32:19 [tomcat-handler-57] INFO  : New session connected: f1182fbf-6bc5-1187-7b43-4a8d554998da, user: t1
+2026-02-17 22:32:19 [tomcat-handler-56] INFO  : New session connected: 00b0627a-91ef-b771-a45f-4932dee2eb2c, user: t1
+2026-02-17 22:32:19 [tomcat-handler-58] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-58] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-59] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-59] INFO  : End of message processing - session: f1182fbf-6bc5-1187-7b43-4a8d554998da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-60] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-60] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-61] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-61] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-62] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-62] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-63] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-63] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-64] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-64] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-65] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-65] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-66] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-66] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-67] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-67] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-68] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-68] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-69] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-69] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-70] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-70] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-71] INFO  : New message from user: t1
+2026-02-17 22:32:19 [tomcat-handler-71] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:32:19 [tomcat-handler-71] INFO  : Attempting to NONE data: 2
+2026-02-17 22:32:19 [tomcat-handler-71] INFO  : Attempting to NONE data: 3
+2026-02-17 22:32:19 [tomcat-handler-71] INFO  : Attempting to NONE data: 4
+2026-02-17 22:32:19 [tomcat-handler-71] INFO  : Attempting to NONE data: 5
+2026-02-17 22:32:19 [tomcat-handler-71] INFO  : Attempting to NONE data: 4
+2026-02-17 22:32:19 [tomcat-handler-71] INFO  : Attempting to NONE data: 5
+2026-02-17 22:32:19 [tomcat-handler-71] INFO  : Sending message to owner: 00b0627a-91ef-b771-a45f-4932dee2eb2c
+2026-02-17 22:32:19 [tomcat-handler-71] INFO  : End of message processing - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:34:55 [tomcat-handler-72] ERROR : Error null - session: f1182fbf-6bc5-1187-7b43-4a8d554998da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:34:55 [tomcat-handler-72] INFO  : Session closing: f1182fbf-6bc5-1187-7b43-4a8d554998da - reason: null
+2026-02-17 22:34:55 [tomcat-handler-73] ERROR : Error null - session: 00b0627a-91ef-b771-a45f-4932dee2eb2c from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:34:55 [tomcat-handler-73] INFO  : Session closing: 00b0627a-91ef-b771-a45f-4932dee2eb2c - reason: null
+2026-02-17 22:36:32 [tomcat-handler-75] INFO  : New session connected: 2c5525c4-3191-528b-571f-3837b08cde8e, user: t1
+2026-02-17 22:36:32 [tomcat-handler-74] INFO  : New session connected: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da, user: t1
+2026-02-17 22:36:32 [tomcat-handler-76] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-76] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-77] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-77] INFO  : End of message processing - session: 2c5525c4-3191-528b-571f-3837b08cde8e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-78] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-78] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-79] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-79] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-80] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-80] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-81] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-81] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-82] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-82] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-83] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-83] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-84] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-84] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-85] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-85] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-86] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-86] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-87] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-87] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-88] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-88] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-89] INFO  : New message from user: t1
+2026-02-17 22:36:32 [tomcat-handler-89] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:36:32 [tomcat-handler-89] INFO  : Attempting to NONE data: 2
+2026-02-17 22:36:32 [tomcat-handler-89] INFO  : Attempting to NONE data: 3
+2026-02-17 22:36:32 [tomcat-handler-89] INFO  : Attempting to NONE data: 4
+2026-02-17 22:36:32 [tomcat-handler-89] INFO  : Attempting to NONE data: 5
+2026-02-17 22:36:32 [tomcat-handler-89] INFO  : Attempting to NONE data: 4
+2026-02-17 22:36:32 [tomcat-handler-89] INFO  : Attempting to NONE data: 5
+2026-02-17 22:36:32 [tomcat-handler-89] INFO  : Sending message to owner: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da
+2026-02-17 22:36:32 [tomcat-handler-89] INFO  : End of message processing - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:03 [tomcat-handler-90] ERROR : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.lang.String cannot be cast to class org.springframework.security.core.userdetails.UserDetails (java.lang.String is in module java.base of loader 'bootstrap'; org.springframework.security.core.userdetails.UserDetails is in unnamed module of loader 'app')] with root cause
+java.lang.ClassCastException: class java.lang.String cannot be cast to class org.springframework.security.core.userdetails.UserDetails (java.lang.String is in module java.base of loader 'bootstrap'; org.springframework.security.core.userdetails.UserDetails is in unnamed module of loader 'app')
+	at pl.kamjer.shoppinglistservice.service.CustomService.getUserFromAuth(CustomService.java:21)
+	at pl.kamjer.shoppinglistservice.service.ExceptionService.insertLog(ExceptionService.java:19)
+	at pl.kamjer.shoppinglistservice.controller.ExceptionController.sendLog(ExceptionController.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:213)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at pl.kamjer.shoppinglistservice.config.components.SkipAuthorizationFilter.doFilterInternal(SkipAuthorizationFilter.java:30)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2026-02-17 22:38:27 [tomcat-handler-92] ERROR : Error null - session: 2c5525c4-3191-528b-571f-3837b08cde8e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:27 [tomcat-handler-91] ERROR : Error null - session: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:27 [tomcat-handler-92] INFO  : Session closing: 2c5525c4-3191-528b-571f-3837b08cde8e - reason: null
+2026-02-17 22:38:27 [tomcat-handler-91] INFO  : Session closing: 05e94df7-67c6-28a5-c1bf-a15d8e7c51da - reason: null
+2026-02-17 22:38:33 [tomcat-handler-93] INFO  : New session connected: 6ac86b36-90cc-4cec-1193-4fdd45f91abb, user: t1
+2026-02-17 22:38:33 [tomcat-handler-94] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-94] INFO  : End of message processing - session: 6ac86b36-90cc-4cec-1193-4fdd45f91abb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-95] INFO  : New session connected: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442, user: t1
+2026-02-17 22:38:33 [tomcat-handler-96] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-96] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-97] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-97] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-98] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-99] INFO  : New message from user: t1
+2026-02-17 22:38:33 [tomcat-handler-99] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 22:38:33 [tomcat-handler-99] INFO  : Attempting to NONE data: 2
+2026-02-17 22:38:33 [tomcat-handler-99] INFO  : Attempting to NONE data: 3
+2026-02-17 22:38:33 [tomcat-handler-99] INFO  : Attempting to NONE data: 4
+2026-02-17 22:38:33 [tomcat-handler-99] INFO  : Attempting to NONE data: 5
+2026-02-17 22:38:33 [tomcat-handler-99] INFO  : Attempting to NONE data: 4
+2026-02-17 22:38:33 [tomcat-handler-99] INFO  : Attempting to NONE data: 5
+2026-02-17 22:38:33 [tomcat-handler-99] INFO  : Sending message to owner: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442
+2026-02-17 22:38:33 [tomcat-handler-99] INFO  : End of message processing - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:41:56 [tomcat-handler-100] ERROR : Error null - session: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:41:56 [tomcat-handler-101] ERROR : Error null - session: 6ac86b36-90cc-4cec-1193-4fdd45f91abb from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:41:56 [tomcat-handler-100] INFO  : Session closing: 3fface51-ec2f-176e-4ac7-ecc2ef7ad442 - reason: null
+2026-02-17 23:41:56 [tomcat-handler-101] INFO  : Session closing: 6ac86b36-90cc-4cec-1193-4fdd45f91abb - reason: null
+2026-02-17 23:42:02 [tomcat-handler-103] INFO  : New session connected: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3, user: t1
+2026-02-17 23:42:02 [tomcat-handler-102] INFO  : New session connected: 5d04f99d-5a46-1fb8-760b-345f37fbd3b1, user: t1
+2026-02-17 23:42:02 [tomcat-handler-104] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-104] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-105] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-105] INFO  : End of message processing - session: 5d04f99d-5a46-1fb8-760b-345f37fbd3b1 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-106] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-106] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-107] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-107] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-108] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-108] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-109] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-109] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-110] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-110] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-111] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-111] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-112] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-112] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-113] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-113] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-114] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-114] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-115] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-115] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-116] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-116] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-117] INFO  : New message from user: t1
+2026-02-17 23:42:02 [tomcat-handler-117] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:02 [tomcat-handler-117] INFO  : Attempting to NONE data: 2
+2026-02-17 23:42:02 [tomcat-handler-117] INFO  : Attempting to NONE data: 3
+2026-02-17 23:42:02 [tomcat-handler-117] INFO  : Attempting to NONE data: 4
+2026-02-17 23:42:02 [tomcat-handler-117] INFO  : Attempting to NONE data: 5
+2026-02-17 23:42:02 [tomcat-handler-117] INFO  : Attempting to NONE data: 4
+2026-02-17 23:42:02 [tomcat-handler-117] INFO  : Attempting to NONE data: 5
+2026-02-17 23:42:02 [tomcat-handler-117] INFO  : Sending message to owner: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3
+2026-02-17 23:42:02 [tomcat-handler-117] INFO  : End of message processing - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:33 [tomcat-handler-118] ERROR : Error null - session: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:33 [tomcat-handler-119] ERROR : Error null - session: 5d04f99d-5a46-1fb8-760b-345f37fbd3b1 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:33 [tomcat-handler-118] INFO  : Session closing: 7eaf74ae-ca9b-1116-6c03-c65757ab7cd3 - reason: null
+2026-02-17 23:42:33 [tomcat-handler-119] INFO  : Session closing: 5d04f99d-5a46-1fb8-760b-345f37fbd3b1 - reason: null
+2026-02-17 23:42:39 [tomcat-handler-120] INFO  : New session connected: 29a4f967-53b0-ae49-7a49-3e3ba8be09ec, user: t1
+2026-02-17 23:42:39 [tomcat-handler-121] INFO  : New session connected: 74324aa2-0138-7bdc-25df-96e15bc6b5c0, user: t1
+2026-02-17 23:42:39 [tomcat-handler-122] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-122] INFO  : End of message processing - session: 29a4f967-53b0-ae49-7a49-3e3ba8be09ec from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-123] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-123] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-124] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-124] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-125] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-125] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-126] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-126] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-127] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-127] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-128] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-128] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-129] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-129] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-130] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-130] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-131] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-131] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-132] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-132] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-133] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-133] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-134] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-134] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-135] INFO  : New message from user: t1
+2026-02-17 23:42:39 [tomcat-handler-135] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:42:39 [tomcat-handler-135] INFO  : Attempting to NONE data: 2
+2026-02-17 23:42:39 [tomcat-handler-135] INFO  : Attempting to NONE data: 3
+2026-02-17 23:42:39 [tomcat-handler-135] INFO  : Attempting to NONE data: 4
+2026-02-17 23:42:39 [tomcat-handler-135] INFO  : Attempting to NONE data: 5
+2026-02-17 23:42:39 [tomcat-handler-135] INFO  : Attempting to NONE data: 4
+2026-02-17 23:42:40 [tomcat-handler-135] INFO  : Attempting to NONE data: 5
+2026-02-17 23:42:40 [tomcat-handler-135] INFO  : Sending message to owner: 74324aa2-0138-7bdc-25df-96e15bc6b5c0
+2026-02-17 23:42:40 [tomcat-handler-135] INFO  : End of message processing - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:05 [tomcat-handler-136] ERROR : Error null - session: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:05 [tomcat-handler-136] INFO  : Session closing: 74324aa2-0138-7bdc-25df-96e15bc6b5c0 - reason: null
+2026-02-17 23:45:08 [tomcat-handler-137] ERROR : Error null - session: 29a4f967-53b0-ae49-7a49-3e3ba8be09ec from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:08 [tomcat-handler-137] INFO  : Session closing: 29a4f967-53b0-ae49-7a49-3e3ba8be09ec - reason: null
+2026-02-17 23:45:11 [tomcat-handler-138] INFO  : New session connected: 496c8bee-c4e9-1c30-2a27-362b5814c03e, user: t1
+2026-02-17 23:45:11 [tomcat-handler-139] INFO  : New session connected: e7863487-c813-b1b8-3f32-138dca09bd87, user: t1
+2026-02-17 23:45:11 [tomcat-handler-140] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-140] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-141] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-141] INFO  : End of message processing - session: 496c8bee-c4e9-1c30-2a27-362b5814c03e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-142] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-142] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-143] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-143] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-144] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-144] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-145] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-145] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-146] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-146] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-147] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-147] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-148] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-148] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-149] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-149] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-150] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-150] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-151] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-151] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-151] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-151] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-152] INFO  : New message from user: t1
+2026-02-17 23:45:11 [tomcat-handler-152] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:45:11 [tomcat-handler-152] INFO  : Attempting to NONE data: 2
+2026-02-17 23:45:11 [tomcat-handler-152] INFO  : Attempting to NONE data: 3
+2026-02-17 23:45:11 [tomcat-handler-152] INFO  : Attempting to NONE data: 4
+2026-02-17 23:45:11 [tomcat-handler-152] INFO  : Attempting to NONE data: 5
+2026-02-17 23:45:11 [tomcat-handler-152] INFO  : Attempting to NONE data: 4
+2026-02-17 23:45:11 [tomcat-handler-152] INFO  : Attempting to NONE data: 5
+2026-02-17 23:45:12 [tomcat-handler-152] INFO  : Sending message to owner: e7863487-c813-b1b8-3f32-138dca09bd87
+2026-02-17 23:45:12 [tomcat-handler-152] INFO  : End of message processing - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:11 [tomcat-handler-153] ERROR : Error null - session: 496c8bee-c4e9-1c30-2a27-362b5814c03e from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:11 [tomcat-handler-153] INFO  : Session closing: 496c8bee-c4e9-1c30-2a27-362b5814c03e - reason: null
+2026-02-17 23:46:11 [tomcat-handler-154] ERROR : Error null - session: e7863487-c813-b1b8-3f32-138dca09bd87 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:11 [tomcat-handler-154] INFO  : Session closing: e7863487-c813-b1b8-3f32-138dca09bd87 - reason: null
+2026-02-17 23:46:25 [tomcat-handler-155] INFO  : New session connected: 24dacb55-0220-e8c2-33d2-7f73b6ab15aa, user: t1
+2026-02-17 23:46:25 [tomcat-handler-156] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-156] INFO  : End of message processing - session: 24dacb55-0220-e8c2-33d2-7f73b6ab15aa from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-157] INFO  : New session connected: e3502494-32bb-9a75-812d-a7d4eb21e104, user: t1
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-158] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-159] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-159] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-160] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-160] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-160] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-160] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-160] INFO  : New message from user: t1
+2026-02-17 23:46:25 [tomcat-handler-160] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:46:25 [tomcat-handler-160] INFO  : Attempting to NONE data: 2
+2026-02-17 23:46:25 [tomcat-handler-160] INFO  : Attempting to NONE data: 3
+2026-02-17 23:46:25 [tomcat-handler-160] INFO  : Attempting to NONE data: 4
+2026-02-17 23:46:25 [tomcat-handler-160] INFO  : Attempting to NONE data: 5
+2026-02-17 23:46:25 [tomcat-handler-160] INFO  : Attempting to NONE data: 4
+2026-02-17 23:46:25 [tomcat-handler-160] INFO  : Attempting to NONE data: 5
+2026-02-17 23:46:26 [tomcat-handler-160] INFO  : Sending message to owner: e3502494-32bb-9a75-812d-a7d4eb21e104
+2026-02-17 23:46:26 [tomcat-handler-160] INFO  : End of message processing - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:49:35 [tomcat-handler-161] ERROR : Error null - session: e3502494-32bb-9a75-812d-a7d4eb21e104 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:49:35 [tomcat-handler-162] ERROR : Error null - session: 24dacb55-0220-e8c2-33d2-7f73b6ab15aa from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:49:35 [tomcat-handler-162] INFO  : Session closing: 24dacb55-0220-e8c2-33d2-7f73b6ab15aa - reason: null
+2026-02-17 23:49:35 [tomcat-handler-161] INFO  : Session closing: e3502494-32bb-9a75-812d-a7d4eb21e104 - reason: null
+2026-02-17 23:59:22 [tomcat-handler-163] INFO  : New session connected: 5ff42499-01b0-f547-bc05-5838f1e7fad7, user: t1
+2026-02-17 23:59:22 [tomcat-handler-164] INFO  : New message from user: t1
+2026-02-17 23:59:22 [tomcat-handler-164] INFO  : End of message processing - session: 5ff42499-01b0-f547-bc05-5838f1e7fad7 from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-165] INFO  : New session connected: 4988cdf6-c0a8-4a86-c8f5-61907984460d, user: t1
+2026-02-17 23:59:23 [tomcat-handler-166] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-166] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-167] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-168] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-168] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : Attempting to NONE data: 2
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : Attempting to NONE data: 3
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : Attempting to NONE data: 4
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : Attempting to NONE data: 5
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : Attempting to NONE data: 4
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : Attempting to NONE data: 5
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : Sending message to owner: 4988cdf6-c0a8-4a86-c8f5-61907984460d
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : New message from user: t1
+2026-02-17 23:59:23 [tomcat-handler-169] INFO  : End of message processing - session: 4988cdf6-c0a8-4a86-c8f5-61907984460d from: UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=192.168.0.13, SessionId=null], Granted Authorities=[ROLE_USER]]

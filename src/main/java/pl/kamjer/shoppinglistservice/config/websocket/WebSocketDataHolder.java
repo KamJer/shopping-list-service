@@ -1,9 +1,11 @@
 package pl.kamjer.shoppinglistservice.config.websocket;
 
+import lombok.Getter;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.socket.WebSocketSession;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
+import pl.kamjer.shoppinglistservice.model.User;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -93,15 +95,22 @@ public class WebSocketDataHolder {
         return optional.orElseThrow(() ->   new NoResourcesFoundException("No such topic exists"));
     }
 
-    public void removeSessionFromTopics(WebSocketSession session) {
-        sessionsConnected.remove(session.getId());
-        subscribedTopicsAndSessions.forEach((key, value) -> value.remove(session.getId()));
-        subscribedTopicsAndSessions.entrySet()
-                .stream()
-                .filter(stringListEntry -> !stringListEntry.getValue().isEmpty() && !basicTopics.contains(stringListEntry.getKey()))
-                .map(Map.Entry::getKey)
-                .forEach(subscribedTopicsAndSessions::remove);
+//    public void removeSessionFromTopics(WebSocketSession session) {
+//        sessionsConnected.remove(session.getId());
+//        subscribedTopicsAndSessions.forEach((key, value) -> value.remove(session.getId()));
+//        subscribedTopicsAndSessions.entrySet()
+//                .stream()
+//                .filter(stringListEntry -> !stringListEntry.getValue().isEmpty() && !basicTopics.contains(stringListEntry.getKey()))
+//                .map(Map.Entry::getKey)
+//                .forEach(subscribedTopicsAndSessions::remove);
+//    }
 
+    public void removeSessionFromTopics(WebSocketSession session) {
+        String sessionId = session.getId();
+        sessionsConnected.remove(sessionId);
+        subscribedTopicsAndSessions.values().forEach(sessions -> sessions.remove(sessionId));
+        subscribedTopicsAndSessions.entrySet().removeIf(entry ->
+                entry.getValue().isEmpty() && !basicTopics.contains(entry.getKey()));
     }
 
     public WebSocketSession getCurrentSession() {

@@ -35,14 +35,7 @@ public class WebSocketUtilController extends WebsocketCustomController {
         HashMap<Message.Header, String> headers = new HashMap<>();
         headers.put(Message.Header.ID, webSocketDataHolder.getCurrentSession().getId());
         headers.put(Message.Header.DEST, "/synchronizeData");
-//        generating body for a message
-        String auth = "";
-        List<String> authList = webSocketDataHolder.getCurrentSession().getHandshakeHeaders().get("Authorization");
-//        checking if auth header exists and if it exists it's not empty
-        if (authList != null && !authList.isEmpty()) {
-            auth = authList.getFirst();
-        }
-        headers.put(Message.Header.BODY, objectMapper.writeValueAsString(webSocketUtilService.synchronizeWebSocket(allDto, auth)));
+        headers.put(Message.Header.BODY, objectMapper.writeValueAsString(webSocketUtilService.synchronizeWebSocket(allDto)));
         Message message = new Message(Message.Command.MESSAGE, headers);
         log.log(Level.INFO, "Sending message to owner: " + webSocketDataHolder.getCurrentSession().getId());
 //        sending message to an original sender

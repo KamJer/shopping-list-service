@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Builder
-public class ShoppingItemDto extends Dto {
+public class ShoppingItemDto implements Dto {
 
     private long shoppingItemId;
     private long itemAmountTypeId;

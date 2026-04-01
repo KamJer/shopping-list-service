@@ -6,6 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.security.authentication.AuthenticationServiceException;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.validation.FieldError;
@@ -60,6 +62,13 @@ public class ShoppingListControllerAdvice {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
+    @ExceptionHandler({BadCredentialsException.class})
+    public ResponseEntity<String> BadCredentialsException(BadCredentialsException ex, Principal principal) {
+        String textForError = textForError(principal);
+        log.error(textForError, ex);
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(ex.getMessage());
+    }
+
     private String textForError(Principal principal) {
         String text = "No user logged, public endpoint: ";
         Optional<Principal> optionalPrincipal = Optional.ofNullable(principal);
@@ -67,5 +76,17 @@ public class ShoppingListControllerAdvice {
             text = "User logged: " + optionalPrincipal.get().getName() + ": ";
         }
         return text;
+    }
+
+    @ExceptionHandler({AuthenticationServiceException.class})
+    private ResponseEntity<String> handelAuthenticationServiceException(AuthenticationServiceException ex) {
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> handleAllExceptions(Exception ex, Principal principal) {
+        String textForError = textForError(principal);
+        log.error(textForError, ex);
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
     }
 }

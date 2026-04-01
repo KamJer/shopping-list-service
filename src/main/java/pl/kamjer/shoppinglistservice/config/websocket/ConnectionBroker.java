@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
+import pl.kamjer.shoppinglistservice.functional_interface.HandleAuthAction;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;

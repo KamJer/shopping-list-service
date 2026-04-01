@@ -1,16 +1,30 @@
 package pl.kamjer.shoppinglistservice.config.websocket;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.websocket.Session;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.boot.autoconfigure.jms.JmsProperties;
+import org.springframework.http.HttpHeaders;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.WebSocketMessage;
 import org.springframework.web.socket.WebSocketSession;
+import org.springframework.web.util.UriComponentsBuilder;
+import pl.kamjer.shoppinglistservice.config.security.JwtAuthToken;
+import pl.kamjer.shoppinglistservice.config.security.JwtAuthenticationProvider;
+import pl.kamjer.shoppinglistservice.functional_interface.UserProvider;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.security.Principal;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Component
 @RequiredArgsConstructor
@@ -22,12 +36,16 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
     private final ConnectionBroker connectionBroker;
     private final WebsocketMessageDecryptor websocketMessageDecryptor;
 
-    private final Map<String, StringBuilder> partialMessagesMap = new HashMap<>();
+    private final ConcurrentHashMap<String, StringBuilder> partialMessagesMap = new ConcurrentHashMap<>();
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) {
-        log.info("New session connected: {}, user: {}", session.getId(), Optional.ofNullable(session.getPrincipal()).orElseThrow().getName());
+        log.info("New session connected: {}, user: {}", session.getId(), Optional.ofNullable(session.getPrincipal()).map(Principal::getName).orElse(""));
         webSocketDataHolder.putSessionConnected(session);
+        session.getAttributes().put("TOKEN", UriComponentsBuilder.fromUri(session.getUri())
+                .build()
+                .getQueryParams()
+                .getFirst("token"));
     }
 
     @Override
@@ -45,12 +63,11 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
 
                 if (message.isLast()) {
                     String fullMessage = partialMessage.toString();
-                    log.info("New message from user: {}", Optional.ofNullable(session.getPrincipal()).orElseThrow().getName());
+                    log.info("New message from user: {}", Optional.ofNullable(session.getPrincipal()).map(Principal::getName).orElse(""));
 
                     String[] test = fullMessage.split(Message.MESSAGE_ENDER);
-                    
 
-                    Message protocolMessage = websocketMessageDecryptor.decipher(test[test.length-1]);
+                    Message protocolMessage = websocketMessageDecryptor.decipher(test[test.length - 1]);
 
                     if (!messageValidator.validateMessage(protocolMessage)) {
                         throw new IllegalArgumentException("Wrong header type for send message");
@@ -68,21 +85,25 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
         } catch (Exception e) {
             if (e instanceof InvocationTargetException iE) {
                 log.error(iE.getCause());
+                Arrays.stream(iE.getStackTrace()).forEach(stackTraceElement -> {
+                    log.error(stackTraceElement.toString());
+                });
                 connectionBroker.handleException(session, iE.getCause());
             } else {
                 log.error(e);
                 connectionBroker.handleException(session, e);
             }
+            partialMessagesMap.remove(session.getId());
         } finally {
-            log.info("End of message processing - session: {} from: {}", session.getId(), session.getPrincipal());
+            log.info("End of message processing - session: {} from: {}", session.getId(), Optional.ofNullable(session.getPrincipal()).map(Principal::getName).orElse(""));
             webSocketDataHolder.clearCurrentSession();
         }
     }
 
     @Override
     public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
-        log.error("Error {} - session: {} from: {}", exception.getMessage(), session.getId(), session.getPrincipal());
-//        connectionBroker.handleException(session, exception);
+        log.error("Error {} - session: {} from: {}", exception.getMessage(), session.getId(), Optional.ofNullable(session.getPrincipal()).map(Principal::getName).orElse(""));
+        connectionBroker.handleException(session, exception);
         webSocketDataHolder.removeSessionFromTopics(session);
     }
 
@@ -100,4 +121,13 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
     public void registerTopic(String... topic) {
         webSocketDataHolder.registerTopic(topic);
     }
+
+//    private void validateUser(String auth, WebSocketSession session) throws IOException {
+//        try {
+//            Authentication authentication = new JwtAuthToken(auth);
+//            authenticationManager.authenticate(authentication);
+//        } catch (BadCredentialsException ex) {
+//            session.close(CloseStatus.NOT_ACCEPTABLE.withReason(ex.getMessage()));
+//        }
+//    }
 }

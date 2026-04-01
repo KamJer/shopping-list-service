@@ -1,0 +1,229 @@
+2026-03-19 22:38:26 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-03-19 22:38:27 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 20004 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-03-19 22:38:27 [main] INFO  : The following 1 profile is active: "dev"
+2026-03-19 22:38:28 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19 22:38:28 [main] INFO  : Finished Spring Data repository scanning in 124 ms. Found 3 JPA repository interfaces.
+2026-03-19 22:38:29 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-03-19 22:38:29 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-03-19 22:38:29 [main] INFO  : Starting service [Tomcat]
+2026-03-19 22:38:29 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-19 22:38:29 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-03-19 22:38:29 [main] INFO  : Root WebApplicationContext: initialization completed in 2486 ms
+2026-03-19 22:38:30 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-03-19 22:38:30 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-03-19 22:38:30 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-03-19 22:38:30 [main] INFO  : Successfully validated 1 migration (execution time 00:00.033s)
+2026-03-19 22:38:30 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-03-19 22:38:30 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-03-19 22:38:30 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-19 22:38:30 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-19 22:38:30 [main] INFO  : HHH000026: Second-level cache disabled
+2026-03-19 22:38:31 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19 22:38:31 [main] INFO  : HikariPool-1 - Starting...
+2026-03-19 22:38:31 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@f252762
+2026-03-19 22:38:31 [main] INFO  : HikariPool-1 - Start completed.
+2026-03-19 22:38:31 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-19 22:38:32 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19 22:38:32 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19 22:38:32 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19 22:38:32 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name jwtAuthenticationProvider
+2026-03-19 22:38:33 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-03-19 22:38:33 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-03-19 22:38:34 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-03-19 22:38:34 [main] INFO  : Started ShoppingListServiceApplication in 7.794 seconds (process running for 8.299)
+2026-03-19 22:39:32 [tomcat-handler-0] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 22:39:32 [tomcat-handler-0] INFO  : Initializing Servlet 'dispatcherServlet'
+2026-03-19 22:39:32 [tomcat-handler-0] INFO  : Completed initialization in 1 ms
+2026-03-19 22:41:02 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m964ms563µs300ns).
+2026-03-19 22:45:24 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m52s323ms708µs400ns).
+2026-03-19 22:45:24 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 22:45:24 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2026-03-19 22:45:26 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19 22:45:26 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2026-03-19 22:45:26 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2026-03-19 22:45:29 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-03-19 22:45:29 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 17704 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-03-19 22:45:29 [main] INFO  : The following 1 profile is active: "dev"
+2026-03-19 22:45:30 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19 22:45:30 [main] INFO  : Finished Spring Data repository scanning in 106 ms. Found 3 JPA repository interfaces.
+2026-03-19 22:45:31 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-03-19 22:45:31 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-03-19 22:45:31 [main] INFO  : Starting service [Tomcat]
+2026-03-19 22:45:31 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-19 22:45:31 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-03-19 22:45:31 [main] INFO  : Root WebApplicationContext: initialization completed in 1846 ms
+2026-03-19 22:45:32 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-03-19 22:45:32 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-03-19 22:45:32 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-03-19 22:45:32 [main] INFO  : Successfully validated 1 migration (execution time 00:00.026s)
+2026-03-19 22:45:32 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-03-19 22:45:32 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-03-19 22:45:32 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-19 22:45:32 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-19 22:45:32 [main] INFO  : HHH000026: Second-level cache disabled
+2026-03-19 22:45:32 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19 22:45:32 [main] INFO  : HikariPool-1 - Starting...
+2026-03-19 22:45:32 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@f252762
+2026-03-19 22:45:32 [main] INFO  : HikariPool-1 - Start completed.
+2026-03-19 22:45:32 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-19 22:45:33 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19 22:45:33 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19 22:45:34 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19 22:45:34 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name jwtAuthenticationProvider
+2026-03-19 22:45:34 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-03-19 22:45:35 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-03-19 22:45:35 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-03-19 22:45:35 [main] INFO  : Started ShoppingListServiceApplication in 6.06 seconds (process running for 6.391)
+2026-03-19 22:45:47 [tomcat-handler-0] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 22:45:47 [tomcat-handler-0] INFO  : Initializing Servlet 'dispatcherServlet'
+2026-03-19 22:45:47 [tomcat-handler-0] INFO  : Completed initialization in 5 ms
+2026-03-19 22:46:11 [tomcat-handler-0] INFO  : New session connected: 9265caa8-9deb-d39e-2413-95ec622231b5, user: t1
+2026-03-19 22:46:16 [tomcat-handler-1] INFO  : New message from user: t1
+2026-03-19 22:46:16 [tomcat-handler-1] INFO  : End of message processing - session: 9265caa8-9deb-d39e-2413-95ec622231b5 from: t1
+2026-03-19 22:46:21 [tomcat-handler-2] INFO  : Session closing: 9265caa8-9deb-d39e-2413-95ec622231b5 - reason: null
+2026-03-19 22:56:43 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 22:56:43 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2026-03-19 22:56:45 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19 22:56:45 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2026-03-19 22:56:45 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2026-03-19 22:56:52 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-03-19 22:56:52 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 7812 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-03-19 22:56:52 [main] INFO  : The following 1 profile is active: "dev"
+2026-03-19 22:56:53 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19 22:56:53 [main] INFO  : Finished Spring Data repository scanning in 153 ms. Found 3 JPA repository interfaces.
+2026-03-19 22:56:54 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-03-19 22:56:54 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-03-19 22:56:54 [main] INFO  : Starting service [Tomcat]
+2026-03-19 22:56:54 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-19 22:56:55 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-03-19 22:56:55 [main] INFO  : Root WebApplicationContext: initialization completed in 2441 ms
+2026-03-19 22:56:55 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-03-19 22:56:56 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-03-19 22:56:56 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-03-19 22:56:56 [main] INFO  : Successfully validated 1 migration (execution time 00:00.039s)
+2026-03-19 22:56:56 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-03-19 22:56:56 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-03-19 22:56:56 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-19 22:56:56 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-19 22:56:56 [main] INFO  : HHH000026: Second-level cache disabled
+2026-03-19 22:56:56 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19 22:56:56 [main] INFO  : HikariPool-1 - Starting...
+2026-03-19 22:56:56 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@f252762
+2026-03-19 22:56:56 [main] INFO  : HikariPool-1 - Start completed.
+2026-03-19 22:56:57 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-19 22:56:58 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19 22:56:58 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19 22:56:59 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19 22:56:59 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name jwtAuthenticationProvider
+2026-03-19 22:56:59 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-03-19 22:57:00 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-03-19 22:57:00 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-03-19 22:57:00 [main] INFO  : Started ShoppingListServiceApplication in 8.563 seconds (process running for 9.069)
+2026-03-19 22:57:06 [tomcat-handler-0] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 22:57:06 [tomcat-handler-0] INFO  : Initializing Servlet 'dispatcherServlet'
+2026-03-19 22:57:06 [tomcat-handler-0] INFO  : Completed initialization in 1 ms
+2026-03-19 22:57:07 [tomcat-handler-0] INFO  : New session connected: 6722b6c5-f59c-634a-0542-093a3525dbe7, user: t1
+2026-03-19 22:59:01 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 22:59:01 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2026-03-19 22:59:03 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19 22:59:03 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2026-03-19 22:59:03 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2026-03-19 22:59:04 [SpringApplicationShutdownHook] ERROR : Error java.nio.channels.ClosedChannelException - session: 6722b6c5-f59c-634a-0542-093a3525dbe7 from: t1
+2026-03-19 22:59:04 [SpringApplicationShutdownHook] ERROR : Closing session due to exception for StandardWebSocketSession[id=6722b6c5-f59c-634a-0542-093a3525dbe7, uri=ws://localhost:5443/ws?token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3Mzk1NjA3MywiZXhwIjoxNzczOTg2MDczfQ.rQkqw-yqyWhiRh2sU82Td87RmELT3nzdfqHA1FjHv84]
+java.io.IOException: The transformer has been closed and may no longer be used
+	at org.apache.tomcat.websocket.PerMessageDeflate.sendMessagePart(PerMessageDeflate.java:358)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:288)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:223)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:138)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleTransportError(WebSocketHandler.java:103)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleTransportError(WebSocketHandlerDecorator.java:80)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleTransportError(LoggingWebSocketHandlerDecorator.java:64)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleTransportError(ExceptionWebSocketHandlerDecorator.java:68)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onError(StandardWebSocketHandlerAdapter.java:156)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:793)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:575)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:542)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:530)
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:1022)
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:46)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4090)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:4700)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:468)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:915)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:448)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:301)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.destroy(TomcatWebServer.java:374)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:182)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.NullPointerException: Deflater has been closed
+	at java.base/java.util.zip.Deflater.ensureOpen(Deflater.java:902)
+	at java.base/java.util.zip.Deflater.deflate(Deflater.java:564)
+	at org.apache.tomcat.websocket.PerMessageDeflate.sendMessagePart(PerMessageDeflate.java:353)
+	... 51 common frames omitted
+2026-03-19 22:59:04 [SpringApplicationShutdownHook] INFO  : Session closing: 6722b6c5-f59c-634a-0542-093a3525dbe7 - reason: The web application is stopping
+2026-03-19 22:59:13 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-03-19 22:59:13 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 9124 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-03-19 22:59:13 [main] INFO  : The following 1 profile is active: "dev"
+2026-03-19 22:59:15 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19 22:59:15 [main] INFO  : Finished Spring Data repository scanning in 135 ms. Found 3 JPA repository interfaces.
+2026-03-19 22:59:16 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-03-19 22:59:16 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-03-19 22:59:16 [main] INFO  : Starting service [Tomcat]
+2026-03-19 22:59:16 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-19 22:59:16 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-03-19 22:59:16 [main] INFO  : Root WebApplicationContext: initialization completed in 2561 ms
+2026-03-19 22:59:17 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-03-19 22:59:17 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-03-19 22:59:17 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-03-19 22:59:17 [main] INFO  : Successfully validated 1 migration (execution time 00:00.034s)
+2026-03-19 22:59:17 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-03-19 22:59:17 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-03-19 22:59:17 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-19 22:59:17 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-19 22:59:18 [main] INFO  : HHH000026: Second-level cache disabled
+2026-03-19 22:59:18 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19 22:59:18 [main] INFO  : HikariPool-1 - Starting...
+2026-03-19 22:59:18 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@f252762
+2026-03-19 22:59:18 [main] INFO  : HikariPool-1 - Start completed.
+2026-03-19 22:59:18 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-19 22:59:19 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19 22:59:19 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19 22:59:19 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19 22:59:19 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name jwtAuthenticationProvider
+2026-03-19 22:59:20 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-03-19 22:59:20 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-03-19 22:59:20 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-03-19 22:59:20 [main] INFO  : Started ShoppingListServiceApplication in 7.632 seconds (process running for 8.309)
+2026-03-19 23:08:11 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 23:08:11 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2026-03-19 23:08:12 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19 23:08:12 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2026-03-19 23:08:12 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.

@@ -17,7 +17,5 @@ public class WebsocketMessageDecryptor {
 
     public String jsonphyMessage(Message message) throws JsonProcessingException {
         return objectMapper.writeValueAsString(message);
-
     }
-
 }

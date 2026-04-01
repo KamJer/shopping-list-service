@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 @Builder
 @Getter
-public class CategoryDto {
+public class CategoryDto implements Dto {
 
     private long categoryId;
     private String categoryName;

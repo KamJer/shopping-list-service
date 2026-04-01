@@ -47,9 +47,12 @@ public class Message {
 
     public enum Header {
         ID,
+//        destination (where message is addressed)
         DEST,
         BODY,
-        PARA
+//        Parameter: for custom parameter a user or server may want to use in a destination url (used when url contains {parameter})
+        PARA,
+        AUTH
     }
 
     public final static String MESSAGE_ENDER = "\0";
@@ -60,7 +63,8 @@ public class Message {
 
     //how it should look ex 1.
     //{"command":"CONNECT",
-    //"headers":{""}}
+    //"headers":{"AUTH": "BASIC ..."}}
+    //
     //
     //{"command":"SUBSCRIBE",
     //"headers":{"PARA":"test";,"DEST":"{"/{test}/test"}}

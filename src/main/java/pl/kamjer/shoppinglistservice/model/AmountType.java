@@ -14,7 +14,7 @@ import java.util.List;
 @ToString
 @Entity
 @Table(name = "AMOUNT_TYPE")
-public class AmountType {
+public class AmountType implements ShoppingEntity {
 
     @Column(name = "amount_type_id")
     @Id

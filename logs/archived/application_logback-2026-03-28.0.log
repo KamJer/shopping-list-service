@@ -1,0 +1,641 @@
+2026-03-28 12:24:16 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h16m25s135ms845µs).
+2026-03-28 12:51:26 [tomcat-handler-23] INFO  : New session connected: ed8292a5-e5b8-315e-17aa-b8ce9d44845c, user: t1
+2026-03-28 12:51:26 [tomcat-handler-24] INFO  : New message from user: t1
+2026-03-28 12:51:26 [tomcat-handler-24] INFO  : End of message processing - session: ed8292a5-e5b8-315e-17aa-b8ce9d44845c from: t1
+2026-03-28 12:51:26 [tomcat-handler-24] INFO  : New message from user: t1
+2026-03-28 12:51:26 [tomcat-handler-24] INFO  : End of message processing - session: ed8292a5-e5b8-315e-17aa-b8ce9d44845c from: t1
+2026-03-28 12:51:26 [tomcat-handler-24] INFO  : New message from user: t1
+2026-03-28 12:51:26 [tomcat-handler-24] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 12:51:26 [tomcat-handler-24] INFO  : End of message processing - session: ed8292a5-e5b8-315e-17aa-b8ce9d44845c from: t1
+2026-03-28 12:51:26 [tomcat-handler-24] INFO  : New message from user: t1
+2026-03-28 12:51:26 [tomcat-handler-24] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDY5ODY4NiwiZXhwIjoxNzc0Njk5NTg2fQ.qWPTUo9iwDD3cF9QMjR4tkR0E2Xp4EKMOenPSvE1m-FupZ3EJEm7xGX47QrEYokf, Granted Authorities=[USER]]
+2026-03-28 12:51:26 [tomcat-handler-24] INFO  : Sending message to owner: ed8292a5-e5b8-315e-17aa-b8ce9d44845c
+2026-03-28 12:51:26 [tomcat-handler-24] INFO  : End of message processing - session: ed8292a5-e5b8-315e-17aa-b8ce9d44845c from: t1
+2026-03-28 12:53:28 [tomcat-handler-25] INFO  : Session closing: ed8292a5-e5b8-315e-17aa-b8ce9d44845c - reason: null
+2026-03-28 12:54:00 [tomcat-handler-26] INFO  : New session connected: b4befebf-2856-eff8-875c-67c3f3bfe196, user: t1
+2026-03-28 12:54:00 [tomcat-handler-27] INFO  : New message from user: t1
+2026-03-28 12:54:00 [tomcat-handler-27] INFO  : End of message processing - session: b4befebf-2856-eff8-875c-67c3f3bfe196 from: t1
+2026-03-28 12:54:00 [tomcat-handler-27] INFO  : New message from user: t1
+2026-03-28 12:54:00 [tomcat-handler-27] INFO  : End of message processing - session: b4befebf-2856-eff8-875c-67c3f3bfe196 from: t1
+2026-03-28 12:54:00 [tomcat-handler-27] INFO  : New message from user: t1
+2026-03-28 12:54:00 [tomcat-handler-27] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 12:54:00 [tomcat-handler-27] INFO  : End of message processing - session: b4befebf-2856-eff8-875c-67c3f3bfe196 from: t1
+2026-03-28 12:54:00 [tomcat-handler-27] INFO  : New message from user: t1
+2026-03-28 12:54:00 [tomcat-handler-27] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDY5ODg0MCwiZXhwIjoxNzc0Njk5NzQwfQ.BLAJNBhlFhSz1RyiWCfE-fA81TiAhnWt7czOaCOWlmVTdkfas_Qv-Qz1ejssqevQ, Granted Authorities=[USER]]
+2026-03-28 12:54:00 [tomcat-handler-27] INFO  : Sending message to owner: b4befebf-2856-eff8-875c-67c3f3bfe196
+2026-03-28 12:54:00 [tomcat-handler-27] INFO  : End of message processing - session: b4befebf-2856-eff8-875c-67c3f3bfe196 from: t1
+2026-03-28 12:55:31 [tomcat-handler-28] INFO  : Session closing: b4befebf-2856-eff8-875c-67c3f3bfe196 - reason: null
+2026-03-28 12:56:05 [tomcat-handler-29] INFO  : New session connected: 4c24be49-e7a0-103b-990c-072bfa96d066, user: t1
+2026-03-28 12:56:05 [tomcat-handler-30] INFO  : New message from user: t1
+2026-03-28 12:56:05 [tomcat-handler-30] INFO  : End of message processing - session: 4c24be49-e7a0-103b-990c-072bfa96d066 from: t1
+2026-03-28 12:56:05 [tomcat-handler-30] INFO  : New message from user: t1
+2026-03-28 12:56:05 [tomcat-handler-30] INFO  : End of message processing - session: 4c24be49-e7a0-103b-990c-072bfa96d066 from: t1
+2026-03-28 12:56:05 [tomcat-handler-30] INFO  : New message from user: t1
+2026-03-28 12:56:05 [tomcat-handler-30] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 12:56:05 [tomcat-handler-30] INFO  : End of message processing - session: 4c24be49-e7a0-103b-990c-072bfa96d066 from: t1
+2026-03-28 12:56:05 [tomcat-handler-30] INFO  : New message from user: t1
+2026-03-28 12:56:05 [tomcat-handler-30] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDY5ODk2NSwiZXhwIjoxNzc0Njk5ODY1fQ.HgMfbnwx8hW9jhKGwvrbV-jmNkDQMaJHKnF_VZShZeiqtPEbHjxS9D0uneD9cP7i, Granted Authorities=[USER]]
+2026-03-28 12:56:05 [tomcat-handler-30] INFO  : Sending message to owner: 4c24be49-e7a0-103b-990c-072bfa96d066
+2026-03-28 12:56:05 [tomcat-handler-30] INFO  : End of message processing - session: 4c24be49-e7a0-103b-990c-072bfa96d066 from: t1
+2026-03-28 12:57:19 [tomcat-handler-31] INFO  : Session closing: 4c24be49-e7a0-103b-990c-072bfa96d066 - reason: null
+2026-03-28 12:57:38 [tomcat-handler-32] INFO  : New session connected: 7b593b0c-e28a-213e-3e06-43e2b5ed55a5, user: t1
+2026-03-28 12:57:38 [tomcat-handler-33] INFO  : New message from user: t1
+2026-03-28 12:57:38 [tomcat-handler-33] INFO  : End of message processing - session: 7b593b0c-e28a-213e-3e06-43e2b5ed55a5 from: t1
+2026-03-28 12:57:38 [tomcat-handler-33] INFO  : New message from user: t1
+2026-03-28 12:57:38 [tomcat-handler-33] INFO  : End of message processing - session: 7b593b0c-e28a-213e-3e06-43e2b5ed55a5 from: t1
+2026-03-28 12:57:38 [tomcat-handler-33] INFO  : New message from user: t1
+2026-03-28 12:57:38 [tomcat-handler-33] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 12:57:38 [tomcat-handler-33] INFO  : End of message processing - session: 7b593b0c-e28a-213e-3e06-43e2b5ed55a5 from: t1
+2026-03-28 12:57:38 [tomcat-handler-34] INFO  : New message from user: t1
+2026-03-28 12:57:38 [tomcat-handler-34] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDY5ODk2NSwiZXhwIjoxNzc0Njk5ODY1fQ.HgMfbnwx8hW9jhKGwvrbV-jmNkDQMaJHKnF_VZShZeiqtPEbHjxS9D0uneD9cP7i, Granted Authorities=[USER]]
+2026-03-28 12:57:38 [tomcat-handler-34] INFO  : Sending message to owner: 7b593b0c-e28a-213e-3e06-43e2b5ed55a5
+2026-03-28 12:57:38 [tomcat-handler-34] INFO  : End of message processing - session: 7b593b0c-e28a-213e-3e06-43e2b5ed55a5 from: t1
+2026-03-28 12:59:03 [tomcat-handler-35] INFO  : Session closing: 7b593b0c-e28a-213e-3e06-43e2b5ed55a5 - reason: null
+2026-03-28 12:59:03 [tomcat-handler-36] INFO  : New session connected: 506c0f8a-af6f-4fd1-1f23-9abd85af254e, user: t1
+2026-03-28 12:59:03 [tomcat-handler-37] INFO  : New message from user: t1
+2026-03-28 12:59:03 [tomcat-handler-37] INFO  : End of message processing - session: 506c0f8a-af6f-4fd1-1f23-9abd85af254e from: t1
+2026-03-28 12:59:03 [tomcat-handler-37] INFO  : New message from user: t1
+2026-03-28 12:59:03 [tomcat-handler-37] INFO  : End of message processing - session: 506c0f8a-af6f-4fd1-1f23-9abd85af254e from: t1
+2026-03-28 12:59:03 [tomcat-handler-37] INFO  : New message from user: t1
+2026-03-28 12:59:03 [tomcat-handler-37] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 12:59:03 [tomcat-handler-37] INFO  : End of message processing - session: 506c0f8a-af6f-4fd1-1f23-9abd85af254e from: t1
+2026-03-28 12:59:03 [tomcat-handler-37] INFO  : New message from user: t1
+2026-03-28 12:59:03 [tomcat-handler-37] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDY5ODk2NSwiZXhwIjoxNzc0Njk5ODY1fQ.HgMfbnwx8hW9jhKGwvrbV-jmNkDQMaJHKnF_VZShZeiqtPEbHjxS9D0uneD9cP7i, Granted Authorities=[USER]]
+2026-03-28 12:59:03 [tomcat-handler-37] INFO  : Sending message to owner: 506c0f8a-af6f-4fd1-1f23-9abd85af254e
+2026-03-28 12:59:03 [tomcat-handler-37] INFO  : End of message processing - session: 506c0f8a-af6f-4fd1-1f23-9abd85af254e from: t1
+2026-03-28 13:01:24 [tomcat-handler-38] INFO  : Session closing: 506c0f8a-af6f-4fd1-1f23-9abd85af254e - reason: null
+2026-03-28 13:01:47 [tomcat-handler-39] INFO  : New session connected: 57c89995-df33-5942-f464-c6c0f2bcd648, user: t1
+2026-03-28 13:01:47 [tomcat-handler-40] INFO  : New message from user: t1
+2026-03-28 13:01:47 [tomcat-handler-40] INFO  : End of message processing - session: 57c89995-df33-5942-f464-c6c0f2bcd648 from: t1
+2026-03-28 13:01:47 [tomcat-handler-40] INFO  : New message from user: t1
+2026-03-28 13:01:47 [tomcat-handler-40] INFO  : End of message processing - session: 57c89995-df33-5942-f464-c6c0f2bcd648 from: t1
+2026-03-28 13:01:47 [tomcat-handler-40] INFO  : New message from user: t1
+2026-03-28 13:01:47 [tomcat-handler-40] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 13:01:47 [tomcat-handler-40] INFO  : End of message processing - session: 57c89995-df33-5942-f464-c6c0f2bcd648 from: t1
+2026-03-28 13:01:47 [tomcat-handler-40] INFO  : New message from user: t1
+2026-03-28 13:01:47 [tomcat-handler-40] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDY5OTMwNywiZXhwIjoxNzc0NzAwMjA3fQ.cjZiy7UiZbLTGKUWPTN8upnXE0Q_jq3zLhisRER9p55RK-Y0gXnV5UtLVZPGfNSW, Granted Authorities=[USER]]
+2026-03-28 13:01:47 [tomcat-handler-40] INFO  : Sending message to owner: 57c89995-df33-5942-f464-c6c0f2bcd648
+2026-03-28 13:01:47 [tomcat-handler-40] INFO  : End of message processing - session: 57c89995-df33-5942-f464-c6c0f2bcd648 from: t1
+2026-03-28 13:03:09 [tomcat-handler-41] INFO  : Session closing: 57c89995-df33-5942-f464-c6c0f2bcd648 - reason: null
+2026-03-28 13:03:41 [tomcat-handler-42] INFO  : New session connected: 07cb0506-5eb2-3fe7-1661-53d1abb1051c, user: t1
+2026-03-28 13:03:41 [tomcat-handler-43] INFO  : New message from user: t1
+2026-03-28 13:03:41 [tomcat-handler-43] INFO  : End of message processing - session: 07cb0506-5eb2-3fe7-1661-53d1abb1051c from: t1
+2026-03-28 13:03:41 [tomcat-handler-43] INFO  : New message from user: t1
+2026-03-28 13:03:41 [tomcat-handler-43] INFO  : End of message processing - session: 07cb0506-5eb2-3fe7-1661-53d1abb1051c from: t1
+2026-03-28 13:03:41 [tomcat-handler-43] INFO  : New message from user: t1
+2026-03-28 13:03:41 [tomcat-handler-43] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 13:03:41 [tomcat-handler-43] INFO  : End of message processing - session: 07cb0506-5eb2-3fe7-1661-53d1abb1051c from: t1
+2026-03-28 13:03:41 [tomcat-handler-43] INFO  : New message from user: t1
+2026-03-28 13:03:41 [tomcat-handler-43] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDY5OTQyMSwiZXhwIjoxNzc0NzAwMzIxfQ.2TOKKKjQIODX3q9u-M5puEs1jXNppeU5diQMdIUH0Z6jYhACzY9BQjzdtx9X7wYN, Granted Authorities=[USER]]
+2026-03-28 13:03:42 [tomcat-handler-43] INFO  : Sending message to owner: 07cb0506-5eb2-3fe7-1661-53d1abb1051c
+2026-03-28 13:03:42 [tomcat-handler-43] INFO  : End of message processing - session: 07cb0506-5eb2-3fe7-1661-53d1abb1051c from: t1
+2026-03-28 13:06:30 [tomcat-handler-44] INFO  : Session closing: 07cb0506-5eb2-3fe7-1661-53d1abb1051c - reason: null
+2026-03-28 13:07:51 [tomcat-handler-45] INFO  : New session connected: 7fabb03e-1f1c-c504-5251-f7adcb86cf9e, user: t1
+2026-03-28 13:07:51 [tomcat-handler-46] INFO  : New message from user: t1
+2026-03-28 13:07:51 [tomcat-handler-46] INFO  : End of message processing - session: 7fabb03e-1f1c-c504-5251-f7adcb86cf9e from: t1
+2026-03-28 13:07:51 [tomcat-handler-46] INFO  : New message from user: t1
+2026-03-28 13:07:51 [tomcat-handler-46] INFO  : End of message processing - session: 7fabb03e-1f1c-c504-5251-f7adcb86cf9e from: t1
+2026-03-28 13:07:51 [tomcat-handler-46] INFO  : New message from user: t1
+2026-03-28 13:07:51 [tomcat-handler-46] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 13:07:51 [tomcat-handler-46] INFO  : End of message processing - session: 7fabb03e-1f1c-c504-5251-f7adcb86cf9e from: t1
+2026-03-28 13:07:51 [tomcat-handler-46] INFO  : New message from user: t1
+2026-03-28 13:07:51 [tomcat-handler-46] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDY5OTY3MSwiZXhwIjoxNzc0NzAwNTcxfQ.Fxw-2seYLRybxRm_eNSAAwnDyaI1nuc9V6WbnvQVzACPX00F5aZU5negEbi1CQ39, Granted Authorities=[USER]]
+2026-03-28 13:07:51 [tomcat-handler-46] INFO  : Sending message to owner: 7fabb03e-1f1c-c504-5251-f7adcb86cf9e
+2026-03-28 13:07:51 [tomcat-handler-46] INFO  : End of message processing - session: 7fabb03e-1f1c-c504-5251-f7adcb86cf9e from: t1
+2026-03-28 13:15:39 [tomcat-handler-47] INFO  : Session closing: 7fabb03e-1f1c-c504-5251-f7adcb86cf9e - reason: null
+2026-03-28 13:15:43 [tomcat-handler-48] INFO  : New session connected: 71a9d97c-f82d-900d-ffdd-2bd95d95ddc3, user: t1
+2026-03-28 13:15:43 [tomcat-handler-49] INFO  : New message from user: t1
+2026-03-28 13:15:43 [tomcat-handler-49] INFO  : End of message processing - session: 71a9d97c-f82d-900d-ffdd-2bd95d95ddc3 from: t1
+2026-03-28 13:15:43 [tomcat-handler-49] INFO  : New message from user: t1
+2026-03-28 13:15:43 [tomcat-handler-49] INFO  : End of message processing - session: 71a9d97c-f82d-900d-ffdd-2bd95d95ddc3 from: t1
+2026-03-28 13:15:43 [tomcat-handler-49] INFO  : New message from user: t1
+2026-03-28 13:15:43 [tomcat-handler-49] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 13:15:43 [tomcat-handler-49] INFO  : End of message processing - session: 71a9d97c-f82d-900d-ffdd-2bd95d95ddc3 from: t1
+2026-03-28 13:15:43 [tomcat-handler-49] INFO  : New message from user: t1
+2026-03-28 13:15:43 [tomcat-handler-49] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDY5OTY3MSwiZXhwIjoxNzc0NzAwNTcxfQ.Fxw-2seYLRybxRm_eNSAAwnDyaI1nuc9V6WbnvQVzACPX00F5aZU5negEbi1CQ39, Granted Authorities=[USER]]
+2026-03-28 13:15:44 [tomcat-handler-49] INFO  : Sending message to owner: 71a9d97c-f82d-900d-ffdd-2bd95d95ddc3
+2026-03-28 13:15:44 [tomcat-handler-49] INFO  : End of message processing - session: 71a9d97c-f82d-900d-ffdd-2bd95d95ddc3 from: t1
+2026-03-28 13:18:13 [tomcat-handler-50] INFO  : Session closing: 71a9d97c-f82d-900d-ffdd-2bd95d95ddc3 - reason: null
+2026-03-28 13:29:21 [tomcat-handler-51] INFO  : New session connected: 5eb7b1df-ca60-b223-52f5-c0e722bdd054, user: t1
+2026-03-28 13:29:21 [tomcat-handler-52] INFO  : New message from user: t1
+2026-03-28 13:29:21 [tomcat-handler-52] INFO  : End of message processing - session: 5eb7b1df-ca60-b223-52f5-c0e722bdd054 from: t1
+2026-03-28 13:29:21 [tomcat-handler-52] INFO  : New message from user: t1
+2026-03-28 13:29:21 [tomcat-handler-52] INFO  : End of message processing - session: 5eb7b1df-ca60-b223-52f5-c0e722bdd054 from: t1
+2026-03-28 13:29:21 [tomcat-handler-52] INFO  : New message from user: t1
+2026-03-28 13:29:21 [tomcat-handler-52] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 13:29:21 [tomcat-handler-52] INFO  : End of message processing - session: 5eb7b1df-ca60-b223-52f5-c0e722bdd054 from: t1
+2026-03-28 13:29:21 [tomcat-handler-52] INFO  : New message from user: t1
+2026-03-28 13:29:21 [tomcat-handler-52] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwMDk2MSwiZXhwIjoxNzc0NzAxODYxfQ.pgq3llrf8YZ9mtHZphUn2tA5wcWNwhVsdHCRdFsefWffXpnDHur8cG4h909ZA4vn, Granted Authorities=[USER]]
+2026-03-28 13:29:21 [tomcat-handler-52] INFO  : Sending message to owner: 5eb7b1df-ca60-b223-52f5-c0e722bdd054
+2026-03-28 13:29:21 [tomcat-handler-52] INFO  : End of message processing - session: 5eb7b1df-ca60-b223-52f5-c0e722bdd054 from: t1
+2026-03-28 13:42:25 [tomcat-handler-53] INFO  : Session closing: 5eb7b1df-ca60-b223-52f5-c0e722bdd054 - reason: null
+2026-03-28 14:15:06 [tomcat-handler-54] INFO  : New session connected: 03147f2e-e477-9e80-f043-f54491b371ed, user: t1
+2026-03-28 14:15:06 [tomcat-handler-54] INFO  : New message from user: t1
+2026-03-28 14:15:06 [tomcat-handler-54] INFO  : End of message processing - session: 03147f2e-e477-9e80-f043-f54491b371ed from: t1
+2026-03-28 14:15:06 [tomcat-handler-54] INFO  : New message from user: t1
+2026-03-28 14:15:06 [tomcat-handler-54] INFO  : End of message processing - session: 03147f2e-e477-9e80-f043-f54491b371ed from: t1
+2026-03-28 14:15:06 [tomcat-handler-54] INFO  : New message from user: t1
+2026-03-28 14:15:06 [tomcat-handler-54] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 14:15:06 [tomcat-handler-54] INFO  : End of message processing - session: 03147f2e-e477-9e80-f043-f54491b371ed from: t1
+2026-03-28 14:15:06 [tomcat-handler-54] INFO  : New message from user: t1
+2026-03-28 14:15:06 [tomcat-handler-54] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwMzcwNiwiZXhwIjoxNzc0NzA0NjA2fQ.llzgSwKF4b2PmyGP59GP06_qgr6VlFLqwMi7O8lw95ri1r_OZkJzTJ-uOw6HJaDR, Granted Authorities=[USER]]
+2026-03-28 14:15:06 [tomcat-handler-54] INFO  : Sending message to owner: 03147f2e-e477-9e80-f043-f54491b371ed
+2026-03-28 14:15:06 [tomcat-handler-54] INFO  : End of message processing - session: 03147f2e-e477-9e80-f043-f54491b371ed from: t1
+2026-03-28 14:15:12 [tomcat-handler-55] INFO  : Session closing: 03147f2e-e477-9e80-f043-f54491b371ed - reason: null
+2026-03-28 14:18:25 [tomcat-handler-56] INFO  : New session connected: 1287dc82-a811-8fd0-c422-45d21ebfe807, user: t1
+2026-03-28 14:18:25 [tomcat-handler-57] INFO  : New message from user: t1
+2026-03-28 14:18:25 [tomcat-handler-57] INFO  : End of message processing - session: 1287dc82-a811-8fd0-c422-45d21ebfe807 from: t1
+2026-03-28 14:18:25 [tomcat-handler-57] INFO  : New message from user: t1
+2026-03-28 14:18:25 [tomcat-handler-57] INFO  : End of message processing - session: 1287dc82-a811-8fd0-c422-45d21ebfe807 from: t1
+2026-03-28 14:18:25 [tomcat-handler-57] INFO  : New message from user: t1
+2026-03-28 14:18:25 [tomcat-handler-57] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 14:18:25 [tomcat-handler-57] INFO  : End of message processing - session: 1287dc82-a811-8fd0-c422-45d21ebfe807 from: t1
+2026-03-28 14:18:25 [tomcat-handler-57] INFO  : New message from user: t1
+2026-03-28 14:18:25 [tomcat-handler-57] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwMzkwNSwiZXhwIjoxNzc0NzA0ODA1fQ.GZBbbKxw5kuFtwEDCjQpcnYIbz65QnDMElzsuRKSjEuC0EWVLQLvNmROqygxyx4V, Granted Authorities=[USER]]
+2026-03-28 14:18:25 [tomcat-handler-57] INFO  : Sending message to owner: 1287dc82-a811-8fd0-c422-45d21ebfe807
+2026-03-28 14:18:25 [tomcat-handler-57] INFO  : End of message processing - session: 1287dc82-a811-8fd0-c422-45d21ebfe807 from: t1
+2026-03-28 14:20:55 [tomcat-handler-58] INFO  : Session closing: 1287dc82-a811-8fd0-c422-45d21ebfe807 - reason: null
+2026-03-28 14:21:51 [tomcat-handler-59] INFO  : New session connected: 25356329-6f1e-336c-120e-dababf629f46, user: t1
+2026-03-28 14:21:51 [tomcat-handler-60] INFO  : New message from user: t1
+2026-03-28 14:21:51 [tomcat-handler-60] INFO  : End of message processing - session: 25356329-6f1e-336c-120e-dababf629f46 from: t1
+2026-03-28 14:21:51 [tomcat-handler-60] INFO  : New message from user: t1
+2026-03-28 14:21:51 [tomcat-handler-60] INFO  : End of message processing - session: 25356329-6f1e-336c-120e-dababf629f46 from: t1
+2026-03-28 14:21:51 [tomcat-handler-60] INFO  : New message from user: t1
+2026-03-28 14:21:51 [tomcat-handler-60] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 14:21:51 [tomcat-handler-60] INFO  : End of message processing - session: 25356329-6f1e-336c-120e-dababf629f46 from: t1
+2026-03-28 14:21:51 [tomcat-handler-60] INFO  : New message from user: t1
+2026-03-28 14:21:51 [tomcat-handler-60] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNDExMSwiZXhwIjoxNzc0NzA1MDExfQ.JUayHeuvmDJAk1WXebc1n95unfl1dtGExstrbqtGvlB8eM560QHAcsMcbdBDrlJZ, Granted Authorities=[USER]]
+2026-03-28 14:21:51 [tomcat-handler-60] INFO  : Sending message to owner: 25356329-6f1e-336c-120e-dababf629f46
+2026-03-28 14:21:51 [tomcat-handler-60] INFO  : End of message processing - session: 25356329-6f1e-336c-120e-dababf629f46 from: t1
+2026-03-28 14:37:39 [tomcat-handler-61] INFO  : Session closing: 25356329-6f1e-336c-120e-dababf629f46 - reason: null
+2026-03-28 14:38:51 [tomcat-handler-62] INFO  : New session connected: ef3e896c-aa61-7098-ccf9-919eabbd92f1, user: t1
+2026-03-28 14:38:51 [tomcat-handler-63] INFO  : New message from user: t1
+2026-03-28 14:38:51 [tomcat-handler-63] INFO  : End of message processing - session: ef3e896c-aa61-7098-ccf9-919eabbd92f1 from: t1
+2026-03-28 14:38:51 [tomcat-handler-63] INFO  : New message from user: t1
+2026-03-28 14:38:51 [tomcat-handler-63] INFO  : End of message processing - session: ef3e896c-aa61-7098-ccf9-919eabbd92f1 from: t1
+2026-03-28 14:38:51 [tomcat-handler-63] INFO  : New message from user: t1
+2026-03-28 14:38:51 [tomcat-handler-63] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 14:38:51 [tomcat-handler-63] INFO  : End of message processing - session: ef3e896c-aa61-7098-ccf9-919eabbd92f1 from: t1
+2026-03-28 14:38:51 [tomcat-handler-63] INFO  : New message from user: t1
+2026-03-28 14:38:51 [tomcat-handler-63] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNDgyMywiZXhwIjoxNzc0NzA1NzIzfQ.w8xZrOQOw2kapNmj8IJkPJpal6jqBg-XQmiOla-laNoDbv7NvLJ1VFGAbEErjisx, Granted Authorities=[USER]]
+2026-03-28 14:38:51 [tomcat-handler-63] INFO  : Sending message to owner: ef3e896c-aa61-7098-ccf9-919eabbd92f1
+2026-03-28 14:38:51 [tomcat-handler-63] INFO  : End of message processing - session: ef3e896c-aa61-7098-ccf9-919eabbd92f1 from: t1
+2026-03-28 14:41:27 [tomcat-handler-64] INFO  : Session closing: ef3e896c-aa61-7098-ccf9-919eabbd92f1 - reason: null
+2026-03-28 14:41:30 [tomcat-handler-65] INFO  : New session connected: b49f6e33-4961-6ade-2417-37b064a3056c, user: t1
+2026-03-28 14:41:30 [tomcat-handler-66] INFO  : New message from user: t1
+2026-03-28 14:41:30 [tomcat-handler-66] INFO  : End of message processing - session: b49f6e33-4961-6ade-2417-37b064a3056c from: t1
+2026-03-28 14:41:30 [tomcat-handler-66] INFO  : New message from user: t1
+2026-03-28 14:41:30 [tomcat-handler-66] INFO  : End of message processing - session: b49f6e33-4961-6ade-2417-37b064a3056c from: t1
+2026-03-28 14:41:30 [tomcat-handler-66] INFO  : New message from user: t1
+2026-03-28 14:41:30 [tomcat-handler-66] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 14:41:30 [tomcat-handler-66] INFO  : End of message processing - session: b49f6e33-4961-6ade-2417-37b064a3056c from: t1
+2026-03-28 14:41:30 [tomcat-handler-67] INFO  : New message from user: t1
+2026-03-28 14:41:30 [tomcat-handler-67] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNDgyMywiZXhwIjoxNzc0NzA1NzIzfQ.w8xZrOQOw2kapNmj8IJkPJpal6jqBg-XQmiOla-laNoDbv7NvLJ1VFGAbEErjisx, Granted Authorities=[USER]]
+2026-03-28 14:41:30 [tomcat-handler-67] INFO  : Sending message to owner: b49f6e33-4961-6ade-2417-37b064a3056c
+2026-03-28 14:41:30 [tomcat-handler-67] INFO  : End of message processing - session: b49f6e33-4961-6ade-2417-37b064a3056c from: t1
+2026-03-28 14:43:12 [tomcat-handler-68] INFO  : Session closing: b49f6e33-4961-6ade-2417-37b064a3056c - reason: null
+2026-03-28 14:43:17 [tomcat-handler-69] INFO  : New session connected: fafef4bb-5f67-fe17-62df-f52af8afed18, user: t1
+2026-03-28 14:43:17 [tomcat-handler-70] INFO  : New message from user: t1
+2026-03-28 14:43:17 [tomcat-handler-70] INFO  : End of message processing - session: fafef4bb-5f67-fe17-62df-f52af8afed18 from: t1
+2026-03-28 14:43:17 [tomcat-handler-70] INFO  : New message from user: t1
+2026-03-28 14:43:17 [tomcat-handler-70] INFO  : End of message processing - session: fafef4bb-5f67-fe17-62df-f52af8afed18 from: t1
+2026-03-28 14:43:17 [tomcat-handler-70] INFO  : New message from user: t1
+2026-03-28 14:43:17 [tomcat-handler-70] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 14:43:17 [tomcat-handler-70] INFO  : End of message processing - session: fafef4bb-5f67-fe17-62df-f52af8afed18 from: t1
+2026-03-28 14:43:17 [tomcat-handler-71] INFO  : New message from user: t1
+2026-03-28 14:43:17 [tomcat-handler-71] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNDgyMywiZXhwIjoxNzc0NzA1NzIzfQ.w8xZrOQOw2kapNmj8IJkPJpal6jqBg-XQmiOla-laNoDbv7NvLJ1VFGAbEErjisx, Granted Authorities=[USER]]
+2026-03-28 14:43:17 [tomcat-handler-71] INFO  : Sending message to owner: fafef4bb-5f67-fe17-62df-f52af8afed18
+2026-03-28 14:43:17 [tomcat-handler-71] INFO  : End of message processing - session: fafef4bb-5f67-fe17-62df-f52af8afed18 from: t1
+2026-03-28 14:43:57 [tomcat-handler-72] INFO  : Session closing: fafef4bb-5f67-fe17-62df-f52af8afed18 - reason: null
+2026-03-28 14:44:02 [tomcat-handler-73] INFO  : New session connected: 80691684-067a-cbcc-f677-a85582dc6618, user: t1
+2026-03-28 14:44:02 [tomcat-handler-74] INFO  : New message from user: t1
+2026-03-28 14:44:02 [tomcat-handler-74] INFO  : End of message processing - session: 80691684-067a-cbcc-f677-a85582dc6618 from: t1
+2026-03-28 14:44:02 [tomcat-handler-74] INFO  : New message from user: t1
+2026-03-28 14:44:02 [tomcat-handler-74] INFO  : End of message processing - session: 80691684-067a-cbcc-f677-a85582dc6618 from: t1
+2026-03-28 14:44:02 [tomcat-handler-74] INFO  : New message from user: t1
+2026-03-28 14:44:02 [tomcat-handler-74] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 14:44:02 [tomcat-handler-74] INFO  : End of message processing - session: 80691684-067a-cbcc-f677-a85582dc6618 from: t1
+2026-03-28 14:44:02 [tomcat-handler-74] INFO  : New message from user: t1
+2026-03-28 14:44:02 [tomcat-handler-74] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNDgyMywiZXhwIjoxNzc0NzA1NzIzfQ.w8xZrOQOw2kapNmj8IJkPJpal6jqBg-XQmiOla-laNoDbv7NvLJ1VFGAbEErjisx, Granted Authorities=[USER]]
+2026-03-28 14:44:02 [tomcat-handler-74] INFO  : Sending message to owner: 80691684-067a-cbcc-f677-a85582dc6618
+2026-03-28 14:44:02 [tomcat-handler-74] INFO  : End of message processing - session: 80691684-067a-cbcc-f677-a85582dc6618 from: t1
+2026-03-28 14:48:02 [tomcat-handler-75] INFO  : Session closing: 80691684-067a-cbcc-f677-a85582dc6618 - reason: null
+2026-03-28 14:48:07 [tomcat-handler-76] INFO  : New session connected: 6f253a2d-7f6d-e7eb-d0c3-6b34f7572da3, user: t1
+2026-03-28 14:48:07 [tomcat-handler-77] INFO  : New message from user: t1
+2026-03-28 14:48:07 [tomcat-handler-77] INFO  : End of message processing - session: 6f253a2d-7f6d-e7eb-d0c3-6b34f7572da3 from: t1
+2026-03-28 14:48:07 [tomcat-handler-77] INFO  : New message from user: t1
+2026-03-28 14:48:07 [tomcat-handler-77] INFO  : End of message processing - session: 6f253a2d-7f6d-e7eb-d0c3-6b34f7572da3 from: t1
+2026-03-28 14:48:07 [tomcat-handler-77] INFO  : New message from user: t1
+2026-03-28 14:48:07 [tomcat-handler-77] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 14:48:07 [tomcat-handler-77] INFO  : End of message processing - session: 6f253a2d-7f6d-e7eb-d0c3-6b34f7572da3 from: t1
+2026-03-28 14:48:07 [tomcat-handler-77] INFO  : New message from user: t1
+2026-03-28 14:48:07 [tomcat-handler-77] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNDgyMywiZXhwIjoxNzc0NzA1NzIzfQ.w8xZrOQOw2kapNmj8IJkPJpal6jqBg-XQmiOla-laNoDbv7NvLJ1VFGAbEErjisx, Granted Authorities=[USER]]
+2026-03-28 14:48:07 [tomcat-handler-77] INFO  : Sending message to owner: 6f253a2d-7f6d-e7eb-d0c3-6b34f7572da3
+2026-03-28 14:48:07 [tomcat-handler-77] INFO  : End of message processing - session: 6f253a2d-7f6d-e7eb-d0c3-6b34f7572da3 from: t1
+2026-03-28 14:49:25 [tomcat-handler-78] INFO  : Session closing: 6f253a2d-7f6d-e7eb-d0c3-6b34f7572da3 - reason: null
+2026-03-28 14:51:42 [tomcat-handler-81] INFO  : New session connected: cf1586b4-9e74-d02c-efb5-63ab1ea8d5b2, user: t1
+2026-03-28 14:51:42 [tomcat-handler-82] INFO  : New message from user: t1
+2026-03-28 14:51:42 [tomcat-handler-82] INFO  : End of message processing - session: cf1586b4-9e74-d02c-efb5-63ab1ea8d5b2 from: t1
+2026-03-28 14:51:42 [tomcat-handler-82] INFO  : New message from user: t1
+2026-03-28 14:51:42 [tomcat-handler-82] INFO  : End of message processing - session: cf1586b4-9e74-d02c-efb5-63ab1ea8d5b2 from: t1
+2026-03-28 14:51:42 [tomcat-handler-82] INFO  : New message from user: t1
+2026-03-28 14:51:42 [tomcat-handler-82] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 14:51:42 [tomcat-handler-82] INFO  : End of message processing - session: cf1586b4-9e74-d02c-efb5-63ab1ea8d5b2 from: t1
+2026-03-28 14:51:42 [tomcat-handler-82] INFO  : New message from user: t1
+2026-03-28 14:51:42 [tomcat-handler-82] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNTg5NiwiZXhwIjoxNzc0NzA2Nzk2fQ.0p9pNY1pSEkgtWDkEvRwy5qeqZ5bA1_4wxopo1Je1TEs65JCe1QPhOB7-iKT3HnG, Granted Authorities=[USER]]
+2026-03-28 14:51:42 [tomcat-handler-82] INFO  : Sending message to owner: cf1586b4-9e74-d02c-efb5-63ab1ea8d5b2
+2026-03-28 14:51:42 [tomcat-handler-82] INFO  : End of message processing - session: cf1586b4-9e74-d02c-efb5-63ab1ea8d5b2 from: t1
+2026-03-28 15:03:40 [tomcat-handler-83] INFO  : Session closing: cf1586b4-9e74-d02c-efb5-63ab1ea8d5b2 - reason: null
+2026-03-28 15:03:45 [tomcat-handler-84] INFO  : New session connected: 3c611e68-64d3-3c71-38b9-d9a5e056778a, user: t1
+2026-03-28 15:03:45 [tomcat-handler-85] INFO  : New message from user: t1
+2026-03-28 15:03:45 [tomcat-handler-85] INFO  : End of message processing - session: 3c611e68-64d3-3c71-38b9-d9a5e056778a from: t1
+2026-03-28 15:03:45 [tomcat-handler-85] INFO  : New message from user: t1
+2026-03-28 15:03:45 [tomcat-handler-85] INFO  : End of message processing - session: 3c611e68-64d3-3c71-38b9-d9a5e056778a from: t1
+2026-03-28 15:03:45 [tomcat-handler-85] INFO  : New message from user: t1
+2026-03-28 15:03:45 [tomcat-handler-85] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 15:03:45 [tomcat-handler-85] INFO  : End of message processing - session: 3c611e68-64d3-3c71-38b9-d9a5e056778a from: t1
+2026-03-28 15:03:45 [tomcat-handler-85] INFO  : New message from user: t1
+2026-03-28 15:03:45 [tomcat-handler-85] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNTg5NiwiZXhwIjoxNzc0NzA2Nzk2fQ.0p9pNY1pSEkgtWDkEvRwy5qeqZ5bA1_4wxopo1Je1TEs65JCe1QPhOB7-iKT3HnG, Granted Authorities=[USER]]
+2026-03-28 15:03:45 [tomcat-handler-85] INFO  : Sending message to owner: 3c611e68-64d3-3c71-38b9-d9a5e056778a
+2026-03-28 15:03:45 [tomcat-handler-85] INFO  : End of message processing - session: 3c611e68-64d3-3c71-38b9-d9a5e056778a from: t1
+2026-03-28 15:03:53 [tomcat-handler-86] INFO  : New message from user: t1
+2026-03-28 15:03:53 [tomcat-handler-86] INFO  : /postShoppingItem connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNTg5NiwiZXhwIjoxNzc0NzA2Nzk2fQ.0p9pNY1pSEkgtWDkEvRwy5qeqZ5bA1_4wxopo1Je1TEs65JCe1QPhOB7-iKT3HnG, Granted Authorities=[USER]]
+2026-03-28 15:03:53 [tomcat-handler-86] ERROR : pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException: No such topic exists
+2026-03-28 15:03:53 [tomcat-handler-86] INFO  : End of message processing - session: 3c611e68-64d3-3c71-38b9-d9a5e056778a from: t1
+2026-03-28 15:03:57 [tomcat-handler-87] INFO  : Session closing: 3c611e68-64d3-3c71-38b9-d9a5e056778a - reason: null
+2026-03-28 15:03:57 [tomcat-handler-88] INFO  : New session connected: d94f2c22-ed97-6047-8841-395cc1affe83, user: t1
+2026-03-28 15:03:57 [tomcat-handler-89] INFO  : New message from user: t1
+2026-03-28 15:03:57 [tomcat-handler-89] INFO  : End of message processing - session: d94f2c22-ed97-6047-8841-395cc1affe83 from: t1
+2026-03-28 15:03:57 [tomcat-handler-89] INFO  : New message from user: t1
+2026-03-28 15:03:57 [tomcat-handler-89] INFO  : End of message processing - session: d94f2c22-ed97-6047-8841-395cc1affe83 from: t1
+2026-03-28 15:03:57 [tomcat-handler-89] INFO  : New message from user: t1
+2026-03-28 15:03:57 [tomcat-handler-89] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 15:03:57 [tomcat-handler-89] INFO  : End of message processing - session: d94f2c22-ed97-6047-8841-395cc1affe83 from: t1
+2026-03-28 15:03:57 [tomcat-handler-89] INFO  : New message from user: t1
+2026-03-28 15:03:57 [tomcat-handler-89] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNTg5NiwiZXhwIjoxNzc0NzA2Nzk2fQ.0p9pNY1pSEkgtWDkEvRwy5qeqZ5bA1_4wxopo1Je1TEs65JCe1QPhOB7-iKT3HnG, Granted Authorities=[USER]]
+2026-03-28 15:03:58 [tomcat-handler-89] INFO  : Sending message to owner: d94f2c22-ed97-6047-8841-395cc1affe83
+2026-03-28 15:03:58 [tomcat-handler-89] INFO  : End of message processing - session: d94f2c22-ed97-6047-8841-395cc1affe83 from: t1
+2026-03-28 15:04:56 [tomcat-handler-90] INFO  : Session closing: d94f2c22-ed97-6047-8841-395cc1affe83 - reason: null
+2026-03-28 15:24:37 [tomcat-handler-91] INFO  : New session connected: 8394a052-8c7d-5b33-0cda-1befae519ef6, user: t1
+2026-03-28 15:24:37 [tomcat-handler-92] INFO  : New message from user: t1
+2026-03-28 15:24:37 [tomcat-handler-92] INFO  : End of message processing - session: 8394a052-8c7d-5b33-0cda-1befae519ef6 from: t1
+2026-03-28 15:24:37 [tomcat-handler-92] INFO  : New message from user: t1
+2026-03-28 15:24:37 [tomcat-handler-92] INFO  : End of message processing - session: 8394a052-8c7d-5b33-0cda-1befae519ef6 from: t1
+2026-03-28 15:24:37 [tomcat-handler-92] INFO  : New message from user: t1
+2026-03-28 15:24:37 [tomcat-handler-92] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 15:24:37 [tomcat-handler-92] INFO  : End of message processing - session: 8394a052-8c7d-5b33-0cda-1befae519ef6 from: t1
+2026-03-28 15:24:37 [tomcat-handler-92] INFO  : New message from user: t1
+2026-03-28 15:24:37 [tomcat-handler-92] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNzg3NywiZXhwIjoxNzc0NzA4Nzc3fQ.TQncX69BJZ-EHrPBwt1PDHB5Y4iGMD4xqVqq6WZh6jl5RzxIYKY1ZLrOQQEIkxho, Granted Authorities=[USER]]
+2026-03-28 15:24:37 [tomcat-handler-92] INFO  : Sending message to owner: 8394a052-8c7d-5b33-0cda-1befae519ef6
+2026-03-28 15:24:37 [tomcat-handler-92] INFO  : End of message processing - session: 8394a052-8c7d-5b33-0cda-1befae519ef6 from: t1
+2026-03-28 15:24:41 [tomcat-handler-93] INFO  : Session closing: 8394a052-8c7d-5b33-0cda-1befae519ef6 - reason: null
+2026-03-28 15:24:44 [tomcat-handler-94] INFO  : New session connected: 4975347f-345e-ff1c-cf44-d7aef89821d3, user: t1
+2026-03-28 15:24:44 [tomcat-handler-95] INFO  : New message from user: t1
+2026-03-28 15:24:44 [tomcat-handler-95] INFO  : End of message processing - session: 4975347f-345e-ff1c-cf44-d7aef89821d3 from: t1
+2026-03-28 15:24:44 [tomcat-handler-95] INFO  : New message from user: t1
+2026-03-28 15:24:44 [tomcat-handler-95] INFO  : End of message processing - session: 4975347f-345e-ff1c-cf44-d7aef89821d3 from: t1
+2026-03-28 15:24:44 [tomcat-handler-95] INFO  : New message from user: t1
+2026-03-28 15:24:44 [tomcat-handler-95] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 15:24:44 [tomcat-handler-95] INFO  : End of message processing - session: 4975347f-345e-ff1c-cf44-d7aef89821d3 from: t1
+2026-03-28 15:24:44 [tomcat-handler-95] INFO  : New message from user: t1
+2026-03-28 15:24:44 [tomcat-handler-95] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNzg3NywiZXhwIjoxNzc0NzA4Nzc3fQ.TQncX69BJZ-EHrPBwt1PDHB5Y4iGMD4xqVqq6WZh6jl5RzxIYKY1ZLrOQQEIkxho, Granted Authorities=[USER]]
+2026-03-28 15:24:44 [tomcat-handler-95] INFO  : Sending message to owner: 4975347f-345e-ff1c-cf44-d7aef89821d3
+2026-03-28 15:24:44 [tomcat-handler-95] INFO  : End of message processing - session: 4975347f-345e-ff1c-cf44-d7aef89821d3 from: t1
+2026-03-28 15:25:01 [tomcat-handler-96] INFO  : New message from user: t1
+2026-03-28 15:25:01 [tomcat-handler-96] INFO  : /postShoppingItem connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcwNzg3NywiZXhwIjoxNzc0NzA4Nzc3fQ.TQncX69BJZ-EHrPBwt1PDHB5Y4iGMD4xqVqq6WZh6jl5RzxIYKY1ZLrOQQEIkxho, Granted Authorities=[USER]]
+2026-03-28 15:25:01 [tomcat-handler-96] ERROR : pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException: No such topic exists
+2026-03-28 15:25:01 [tomcat-handler-96] INFO  : End of message processing - session: 4975347f-345e-ff1c-cf44-d7aef89821d3 from: t1
+2026-03-28 15:39:42 [tomcat-handler-97] INFO  : Session closing: 4975347f-345e-ff1c-cf44-d7aef89821d3 - reason: null
+2026-03-28 16:43:00 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 16:43:00 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2026-03-28 16:43:00 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m23s90ms361µs300ns).
+2026-03-28 16:43:02 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-28 16:43:02 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2026-03-28 16:43:02 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2026-03-28 16:43:15 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-03-28 16:43:15 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 21596 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-03-28 16:43:15 [main] INFO  : The following 1 profile is active: "dev"
+2026-03-28 16:43:17 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-28 16:43:17 [main] INFO  : Finished Spring Data repository scanning in 207 ms. Found 3 JPA repository interfaces.
+2026-03-28 16:43:18 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-03-28 16:43:18 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-03-28 16:43:18 [main] INFO  : Starting service [Tomcat]
+2026-03-28 16:43:18 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-28 16:43:18 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-03-28 16:43:18 [main] INFO  : Root WebApplicationContext: initialization completed in 3186 ms
+2026-03-28 16:43:19 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-03-28 16:43:19 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-03-28 16:43:19 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-03-28 16:43:19 [main] INFO  : Successfully validated 1 migration (execution time 00:00.043s)
+2026-03-28 16:43:19 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-03-28 16:43:19 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-03-28 16:43:19 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-28 16:43:19 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-28 16:43:20 [main] INFO  : HHH000026: Second-level cache disabled
+2026-03-28 16:43:20 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-28 16:43:20 [main] INFO  : HikariPool-1 - Starting...
+2026-03-28 16:43:20 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3e4636c3
+2026-03-28 16:43:20 [main] INFO  : HikariPool-1 - Start completed.
+2026-03-28 16:43:20 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-28 16:43:21 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-28 16:43:21 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-28 16:43:22 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-28 16:43:22 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name jwtAuthenticationProvider
+2026-03-28 16:43:23 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-03-28 16:43:23 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-03-28 16:43:23 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-03-28 16:43:23 [main] INFO  : Started ShoppingListServiceApplication in 9.321 seconds (process running for 9.979)
+2026-03-28 16:45:09 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 16:45:09 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2026-03-28 16:45:09 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-28 16:45:09 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2026-03-28 16:45:09 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2026-03-28 16:45:21 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-03-28 16:45:21 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 12432 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-03-28 16:45:21 [main] INFO  : The following 1 profile is active: "dev"
+2026-03-28 16:45:22 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-28 16:45:22 [main] INFO  : Finished Spring Data repository scanning in 166 ms. Found 3 JPA repository interfaces.
+2026-03-28 16:45:24 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-03-28 16:45:24 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-03-28 16:45:24 [main] INFO  : Starting service [Tomcat]
+2026-03-28 16:45:24 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-28 16:45:24 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-03-28 16:45:24 [main] INFO  : Root WebApplicationContext: initialization completed in 2789 ms
+2026-03-28 16:45:25 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-03-28 16:45:25 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-03-28 16:45:25 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-03-28 16:45:25 [main] INFO  : Successfully validated 1 migration (execution time 00:00.026s)
+2026-03-28 16:45:25 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-03-28 16:45:25 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-03-28 16:45:25 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-28 16:45:25 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-28 16:45:25 [main] INFO  : HHH000026: Second-level cache disabled
+2026-03-28 16:45:25 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-28 16:45:25 [main] INFO  : HikariPool-1 - Starting...
+2026-03-28 16:45:25 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@f252762
+2026-03-28 16:45:25 [main] INFO  : HikariPool-1 - Start completed.
+2026-03-28 16:45:25 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-28 16:45:26 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-28 16:45:26 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-28 16:45:27 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-28 16:45:27 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name jwtAuthenticationProvider
+2026-03-28 16:45:27 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-03-28 16:45:29 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-03-28 16:45:29 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-03-28 16:45:29 [main] INFO  : Started ShoppingListServiceApplication in 8.477 seconds (process running for 9.183)
+2026-03-28 16:46:26 [tomcat-handler-0] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-28 16:46:26 [tomcat-handler-0] INFO  : Initializing Servlet 'dispatcherServlet'
+2026-03-28 16:46:26 [tomcat-handler-0] INFO  : Completed initialization in 0 ms
+2026-03-28 16:46:26 [tomcat-handler-0] INFO  : New session connected: d78294d8-8ce3-d19f-fda5-15fb0d21c594, user: t1
+2026-03-28 16:46:26 [tomcat-handler-0] INFO  : New message from user: t1
+2026-03-28 16:46:26 [tomcat-handler-0] INFO  : End of message processing - session: d78294d8-8ce3-d19f-fda5-15fb0d21c594 from: t1
+2026-03-28 16:46:26 [tomcat-handler-0] INFO  : New message from user: t1
+2026-03-28 16:46:26 [tomcat-handler-0] INFO  : End of message processing - session: d78294d8-8ce3-d19f-fda5-15fb0d21c594 from: t1
+2026-03-28 16:46:26 [tomcat-handler-0] INFO  : New message from user: t1
+2026-03-28 16:46:26 [tomcat-handler-0] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 16:46:26 [tomcat-handler-0] INFO  : End of message processing - session: d78294d8-8ce3-d19f-fda5-15fb0d21c594 from: t1
+2026-03-28 16:46:26 [tomcat-handler-0] INFO  : New message from user: t1
+2026-03-28 16:46:27 [tomcat-handler-0] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcxMjU2NiwiZXhwIjoxNzc0NzEzNDY2fQ.xaRGrmiXm2WFiGfCDxAwPb5bvjIQXUxxzkyZym9azSp-96o6ZPlIFOiFY8IOUOAi, Granted Authorities=[USER]]
+2026-03-28 16:46:27 [tomcat-handler-0] INFO  : Sending message to owner: d78294d8-8ce3-d19f-fda5-15fb0d21c594
+2026-03-28 16:46:27 [tomcat-handler-0] INFO  : End of message processing - session: d78294d8-8ce3-d19f-fda5-15fb0d21c594 from: t1
+2026-03-28 16:46:32 [tomcat-handler-1] INFO  : New message from user: t1
+2026-03-28 16:46:32 [tomcat-handler-1] INFO  : /postShoppingItem connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcxMjU2NiwiZXhwIjoxNzc0NzEzNDY2fQ.xaRGrmiXm2WFiGfCDxAwPb5bvjIQXUxxzkyZym9azSp-96o6ZPlIFOiFY8IOUOAi, Granted Authorities=[USER]]
+2026-03-28 16:46:32 [tomcat-handler-1] ERROR : pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException: No such topic exists
+2026-03-28 16:46:32 [tomcat-handler-1] INFO  : End of message processing - session: d78294d8-8ce3-d19f-fda5-15fb0d21c594 from: t1
+2026-03-28 16:48:36 [tomcat-handler-2] INFO  : Session closing: d78294d8-8ce3-d19f-fda5-15fb0d21c594 - reason: null
+2026-03-28 16:49:44 [tomcat-handler-3] INFO  : New session connected: e6db35e4-f105-8169-c677-21c2fec5dd26, user: t1
+2026-03-28 16:49:44 [tomcat-handler-4] INFO  : New message from user: t1
+2026-03-28 16:49:44 [tomcat-handler-4] INFO  : End of message processing - session: e6db35e4-f105-8169-c677-21c2fec5dd26 from: t1
+2026-03-28 16:49:44 [tomcat-handler-4] INFO  : New message from user: t1
+2026-03-28 16:49:44 [tomcat-handler-4] INFO  : End of message processing - session: e6db35e4-f105-8169-c677-21c2fec5dd26 from: t1
+2026-03-28 16:49:44 [tomcat-handler-4] INFO  : New message from user: t1
+2026-03-28 16:49:44 [tomcat-handler-4] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 16:49:44 [tomcat-handler-4] INFO  : End of message processing - session: e6db35e4-f105-8169-c677-21c2fec5dd26 from: t1
+2026-03-28 16:49:44 [tomcat-handler-4] INFO  : New message from user: t1
+2026-03-28 16:49:44 [tomcat-handler-4] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcxMjU2NiwiZXhwIjoxNzc0NzEzNDY2fQ.xaRGrmiXm2WFiGfCDxAwPb5bvjIQXUxxzkyZym9azSp-96o6ZPlIFOiFY8IOUOAi, Granted Authorities=[USER]]
+2026-03-28 16:49:44 [tomcat-handler-4] INFO  : Sending message to owner: e6db35e4-f105-8169-c677-21c2fec5dd26
+2026-03-28 16:49:44 [tomcat-handler-4] INFO  : End of message processing - session: e6db35e4-f105-8169-c677-21c2fec5dd26 from: t1
+2026-03-28 16:52:07 [tomcat-handler-5] INFO  : Session closing: e6db35e4-f105-8169-c677-21c2fec5dd26 - reason: null
+2026-03-28 17:01:02 [tomcat-handler-8] INFO  : New session connected: 2f8c1370-3d91-7099-09e5-6ec4522ff091, user: t1
+2026-03-28 17:01:02 [tomcat-handler-9] INFO  : New message from user: t1
+2026-03-28 17:01:02 [tomcat-handler-9] INFO  : End of message processing - session: 2f8c1370-3d91-7099-09e5-6ec4522ff091 from: t1
+2026-03-28 17:01:02 [tomcat-handler-9] INFO  : New message from user: t1
+2026-03-28 17:01:02 [tomcat-handler-9] INFO  : End of message processing - session: 2f8c1370-3d91-7099-09e5-6ec4522ff091 from: t1
+2026-03-28 17:01:02 [tomcat-handler-9] INFO  : New message from user: t1
+2026-03-28 17:01:02 [tomcat-handler-9] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 17:01:02 [tomcat-handler-9] INFO  : End of message processing - session: 2f8c1370-3d91-7099-09e5-6ec4522ff091 from: t1
+2026-03-28 17:01:02 [tomcat-handler-10] INFO  : New message from user: t1
+2026-03-28 17:01:02 [tomcat-handler-10] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcxMzY2MSwiZXhwIjoxNzc0NzE0NTYxfQ.MQpZjcJczevYArAymd2RFvtbat0VLDcd2yHjOF6viKc1GpuNvVAvc6BuGLwvdicB, Granted Authorities=[USER]]
+2026-03-28 17:01:02 [tomcat-handler-10] INFO  : Sending message to owner: 2f8c1370-3d91-7099-09e5-6ec4522ff091
+2026-03-28 17:01:02 [tomcat-handler-10] INFO  : End of message processing - session: 2f8c1370-3d91-7099-09e5-6ec4522ff091 from: t1
+2026-03-28 17:02:54 [tomcat-handler-11] INFO  : Session closing: 2f8c1370-3d91-7099-09e5-6ec4522ff091 - reason: null
+2026-03-28 17:06:18 [tomcat-handler-12] INFO  : New session connected: 91255c03-a108-f656-0608-cc56d88dd2e5, user: t1
+2026-03-28 17:06:18 [tomcat-handler-13] INFO  : New message from user: t1
+2026-03-28 17:06:18 [tomcat-handler-13] INFO  : End of message processing - session: 91255c03-a108-f656-0608-cc56d88dd2e5 from: t1
+2026-03-28 17:06:18 [tomcat-handler-13] INFO  : New message from user: t1
+2026-03-28 17:06:18 [tomcat-handler-13] INFO  : End of message processing - session: 91255c03-a108-f656-0608-cc56d88dd2e5 from: t1
+2026-03-28 17:06:18 [tomcat-handler-13] INFO  : New message from user: t1
+2026-03-28 17:06:18 [tomcat-handler-13] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 17:06:18 [tomcat-handler-13] INFO  : End of message processing - session: 91255c03-a108-f656-0608-cc56d88dd2e5 from: t1
+2026-03-28 17:06:18 [tomcat-handler-13] INFO  : New message from user: t1
+2026-03-28 17:06:18 [tomcat-handler-13] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDcxMzY2MSwiZXhwIjoxNzc0NzE0NTYxfQ.MQpZjcJczevYArAymd2RFvtbat0VLDcd2yHjOF6viKc1GpuNvVAvc6BuGLwvdicB, Granted Authorities=[USER]]
+2026-03-28 17:06:18 [tomcat-handler-13] INFO  : Sending message to owner: 91255c03-a108-f656-0608-cc56d88dd2e5
+2026-03-28 17:06:18 [tomcat-handler-13] INFO  : End of message processing - session: 91255c03-a108-f656-0608-cc56d88dd2e5 from: t1
+2026-03-28 17:11:11 [tomcat-handler-14] INFO  : Session closing: 91255c03-a108-f656-0608-cc56d88dd2e5 - reason: null
+2026-03-28 19:44:22 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m24s346ms788µs400ns).
+2026-03-28 22:53:43 [tomcat-handler-15] INFO  : New session connected: f2583c7c-9bf5-e2aa-37de-0f085dc1309d, user: t1
+2026-03-28 22:53:43 [tomcat-handler-16] INFO  : New message from user: t1
+2026-03-28 22:53:43 [tomcat-handler-16] INFO  : End of message processing - session: f2583c7c-9bf5-e2aa-37de-0f085dc1309d from: t1
+2026-03-28 22:53:43 [tomcat-handler-16] INFO  : New message from user: t1
+2026-03-28 22:53:43 [tomcat-handler-16] INFO  : End of message processing - session: f2583c7c-9bf5-e2aa-37de-0f085dc1309d from: t1
+2026-03-28 22:53:43 [tomcat-handler-16] INFO  : New message from user: t1
+2026-03-28 22:53:43 [tomcat-handler-16] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 22:53:43 [tomcat-handler-16] INFO  : End of message processing - session: f2583c7c-9bf5-e2aa-37de-0f085dc1309d from: t1
+2026-03-28 22:53:43 [tomcat-handler-16] INFO  : New message from user: t1
+2026-03-28 22:53:43 [tomcat-handler-16] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDczNDgyMywiZXhwIjoxNzc0NzM1NzIzfQ.4W7ZNXcazjlKFv2DCmMjL9CHxLJnJzDnj9NZbzDygiFki7a2Z4YbIg_37OjMtFYc, Granted Authorities=[USER]]
+2026-03-28 22:53:43 [tomcat-handler-16] INFO  : Sending message to owner: f2583c7c-9bf5-e2aa-37de-0f085dc1309d
+2026-03-28 22:53:43 [tomcat-handler-16] INFO  : End of message processing - session: f2583c7c-9bf5-e2aa-37de-0f085dc1309d from: t1
+2026-03-28 23:22:49 [tomcat-handler-17] INFO  : Session closing: f2583c7c-9bf5-e2aa-37de-0f085dc1309d - reason: null
+2026-03-28 23:24:46 [tomcat-handler-18] INFO  : New session connected: 3f7abedb-aeb5-fb49-fd95-6f4c86bfcfff, user: t1
+2026-03-28 23:24:46 [tomcat-handler-19] INFO  : New message from user: t1
+2026-03-28 23:24:46 [tomcat-handler-19] INFO  : End of message processing - session: 3f7abedb-aeb5-fb49-fd95-6f4c86bfcfff from: t1
+2026-03-28 23:24:46 [tomcat-handler-19] INFO  : New message from user: t1
+2026-03-28 23:24:46 [tomcat-handler-19] INFO  : End of message processing - session: 3f7abedb-aeb5-fb49-fd95-6f4c86bfcfff from: t1
+2026-03-28 23:24:46 [tomcat-handler-19] INFO  : New message from user: t1
+2026-03-28 23:24:46 [tomcat-handler-19] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 23:24:46 [tomcat-handler-19] INFO  : End of message processing - session: 3f7abedb-aeb5-fb49-fd95-6f4c86bfcfff from: t1
+2026-03-28 23:24:46 [tomcat-handler-19] INFO  : New message from user: t1
+2026-03-28 23:24:46 [tomcat-handler-19] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDczNjY4NiwiZXhwIjoxNzc0NzM3NTg2fQ.yswazK6PpDzIDF9xlgcTui6Z9dO4D__BX5iLHS1kVt9fu35f-fuoyVtOC1yTYPBH, Granted Authorities=[USER]]
+2026-03-28 23:24:46 [tomcat-handler-19] INFO  : Sending message to owner: 3f7abedb-aeb5-fb49-fd95-6f4c86bfcfff
+2026-03-28 23:24:46 [tomcat-handler-19] INFO  : End of message processing - session: 3f7abedb-aeb5-fb49-fd95-6f4c86bfcfff from: t1
+2026-03-28 23:26:40 [tomcat-handler-20] INFO  : Session closing: 3f7abedb-aeb5-fb49-fd95-6f4c86bfcfff - reason: null
+2026-03-28 23:41:58 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-28 23:41:58 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2026-03-28 23:42:00 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-28 23:42:00 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2026-03-28 23:42:00 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2026-03-28 23:42:03 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-03-28 23:42:03 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 14728 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-03-28 23:42:03 [main] INFO  : The following 1 profile is active: "dev"
+2026-03-28 23:42:04 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-28 23:42:04 [main] INFO  : Finished Spring Data repository scanning in 165 ms. Found 3 JPA repository interfaces.
+2026-03-28 23:42:06 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-03-28 23:42:06 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-03-28 23:42:06 [main] INFO  : Starting service [Tomcat]
+2026-03-28 23:42:06 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-03-28 23:42:06 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-03-28 23:42:06 [main] INFO  : Root WebApplicationContext: initialization completed in 2407 ms
+2026-03-28 23:42:07 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-03-28 23:42:07 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-03-28 23:42:07 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-03-28 23:42:07 [main] INFO  : Successfully validated 1 migration (execution time 00:00.035s)
+2026-03-28 23:42:07 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-03-28 23:42:07 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-03-28 23:42:07 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-28 23:42:07 [main] INFO  : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-28 23:42:07 [main] INFO  : HHH000026: Second-level cache disabled
+2026-03-28 23:42:07 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-28 23:42:07 [main] INFO  : HikariPool-1 - Starting...
+2026-03-28 23:42:07 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7ffc4195
+2026-03-28 23:42:07 [main] INFO  : HikariPool-1 - Start completed.
+2026-03-28 23:42:07 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-28 23:42:09 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-28 23:42:09 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-28 23:42:10 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-28 23:42:10 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name jwtAuthenticationProvider
+2026-03-28 23:42:10 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-03-28 23:42:11 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-03-28 23:42:11 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-03-28 23:42:11 [main] INFO  : Started ShoppingListServiceApplication in 8.273 seconds (process running for 8.708)
+2026-03-28 23:44:09 [tomcat-handler-0] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-28 23:44:09 [tomcat-handler-0] INFO  : Initializing Servlet 'dispatcherServlet'
+2026-03-28 23:44:09 [tomcat-handler-0] INFO  : Completed initialization in 1 ms
+2026-03-28 23:44:10 [tomcat-handler-0] INFO  : New session connected: f81fc772-58b3-2d05-361b-1764869d6870, user: t1
+2026-03-28 23:44:10 [tomcat-handler-0] INFO  : New message from user: t1
+2026-03-28 23:44:10 [tomcat-handler-0] INFO  : End of message processing - session: f81fc772-58b3-2d05-361b-1764869d6870 from: t1
+2026-03-28 23:44:10 [tomcat-handler-0] INFO  : New message from user: t1
+2026-03-28 23:44:10 [tomcat-handler-0] INFO  : End of message processing - session: f81fc772-58b3-2d05-361b-1764869d6870 from: t1
+2026-03-28 23:44:10 [tomcat-handler-0] INFO  : New message from user: t1
+2026-03-28 23:44:10 [tomcat-handler-0] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 23:44:10 [tomcat-handler-0] INFO  : End of message processing - session: f81fc772-58b3-2d05-361b-1764869d6870 from: t1
+2026-03-28 23:44:10 [tomcat-handler-0] INFO  : New message from user: t1
+2026-03-28 23:44:10 [tomcat-handler-0] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDczNzg0OSwiZXhwIjoxNzc0NzM4NzQ5fQ.k9TjNah0UYFynMJzrFP7YdOPxtsO7oLPe-6Hh9IQ94cnkBL6hiCGM7tAWkFGbmH1, Granted Authorities=[USER]]
+2026-03-28 23:44:10 [tomcat-handler-0] INFO  : Sending message to owner: f81fc772-58b3-2d05-361b-1764869d6870
+2026-03-28 23:44:10 [tomcat-handler-0] INFO  : End of message processing - session: f81fc772-58b3-2d05-361b-1764869d6870 from: t1
+2026-03-28 23:48:09 [tomcat-handler-1] INFO  : Session closing: f81fc772-58b3-2d05-361b-1764869d6870 - reason: null
+2026-03-28 23:50:42 [tomcat-handler-2] INFO  : New session connected: 639cd7e4-f020-f9b3-d2dd-2f82bd0a692b, user: t1
+2026-03-28 23:50:42 [tomcat-handler-3] INFO  : New message from user: t1
+2026-03-28 23:50:42 [tomcat-handler-3] INFO  : End of message processing - session: 639cd7e4-f020-f9b3-d2dd-2f82bd0a692b from: t1
+2026-03-28 23:50:42 [tomcat-handler-3] INFO  : New message from user: t1
+2026-03-28 23:50:42 [tomcat-handler-3] INFO  : End of message processing - session: 639cd7e4-f020-f9b3-d2dd-2f82bd0a692b from: t1
+2026-03-28 23:50:42 [tomcat-handler-3] INFO  : New message from user: t1
+2026-03-28 23:50:42 [tomcat-handler-3] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 23:50:42 [tomcat-handler-3] INFO  : End of message processing - session: 639cd7e4-f020-f9b3-d2dd-2f82bd0a692b from: t1
+2026-03-28 23:50:42 [tomcat-handler-3] INFO  : New message from user: t1
+2026-03-28 23:50:42 [tomcat-handler-3] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDczODI0MiwiZXhwIjoxNzc0NzM5MTQyfQ.5OyfuMGGTVY9eLgGLispTrEhGNWiptf1_-DFgz2f5SBg86YI0q3IG5Ym1s2g09qB, Granted Authorities=[USER]]
+2026-03-28 23:50:42 [tomcat-handler-3] INFO  : Sending message to owner: 639cd7e4-f020-f9b3-d2dd-2f82bd0a692b
+2026-03-28 23:50:42 [tomcat-handler-3] INFO  : End of message processing - session: 639cd7e4-f020-f9b3-d2dd-2f82bd0a692b from: t1
+2026-03-28 23:51:36 [tomcat-handler-4] ERROR : Error Connection reset - session: 639cd7e4-f020-f9b3-d2dd-2f82bd0a692b from: t1
+2026-03-28 23:51:36 [tomcat-handler-4] ERROR : Error java.io.IOException: Connection reset by peer - session: 639cd7e4-f020-f9b3-d2dd-2f82bd0a692b from: t1
+2026-03-28 23:51:36 [tomcat-handler-4] ERROR : Closing session due to exception for StandardWebSocketSession[id=639cd7e4-f020-f9b3-d2dd-2f82bd0a692b, uri=ws://localhost:5443/ws?token=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDczODI0MiwiZXhwIjoxNzc0NzM5MTQyfQ.5OyfuMGGTVY9eLgGLispTrEhGNWiptf1_-DFgz2f5SBg86YI0q3IG5Ym1s2g09qB]
+java.lang.IllegalStateException: The remote endpoint was in state [TEXT_PARTIAL_WRITING] which is an invalid state for called method
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase$StateMachine.checkState(WsRemoteEndpointImplBase.java:1250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase$StateMachine.textPartialStart(WsRemoteEndpointImplBase.java:1215)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:222)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:138)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleTransportError(WebSocketHandler.java:106)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleTransportError(WebSocketHandlerDecorator.java:80)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleTransportError(LoggingWebSocketHandlerDecorator.java:64)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleTransportError(ExceptionWebSocketHandlerDecorator.java:68)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onError(StandardWebSocketHandlerAdapter.java:156)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:793)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:575)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:324)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:223)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:138)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleTransportError(WebSocketHandler.java:106)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleTransportError(WebSocketHandlerDecorator.java:80)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleTransportError(LoggingWebSocketHandlerDecorator.java:64)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleTransportError(ExceptionWebSocketHandlerDecorator.java:68)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onError(StandardWebSocketHandlerAdapter.java:156)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.onError(WsHttpUpgradeHandler.java:234)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:156)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2026-03-28 23:51:36 [tomcat-handler-4] INFO  : Session closing: 639cd7e4-f020-f9b3-d2dd-2f82bd0a692b - reason: Connection reset by peer
+2026-03-28 23:51:36 [tomcat-handler-4] ERROR : Closing session due to exception for StandardWebSocketSession[id=639cd7e4-f020-f9b3-d2dd-2f82bd0a692b, uri=ws://localhost:5443/ws?token=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDczODI0MiwiZXhwIjoxNzc0NzM5MTQyfQ.5OyfuMGGTVY9eLgGLispTrEhGNWiptf1_-DFgz2f5SBg86YI0q3IG5Ym1s2g09qB]
+java.io.IOException: java.io.IOException: Connection reset by peer
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:326)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:223)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:138)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleTransportError(WebSocketHandler.java:106)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleTransportError(WebSocketHandlerDecorator.java:80)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleTransportError(LoggingWebSocketHandlerDecorator.java:64)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleTransportError(ExceptionWebSocketHandlerDecorator.java:68)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onError(StandardWebSocketHandlerAdapter.java:156)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.onError(WsHttpUpgradeHandler.java:234)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:156)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+Caused by: java.io.IOException: Connection reset by peer
+	at java.base/sun.nio.ch.SocketDispatcher.writev0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:58)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:227)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:158)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:574)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:134)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1634)
+	at org.apache.tomcat.util.net.SocketWrapperBase$OperationState.start(SocketWrapperBase.java:1037)
+	at org.apache.tomcat.util.net.SocketWrapperBase.vectoredOperation(SocketWrapperBase.java:1426)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1352)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1323)
+	at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer.doWrite(WsRemoteEndpointImplServer.java:171)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:521)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:313)
+	... 20 common frames omitted
+2026-03-28 23:53:44 [tomcat-handler-5] INFO  : New session connected: 9eedd1e5-184b-9e1d-4b19-20a4e2b162e5, user: t1
+2026-03-28 23:53:44 [tomcat-handler-6] INFO  : New message from user: t1
+2026-03-28 23:53:44 [tomcat-handler-6] INFO  : End of message processing - session: 9eedd1e5-184b-9e1d-4b19-20a4e2b162e5 from: t1
+2026-03-28 23:53:44 [tomcat-handler-6] INFO  : New message from user: t1
+2026-03-28 23:53:44 [tomcat-handler-6] INFO  : End of message processing - session: 9eedd1e5-184b-9e1d-4b19-20a4e2b162e5 from: t1
+2026-03-28 23:53:44 [tomcat-handler-6] INFO  : New message from user: t1
+2026-03-28 23:53:44 [tomcat-handler-6] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 23:53:44 [tomcat-handler-6] INFO  : End of message processing - session: 9eedd1e5-184b-9e1d-4b19-20a4e2b162e5 from: t1
+2026-03-28 23:53:44 [tomcat-handler-7] INFO  : New message from user: t1
+2026-03-28 23:53:44 [tomcat-handler-7] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDczODQyNCwiZXhwIjoxNzc0NzM5MzI0fQ.-_wxckd2OJmB7zW4OxiQbeHYlAF-zzIWG28KSQ4i7qkFC7J-nvb7TRLJPS2zePFn, Granted Authorities=[USER]]
+2026-03-28 23:53:44 [tomcat-handler-7] INFO  : Sending message to owner: 9eedd1e5-184b-9e1d-4b19-20a4e2b162e5
+2026-03-28 23:53:44 [tomcat-handler-7] INFO  : End of message processing - session: 9eedd1e5-184b-9e1d-4b19-20a4e2b162e5 from: t1
+2026-03-28 23:56:31 [tomcat-handler-8] INFO  : Session closing: 9eedd1e5-184b-9e1d-4b19-20a4e2b162e5 - reason: null
+2026-03-28 23:58:39 [tomcat-handler-9] INFO  : New session connected: 824e16d8-107d-9b65-05fd-8549b255ae08, user: t1
+2026-03-28 23:58:39 [tomcat-handler-10] INFO  : New message from user: t1
+2026-03-28 23:58:39 [tomcat-handler-10] INFO  : End of message processing - session: 824e16d8-107d-9b65-05fd-8549b255ae08 from: t1
+2026-03-28 23:58:39 [tomcat-handler-10] INFO  : New message from user: t1
+2026-03-28 23:58:39 [tomcat-handler-10] INFO  : End of message processing - session: 824e16d8-107d-9b65-05fd-8549b255ae08 from: t1
+2026-03-28 23:58:39 [tomcat-handler-10] INFO  : New message from user: t1
+2026-03-28 23:58:39 [tomcat-handler-10] ERROR : java.lang.IllegalArgumentException: Wrong amount of parameters
+2026-03-28 23:58:39 [tomcat-handler-10] INFO  : End of message processing - session: 824e16d8-107d-9b65-05fd-8549b255ae08 from: t1
+2026-03-28 23:58:39 [tomcat-handler-10] INFO  : New message from user: t1
+2026-03-28 23:58:39 [tomcat-handler-10] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NDczODQyNCwiZXhwIjoxNzc0NzM5MzI0fQ.-_wxckd2OJmB7zW4OxiQbeHYlAF-zzIWG28KSQ4i7qkFC7J-nvb7TRLJPS2zePFn, Granted Authorities=[USER]]
+2026-03-28 23:58:39 [tomcat-handler-10] INFO  : Sending message to owner: 824e16d8-107d-9b65-05fd-8549b255ae08
+2026-03-28 23:58:39 [tomcat-handler-10] INFO  : End of message processing - session: 824e16d8-107d-9b65-05fd-8549b255ae08 from: t1

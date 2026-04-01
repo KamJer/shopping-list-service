@@ -12,7 +12,7 @@
     @Data
     @EqualsAndHashCode(onlyExplicitlyIncluded = true)
     @Table(name = "SHOPPING_ITEM")
-    public class ShoppingItem {
+    public class ShoppingItem implements ShoppingEntity {
         @Column(name = "user_name")
         private String userName;
         @Id

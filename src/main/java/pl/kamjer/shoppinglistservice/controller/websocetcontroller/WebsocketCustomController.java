@@ -28,7 +28,7 @@ public class WebsocketCustomController {
     ObjectMapper objectMapper;
 
     void notifyClients(AllDto allDto) throws IOException {
-        String currentUserName = Optional.ofNullable(webSocketDataHolder.getCurrentSession().getPrincipal()).orElseThrow().getName();
+        String currentUserName = Optional.ofNullable(webSocketDataHolder.getCurrentSession().getPrincipal()).map(Principal::getName).orElseThrow();
 
         if (newDataBrought(allDto)) {
             HashMap<Message.Header, String> headersForOthers = new HashMap<>();

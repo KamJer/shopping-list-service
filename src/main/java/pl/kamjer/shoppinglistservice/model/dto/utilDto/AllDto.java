@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-public class AllDto extends Dto{
+public class AllDto{
     private List<AmountTypeDto> amountTypeDtoList;
     private List<CategoryDto> categoryDtoList;
     private List<ShoppingItemDto> shoppingItemDtoList;
