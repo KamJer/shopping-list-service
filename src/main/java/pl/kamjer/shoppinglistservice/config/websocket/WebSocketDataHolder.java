@@ -95,16 +95,6 @@ public class WebSocketDataHolder {
         return optional.orElseThrow(() ->   new NoResourcesFoundException("No such topic exists"));
     }
 
-//    public void removeSessionFromTopics(WebSocketSession session) {
-//        sessionsConnected.remove(session.getId());
-//        subscribedTopicsAndSessions.forEach((key, value) -> value.remove(session.getId()));
-//        subscribedTopicsAndSessions.entrySet()
-//                .stream()
-//                .filter(stringListEntry -> !stringListEntry.getValue().isEmpty() && !basicTopics.contains(stringListEntry.getKey()))
-//                .map(Map.Entry::getKey)
-//                .forEach(subscribedTopicsAndSessions::remove);
-//    }
-
     public void removeSessionFromTopics(WebSocketSession session) {
         String sessionId = session.getId();
         sessionsConnected.remove(sessionId);

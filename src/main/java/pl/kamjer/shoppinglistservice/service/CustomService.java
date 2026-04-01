@@ -19,7 +19,7 @@ public class CustomService {
     protected ObjectMapper objectMapper;
 
     public User getUserFromAuth() {
-        String userName = ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
+        String userName = ((String) SecurityContextHolder.getContext().getAuthentication().getPrincipal());
         String token = (String) SecurityContextHolder.getContext().getAuthentication().getDetails();
         return objectMapper.convertValue(secClient.getUserByUserName(userName, token), User.class);
     }

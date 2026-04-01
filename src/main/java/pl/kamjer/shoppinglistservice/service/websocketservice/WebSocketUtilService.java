@@ -167,8 +167,8 @@ public class WebSocketUtilService extends WebsocketCustomService {
         return false;
     }
 
-    // --- SYNC ---
-    private <E, D, ID> void syncEntities(
+    // --- SYNC --- (package-private for unit tests in the same package)
+    <E, D, ID> void syncEntities(
             List<D> dtos,
             List<E> dbList,
             User user,
