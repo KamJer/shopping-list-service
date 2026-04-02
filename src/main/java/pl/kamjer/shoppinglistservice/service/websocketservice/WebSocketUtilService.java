@@ -16,6 +16,7 @@ import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
 
+import javax.swing.text.html.Option;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.function.BiConsumer;
@@ -46,17 +47,15 @@ public class WebSocketUtilService extends WebsocketCustomService {
     @Transactional
     public AllDto synchronizeWebSocket(AllDto allDto) {
         LocalDateTime savedTime = LocalDateTime.now();
-        User user = getUserFromAuth();
+        User user = requireAuthenticatedUser();
 
         LocalDateTime userSavedTime = Optional.ofNullable(allDto.getSavedTime())
                 .orElse(LocalDateTime.of(1000, 1, 1, 0, 0));
 
-        // --- DB DATA ---
         List<AmountType> amountTypesFromDb = amountTypeRepository.findByUserName(user.getUserName());
         List<Category> categoriesFromDb = categoryRepository.findByUserName(user.getUserName());
         List<ShoppingItem> shoppingItemsFromDb = shoppingItemRepository.findByUserName(user.getUserName());
 
-        // --- CLIENT STATE (KLUCZOWE) ---
         Set<AmountType> clientAmountTypes = buildClientEntities(
                 allDto.getAmountTypeDtoList(),
                 user,
@@ -83,7 +82,6 @@ public class WebSocketUtilService extends WebsocketCustomService {
                 )
         );
 
-        // --- DIRTY CHECK ---
         boolean dirty = isDirty(allDto.getAmountTypeDtoList(), amountTypesFromDb, user, DatabaseUtil::toAmountType)
                 || isDirty(allDto.getCategoryDtoList(), categoriesFromDb, user, DatabaseUtil::toCategory)
                 || isDirty(allDto.getShoppingItemDtoList(), shoppingItemsFromDb, user,
@@ -109,7 +107,6 @@ public class WebSocketUtilService extends WebsocketCustomService {
                     .build();
         }
 
-        // --- SYNC ---
         syncEntities(allDto.getAmountTypeDtoList(), amountTypesFromDb, user, savedTime,
                 amountTypeRepository::save, DatabaseUtil::toAmountType, AmountType::getAmountTypeId,
                 AmountType::setSavedTime, AmountType::setDeleted);
@@ -131,11 +128,9 @@ public class WebSocketUtilService extends WebsocketCustomService {
                 ShoppingItem::setSavedTime,
                 ShoppingItem::setDeleted);
 
-        // --- USER UPDATE ---
         user.setSavedTime(savedTime);
         secClient.putUser(DatabaseUtil.toUserDto(user), user.getPassword());
 
-        // --- RESPONSE ---
         return AllDto.builder()
                 .amountTypeDtoList(processForClient(clientAmountTypes, amountTypesFromDb, userSavedTime, DatabaseUtil::toAmountTypeDto))
                 .categoryDtoList(processForClient(clientCategories, categoriesFromDb, userSavedTime, DatabaseUtil::toCategoryDto))
@@ -145,7 +140,6 @@ public class WebSocketUtilService extends WebsocketCustomService {
                 .build();
     }
 
-    // --- BUILD CLIENT STATE ---
     private <E, D> Set<E> buildClientEntities(List<D> dtos, User user,
                                               TriFunction<User, D, LocalDateTime, E> mapper) {
         return dtos.stream()
@@ -167,7 +161,6 @@ public class WebSocketUtilService extends WebsocketCustomService {
         return false;
     }
 
-    // --- SYNC --- (package-private for unit tests in the same package)
     <E, D, ID> void syncEntities(
             List<D> dtos,
             List<E> dbList,
@@ -185,6 +178,10 @@ public class WebSocketUtilService extends WebsocketCustomService {
         for (D dto : dtos) {
             E entity = toEntityFunction.apply(user, dto, savedTime);
             ModifyState state = ((Dto) dto).getModifyState();
+
+            if (state == null) {
+                throw new IllegalArgumentException("Modify state can't be null");
+            }
 
             switch (state) {
                 case INSERT -> toInsert.add(entity);
@@ -211,7 +208,6 @@ public class WebSocketUtilService extends WebsocketCustomService {
         toInsert.forEach(saveFunction::apply);
     }
 
-    // --- COPY ---
     private <E> void copyProperties(E source, E target, LocalDateTime savedTime) {
         if (target instanceof AmountType t && source instanceof AmountType s) {
             t.setTypeName(s.getTypeName());

@@ -1,11 +1,9 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-import pl.kamjer.shoppinglistservice.DatabaseUtil;
+import org.springframework.web.socket.WebSocketSession;
 import pl.kamjer.shoppinglistservice.client.SecClient;
-import pl.kamjer.shoppinglistservice.config.security.JwtAuthToken;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.User;
@@ -25,11 +23,33 @@ public class WebsocketCustomService extends CustomService {
     }
 
     @Override
-    public User getUserFromAuth() throws NoResourcesFoundException {
-        String userName = Optional.ofNullable(webSocketDataHolder.getCurrentSession().getPrincipal()).map(Principal::getName).orElseThrow();
-        String token = webSocketDataHolder.getCurrentSession().getAttributes().get("TOKEN").toString();
-        User user = objectMapper.convertValue(secClient.getUserByUserName(userName, token), User.class);
-        user.setPassword(token);
-        return user;
+    public Optional<User> getUserFromAuth() {
+        WebSocketSession session = webSocketDataHolder.getCurrentSession();
+        if (session == null) {
+            return Optional.empty();
+        }
+        Optional<String> userName = Optional.ofNullable(session.getPrincipal()).map(Principal::getName);
+        if (userName.isEmpty()) {
+            return Optional.empty();
+        }
+        Object tokenObj = session.getAttributes().get("TOKEN");
+        if (tokenObj == null) {
+            return Optional.empty();
+        }
+        String token = tokenObj.toString();
+        try {
+            User user = objectMapper.convertValue(secClient.getUserByUserName(userName.get(), token), User.class);
+            if (user == null) {
+                return Optional.empty();
+            }
+            user.setPassword(token);
+            return Optional.of(user);
+        } catch (RuntimeException ignored) {
+            return Optional.empty();
+        }
+    }
+
+    protected User requireAuthenticatedUser() {
+        return getUserFromAuth().orElseThrow(() -> new NoResourcesFoundException("User not authenticated"));
     }
 }

@@ -1,6 +1,7 @@
 package pl.kamjer.shoppinglistservice.model.dto;
 
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Getter;
 import pl.kamjer.shoppinglistservice.model.ModifyState;
@@ -15,6 +16,7 @@ public class AmountTypeDto implements Dto {
     @NotEmpty
     private String typeName;
     private boolean deleted;
+    @NotNull
     private ModifyState modifyState;
 
     private long localId;

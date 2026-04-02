@@ -11,6 +11,7 @@ import pl.kamjer.shoppinglistservice.model.AmountType;
 import pl.kamjer.shoppinglistservice.model.Category;
 import pl.kamjer.shoppinglistservice.model.ModifyState;
 import pl.kamjer.shoppinglistservice.model.ShoppingItem;
+import pl.kamjer.shoppinglistservice.model.User;
 import pl.kamjer.shoppinglistservice.model.dto.ShoppingItemDto;
 import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
@@ -41,25 +42,28 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
 
     @Transactional
     public ShoppingItemDto putShoppingItem(ShoppingItemDto shoppingItemDto) {
+        User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
-        ShoppingItem shoppingItem = DatabaseUtil.toShoppingItem(getUserFromAuth(), amountTypeRepository, new HashMap<>(), categoryRepository, new HashMap<>(), shoppingItemDto, LocalDateTime.now());
+        ShoppingItem shoppingItem =
+                DatabaseUtil.toShoppingItem(user, amountTypeRepository, new HashMap<>(), categoryRepository, new HashMap<>(), shoppingItemDto, savedTime);
         shoppingItemRepository.save(shoppingItem);
         shoppingItem.setLocalShoppingItemId(shoppingItemDto.getLocalId());
         shoppingItem.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
         shoppingItem.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
         shoppingItem.setSavedTime(savedTime);
-        getUserFromAuth().setSavedTime(savedTime);
+        user.setSavedTime(savedTime);
+        secClient.putUser(DatabaseUtil.toUserDto(user), user.getPassword());
         return DatabaseUtil.toShoppingItemDto(shoppingItem, ModifyState.UPDATE, savedTime);
-
     }
 
     @Transactional
     public ShoppingItemDto postShoppingItem(ShoppingItemDto shoppingItemDto) {
+        User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
-        Optional<ShoppingItem> shoppingItemOptional = shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(getUserFromAuth().getUserName(), shoppingItemDto.getShoppingItemId());
+        Optional<ShoppingItem> shoppingItemOptional = shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(user.getUserName(), shoppingItemDto.getShoppingItemId());
         if (shoppingItemOptional.isPresent()) {
-            Optional<AmountType> amountTypeOptional = amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(getUserFromAuth().getUserName(), shoppingItemDto.getItemAmountTypeId());
-            Optional<Category> categoryOptional = categoryRepository.findCategoryByUserNameAndCategoryId(getUserFromAuth().getUserName(), shoppingItemDto.getItemCategoryId());
+            Optional<AmountType> amountTypeOptional = amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId());
+            Optional<Category> categoryOptional = categoryRepository.findCategoryByUserNameAndCategoryId(user.getUserName(), shoppingItemDto.getItemCategoryId());
             if (amountTypeOptional.isPresent() && categoryOptional.isPresent()) {
                 ShoppingItem shoppingItem = shoppingItemOptional.get();
                 shoppingItem.setItemName(shoppingItemDto.getItemName());
@@ -68,12 +72,13 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
                 shoppingItem.setAmount(shoppingItemDto.getAmount());
                 shoppingItem.setDeleted(shoppingItemDto.isDeleted());
                 shoppingItem.setBought(shoppingItemDto.isBought());
-                shoppingItem.setSavedTime(LocalDateTime.now());
+                shoppingItem.setSavedTime(savedTime);
                 shoppingItem.setLocalShoppingItemId(shoppingItemDto.getLocalId());
                 shoppingItem.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
                 shoppingItem.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
                 shoppingItem.setSavedTime(savedTime);
-                getUserFromAuth().setSavedTime(savedTime);
+                user.setSavedTime(savedTime);
+                secClient.putUser(DatabaseUtil.toUserDto(user), user.getPassword());
                 return DatabaseUtil.toShoppingItemDto(shoppingItem, ModifyState.UPDATE, savedTime);
             } else {
                 throw new NoResourcesFoundException("Such Amount Type or Category does not exist");
@@ -85,16 +90,18 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
 
     @Transactional
     public ShoppingItemDto deleteShoppingItem(ShoppingItemDto shoppingItemDto) {
+        User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
-        getUserFromAuth().setSavedTime(savedTime);
-        Optional<ShoppingItem> amountTypeOptional = shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(getUserFromAuth().getUserName(), shoppingItemDto.getShoppingItemId());
-        if (amountTypeOptional.isPresent()) {
-            ShoppingItem amountTypeToDelete = amountTypeOptional.get();
+        Optional<ShoppingItem> shoppingItemOptional = shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(user.getUserName(), shoppingItemDto.getShoppingItemId());
+        if (shoppingItemOptional.isPresent()) {
+            ShoppingItem amountTypeToDelete = shoppingItemOptional.get();
             amountTypeToDelete.setDeleted(shoppingItemDto.isDeleted());
             amountTypeToDelete.setLocalShoppingItemId(shoppingItemDto.getLocalId());
             amountTypeToDelete.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
             amountTypeToDelete.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
             amountTypeToDelete.setSavedTime(savedTime);
+            user.setSavedTime(savedTime);
+            secClient.putUser(DatabaseUtil.toUserDto(user), user.getPassword());
             return DatabaseUtil.toShoppingItemDto(amountTypeToDelete, ModifyState.DELETE);
         }
 //        if data does not exist in a database send it to client to delete anyway since it does not exist no action necessary

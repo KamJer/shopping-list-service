@@ -1,5 +1,6 @@
 package pl.kamjer.shoppinglistservice.model.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Getter;
 import pl.kamjer.shoppinglistservice.model.ModifyState;
@@ -14,6 +15,7 @@ public class CategoryDto implements Dto {
     private long categoryId;
     private String categoryName;
     private boolean deleted;
+    @NotNull
     private ModifyState modifyState;
 
     private long localId;
