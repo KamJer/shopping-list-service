@@ -778,3 +778,242 @@ Caused by: java.lang.NullPointerException: Deflater has been closed
 	at org.apache.tomcat.websocket.PerMessageDeflate.sendMessagePart(PerMessageDeflate.java:353)
 	... 51 common frames omitted
 2026-04-02 20:32:49 [SpringApplicationShutdownHook] INFO  : Session closing: 0bdf9819-4ee8-44df-4caf-fe42f1ad106b - reason: The web application is stopping
+2026-04-02 21:17:38 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-04-02 21:17:38 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 4548 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-04-02 21:17:38 [main] INFO  : The following 1 profile is active: "dev"
+2026-04-02 21:17:39 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-02 21:17:39 [main] INFO  : Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+2026-04-02 21:17:40 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-04-02 21:17:40 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-04-02 21:17:40 [main] INFO  : Starting service [Tomcat]
+2026-04-02 21:17:40 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-04-02 21:17:40 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-04-02 21:17:40 [main] INFO  : Root WebApplicationContext: initialization completed in 2233 ms
+2026-04-02 21:17:41 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-04-02 21:17:41 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-04-02 21:17:41 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-04-02 21:17:41 [main] INFO  : Successfully validated 1 migration (execution time 00:00.023s)
+2026-04-02 21:17:41 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-04-02 21:17:41 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-04-02 21:17:41 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-02 21:17:41 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.13.Final
+2026-04-02 21:17:41 [main] INFO  : HHH000026: Second-level cache disabled
+2026-04-02 21:17:41 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-02 21:17:41 [main] INFO  : HikariPool-1 - Starting...
+2026-04-02 21:17:42 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1eab0700
+2026-04-02 21:17:42 [main] INFO  : HikariPool-1 - Start completed.
+2026-04-02 21:17:42 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-02 21:17:42 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.7.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-02 21:17:43 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-02 21:17:43 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-02 21:17:45 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-02 21:17:45 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name jwtAuthenticationProvider
+2026-04-02 21:17:45 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-04-02 21:17:46 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-04-02 21:17:46 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-04-02 21:17:46 [main] INFO  : Started ShoppingListServiceApplication in 9.291 seconds (process running for 10.179)
+2026-04-02 21:22:03 [tomcat-handler-0] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-02 21:22:03 [tomcat-handler-0] INFO  : Initializing Servlet 'dispatcherServlet'
+2026-04-02 21:22:03 [tomcat-handler-0] INFO  : Completed initialization in 1 ms
+2026-04-02 21:22:03 [tomcat-handler-1] INFO  : New session connected: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3, user: t1
+2026-04-02 21:22:03 [tomcat-handler-0] INFO  : New session connected: dfb4c1ee-655d-4044-987f-79b10a33ad02, user: t1
+2026-04-02 21:22:03 [tomcat-handler-2] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-3] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-2] INFO  : End of message processing - session: dfb4c1ee-655d-4044-987f-79b10a33ad02 from: t1
+2026-04-02 21:22:03 [tomcat-handler-3] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:22:03 [tomcat-handler-4] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-4] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:22:03 [tomcat-handler-5] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-5] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:22:03 [tomcat-handler-6] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-6] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:22:03 [tomcat-handler-7] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-7] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:22:03 [tomcat-handler-8] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-8] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:22:03 [tomcat-handler-9] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-9] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:22:03 [tomcat-handler-10] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-10] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:22:03 [tomcat-handler-11] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-11] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:22:03 [tomcat-handler-12] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-12] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:22:03 [tomcat-handler-13] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-13] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:22:03 [tomcat-handler-14] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-14] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:22:03 [tomcat-handler-15] INFO  : New message from user: t1
+2026-04-02 21:22:03 [tomcat-handler-15] INFO  : /synchronizeData connected: User UsernamePasswordAuthenticationToken [Principal=t1, Credentials=[PROTECTED], Authenticated=true, Details=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NTE1NzcyMSwiZXhwIjoxNzc1MTU4NjIxfQ.t7OgBdaasvupF4az1m5LSexVYEWY6eTdw42y9_LRTdOY5OxkuddBPTMC-A4vwS4N, Granted Authorities=[USER]]
+2026-04-02 21:22:03 [tomcat-handler-15] INFO  : Sending message to owner: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3
+2026-04-02 21:22:03 [tomcat-handler-15] INFO  : End of message processing - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:31:51 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-02 21:31:51 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2026-04-02 21:31:51 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-02 21:31:51 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2026-04-02 21:31:51 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2026-04-02 21:31:51 [SpringApplicationShutdownHook] ERROR : Error java.nio.channels.ClosedChannelException - session: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 from: t1
+2026-04-02 21:31:51 [SpringApplicationShutdownHook] ERROR : Closing session due to exception for StandardWebSocketSession[id=5f4fd0fc-d6f2-00c4-387a-c59c792765f3, uri=ws://192.168.0.13:5443/ws?token=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NTE1NzcyMSwiZXhwIjoxNzc1MTU4NjIxfQ.t7OgBdaasvupF4az1m5LSexVYEWY6eTdw42y9_LRTdOY5OxkuddBPTMC-A4vwS4N]
+java.lang.IllegalStateException: Message will not be sent because the WebSocket session has been closed
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:455)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:313)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:223)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:138)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleTransportError(WebSocketHandler.java:106)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleTransportError(WebSocketHandlerDecorator.java:80)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleTransportError(LoggingWebSocketHandlerDecorator.java:64)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleTransportError(ExceptionWebSocketHandlerDecorator.java:68)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onError(StandardWebSocketHandlerAdapter.java:156)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:793)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:575)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:542)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:530)
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:1022)
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:46)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4090)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:4700)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:468)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:915)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:448)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:301)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.destroy(TomcatWebServer.java:374)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:182)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-04-02 21:31:51 [SpringApplicationShutdownHook] INFO  : Session closing: 5f4fd0fc-d6f2-00c4-387a-c59c792765f3 - reason: The web application is stopping
+2026-04-02 21:31:51 [SpringApplicationShutdownHook] ERROR : Error java.nio.channels.ClosedChannelException - session: dfb4c1ee-655d-4044-987f-79b10a33ad02 from: t1
+2026-04-02 21:31:51 [SpringApplicationShutdownHook] ERROR : Closing session due to exception for StandardWebSocketSession[id=dfb4c1ee-655d-4044-987f-79b10a33ad02, uri=ws://192.168.0.13:5443/ws?token=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0MSIsImlhdCI6MTc3NTE1NzcyMSwiZXhwIjoxNzc1MTU4NjIxfQ.t7OgBdaasvupF4az1m5LSexVYEWY6eTdw42y9_LRTdOY5OxkuddBPTMC-A4vwS4N]
+java.lang.IllegalStateException: Message will not be sent because the WebSocket session has been closed
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:455)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:313)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:250)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendPartialString(WsRemoteEndpointImplBase.java:223)
+	at org.apache.tomcat.websocket.WsRemoteEndpointBasic.sendText(WsRemoteEndpointBasic.java:48)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketSession.sendTextMessage(StandardWebSocketSession.java:217)
+	at org.springframework.web.socket.adapter.AbstractWebSocketSession.sendMessage(AbstractWebSocketSession.java:108)
+	at pl.kamjer.shoppinglistservice.config.websocket.ConnectionBroker.handleException(ConnectionBroker.java:138)
+	at pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler.handleTransportError(WebSocketHandler.java:106)
+	at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleTransportError(WebSocketHandlerDecorator.java:80)
+	at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleTransportError(LoggingWebSocketHandlerDecorator.java:64)
+	at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleTransportError(ExceptionWebSocketHandlerDecorator.java:68)
+	at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.onError(StandardWebSocketHandlerAdapter.java:156)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:793)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:575)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:542)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:530)
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:1022)
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:46)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4090)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:4700)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:468)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:915)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:448)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:301)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.destroy(TomcatWebServer.java:374)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:182)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-04-02 21:31:51 [SpringApplicationShutdownHook] INFO  : Session closing: dfb4c1ee-655d-4044-987f-79b10a33ad02 - reason: The web application is stopping
+2026-04-02 21:32:01 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.2.Final
+2026-04-02 21:32:01 [main] INFO  : Starting ShoppingListServiceApplication using Java 21.0.3 with PID 21520 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-04-02 21:32:01 [main] INFO  : The following 1 profile is active: "dev"
+2026-04-02 21:32:02 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-02 21:32:02 [main] INFO  : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2026-04-02 21:32:03 [main] INFO  : Tomcat initialized with port 5443 (http)
+2026-04-02 21:32:03 [main] INFO  : Initializing ProtocolHandler ["http-nio-5443"]
+2026-04-02 21:32:03 [main] INFO  : Starting service [Tomcat]
+2026-04-02 21:32:03 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-04-02 21:32:03 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2026-04-02 21:32:03 [main] INFO  : Root WebApplicationContext: initialization completed in 2156 ms
+2026-04-02 21:32:04 [main] WARN  : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-04-02 21:32:04 [main] INFO  : Database: jdbc:mariadb://localhost/shopping_list_db?user=root&password=******** (MariaDB 11.7)
+2026-04-02 21:32:04 [main] WARN  : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-04-02 21:32:04 [main] INFO  : Successfully validated 1 migration (execution time 00:00.033s)
+2026-04-02 21:32:04 [main] INFO  : Current version of schema `shopping_list_db`: 1
+2026-04-02 21:32:04 [main] INFO  : Schema `shopping_list_db` is up to date. No migration necessary.
+2026-04-02 21:32:04 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-02 21:32:04 [main] INFO  : HHH000412: Hibernate ORM core version 6.6.13.Final
+2026-04-02 21:32:04 [main] INFO  : HHH000026: Second-level cache disabled
+2026-04-02 21:32:05 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-02 21:32:05 [main] INFO  : HikariPool-1 - Starting...
+2026-04-02 21:32:05 [main] INFO  : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@54ef9698
+2026-04-02 21:32:05 [main] INFO  : HikariPool-1 - Start completed.
+2026-04-02 21:32:05 [main] WARN  : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-02 21:32:05 [main] INFO  : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 11.7.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-02 21:32:06 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-02 21:32:06 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-02 21:32:07 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-02 21:32:07 [main] INFO  : Global AuthenticationManager configured with AuthenticationProvider bean with name jwtAuthenticationProvider
+2026-04-02 21:32:07 [main] INFO  : Exposing 0 endpoints beneath base path '/actuator'
+2026-04-02 21:32:08 [main] INFO  : Starting ProtocolHandler ["http-nio-5443"]
+2026-04-02 21:32:08 [main] INFO  : Tomcat started on port 5443 (http) with context path '/'
+2026-04-02 21:32:08 [main] INFO  : Started ShoppingListServiceApplication in 7.574 seconds (process running for 7.951)
+2026-04-02 21:42:05 [SpringApplicationShutdownHook] INFO  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-02 21:42:05 [tomcat-shutdown] INFO  : Graceful shutdown complete
+2026-04-02 21:42:05 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-02 21:42:05 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2026-04-02 21:42:05 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.

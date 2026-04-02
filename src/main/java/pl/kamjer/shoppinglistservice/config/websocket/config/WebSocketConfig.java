@@ -2,10 +2,10 @@ package pl.kamjer.shoppinglistservice.config.websocket.config;
 
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.socket.config.annotation.*;
-import pl.kamjer.shoppinglistservice.client.SecClient;
+import org.springframework.web.socket.config.annotation.EnableWebSocket;
+import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
+import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler;
-import pl.kamjer.shoppinglistservice.model.User;
 
 @Configuration
 @EnableWebSocket
@@ -13,7 +13,6 @@ import pl.kamjer.shoppinglistservice.model.User;
 public class WebSocketConfig implements WebSocketConfigurer {
 
     private WebSocketHandler webSocketHandler;
-    private SecClient secClient;
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {

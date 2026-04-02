@@ -16,7 +16,6 @@ import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
 import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
 
-import javax.swing.text.html.Option;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.function.BiConsumer;
@@ -195,9 +194,7 @@ public class WebSocketUtilService extends WebsocketCustomService {
                 }
                 case DELETE -> {
                     E existing = existingMap.get(idGetter.apply(entity));
-                    if (existing == null) {
-                        toInsert.add(entity);
-                    } else {
+                    if (existing != null) {
                         setDeleted.accept(existing, true);
                         setSavedTime.accept(existing, savedTime);
                     }

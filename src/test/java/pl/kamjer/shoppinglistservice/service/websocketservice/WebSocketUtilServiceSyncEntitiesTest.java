@@ -161,6 +161,31 @@ class WebSocketUtilServiceSyncEntitiesTest {
     }
 
     @Test
+    void syncEntities_delete_whenMissingInDb_doesNotSave() {
+        List<AmountType> db = new ArrayList<>();
+        AmountTypeDto dto = AmountTypeDto.builder()
+                .amountTypeId(42L)
+                .typeName("gone")
+                .modifyState(ModifyState.DELETE)
+                .savedTime(T0)
+                .build();
+
+        service.syncEntities(
+                List.of(dto),
+                db,
+                user,
+                T1,
+                amountTypeRepository::save,
+                DatabaseUtil::toAmountType,
+                AmountType::getAmountTypeId,
+                AmountType::setSavedTime,
+                AmountType::setDeleted
+        );
+
+        verify(amountTypeRepository, never()).save(any());
+    }
+
+    @Test
     void syncEntities_update_whenMissingInDb_insertsViaSave() {
         List<AmountType> db = new ArrayList<>();
         AmountTypeDto dto = AmountTypeDto.builder()

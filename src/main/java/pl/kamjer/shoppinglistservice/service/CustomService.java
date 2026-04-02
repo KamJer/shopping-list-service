@@ -53,7 +53,7 @@ public class CustomService {
             log.warn("Sec unreachable for userName={}: {}", userName, e.toString(), e);
             return Optional.empty();
         } catch (RuntimeException e) {
-            log.debug("Unexpected error loading user from Sec for userName={}", userName, e);
+            log.warn("Unexpected error loading user from Sec for userName={}", userName, e);
             return Optional.empty();
         }
     }

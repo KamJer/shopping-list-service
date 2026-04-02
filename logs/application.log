@@ -36,3 +36,76 @@
 2026-04-02T20:32:49.446+02:00  INFO 20132 --- [ShoppingListServices] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-04-02T20:32:49.447+02:00  INFO 20132 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-04-02T20:32:49.449+02:00  INFO 20132 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-02T21:17:40.495+02:00  INFO 7408 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 7408 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-04-02T21:17:40.498+02:00  INFO 7408 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
+2026-04-02T21:17:41.881+02:00  INFO 7408 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-02T21:17:42.019+02:00  INFO 7408 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 2 JPA repository interfaces.
+2026-04-02T21:17:43.152+02:00  INFO 7408 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
+2026-04-02T21:17:43.189+02:00  INFO 7408 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-02T21:17:43.190+02:00  INFO 7408 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-04-02T21:17:43.301+02:00  INFO 7408 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-02T21:17:43.302+02:00  INFO 7408 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2745 ms
+2026-04-02T21:17:44.310+02:00  WARN 7408 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-04-02T21:17:44.334+02:00  INFO 7408 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_users_db?user=root&password=******** (MariaDB 11.7)
+2026-04-02T21:17:44.345+02:00  WARN 7408 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-04-02T21:17:44.421+02:00  INFO 7408 --- [ShoppingListServices] [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.061s)
+2026-04-02T21:17:44.443+02:00  INFO 7408 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `shopping_list_users_db`: 2
+2026-04-02T21:17:44.450+02:00  INFO 7408 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Schema `shopping_list_users_db` is up to date. No migration necessary.
+2026-04-02T21:17:44.632+02:00  INFO 7408 --- [ShoppingListServices] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-02T21:17:44.737+02:00  INFO 7408 --- [ShoppingListServices] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-02T21:17:44.785+02:00  INFO 7408 --- [ShoppingListServices] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-02T21:17:45.060+02:00  INFO 7408 --- [ShoppingListServices] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-02T21:17:45.092+02:00  INFO 7408 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-02T21:17:45.110+02:00  INFO 7408 --- [ShoppingListServices] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6c25123e
+2026-04-02T21:17:45.112+02:00  INFO 7408 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-02T21:17:45.163+02:00  WARN 7408 --- [ShoppingListServices] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-02T21:17:46.182+02:00  INFO 7408 --- [ShoppingListServices] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-02T21:17:46.188+02:00  INFO 7408 --- [ShoppingListServices] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-02T21:17:46.924+02:00  INFO 7408 --- [ShoppingListServices] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2026-04-02T21:17:47.085+02:00  WARN 7408 --- [ShoppingListServices] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-02T21:17:47.909+02:00  INFO 7408 --- [ShoppingListServices] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoints beneath base path '/actuator'
+2026-04-02T21:17:48.971+02:00  INFO 7408 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4443 (http) with context path '/'
+2026-04-02T21:17:48.993+02:00  INFO 7408 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Started ShoppingSecurityServiceApplication in 9.136 seconds (process running for 9.745)
+2026-04-02T21:22:00.911+02:00  INFO 7408 --- [ShoppingListServices] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-02T21:22:00.911+02:00  INFO 7408 --- [ShoppingListServices] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-02T21:22:00.912+02:00  INFO 7408 --- [ShoppingListServices] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-02T21:31:51.164+02:00  INFO 7408 --- [ShoppingListServices] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-02T21:31:51.172+02:00  INFO 7408 --- [ShoppingListServices] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-04-02T21:31:51.201+02:00  INFO 7408 --- [ShoppingListServices] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-02T21:31:51.204+02:00  INFO 7408 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-02T21:31:51.208+02:00  INFO 7408 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-02T21:32:03.950+02:00  INFO 24264 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Starting ShoppingSecurityServiceApplication using Java 21.0.3 with PID 24264 (C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingSecService\target\classes started by kjerz in C:\Users\kjerz\Desktop\programy programowanie\projekty\ShoppingListService)
+2026-04-02T21:32:03.952+02:00  INFO 24264 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : The following 1 profile is active: "dev"
+2026-04-02T21:32:05.238+02:00  INFO 24264 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-02T21:32:05.364+02:00  INFO 24264 --- [ShoppingListServices] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 2 JPA repository interfaces.
+2026-04-02T21:32:06.285+02:00  INFO 24264 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4443 (http)
+2026-04-02T21:32:06.318+02:00  INFO 24264 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-02T21:32:06.319+02:00  INFO 24264 --- [ShoppingListServices] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2026-04-02T21:32:06.382+02:00  INFO 24264 --- [ShoppingListServices] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-02T21:32:06.383+02:00  INFO 24264 --- [ShoppingListServices] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2378 ms
+2026-04-02T21:32:07.164+02:00  WARN 24264 --- [ShoppingListServices] [main] o.m.jdbc.message.server.ErrorPacket      : Error: 1193-HY000: Unknown system variable 'WSREP_ON'
+2026-04-02T21:32:07.182+02:00  INFO 24264 --- [ShoppingListServices] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mariadb://localhost/shopping_list_users_db?user=root&password=******** (MariaDB 11.7)
+2026-04-02T21:32:07.192+02:00  WARN 24264 --- [ShoppingListServices] [main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: MariaDB 11.7 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 11.2.
+2026-04-02T21:32:07.238+02:00  INFO 24264 --- [ShoppingListServices] [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.034s)
+2026-04-02T21:32:07.251+02:00  INFO 24264 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `shopping_list_users_db`: 2
+2026-04-02T21:32:07.256+02:00  INFO 24264 --- [ShoppingListServices] [main] o.f.core.internal.command.DbMigrate      : Schema `shopping_list_users_db` is up to date. No migration necessary.
+2026-04-02T21:32:07.393+02:00  INFO 24264 --- [ShoppingListServices] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-02T21:32:07.478+02:00  INFO 24264 --- [ShoppingListServices] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-02T21:32:07.541+02:00  INFO 24264 --- [ShoppingListServices] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-02T21:32:07.994+02:00  INFO 24264 --- [ShoppingListServices] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-02T21:32:08.025+02:00  INFO 24264 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-02T21:32:08.043+02:00  INFO 24264 --- [ShoppingListServices] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2e38d44e
+2026-04-02T21:32:08.046+02:00  INFO 24264 --- [ShoppingListServices] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-02T21:32:08.088+02:00  WARN 24264 --- [ShoppingListServices] [main] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-02T21:32:08.921+02:00  INFO 24264 --- [ShoppingListServices] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-02T21:32:08.924+02:00  INFO 24264 --- [ShoppingListServices] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-02T21:32:09.279+02:00  INFO 24264 --- [ShoppingListServices] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2026-04-02T21:32:09.362+02:00  WARN 24264 --- [ShoppingListServices] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-02T21:32:09.667+02:00  INFO 24264 --- [ShoppingListServices] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 0 endpoints beneath base path '/actuator'
+2026-04-02T21:32:10.287+02:00  INFO 24264 --- [ShoppingListServices] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4443 (http) with context path '/'
+2026-04-02T21:32:10.298+02:00  INFO 24264 --- [ShoppingListServices] [main] p.k.S.ShoppingSecurityServiceApplication : Started ShoppingSecurityServiceApplication in 7.003 seconds (process running for 7.654)
+2026-04-02T21:42:05.413+02:00  INFO 24264 --- [ShoppingListServices] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-02T21:42:05.418+02:00  INFO 24264 --- [ShoppingListServices] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-04-02T21:42:05.437+02:00  INFO 24264 --- [ShoppingListServices] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-02T21:42:05.439+02:00  INFO 24264 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-02T21:42:05.441+02:00  INFO 24264 --- [ShoppingListServices] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

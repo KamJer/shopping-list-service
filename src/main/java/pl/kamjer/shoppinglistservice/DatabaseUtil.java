@@ -166,7 +166,7 @@ public class DatabaseUtil {
             ShoppingItemDto shoppingItemDto,
             LocalDateTime savedTime)
             throws NoResourcesFoundException {
-        return ShoppingItem.builder()
+        ShoppingItem item = ShoppingItem.builder()
                 .shoppingItemId(adjustId(shoppingItemDto.getShoppingItemId()))
                 .userName(user.getUserName())
                 .itemAmountType(amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId(user.getUserName(), shoppingItemDto.getItemAmountTypeId()).orElseGet(() -> at.get(shoppingItemDto.getLocalAmountTypeId())))
@@ -180,5 +180,9 @@ public class DatabaseUtil {
                 .localAmountTypeId(shoppingItemDto.getLocalAmountTypeId())
                 .localCategoryId(shoppingItemDto.getLocalCategoryId())
                 .build();
+        if (item.getItemAmountType() == null || item.getItemCategory() == null) {
+            throw new NoResourcesFoundException("Amount type or category not found for shopping item");
+        }
+        return item;
     }
 }

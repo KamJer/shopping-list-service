@@ -94,15 +94,15 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
         LocalDateTime savedTime = LocalDateTime.now();
         Optional<ShoppingItem> shoppingItemOptional = shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(user.getUserName(), shoppingItemDto.getShoppingItemId());
         if (shoppingItemOptional.isPresent()) {
-            ShoppingItem amountTypeToDelete = shoppingItemOptional.get();
-            amountTypeToDelete.setDeleted(shoppingItemDto.isDeleted());
-            amountTypeToDelete.setLocalShoppingItemId(shoppingItemDto.getLocalId());
-            amountTypeToDelete.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
-            amountTypeToDelete.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
-            amountTypeToDelete.setSavedTime(savedTime);
+            ShoppingItem shoppingItemToDelete = shoppingItemOptional.get();
+            shoppingItemToDelete.setDeleted(shoppingItemDto.isDeleted());
+            shoppingItemToDelete.setLocalShoppingItemId(shoppingItemDto.getLocalId());
+            shoppingItemToDelete.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
+            shoppingItemToDelete.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
+            shoppingItemToDelete.setSavedTime(savedTime);
             user.setSavedTime(savedTime);
             secClient.putUser(DatabaseUtil.toUserDto(user), user.getPassword());
-            return DatabaseUtil.toShoppingItemDto(amountTypeToDelete, ModifyState.DELETE);
+            return DatabaseUtil.toShoppingItemDto(shoppingItemToDelete, ModifyState.DELETE);
         }
 //        if data does not exist in a database send it to client to delete anyway since it does not exist no action necessary
         return DatabaseUtil.fromShoppingItemDtoToShoppingItemDto(shoppingItemDto, ModifyState.DELETE, savedTime);

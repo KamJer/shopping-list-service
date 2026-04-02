@@ -1,6 +1,7 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 import org.springframework.web.socket.WebSocketSession;
 import pl.kamjer.shoppinglistservice.client.SecClient;
@@ -13,6 +14,7 @@ import java.security.Principal;
 import java.util.Optional;
 
 @Service
+@Log4j2
 public class WebsocketCustomService extends CustomService {
 
     private final WebSocketDataHolder webSocketDataHolder;
@@ -44,7 +46,8 @@ public class WebsocketCustomService extends CustomService {
             }
             user.setPassword(token);
             return Optional.of(user);
-        } catch (RuntimeException ignored) {
+        } catch (RuntimeException e) {
+            log.warn("Failed to load user from Sec for WebSocket session userName={}", userName.get(), e);
             return Optional.empty();
         }
     }
