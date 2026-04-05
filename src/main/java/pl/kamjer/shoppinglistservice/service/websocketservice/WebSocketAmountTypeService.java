@@ -3,8 +3,8 @@ package pl.kamjer.shoppinglistservice.service.websocketservice;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-import pl.kamjer.shoppinglistservice.DatabaseUtil;
 import pl.kamjer.shoppinglistservice.client.SecClient;
+import pl.kamjer.shoppinglistservice.mapping.ShoppingEntityMapper;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
 import pl.kamjer.shoppinglistservice.model.AmountType;
 import pl.kamjer.shoppinglistservice.model.ModifyState;
@@ -19,23 +19,27 @@ import java.util.Optional;
 public class WebSocketAmountTypeService extends WebsocketCustomService {
 
     private final AmountTypeRepository amountTypeRepository;
+    private final ShoppingEntityMapper shoppingEntityMapper;
 
-    public WebSocketAmountTypeService(SecClient secClient, WebSocketDataHolder webSocketDataHolder, AmountTypeRepository amountTypeRepository, ObjectMapper objectMapper) {
+    public WebSocketAmountTypeService(SecClient secClient, WebSocketDataHolder webSocketDataHolder,
+                                      AmountTypeRepository amountTypeRepository, ObjectMapper objectMapper,
+                                      ShoppingEntityMapper shoppingEntityMapper) {
         super(webSocketDataHolder, secClient, objectMapper);
         this.amountTypeRepository = amountTypeRepository;
+        this.shoppingEntityMapper = shoppingEntityMapper;
     }
 
     @Transactional
     public AmountTypeDto putAmountType(AmountTypeDto amountTypeDto) {
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
-        AmountType amountTypeToPut = DatabaseUtil.toAmountType(user, amountTypeDto, savedTime);
+        AmountType amountTypeToPut = shoppingEntityMapper.toAmountType(user, amountTypeDto, savedTime);
         amountTypeRepository.save(amountTypeToPut);
         amountTypeToPut.setLocalId(amountTypeDto.getLocalId());
         amountTypeToPut.setSavedTime(savedTime);
         user.setSavedTime(savedTime);
-        secClient.putUser(DatabaseUtil.toUserDto(user), user.getPassword());
-        return DatabaseUtil.toAmountTypeDto(amountTypeToPut, ModifyState.UPDATE, savedTime);
+        secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
+        return shoppingEntityMapper.toAmountTypeDto(amountTypeToPut, ModifyState.UPDATE, savedTime);
     }
 
     @Transactional
@@ -51,8 +55,8 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
             amountType.setLocalId(amountTypeDto.getLocalId());
             amountType.setSavedTime(savedTime);
             user.setSavedTime(savedTime);
-            secClient.putUser(DatabaseUtil.toUserDto(user), user.getPassword());
-            return DatabaseUtil.toAmountTypeDto(amountType, ModifyState.UPDATE, savedTime);
+            secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
+            return shoppingEntityMapper.toAmountTypeDto(amountType, ModifyState.UPDATE, savedTime);
         }
 //        if updated amountType does not exist insert in to the database
         return putAmountType(amountTypeDto);
@@ -71,10 +75,10 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
             amountTypeToDelete.setSavedTime(savedTime);
             amountTypeToDelete.getShoppingItemList().forEach(shoppingItem -> shoppingItem.setDeleted(true));
             user.setSavedTime(savedTime);
-            secClient.putUser(DatabaseUtil.toUserDto(user), user.getPassword());
-            return DatabaseUtil.toAmountTypeDto(amountTypeToDelete, ModifyState.DELETE, savedTime);
+            secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
+            return shoppingEntityMapper.toAmountTypeDto(amountTypeToDelete, ModifyState.DELETE, savedTime);
         }
 //        if data does not exist in a database send it to client to delete anyway since it does not exist no action necessary
-        return DatabaseUtil.amountTypeDtoToAmountTypeDto(amountTypeDto, ModifyState.DELETE);
+        return shoppingEntityMapper.copyAmountTypeDto(amountTypeDto, ModifyState.DELETE);
     }
 }

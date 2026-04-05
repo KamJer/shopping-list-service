@@ -4,8 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
-import pl.kamjer.shoppinglistservice.DatabaseUtil;
 import pl.kamjer.shoppinglistservice.client.SecClient;
+import pl.kamjer.shoppinglistservice.mapping.ShoppingEntityMapper;
+import pl.kamjer.shoppinglistservice.mapping.ShoppingItemResolver;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
 import pl.kamjer.shoppinglistservice.functional_interface.TriFunction;
 import pl.kamjer.shoppinglistservice.model.*;
@@ -30,17 +31,23 @@ public class WebSocketUtilService extends WebsocketCustomService {
     private final AmountTypeRepository amountTypeRepository;
     private final CategoryRepository categoryRepository;
     private final ShoppingItemRepository shoppingItemRepository;
+    private final ShoppingEntityMapper shoppingEntityMapper;
+    private final ShoppingItemResolver shoppingItemResolver;
 
     public WebSocketUtilService(SecClient secClient,
                                 AmountTypeRepository amountTypeRepository,
                                 CategoryRepository categoryRepository,
                                 ShoppingItemRepository shoppingItemRepository,
                                 WebSocketDataHolder webSocketDataHolder,
-                                ObjectMapper objectMapper) {
+                                ObjectMapper objectMapper,
+                                ShoppingEntityMapper shoppingEntityMapper,
+                                ShoppingItemResolver shoppingItemResolver) {
         super(webSocketDataHolder, secClient, objectMapper);
         this.amountTypeRepository = amountTypeRepository;
         this.categoryRepository = categoryRepository;
         this.shoppingItemRepository = shoppingItemRepository;
+        this.shoppingEntityMapper = shoppingEntityMapper;
+        this.shoppingItemResolver = shoppingItemResolver;
     }
 
     @Transactional
@@ -58,60 +65,44 @@ public class WebSocketUtilService extends WebsocketCustomService {
         Set<AmountType> clientAmountTypes = buildClientEntities(
                 allDto.getAmountTypeDtoList(),
                 user,
-                DatabaseUtil::toAmountType
+                shoppingEntityMapper::toAmountType
         );
 
         Set<Category> clientCategories = buildClientEntities(
                 allDto.getCategoryDtoList(),
                 user,
-                DatabaseUtil::toCategory
+                shoppingEntityMapper::toCategory
         );
 
         Set<ShoppingItem> clientShoppingItems = buildClientEntities(
                 allDto.getShoppingItemDtoList(),
                 user,
-                (u, dto, time) -> DatabaseUtil.toShoppingItem(
-                        u,
-                        amountTypeRepository,
-                        new HashMap<>(),
-                        categoryRepository,
-                        new HashMap<>(),
-                        dto,
-                        time
-                )
+                (u, dto, time) -> shoppingItemResolver.resolve(u, new HashMap<>(), new HashMap<>(), dto, time)
         );
 
-        boolean dirty = isDirty(allDto.getAmountTypeDtoList(), amountTypesFromDb, user, DatabaseUtil::toAmountType)
-                || isDirty(allDto.getCategoryDtoList(), categoriesFromDb, user, DatabaseUtil::toCategory)
+        boolean dirty = isDirty(allDto.getAmountTypeDtoList(), amountTypesFromDb, user, shoppingEntityMapper::toAmountType)
+                || isDirty(allDto.getCategoryDtoList(), categoriesFromDb, user, shoppingEntityMapper::toCategory)
                 || isDirty(allDto.getShoppingItemDtoList(), shoppingItemsFromDb, user,
-                (u, dto, time) -> DatabaseUtil.toShoppingItem(
-                        u,
-                        amountTypeRepository,
-                        new HashMap<>(),
-                        categoryRepository,
-                        new HashMap<>(),
-                        dto,
-                        time
-                ));
+                (u, dto, time) -> shoppingItemResolver.resolve(u, new HashMap<>(), new HashMap<>(), dto, time));
 
         if (dirty) {
             return AllDto.builder()
                     .amountTypeDtoList(amountTypesFromDb.stream()
-                            .map(a -> DatabaseUtil.toAmountTypeDto(a, ModifyState.INSERT)).toList())
+                            .map(a -> shoppingEntityMapper.toAmountTypeDto(a, ModifyState.INSERT)).toList())
                     .categoryDtoList(categoriesFromDb.stream()
-                            .map(c -> DatabaseUtil.toCategoryDto(c, ModifyState.INSERT)).toList())
+                            .map(c -> shoppingEntityMapper.toCategoryDto(c, ModifyState.INSERT)).toList())
                     .shoppingItemDtoList(shoppingItemsFromDb.stream()
-                            .map(s -> DatabaseUtil.toShoppingItemDto(s, ModifyState.INSERT)).toList())
+                            .map(s -> shoppingEntityMapper.toShoppingItemDto(s, ModifyState.INSERT)).toList())
                     .dirty(true)
                     .build();
         }
 
         syncEntities(allDto.getAmountTypeDtoList(), amountTypesFromDb, user, savedTime,
-                amountTypeRepository::save, DatabaseUtil::toAmountType, AmountType::getAmountTypeId,
+                amountTypeRepository::save, shoppingEntityMapper::toAmountType, AmountType::getAmountTypeId,
                 AmountType::setSavedTime, AmountType::setDeleted);
 
         syncEntities(allDto.getCategoryDtoList(), categoriesFromDb, user, savedTime,
-                categoryRepository::save, DatabaseUtil::toCategory, Category::getCategoryId,
+                categoryRepository::save, shoppingEntityMapper::toCategory, Category::getCategoryId,
                 Category::setSavedTime, Category::setDeleted);
 
         Map<Long, AmountType> amountTypeMap = amountTypesFromDb.stream()
@@ -121,19 +112,18 @@ public class WebSocketUtilService extends WebsocketCustomService {
 
         syncEntities(allDto.getShoppingItemDtoList(), shoppingItemsFromDb, user, savedTime,
                 shoppingItemRepository::save,
-                (u, dto, time) -> DatabaseUtil.toShoppingItem(u, amountTypeRepository, amountTypeMap,
-                        categoryRepository, categoryMap, dto, time),
+                (u, dto, time) -> shoppingItemResolver.resolve(u, amountTypeMap, categoryMap, dto, time),
                 ShoppingItem::getShoppingItemId,
                 ShoppingItem::setSavedTime,
                 ShoppingItem::setDeleted);
 
         user.setSavedTime(savedTime);
-        secClient.putUser(DatabaseUtil.toUserDto(user), user.getPassword());
+        secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
 
         return AllDto.builder()
-                .amountTypeDtoList(processForClient(clientAmountTypes, amountTypesFromDb, userSavedTime, DatabaseUtil::toAmountTypeDto))
-                .categoryDtoList(processForClient(clientCategories, categoriesFromDb, userSavedTime, DatabaseUtil::toCategoryDto))
-                .shoppingItemDtoList(processForClient(clientShoppingItems, shoppingItemsFromDb, userSavedTime, DatabaseUtil::toShoppingItemDto))
+                .amountTypeDtoList(processForClient(clientAmountTypes, amountTypesFromDb, userSavedTime, shoppingEntityMapper::toAmountTypeDto))
+                .categoryDtoList(processForClient(clientCategories, categoriesFromDb, userSavedTime, shoppingEntityMapper::toCategoryDto))
+                .shoppingItemDtoList(processForClient(clientShoppingItems, shoppingItemsFromDb, userSavedTime, shoppingEntityMapper::toShoppingItemDto))
                 .savedTime(savedTime)
                 .dirty(false)
                 .build();

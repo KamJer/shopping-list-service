@@ -3,8 +3,9 @@ package pl.kamjer.shoppinglistservice.service.websocketservice;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-import pl.kamjer.shoppinglistservice.DatabaseUtil;
 import pl.kamjer.shoppinglistservice.client.SecClient;
+import pl.kamjer.shoppinglistservice.mapping.ShoppingEntityMapper;
+import pl.kamjer.shoppinglistservice.mapping.ShoppingItemResolver;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.AmountType;
@@ -27,17 +28,23 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
     private final ShoppingItemRepository shoppingItemRepository;
     private final AmountTypeRepository amountTypeRepository;
     private final CategoryRepository categoryRepository;
+    private final ShoppingEntityMapper shoppingEntityMapper;
+    private final ShoppingItemResolver shoppingItemResolver;
 
     public WebSocketShoppingItemService(SecClient secClient,
                                         WebSocketDataHolder webSocketDataHolder,
                                         ShoppingItemRepository shoppingItemRepository,
                                         AmountTypeRepository amountTypeRepository,
                                         CategoryRepository categoryRepository,
-                                        ObjectMapper objectMapper) {
+                                        ObjectMapper objectMapper,
+                                        ShoppingEntityMapper shoppingEntityMapper,
+                                        ShoppingItemResolver shoppingItemResolver) {
         super(webSocketDataHolder, secClient, objectMapper);
         this.shoppingItemRepository = shoppingItemRepository;
         this.amountTypeRepository = amountTypeRepository;
         this.categoryRepository = categoryRepository;
+        this.shoppingEntityMapper = shoppingEntityMapper;
+        this.shoppingItemResolver = shoppingItemResolver;
     }
 
     @Transactional
@@ -45,15 +52,15 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         ShoppingItem shoppingItem =
-                DatabaseUtil.toShoppingItem(user, amountTypeRepository, new HashMap<>(), categoryRepository, new HashMap<>(), shoppingItemDto, savedTime);
+                shoppingItemResolver.resolve(user, new HashMap<>(), new HashMap<>(), shoppingItemDto, savedTime);
         shoppingItemRepository.save(shoppingItem);
         shoppingItem.setLocalShoppingItemId(shoppingItemDto.getLocalId());
         shoppingItem.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
         shoppingItem.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
         shoppingItem.setSavedTime(savedTime);
         user.setSavedTime(savedTime);
-        secClient.putUser(DatabaseUtil.toUserDto(user), user.getPassword());
-        return DatabaseUtil.toShoppingItemDto(shoppingItem, ModifyState.UPDATE, savedTime);
+        secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
+        return shoppingEntityMapper.toShoppingItemDto(shoppingItem, ModifyState.UPDATE, savedTime);
     }
 
     @Transactional
@@ -78,8 +85,8 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
                 shoppingItem.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
                 shoppingItem.setSavedTime(savedTime);
                 user.setSavedTime(savedTime);
-                secClient.putUser(DatabaseUtil.toUserDto(user), user.getPassword());
-                return DatabaseUtil.toShoppingItemDto(shoppingItem, ModifyState.UPDATE, savedTime);
+                secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
+                return shoppingEntityMapper.toShoppingItemDto(shoppingItem, ModifyState.UPDATE, savedTime);
             } else {
                 throw new NoResourcesFoundException("Such Amount Type or Category does not exist");
             }
@@ -101,11 +108,11 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
             shoppingItemToDelete.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
             shoppingItemToDelete.setSavedTime(savedTime);
             user.setSavedTime(savedTime);
-            secClient.putUser(DatabaseUtil.toUserDto(user), user.getPassword());
-            return DatabaseUtil.toShoppingItemDto(shoppingItemToDelete, ModifyState.DELETE);
+            secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
+            return shoppingEntityMapper.toShoppingItemDto(shoppingItemToDelete, ModifyState.DELETE);
         }
 //        if data does not exist in a database send it to client to delete anyway since it does not exist no action necessary
-        return DatabaseUtil.fromShoppingItemDtoToShoppingItemDto(shoppingItemDto, ModifyState.DELETE, savedTime);
+        return shoppingEntityMapper.copyShoppingItemDto(shoppingItemDto, ModifyState.DELETE, savedTime);
 
     }
 }

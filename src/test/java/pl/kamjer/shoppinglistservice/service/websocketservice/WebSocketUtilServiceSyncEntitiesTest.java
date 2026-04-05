@@ -7,8 +7,11 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import pl.kamjer.shoppinglistservice.DatabaseUtil;
+import org.springframework.test.util.ReflectionTestUtils;
 import pl.kamjer.shoppinglistservice.client.SecClient;
+import pl.kamjer.shoppinglistservice.mapping.IdAdjuster;
+import pl.kamjer.shoppinglistservice.mapping.ShoppingEntityMapperImpl;
+import pl.kamjer.shoppinglistservice.mapping.ShoppingItemResolver;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
 import pl.kamjer.shoppinglistservice.model.AmountType;
 import pl.kamjer.shoppinglistservice.model.ModifyState;
@@ -44,19 +47,26 @@ class WebSocketUtilServiceSyncEntitiesTest {
     private SecClient secClient;
     @Mock
     private WebSocketDataHolder webSocketDataHolder;
+    @Mock
+    private ShoppingItemResolver shoppingItemResolver;
 
+    private ShoppingEntityMapperImpl shoppingEntityMapper;
     private WebSocketUtilService service;
     private User user;
 
     @BeforeEach
     void setUp() {
+        shoppingEntityMapper = new ShoppingEntityMapperImpl();
+        ReflectionTestUtils.setField(shoppingEntityMapper, "idAdjuster", new IdAdjuster());
         service = new WebSocketUtilService(
                 secClient,
                 amountTypeRepository,
                 categoryRepository,
                 shoppingItemRepository,
                 webSocketDataHolder,
-                new ObjectMapper()
+                new ObjectMapper(),
+                shoppingEntityMapper,
+                shoppingItemResolver
         );
         user = User.builder().userName("tester").build();
     }
@@ -77,7 +87,7 @@ class WebSocketUtilServiceSyncEntitiesTest {
                 user,
                 T1,
                 amountTypeRepository::save,
-                DatabaseUtil::toAmountType,
+                shoppingEntityMapper::toAmountType,
                 AmountType::getAmountTypeId,
                 AmountType::setSavedTime,
                 AmountType::setDeleted
@@ -114,7 +124,7 @@ class WebSocketUtilServiceSyncEntitiesTest {
                 user,
                 T1,
                 amountTypeRepository::save,
-                DatabaseUtil::toAmountType,
+                shoppingEntityMapper::toAmountType,
                 AmountType::getAmountTypeId,
                 AmountType::setSavedTime,
                 AmountType::setDeleted
@@ -149,7 +159,7 @@ class WebSocketUtilServiceSyncEntitiesTest {
                 user,
                 T1,
                 amountTypeRepository::save,
-                DatabaseUtil::toAmountType,
+                shoppingEntityMapper::toAmountType,
                 AmountType::getAmountTypeId,
                 AmountType::setSavedTime,
                 AmountType::setDeleted
@@ -176,7 +186,7 @@ class WebSocketUtilServiceSyncEntitiesTest {
                 user,
                 T1,
                 amountTypeRepository::save,
-                DatabaseUtil::toAmountType,
+                shoppingEntityMapper::toAmountType,
                 AmountType::getAmountTypeId,
                 AmountType::setSavedTime,
                 AmountType::setDeleted
@@ -201,7 +211,7 @@ class WebSocketUtilServiceSyncEntitiesTest {
                 user,
                 T1,
                 amountTypeRepository::save,
-                DatabaseUtil::toAmountType,
+                shoppingEntityMapper::toAmountType,
                 AmountType::getAmountTypeId,
                 AmountType::setSavedTime,
                 AmountType::setDeleted
