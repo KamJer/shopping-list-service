@@ -2,14 +2,31 @@
 
 ## Overview
 
-Spring Boot backend for shopping lists: categories, quantity units (amount types), items, and **full-data sync** over **WebSocket**. HTTP API is minimal (exceptions, utilities). **User accounts and JWT validation** are delegated to a separate **user service** (`SecClient` → `user.service.base-url`).
+Spring Boot backend for shopping lists: categories, quantity units (amount types), items, and **full-data sync** over **WebSocket**. HTTP API is minimal (exceptions, utilities). **User accounts and JWT validation** are delegated to a separate **user microservice** (`SecClient` → `user.service.base-url`); see [Related repositories](#related-repositories) below.
+
+## Related repositories
+
+This service is one component of a shopping-list ecosystem. Official clients and the user backend are maintained in other GitHub repositories.
+
+### Client applications
+
+| Repository | Description |
+|------------|-------------|
+| [**Shopping-list-web**](https://github.com/KamJer/Shopping-list-web) | Web client (Angular SPA): shopping list, WebSocket sync, authentication against the user API, units, recipes, and related features. |
+| [**Shopping-List-Client**](https://github.com/KamJer/Shopping-List-Client) | Android application for creating and managing shopping lists. |
+
+### Other backend services
+
+| Repository | Description |
+|------------|-------------|
+| [**Shopping-security-service**](https://github.com/KamJer/Shopping-security-service) | User microservice: account data and APIs that this service calls for JWT validation, user lookup, and saved-time updates (`user.service.base-url`). |
 
 ## Requirements
 
 - **Java 21**
 - **Maven 3.8+**
 - **MariaDB** with database `shopping_list_db` (or adjust URLs in configuration)
-- Running **user/auth service** compatible with this app’s `SecClient` (default base URL in properties: `http://localhost:4443/user`)
+- Running [**Shopping-security-service**](https://github.com/KamJer/Shopping-security-service) (or another deployment compatible with `SecClient`; default base URL in properties: `http://localhost:4443/user`)
 
 ## Stack
 
@@ -59,7 +76,7 @@ Adjust the JAR name if `<version>` in `pom.xml` changes.
 | **`/util/message`** | Permitted without auth (see `WebSecurityConfiguration`). |
 | **Other HTTP routes** | Typically require a valid JWT in the **`token` query parameter**. |
 
-There is **no** `/user` REST API in *this* repository; user operations go through the configured **external user service**.
+There is **no** `/user` REST API in *this* repository; user operations go through the configured **user microservice** (typically [Shopping-security-service](https://github.com/KamJer/Shopping-security-service)).
 
 ## WebSocket
 
