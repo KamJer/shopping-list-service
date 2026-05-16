@@ -55,6 +55,7 @@ Main defaults live in `src/main/resources/application.properties`:
 - **Server port:** `5443` (HTTPS/TLS termination may be handled externally).
 - **Datasource:** `jdbc:mariadb://localhost:3306/shopping_list_db` — set `spring.datasource.username` / `spring.datasource.password` (often via `application-secret-dev.properties` / `application-secret-prod.properties` or env).
 - **Schema:** managed by **Flyway**; do not rely on `ddl-auto` for production. Migrations are under `src/main/resources/db/migration/`.
+- **Flyway checksum mismatch:** if you edit a migration after it has already been applied (e.g. `V2`), startup fails validation. Either add a new versioned migration with the change instead of rewriting history, or—for a controlled dev/staging fix only—set `app.flyway.repair-before-migrate=true` for **one** startup (then set it back to `false`), or run `mvn flyway:repair` with valid DB credentials in the Flyway Maven plugin configuration.
 - **User service:** `user.service.base-url` (e.g. `http://localhost:4443/user`) — used for token validation and user/saved-time updates.
 
 Optional profiles: `application-dev.properties`, `application-prod.properties`.
