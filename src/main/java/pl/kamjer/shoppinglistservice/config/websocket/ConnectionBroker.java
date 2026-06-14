@@ -1,6 +1,7 @@
 package pl.kamjer.shoppinglistservice.config.websocket;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.socket.TextMessage;
@@ -14,6 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
+@Log4j2
 @Component
 @AllArgsConstructor
 public class ConnectionBroker {
@@ -131,11 +133,16 @@ public class ConnectionBroker {
         session.sendMessage(new TextMessage(websocketMessageDecryptor.jsonphyMessage(unsubscribedMessage)));
     }
 
-    public void handleException(WebSocketSession session, Throwable t) throws IOException {
-        HashMap<Message.Header, String> headers = new HashMap<>();
-        headers.put(Message.Header.BODY, t.getMessage());
-
-        session.sendMessage(new TextMessage(websocketMessageDecryptor.jsonphyMessage(new Message(Message.Command.ERROR, headers))));
+    public void handleException(WebSocketSession session, Throwable t) {
+        try {
+            if (session.isOpen()) {
+                HashMap<Message.Header, String> headers = new HashMap<>();
+                headers.put(Message.Header.BODY, t.getMessage());
+                session.sendMessage(new TextMessage(websocketMessageDecryptor.jsonphyMessage(new Message(Message.Command.ERROR, headers))));
+            }
+        } catch (Exception e) {
+            log.warn("Failed to send error message to session {}: {}", session.getId(), e.getMessage());
+        }
     }
 
     private boolean isMessageParametrized(Message protocolMessage) {
