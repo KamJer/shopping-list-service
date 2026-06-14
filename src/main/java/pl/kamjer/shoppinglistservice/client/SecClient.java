@@ -29,8 +29,8 @@ public class SecClient {
     public UserInfo isValid(String token) {
         return userRestClient
                 .get()
-                .uri(uriBuilder ->
-                        uriBuilder.path("").queryParam("token", token).build())
+                .uri("")
+                .header("Authorization", "Bearer " + token)
                 .retrieve()
                 .body(UserInfo.class);
     }
