@@ -1,29 +1,17 @@
 package pl.kamjer.shoppinglistservice.config.websocket;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.websocket.Session;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.boot.autoconfigure.jms.JmsProperties;
-import org.springframework.http.HttpHeaders;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.WebSocketMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.util.UriComponentsBuilder;
-import pl.kamjer.shoppinglistservice.config.security.JwtAuthToken;
-import pl.kamjer.shoppinglistservice.config.security.JwtAuthenticationProvider;
-import pl.kamjer.shoppinglistservice.functional_interface.UserProvider;
 
-import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.security.Principal;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Component
@@ -54,11 +42,6 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
             webSocketDataHolder.setCurrentSession(session);
             if (message.getPayload() instanceof String payload) {
                 StringBuilder partialMessage = partialMessagesMap.computeIfAbsent(session.getId(), k -> new StringBuilder());
-                if (partialMessage.toString().endsWith(Message.MESSAGE_ENDER)) {
-                    StringBuilder stringBuilder = new StringBuilder();
-                    partialMessagesMap.put(session.getId(), stringBuilder);
-                    partialMessage = stringBuilder;
-                }
                 partialMessage.append(payload);
 
                 if (message.isLast()) {

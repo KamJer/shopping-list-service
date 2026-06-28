@@ -16,9 +16,9 @@ import pl.kamjer.shoppinglistservice.model.*;
 import pl.kamjer.shoppinglistservice.model.dto.AmountTypeDto;
 import pl.kamjer.shoppinglistservice.model.dto.UserDto;
 import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
+import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -34,6 +34,7 @@ class WebSocketAmountTypeServiceTest {
     @Mock private SecClient secClient;
     @Mock private WebSocketDataHolder webSocketDataHolder;
     @Mock private AmountTypeRepository amountTypeRepository;
+    @Mock private ShoppingItemRepository shoppingItemRepository;
 
     private ShoppingEntityMapperImpl shoppingEntityMapper;
     private WebSocketAmountTypeService service;
@@ -44,6 +45,7 @@ class WebSocketAmountTypeServiceTest {
         ReflectionTestUtils.setField(shoppingEntityMapper, "idAdjuster", new IdAdjuster());
         service = new WebSocketAmountTypeService(
                 secClient, webSocketDataHolder, amountTypeRepository,
+                shoppingItemRepository,
                 new ObjectMapper(), shoppingEntityMapper);
         service = spy(service);
         doReturn(USER).when(service).requireAuthenticatedUser();
@@ -116,14 +118,11 @@ class WebSocketAmountTypeServiceTest {
 
     @Test
     void deleteAmountType_whenExists_softDeletesAndCascadesToShoppingItems() {
-        ShoppingItem item1 = ShoppingItem.builder().shoppingItemId(1L).deleted(false).build();
-        ShoppingItem item2 = ShoppingItem.builder().shoppingItemId(2L).deleted(false).build();
         AmountType existing = AmountType.builder()
                 .amountTypeId(10L)
                 .userName("tester")
                 .typeName("kg")
                 .deleted(false)
-                .shoppingItemList(List.of(item1, item2))
                 .build();
 
         AmountTypeDto dto = AmountTypeDto.builder()
@@ -139,9 +138,7 @@ class WebSocketAmountTypeServiceTest {
 
         assertThat(existing.isDeleted()).isTrue();
         assertThat(existing.getLocalId()).isEqualTo(50L);
-        assertThat(item1.isDeleted()).isTrue();
-        assertThat(item2.isDeleted()).isTrue();
-        verify(secClient).putUser(any(UserDto.class), eq("token"));
+        verify(shoppingItemRepository).markAllDeletedByAmountTypeId(10L);
         assertThat(result.getModifyState()).isEqualTo(ModifyState.DELETE);
     }
 
@@ -158,6 +155,7 @@ class WebSocketAmountTypeServiceTest {
         AmountTypeDto result = service.deleteAmountType(dto);
 
         verify(amountTypeRepository, never()).save(any());
+        verify(shoppingItemRepository, never()).markAllDeletedByAmountTypeId(any());
         verify(secClient, never()).putUser(any(), any());
         assertThat(result.getModifyState()).isEqualTo(ModifyState.DELETE);
         assertThat(result.getTypeName()).isEqualTo("kg");

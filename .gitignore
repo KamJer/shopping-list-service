@@ -32,5 +32,9 @@ build/
 ### VS Code ###
 .vscode/
 
+### Misc files ###
+bugs.csv
+analiza-zalozenia.txt
+
 ### Logs ###
 logs/

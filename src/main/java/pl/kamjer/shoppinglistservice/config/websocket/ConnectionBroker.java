@@ -6,13 +6,11 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
-import pl.kamjer.shoppinglistservice.functional_interface.HandleAuthAction;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Optional;
 
 @Log4j2
@@ -34,7 +32,9 @@ public class ConnectionBroker {
 
     public void handleMessage(WebSocketSession session, Message protocolMessage) throws IOException, InvocationTargetException, IllegalAccessException {
         // Split the message body by semicolon to extract method parameters
-        String[] body = protocolMessage.getHeaders().get(Message.Header.BODY).split(";");
+        String[] body = Optional.ofNullable(protocolMessage.getHeaders().get(Message.Header.BODY))
+                .map(b -> b.split(";"))
+                .orElse(new String[0]);
 
         // Get the destination header to determine which controller method to call
         Topic topic = null;

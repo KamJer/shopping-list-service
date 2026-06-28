@@ -58,8 +58,6 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
         shoppingItem.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
         shoppingItem.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
         shoppingItem.setSavedTime(savedTime);
-        user.setSavedTime(savedTime);
-        secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
         return shoppingEntityMapper.toShoppingItemDto(shoppingItem, ModifyState.UPDATE, savedTime);
     }
 
@@ -84,14 +82,12 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
                 shoppingItem.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
                 shoppingItem.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
                 shoppingItem.setSavedTime(savedTime);
-                user.setSavedTime(savedTime);
-                secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
                 return shoppingEntityMapper.toShoppingItemDto(shoppingItem, ModifyState.UPDATE, savedTime);
             } else {
                 throw new NoResourcesFoundException("Such Amount Type or Category does not exist");
             }
         } else {
-            return putShoppingItem(shoppingItemDto);
+            throw new IllegalArgumentException("UPDATE dla nieistniejacego ShoppingItem o id=" + shoppingItemDto.getShoppingItemId());
         }
     }
 
@@ -107,8 +103,6 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
             shoppingItemToDelete.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
             shoppingItemToDelete.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
             shoppingItemToDelete.setSavedTime(savedTime);
-            user.setSavedTime(savedTime);
-            secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
             return shoppingEntityMapper.toShoppingItemDto(shoppingItemToDelete, ModifyState.DELETE);
         }
 //        if data does not exist in a database send it to client to delete anyway since it does not exist no action necessary

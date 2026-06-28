@@ -11,6 +11,7 @@ import pl.kamjer.shoppinglistservice.model.ModifyState;
 import pl.kamjer.shoppinglistservice.model.User;
 import pl.kamjer.shoppinglistservice.model.dto.AmountTypeDto;
 import pl.kamjer.shoppinglistservice.repository.AmountTypeRepository;
+import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -19,13 +20,17 @@ import java.util.Optional;
 public class WebSocketAmountTypeService extends WebsocketCustomService {
 
     private final AmountTypeRepository amountTypeRepository;
+    private final ShoppingItemRepository shoppingItemRepository;
     private final ShoppingEntityMapper shoppingEntityMapper;
 
     public WebSocketAmountTypeService(SecClient secClient, WebSocketDataHolder webSocketDataHolder,
-                                      AmountTypeRepository amountTypeRepository, ObjectMapper objectMapper,
+                                      AmountTypeRepository amountTypeRepository,
+                                      ShoppingItemRepository shoppingItemRepository,
+                                      ObjectMapper objectMapper,
                                       ShoppingEntityMapper shoppingEntityMapper) {
         super(webSocketDataHolder, secClient, objectMapper);
         this.amountTypeRepository = amountTypeRepository;
+        this.shoppingItemRepository = shoppingItemRepository;
         this.shoppingEntityMapper = shoppingEntityMapper;
     }
 
@@ -37,13 +42,11 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
         amountTypeRepository.save(amountTypeToPut);
         amountTypeToPut.setLocalId(amountTypeDto.getLocalId());
         amountTypeToPut.setSavedTime(savedTime);
-        user.setSavedTime(savedTime);
-        secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
         return shoppingEntityMapper.toAmountTypeDto(amountTypeToPut, ModifyState.UPDATE, savedTime);
     }
 
     @Transactional
-    public AmountTypeDto postAmountType(AmountTypeDto amountTypeDto) {
+    public AmountTypeDto postAmountType(AmountTypeDto amountTypeDto) {  
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         Optional<AmountType> amountTypeOptional = amountTypeRepository
@@ -54,12 +57,9 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
             amountType.setDeleted(amountTypeDto.isDeleted());
             amountType.setLocalId(amountTypeDto.getLocalId());
             amountType.setSavedTime(savedTime);
-            user.setSavedTime(savedTime);
-            secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
             return shoppingEntityMapper.toAmountTypeDto(amountType, ModifyState.UPDATE, savedTime);
         }
-//        if updated amountType does not exist insert in to the database
-        return putAmountType(amountTypeDto);
+        throw new IllegalArgumentException("UPDATE dla nieistniejacego AmountType o id=" + amountTypeDto.getAmountTypeId());
     }
 
     @Transactional
@@ -73,9 +73,7 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
             amountTypeToDelete.setDeleted(amountTypeDto.isDeleted());
             amountTypeToDelete.setLocalId(amountTypeDto.getLocalId());
             amountTypeToDelete.setSavedTime(savedTime);
-            amountTypeToDelete.getShoppingItemList().forEach(shoppingItem -> shoppingItem.setDeleted(true));
-            user.setSavedTime(savedTime);
-            secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
+            shoppingItemRepository.markAllDeletedByAmountTypeId(amountTypeToDelete.getAmountTypeId());
             return shoppingEntityMapper.toAmountTypeDto(amountTypeToDelete, ModifyState.DELETE, savedTime);
         }
 //        if data does not exist in a database send it to client to delete anyway since it does not exist no action necessary

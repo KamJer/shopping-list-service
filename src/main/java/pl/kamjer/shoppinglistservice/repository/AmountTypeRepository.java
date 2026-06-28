@@ -11,6 +11,5 @@ import java.util.Optional;
 @Repository
 public interface AmountTypeRepository extends JpaRepository<AmountType, Long> {
     Optional<AmountType> findAmountTypeByUserNameAndAmountTypeId(String userName, long amountTypeId_amountTypeId);
-    List<AmountType> findAmountTypeByUserNameAndSavedTimeAfter(String userNAme, LocalDateTime localDateTime);
     List<AmountType> findByUserName(String userName);
 }

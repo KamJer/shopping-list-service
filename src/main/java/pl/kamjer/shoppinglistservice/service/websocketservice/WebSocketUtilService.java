@@ -192,17 +192,15 @@ public class WebSocketUtilService extends WebsocketCustomService {
             }
         }
 
-        toInsert.forEach(saveFunction::apply);
+        dbList.addAll(toInsert.stream().map(saveFunction).toList());
     }
 
     private <E> void copyProperties(E source, E target, LocalDateTime savedTime) {
         if (target instanceof AmountType t && source instanceof AmountType s) {
             t.setTypeName(s.getTypeName());
-            t.setDeleted(s.isDeleted());
             t.setSavedTime(savedTime);
         } else if (target instanceof Category t && source instanceof Category s) {
             t.setCategoryName(s.getCategoryName());
-            t.setDeleted(s.isDeleted());
             t.setSavedTime(savedTime);
         } else if (target instanceof ShoppingItem t && source instanceof ShoppingItem s) {
             t.setItemName(s.getItemName());
@@ -210,7 +208,6 @@ public class WebSocketUtilService extends WebsocketCustomService {
             t.setAmount(s.getAmount());
             t.setItemCategory(s.getItemCategory());
             t.setItemAmountType(s.getItemAmountType());
-            t.setDeleted(s.isDeleted());
             t.setSavedTime(savedTime);
         }
     }

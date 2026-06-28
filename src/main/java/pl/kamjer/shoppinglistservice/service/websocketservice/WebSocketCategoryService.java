@@ -13,6 +13,7 @@ import pl.kamjer.shoppinglistservice.model.ModifyState;
 import pl.kamjer.shoppinglistservice.model.User;
 import pl.kamjer.shoppinglistservice.model.dto.CategoryDto;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
+import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -22,15 +23,18 @@ import java.util.Optional;
 public class WebSocketCategoryService extends WebsocketCustomService {
 
     private final CategoryRepository categoryRepository;
+    private final ShoppingItemRepository shoppingItemRepository;
     private final ShoppingEntityMapper shoppingEntityMapper;
 
     public WebSocketCategoryService(SecClient secClient,
                                     WebSocketDataHolder webSocketDataHolder,
                                     CategoryRepository categoryRepository,
+                                    ShoppingItemRepository shoppingItemRepository,
                                     ObjectMapper objectMapper,
                                     ShoppingEntityMapper shoppingEntityMapper) {
         super(webSocketDataHolder, secClient, objectMapper);
         this.categoryRepository = categoryRepository;
+        this.shoppingItemRepository = shoppingItemRepository;
         this.shoppingEntityMapper = shoppingEntityMapper;
     }
 
@@ -42,8 +46,6 @@ public class WebSocketCategoryService extends WebsocketCustomService {
         categoryRepository.save(categoryToPut);
         categoryToPut.setLocalId(categoryDto.getLocalId());
         categoryToPut.setSavedTime(savedTime);
-        user.setSavedTime(savedTime);
-        secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
         return shoppingEntityMapper.toCategoryDto(categoryToPut, ModifyState.UPDATE, savedTime);
     }
 
@@ -59,11 +61,9 @@ public class WebSocketCategoryService extends WebsocketCustomService {
             categoryToPost.setDeleted(categoryDto.isDeleted());
             categoryToPost.setLocalId(categoryDto.getLocalId());
             categoryToPost.setSavedTime(savedTime);
-            user.setSavedTime(savedTime);
-            secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
             return shoppingEntityMapper.toCategoryDto(categoryToPost, ModifyState.UPDATE, savedTime);
         }
-        return putCategory(categoryDto);
+        throw new IllegalArgumentException("UPDATE dla nieistniejacej Category o id=" + categoryDto.getCategoryId());
     }
 
     @Transactional
@@ -77,9 +77,7 @@ public class WebSocketCategoryService extends WebsocketCustomService {
             categoryToDelete.setDeleted(categoryDto.isDeleted());
             categoryToDelete.setLocalId(categoryDto.getLocalId());
             categoryToDelete.setSavedTime(savedTime);
-            categoryToDelete.getShoppingItemList().forEach(shoppingItem -> shoppingItem.setDeleted(true));
-            user.setSavedTime(savedTime);
-            secClient.putUser(shoppingEntityMapper.toUserDto(user), user.getPassword());
+            shoppingItemRepository.markAllDeletedByCategoryId(categoryToDelete.getCategoryId());
             return shoppingEntityMapper.toCategoryDto(categoryToDelete, ModifyState.DELETE, savedTime);
         }
 //        if data does not exist in a database send it to client to delete anyway since it does not exist no action necessary

@@ -16,9 +16,9 @@ import pl.kamjer.shoppinglistservice.model.*;
 import pl.kamjer.shoppinglistservice.model.dto.CategoryDto;
 import pl.kamjer.shoppinglistservice.model.dto.UserDto;
 import pl.kamjer.shoppinglistservice.repository.CategoryRepository;
+import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -34,6 +34,7 @@ class WebSocketCategoryServiceTest {
     @Mock private SecClient secClient;
     @Mock private WebSocketDataHolder webSocketDataHolder;
     @Mock private CategoryRepository categoryRepository;
+    @Mock private ShoppingItemRepository shoppingItemRepository;
 
     private ShoppingEntityMapperImpl shoppingEntityMapper;
     private WebSocketCategoryService service;
@@ -44,6 +45,7 @@ class WebSocketCategoryServiceTest {
         ReflectionTestUtils.setField(shoppingEntityMapper, "idAdjuster", new IdAdjuster());
         service = new WebSocketCategoryService(
                 secClient, webSocketDataHolder, categoryRepository,
+                shoppingItemRepository,
                 new ObjectMapper(), shoppingEntityMapper);
         service = spy(service);
         doReturn(USER).when(service).requireAuthenticatedUser();
@@ -116,14 +118,11 @@ class WebSocketCategoryServiceTest {
 
     @Test
     void deleteCategory_whenExists_softDeletesAndCascadesToShoppingItems() {
-        ShoppingItem item1 = ShoppingItem.builder().shoppingItemId(1L).deleted(false).build();
-        ShoppingItem item2 = ShoppingItem.builder().shoppingItemId(2L).deleted(false).build();
         Category existing = Category.builder()
                 .categoryId(10L)
                 .userName("tester")
                 .categoryName("Dairy")
                 .deleted(false)
-                .shoppingItemList(List.of(item1, item2))
                 .build();
 
         CategoryDto dto = CategoryDto.builder()
@@ -139,9 +138,7 @@ class WebSocketCategoryServiceTest {
 
         assertThat(existing.isDeleted()).isTrue();
         assertThat(existing.getLocalId()).isEqualTo(50L);
-        assertThat(item1.isDeleted()).isTrue();
-        assertThat(item2.isDeleted()).isTrue();
-        verify(secClient).putUser(any(UserDto.class), eq("token"));
+        verify(shoppingItemRepository).markAllDeletedByCategoryId(10L);
         assertThat(result.getModifyState()).isEqualTo(ModifyState.DELETE);
     }
 
@@ -158,6 +155,7 @@ class WebSocketCategoryServiceTest {
         CategoryDto result = service.deleteCategory(dto);
 
         verify(categoryRepository, never()).save(any());
+        verify(shoppingItemRepository, never()).markAllDeletedByCategoryId(any());
         verify(secClient, never()).putUser(any(), any());
         assertThat(result.getModifyState()).isEqualTo(ModifyState.DELETE);
         assertThat(result.getCategoryName()).isEqualTo("Dairy");
