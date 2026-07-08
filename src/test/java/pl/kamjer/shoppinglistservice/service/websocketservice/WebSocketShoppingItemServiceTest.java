@@ -91,7 +91,6 @@ class WebSocketShoppingItemServiceTest {
         assertThat(captor.getValue().getItemName()).isEqualTo("Apples");
 
         verify(shoppingItemResolver).resolve(eq(USER), anyMap(), anyMap(), eq(dto), any());
-        verify(secClient).putUser(any(UserDto.class), eq("token"));
         assertThat(result.getModifyState()).isEqualTo(ModifyState.UPDATE);
         assertThat(result.getLocalId()).isEqualTo(100L);
         assertThat(result.getLocalAmountTypeId()).isEqualTo(10L);
@@ -154,7 +153,6 @@ class WebSocketShoppingItemServiceTest {
         assertThat(existing.getItemName()).isEqualTo("New");
         assertThat(existing.getAmount()).isEqualTo(2.0);
         assertThat(existing.isBought()).isTrue();
-        verify(secClient).putUser(any(UserDto.class), eq("token"));
         assertThat(result.getModifyState()).isEqualTo(ModifyState.UPDATE);
         assertThat(result.getLocalId()).isEqualTo(100L);
     }
@@ -183,25 +181,21 @@ class WebSocketShoppingItemServiceTest {
     }
 
     @Test
-    void postShoppingItem_whenNotExists_delegatesToPutShoppingItem() {
+    void postShoppingItem_whenNotExists_throwsIllegalArgument() {
         ShoppingItemDto dto = ShoppingItemDto.builder()
                 .shoppingItemId(10L)
                 .itemName("Item")
                 .amount(1.0)
                 .itemAmountTypeId(1L)
                 .itemCategoryId(1L)
+                .deleted(false)
                 .build();
 
         when(shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId("tester", 10L))
                 .thenReturn(Optional.empty());
 
-        ShoppingItem resolved = ShoppingItem.builder().build();
-        when(shoppingItemResolver.resolve(any(), anyMap(), anyMap(), any(), any())).thenReturn(resolved);
-        when(shoppingItemRepository.save(any())).then(returnsFirstArg());
-
-        service.postShoppingItem(dto);
-
-        verify(service).putShoppingItem(dto);
+        assertThatThrownBy(() -> service.postShoppingItem(dto))
+                .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
@@ -227,7 +221,6 @@ class WebSocketShoppingItemServiceTest {
 
         assertThat(existing.isDeleted()).isTrue();
         assertThat(existing.getLocalShoppingItemId()).isEqualTo(100L);
-        verify(secClient).putUser(any(UserDto.class), eq("token"));
         assertThat(result.getModifyState()).isEqualTo(ModifyState.DELETE);
     }
 

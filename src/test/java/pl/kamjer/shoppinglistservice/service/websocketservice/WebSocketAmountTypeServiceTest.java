@@ -21,6 +21,7 @@ import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.ArgumentMatchers.*;
@@ -67,7 +68,6 @@ class WebSocketAmountTypeServiceTest {
         assertThat(captor.getValue().getTypeName()).isEqualTo("kg");
         assertThat(captor.getValue().getUserName()).isEqualTo("tester");
 
-        verify(secClient).putUser(any(UserDto.class), eq("token"));
         assertThat(result.getModifyState()).isEqualTo(ModifyState.UPDATE);
         assertThat(result.getLocalId()).isEqualTo(50L);
     }
@@ -94,26 +94,22 @@ class WebSocketAmountTypeServiceTest {
         AmountTypeDto result = service.postAmountType(dto);
 
         assertThat(existing.getTypeName()).isEqualTo("New");
-        verify(secClient).putUser(any(UserDto.class), eq("token"));
         assertThat(result.getModifyState()).isEqualTo(ModifyState.UPDATE);
         assertThat(result.getLocalId()).isEqualTo(50L);
     }
 
     @Test
-    void postAmountType_whenNotExists_delegatesToPutAmountType() {
+    void postAmountType_whenNotExists_throwsIllegalArgument() {
         AmountTypeDto dto = AmountTypeDto.builder()
                 .amountTypeId(10L)
                 .typeName("New")
+                .deleted(false)
                 .build();
 
         when(amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId("tester", 10L))
                 .thenReturn(Optional.empty());
 
-        when(amountTypeRepository.save(any())).then(returnsFirstArg());
-
-        service.postAmountType(dto);
-
-        verify(service).putAmountType(dto);
+        assertThrows(IllegalArgumentException.class, () -> service.postAmountType(dto));
     }
 
     @Test
