@@ -21,6 +21,7 @@ import pl.kamjer.shoppinglistservice.repository.ShoppingItemRepository;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.ArgumentMatchers.*;
@@ -67,7 +68,6 @@ class WebSocketCategoryServiceTest {
         assertThat(captor.getValue().getCategoryName()).isEqualTo("Dairy");
         assertThat(captor.getValue().getUserName()).isEqualTo("tester");
 
-        verify(secClient).putUser(any(UserDto.class), eq("token"));
         assertThat(result.getModifyState()).isEqualTo(ModifyState.UPDATE);
         assertThat(result.getLocalId()).isEqualTo(50L);
     }
@@ -94,26 +94,22 @@ class WebSocketCategoryServiceTest {
         CategoryDto result = service.postCategory(dto);
 
         assertThat(existing.getCategoryName()).isEqualTo("New");
-        verify(secClient).putUser(any(UserDto.class), eq("token"));
         assertThat(result.getModifyState()).isEqualTo(ModifyState.UPDATE);
         assertThat(result.getLocalId()).isEqualTo(50L);
     }
 
     @Test
-    void postCategory_whenNotExists_delegatesToPutCategory() {
+    void postCategory_whenNotExists_throwsIllegalArgument() {
         CategoryDto dto = CategoryDto.builder()
                 .categoryId(10L)
                 .categoryName("New")
+                .deleted(false)
                 .build();
 
         when(categoryRepository.findCategoryByUserNameAndCategoryId("tester", 10L))
                 .thenReturn(Optional.empty());
 
-        when(categoryRepository.save(any())).then(returnsFirstArg());
-
-        service.postCategory(dto);
-
-        verify(service).putCategory(dto);
+        assertThrows(IllegalArgumentException.class, () -> service.postCategory(dto));
     }
 
     @Test
