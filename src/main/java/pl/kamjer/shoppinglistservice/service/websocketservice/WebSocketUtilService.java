@@ -150,7 +150,7 @@ public class WebSocketUtilService extends WebsocketCustomService {
         return false;
     }
 
-    <E, D, ID> void syncEntities(
+    <E extends ShoppingEntity, D, ID> void syncEntities(
             List<D> dtos,
             List<E> dbList,
             User user,
@@ -195,7 +195,6 @@ public class WebSocketUtilService extends WebsocketCustomService {
         dbList.addAll(toInsert.stream().map(saveFunction).toList());
     }
 
-    @SuppressWarnings("unchecked")
     private <E extends ShoppingEntity> void copyProperties(E source, E target, LocalDateTime savedTime) {
         ((Copyable<E>) target).copyFrom(source, savedTime);
     }
