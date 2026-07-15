@@ -80,82 +80,282 @@ The service communicates with the auth microservice and pairs with the Android a
 
 ## Configuration
 
-Main defaults in `src/main/resources/application.properties`:
+All configuration is in `src/main/resources/application.properties`. Sensitive values are set via environment variables:
 
-- **Server port:** `5443`
-- **Datasource:** `jdbc:mariadb://localhost:3306/shopping_list_db` — credentials via `application-secret-*.properties` or environment variables
+| Variable | Description |
+|----------|-------------|
+| `DB_USERNAME` | MariaDB username |
+| `DB_PASSWORD` | MariaDB password |
+
+### Defaults
+
+| Setting | Default | Notes |
+|---------|---------|-------|
+| **Server port** | `5443` | |
+| **Datasource** | `jdbc:mariadb://localhost:3306/shopping_list_db` | |
+| **User service** | `http://localhost:4443/user` | Token validation and saved-time updates |
+| **Flyway repair** | set `app.flyway.repair-before-migrate=true` for one startup to recover from checksum mismatch (then revert to `false`) |
+
+- **Profiles:** `dev` / `prod` with corresponding `application-dev.properties` / `application-prod.properties`
 - **Schema:** managed by Flyway (`spring.flyway.enabled=true`); do not rely on `ddl-auto` in production
-- **User service:** `user.service.base-url=http://localhost:4443/user` — token validation and saved-time updates
-- **Flyway repair:** set `app.flyway.repair-before-migrate=true` for one startup to recover from checksum mismatch (then revert to `false`)
-- **Profiles:** `dev` / `prod` with corresponding `application-secret-*.properties` for credentials
 
 ## Build and run
 
+You need **Java 21**, **Maven 3.8+**, and a running **MariaDB** instance with database `shopping_list_db`.
+
 ```bash
+# Set required environment variables
+export DB_USERNAME=your_db_user
+export DB_PASSWORD=your_db_password
+
+# Build
 mvn clean package
-java -jar target/ShoppingListService-3.0.jar
+
+# Run with dev profile
+java -jar target/ShoppingListService-3.0.jar --spring.profiles.active=dev
+
+# Run with prod profile
+java -jar target/ShoppingListService-3.0.jar --spring.profiles.active=prod
 ```
 
-Use `--spring.profiles.active=dev` or `=prod` to select a profile.
+## REST API
 
-## HTTP surface
+This service exposes minimal REST endpoints. Most operations go through WebSocket.
 
-| Method | Path | Auth | Description |
-|--------|------|------|-------------|
-| POST | `/exception` | JWT (`token` query param) | Accepts `ExceptionDto` JSON; logs server-side with user label |
-| GET | `/util/message` | None (permitAll) | Placeholder – no controller implementation |
-| * | `/user/log/*` | JWT (stripped) | Legacy path – `SkipAuthorizationFilter` strips `Authorization` header |
+| Method | Path | Auth | Request body | Response | Description |
+|--------|------|------|-------------|----------|-------------|
+| POST | `/exception` | JWT (`token` query param) | `ExceptionDto` JSON | `200 OK` | Logs client-side exceptions server‑side with user label |
 
-There is no `/user` REST API in this service; user operations go through [ShoppingSecService](https://github.com/KamJer/Shopping-security-service).
+**`ExceptionDto` schema:**
+```json
+{
+  "message": "string — exception message",
+  "stackTrace": ["string — stack trace elements"]
+}
+```
 
-## WebSocket
+> All user management and token operations go through [ShoppingSecService](https://github.com/KamJer/Shopping-security-service).  
+> Legacy path `/user/log/*` is handled by `SkipAuthorizationFilter` which strips the `Authorization` header.
 
-### Connection
+---
 
-- **Endpoint:** `ws://<host>:5443/ws?token=<JWT>` (or `wss://` behind TLS)
-- **Allowed origins:** configured via `setAllowedOriginPatterns` (wildcard by default)
-- **Supported origin patterns:** `*` (tighten for production)
+## WebSocket API
 
-### Protocol
+This is the primary interface of the service. All CRUD and synchronisation is done over a custom framed JSON WebSocket protocol.
 
-Custom framed JSON protocol (not STOMP). Messages are JSON objects delimited by a null byte (`\0`). Partial message reassembly is supported.
-
-**Commands:** `CONNECT`, `CONNECTED`, `MESSAGE`, `SUBSCRIBE`, `SUBSCRIBED`, `UNSUBSCRIBE`, `UNSUBSCRIBED`, `ERROR`
-
-**Headers:** `ID`, `DEST`, `BODY`, `PARA`, `AUTH`
-
-**Example flow:**
+### 1. Connection
 
 ```
+ws[s]://<host>:5443/ws?token=<JWT>
+```
+
+The JWT access token is passed as a query parameter. The token is validated by delegating to [ShoppingSecService](https://github.com/KamJer/Shopping-security-service).
+
+> **Origin check:** configured via `setAllowedOriginPatterns` — wildcard (`*`) by default. Tighten for production.
+
+### 2. Protocol
+
+Messages are **JSON objects delimited by a null byte** (`\0`). Each message has the same envelope:
+
+```json
+{"command":"<COMMAND>","headers":{"<KEY>":"<VALUE>",...}}
+```
+
+#### Commands
+
+| Command | Direction | Description |
+|---------|-----------|-------------|
+| `CONNECT` | client → server | Open a logical session |
+| `CONNECTED` | server → client | Session acknowledged |
+| `SUBSCRIBE` | client → server | Subscribe to a topic |
+| `SUBSCRIBED` | server → client | Subscription confirmed |
+| `MESSAGE` | bidirectional | Payload on a topic |
+| `UNSUBSCRIBE` | client → server | Unsubscribe from a topic |
+| `UNSUBSCRIBED` | server → client | Unsubscription confirmed |
+| `ERROR` | server → client | Error notification |
+
+#### Headers
+
+| Header | Description |
+|--------|-------------|
+| `ID` | Unique message identifier (echoed back by the server) |
+| `DEST` | Topic name (e.g. `/synchronizeData`) |
+| `BODY` | JSON payload of the message |
+| `PARA` | Optional parameter |
+| `AUTH` | Authentication data |
+
+### 3. Full connection & sync flow
+
+```
+── Step 1: Connect ─────────────────────────────────────────────
+client → {"command":"CONNECT"}
+server → {"command":"CONNECTED","headers":{}}
+
+── Step 2: Subscribe to synchronisation topic ─────────────────
 client → {"command":"SUBSCRIBE","headers":{"DEST":"/synchronizeData"}}
 server → {"command":"SUBSCRIBED","headers":{"DEST":"/synchronizeData"}}
-client → {"command":"MESSAGE","headers":{"ID":"1","DEST":"/synchronizeData","BODY":"...json..."}}
-server → {"command":"MESSAGE","headers":{"DEST":"/synchronizeData","BODY":"...json...","ID":"1"}}
+
+── Step 3: Subscribe to push notifications ────────────────────
+client → {"command":"SUBSCRIBE","headers":{"DEST":"/{userName}/pip"}}
+server → {"command":"SUBSCRIBED","headers":{"DEST":"/{userName}/pip"}}
+
+── Step 4: Send / receive data via /synchronizeData ────────────
+client → {
+  "command":"MESSAGE",
+  "headers":{
+    "ID":"1",
+    "DEST":"/synchronizeData",
+    "BODY":"{\"amountTypeDtoList\":[...],\"categoryDtoList\":[...],\"shoppingItemDtoList\":[...],\"savedTime\":\"2025-06-07T12:00:00\",\"dirty\":false}"
+  }
+}
+server → {
+  "command":"MESSAGE",
+  "headers":{
+    "ID":"1",
+    "DEST":"/synchronizeData",
+    "BODY":"{\"amountTypeDtoList\":[...],\"categoryDtoList\":[...],\"shoppingItemDtoList\":[...],\"savedTime\":\"2025-06-07T12:00:05\",\"dirty\":false}"
+  }
+}
+
+── Step 5: Server pushes a change notification ────────────────
+server → {
+  "command":"MESSAGE",
+  "headers":{"DEST":"/{userName}/pip","BODY":""}
+}
 ```
 
-### Topics
+### 4. Topics
 
 | Topic | Direction | Description |
 |-------|-----------|-------------|
-| `/synchronizeData` | bidirectional | Full data sync with dirty-flag conflict detection |
-| `/{userName}/pip` | server → client | Push notification when data has changed |
+| `/synchronizeData` | bidirectional | Full bidirectional sync with dirty‑flag conflict detection |
+| `/{userName}/pip` | server → client | Push notification — triggers the client to pull fresh data |
 | `/{userName}/putAmountType` | client → server | Create a new amount type |
 | `/{userName}/postAmountType` | client → server | Update an existing amount type |
-| `/{userName}/deleteAmountType` | client → server | Soft-delete an amount type (cascades to items) |
+| `/{userName}/deleteAmountType` | client → server | Soft‑delete an amount type (cascades to items) |
 | `/{userName}/putCategory` | client → server | Create a new category |
 | `/{userName}/postCategory` | client → server | Update an existing category |
-| `/{userName}/deleteCategory` | client → server | Soft-delete a category (cascades to items) |
+| `/{userName}/deleteCategory` | client → server | Soft‑delete a category (cascades to items) |
 | `/{userName}/putShoppingItem` | client → server | Create a new shopping item |
 | `/{userName}/postShoppingItem` | client → server | Update an existing shopping item |
-| `/{userName}/deleteShoppingItem` | client → server | Soft-delete a shopping item |
+| `/{userName}/deleteShoppingItem` | client → server | Soft‑delete a shopping item |
 
-### Synchronization algorithm
+All CRUD topics expect the BODY to contain the respective DTO (see schemas below).
 
-1. Client sends `AllDto` with its current `savedTime` and entity lists (each with `ModifyState`: `INSERT`, `UPDATE`, `DELETE`)
-2. Server compares the client's `savedTime` with the server's latest data
-3. If the server has newer data → responds with `dirty=true` and the full server dataset for the client to reapply
-4. If not dirty → applies all changes, persists to database, returns only entities with `savedTime > client's savedTime` (incremental delta)
-5. Updates the user's `savedTime` via ShoppingSecService
+### 5. Data types – JSON schemas
+
+#### `AllDto` — used on `/synchronizeData`
+
+```json
+{
+  "amountTypeDtoList": [ ... ],
+  "categoryDtoList": [ ... ],
+  "shoppingItemDtoList": [ ... ],
+  "savedTime": "2025-06-07T12:00:00",
+  "dirty": false
+}
+```
+
+- `savedTime` — client’s last known timestamp (ISO‑8601). Server compares it with its own latest timestamp.
+- `dirty` — `true` when the server has newer data; the client must re‑send its entire dataset.
+- Lists contain their respective DTOs (may be empty).
+
+#### `AmountTypeDto`
+
+```json
+{
+  "amountTypeId": 1,
+  "typeName": "kg",
+  "deleted": false,
+  "modifyState": "INSERT",
+  "localId": 0,
+  "savedTime": "2025-06-07T12:00:00"
+}
+```
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `amountTypeId` | number | Server‑assigned ID (0 for new entities) |
+| `typeName` | string | Unit name (e.g. "szt.", "kg", "l") |
+| `deleted` | boolean | Soft‑delete flag |
+| `modifyState` | enum | `INSERT`, `UPDATE`, `DELETE`, `NONE` |
+| `localId` | number | Client‑side temporary ID for matching responses |
+| `savedTime` | string (ISO‑8601) | Timestamp set by the server |
+
+#### `CategoryDto`
+
+```json
+{
+  "categoryId": 1,
+  "categoryName": "Owoce",
+  "deleted": false,
+  "modifyState": "INSERT",
+  "localId": 0,
+  "savedTime": "2025-06-07T12:00:00"
+}
+```
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `categoryId` | number | Server‑assigned ID (0 for new entities) |
+| `categoryName` | string | Category name |
+| `deleted` | boolean | Soft‑delete flag |
+| `modifyState` | enum | `INSERT`, `UPDATE`, `DELETE`, `NONE` |
+| `localId` | number | Client‑side temporary ID |
+| `savedTime` | string (ISO‑8601) | Timestamp set by the server |
+
+#### `ShoppingItemDto`
+
+```json
+{
+  "shoppingItemId": 1,
+  "itemAmountTypeId": 1,
+  "itemCategoryId": 1,
+  "itemName": "Jabłka",
+  "amount": 2.5,
+  "bought": false,
+  "deleted": false,
+  "modifyState": "INSERT",
+  "localId": 0,
+  "localAmountTypeId": 0,
+  "localCategoryId": 0,
+  "savedTime": "2025-06-07T12:00:00"
+}
+```
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `shoppingItemId` | number | Server‑assigned ID (0 for new entities) |
+| `itemAmountTypeId` | number | FK to `amount_type.amountTypeId` |
+| `itemCategoryId` | number | FK to `category.categoryId` |
+| `itemName` | string | Item name |
+| `amount` | number (nullable) | Quantity |
+| `bought` | boolean | Purchased flag |
+| `deleted` | boolean | Soft‑delete flag |
+| `modifyState` | enum | `INSERT`, `UPDATE`, `DELETE`, `NONE` |
+| `localId` | number | Client‑side temporary ID for the item |
+| `localAmountTypeId` | number | Client‑side temp FK for amount type |
+| `localCategoryId` | number | Client‑side temp FK for category |
+| `savedTime` | string (ISO‑8601) | Timestamp set by the server |
+
+### 6. ModifyState semantics
+
+| Value | Meaning |
+|-------|---------|
+| `INSERT` | New entity to be created on the server |
+| `UPDATE` | Existing entity to be updated |
+| `DELETE` | Existing entity to be soft‑deleted (`deleted = true`) |
+| `NONE` | No change (used in responses) |
+
+### 7. Synchronisation algorithm (detailed)
+
+1. **Client connects** and subscribes to `/synchronizeData` and `/{userName}/pip`.
+2. **Client sends** an `AllDto` with its current `savedTime` and all entities (each with `modifyState` set).
+3. **Server compares** the client’s `savedTime` with the latest modification timestamp in the database for that user.
+4. **If server has newer data** (`dirty = true`): server responds with the **full dataset** and the client must re‑apply its local changes, then re‑send with updated `savedTime`.
+5. **If not dirty**: server applies changes, persists to DB, and returns **only entities whose `savedTime > client's savedTime`** (incremental delta).
+6. **Server updates** the user’s `savedTime` via `PUT /user/savedTime` on the ShoppingSecService.
+7. When **another client** modifies data, the server pushes an **empty message on `/{userName}/pip`**, signalling the subscribed client to perform a full sync cycle.
 
 ## Database
 

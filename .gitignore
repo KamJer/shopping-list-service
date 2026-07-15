@@ -36,5 +36,8 @@ build/
 bugs.csv
 analiza-zalozenia.txt
 
+### Secret properties ###
+src/main/resources/application-secret*.properties
+
 ### Logs ###
 logs/
