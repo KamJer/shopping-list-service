@@ -195,21 +195,9 @@ public class WebSocketUtilService extends WebsocketCustomService {
         dbList.addAll(toInsert.stream().map(saveFunction).toList());
     }
 
-    private <E> void copyProperties(E source, E target, LocalDateTime savedTime) {
-        if (target instanceof AmountType t && source instanceof AmountType s) {
-            t.setTypeName(s.getTypeName());
-            t.setSavedTime(savedTime);
-        } else if (target instanceof Category t && source instanceof Category s) {
-            t.setCategoryName(s.getCategoryName());
-            t.setSavedTime(savedTime);
-        } else if (target instanceof ShoppingItem t && source instanceof ShoppingItem s) {
-            t.setItemName(s.getItemName());
-            t.setBought(s.isBought());
-            t.setAmount(s.getAmount());
-            t.setItemCategory(s.getItemCategory());
-            t.setItemAmountType(s.getItemAmountType());
-            t.setSavedTime(savedTime);
-        }
+    @SuppressWarnings("unchecked")
+    private <E extends ShoppingEntity> void copyProperties(E source, E target, LocalDateTime savedTime) {
+        ((Copyable<E>) target).copyFrom(source, savedTime);
     }
 
     private <E extends ShoppingEntity, D> List<D> processForClient(

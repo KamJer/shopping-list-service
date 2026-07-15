@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Table(name = "SHOPPING_ITEM")
-public class ShoppingItem implements ShoppingEntity {
+public class ShoppingItem implements ShoppingEntity, Copyable<ShoppingItem> {
     @Column(name = "user_name")
     private String userName;
     @Id
@@ -47,4 +47,14 @@ public class ShoppingItem implements ShoppingEntity {
     private long localCategoryId;
     @Transient
     private long localShoppingItemId;
+
+    @Override
+    public void copyFrom(ShoppingItem source, LocalDateTime savedTime) {
+        this.itemName = source.itemName;
+        this.bought = source.bought;
+        this.amount = source.amount;
+        this.itemCategory = source.itemCategory;
+        this.itemAmountType = source.itemAmountType;
+        this.setSavedTime(savedTime);
+    }
 }

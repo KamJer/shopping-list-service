@@ -14,7 +14,7 @@ import java.util.List;
 @ToString
 @Entity
 @Table(name = "CATEGORY")
-public class Category implements ShoppingEntity {
+public class Category implements ShoppingEntity, Copyable<Category> {
 
     @Id
     @Column(name = "category_id")
@@ -34,4 +34,10 @@ public class Category implements ShoppingEntity {
 
     @Transient
     private long localId;
+
+    @Override
+    public void copyFrom(Category source, LocalDateTime savedTime) {
+        this.categoryName = source.categoryName;
+        this.setSavedTime(savedTime);
+    }
 }

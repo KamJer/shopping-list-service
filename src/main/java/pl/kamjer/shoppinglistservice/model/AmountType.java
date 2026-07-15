@@ -14,7 +14,7 @@ import java.util.List;
 @ToString
 @Entity
 @Table(name = "AMOUNT_TYPE")
-public class AmountType implements ShoppingEntity {
+public class AmountType implements ShoppingEntity, Copyable<AmountType> {
 
     @Column(name = "amount_type_id")
     @Id
@@ -34,4 +34,10 @@ public class AmountType implements ShoppingEntity {
 
     @Transient
     private long localId;
+
+    @Override
+    public void copyFrom(AmountType source, LocalDateTime savedTime) {
+        this.typeName = source.typeName;
+        this.setSavedTime(savedTime);
+    }
 }
