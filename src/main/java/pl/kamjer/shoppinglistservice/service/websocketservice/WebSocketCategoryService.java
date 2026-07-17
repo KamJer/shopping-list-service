@@ -42,7 +42,11 @@ public class WebSocketCategoryService extends WebsocketCustomService {
     public CategoryDto putCategory(CategoryDto categoryDto) {
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
+        if (categoryDto.getCategoryId() > 0) {
+            throw new IllegalArgumentException("PUT does not support updates. Use POST instead.");
+        }
         Category categoryToPut = shoppingEntityMapper.toCategory(user, categoryDto, savedTime);
+        categoryToPut.setUserName(user.getUserName());
         categoryRepository.save(categoryToPut);
         categoryToPut.setLocalId(categoryDto.getLocalId());
         categoryToPut.setSavedTime(savedTime);

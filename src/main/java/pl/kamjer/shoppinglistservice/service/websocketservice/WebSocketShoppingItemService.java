@@ -51,8 +51,12 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
     public ShoppingItemDto putShoppingItem(ShoppingItemDto shoppingItemDto) {
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
+        if (shoppingItemDto.getShoppingItemId() > 0) {
+            throw new IllegalArgumentException("PUT does not support updates. Use POST instead.");
+        }
         ShoppingItem shoppingItem =
                 shoppingItemResolver.resolve(user, new HashMap<>(), new HashMap<>(), shoppingItemDto, savedTime);
+        shoppingItem.setUserName(user.getUserName());
         shoppingItemRepository.save(shoppingItem);
         shoppingItem.setLocalShoppingItemId(shoppingItemDto.getLocalId());
         shoppingItem.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());

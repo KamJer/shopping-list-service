@@ -38,7 +38,11 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
     public AmountTypeDto putAmountType(AmountTypeDto amountTypeDto) {
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
+        if (amountTypeDto.getAmountTypeId() > 0) {
+            throw new IllegalArgumentException("PUT does not support updates. Use POST instead.");
+        }
         AmountType amountTypeToPut = shoppingEntityMapper.toAmountType(user, amountTypeDto, savedTime);
+        amountTypeToPut.setUserName(user.getUserName());
         amountTypeRepository.save(amountTypeToPut);
         amountTypeToPut.setLocalId(amountTypeDto.getLocalId());
         amountTypeToPut.setSavedTime(savedTime);
