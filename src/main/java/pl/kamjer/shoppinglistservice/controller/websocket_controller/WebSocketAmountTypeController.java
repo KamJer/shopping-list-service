@@ -1,7 +1,7 @@
 package pl.kamjer.shoppinglistservice.controller.websocket_controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.extern.java.Log;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Controller
-@Log
+@Log4j2
 public class WebSocketAmountTypeController extends WebsocketCustomController {
 
     private final WebSocketAmountTypeService webSocketAmountTypeService;

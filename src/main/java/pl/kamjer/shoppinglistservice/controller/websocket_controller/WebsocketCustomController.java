@@ -2,7 +2,7 @@ package pl.kamjer.shoppinglistservice.controller.websocket_controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
-import lombok.extern.java.Log;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -17,11 +17,11 @@ import java.security.Principal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
-import java.util.logging.Level;
+
 
 @Controller
 @AllArgsConstructor
-@Log
+@Log4j2
 public class WebsocketCustomController {
 
     WebSocketDataHolder webSocketDataHolder;
@@ -45,7 +45,7 @@ public class WebsocketCustomController {
                     if (!session.isOpen()) {
                         webSocketDataHolder.removeSessionFromTopics(session);
                     } else {
-                        log.log(Level.INFO, "Sending message to: " + session.getId());
+                        log.info("Sending message to: " + session.getId());
                         session.sendMessage(new TextMessage(objectMapper.writeValueAsString(messageForOthers)));
                     }
                 }

@@ -1,7 +1,7 @@
 package pl.kamjer.shoppinglistservice.controller.websocket_controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.extern.java.Log;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.socket.TextMessage;
@@ -12,10 +12,10 @@ import pl.kamjer.shoppinglistservice.service.websocketservice.WebSocketUtilServi
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.logging.Level;
+
 
 @Controller
-@Log
+@Log4j2
 public class WebSocketUtilController extends WebsocketCustomController {
 
     private final WebSocketUtilService webSocketUtilService;
@@ -34,7 +34,7 @@ public class WebSocketUtilController extends WebsocketCustomController {
         headers.put(Message.Header.DEST, "/synchronizeData");
         headers.put(Message.Header.BODY, objectMapper.writeValueAsString(webSocketUtilService.synchronizeWebSocket(allDto)));
         Message message = new Message(Message.Command.MESSAGE, headers);
-        log.log(Level.INFO, "Sending message to owner: " + webSocketDataHolder.getCurrentSession().getId());
+        log.info("Sending message to owner: " + webSocketDataHolder.getCurrentSession().getId());
 //        sending message to an original sender
         webSocketDataHolder.getCurrentSession().sendMessage(new TextMessage(objectMapper.writeValueAsString(message)));
 

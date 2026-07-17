@@ -26,6 +26,6 @@ public class ShoppingItemDto implements Dto {
 
     private long localId;
     private long localAmountTypeId;
-    protected long localCategoryId;
+    private long localCategoryId;
     private LocalDateTime savedTime;
 }
