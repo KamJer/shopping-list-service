@@ -338,7 +338,26 @@ All CRUD topics expect the BODY to contain the respective DTO (see schemas below
 | `localCategoryId` | number | Client‑side temp FK for category |
 | `savedTime` | string (ISO‑8601) | Timestamp set by the server |
 
-### 6. ModifyState semantics
+### 6. `localId` — client-side entity tracking
+
+The `localId` field exists **exclusively** for clients that maintain a local database (e.g. Android's SQLite). Its purpose is to let such a client match a server response back to the exact local row that originated the request.
+
+**How it works:**
+
+1. A client with a local DB creates an entity offline and assigns a local auto-increment ID (`localId`).
+2. The client sends the entity to the server via PUT with `localId` set.
+3. The server stores the value in `localShoppingItemId` / `localCategoryId` / `localAmountTypeId`.
+4. When the server responds (on the CRUD topic or during sync), it echoes the same `localId` back.
+5. The client uses `localId` to find the matching local row and update it with the server-assigned ID.
+
+**Key points:**
+
+- **`localId` has no global meaning.** Two different clients may send the same `localId` value for different entities — the server stores them per-user, so there is no collision.
+- **The web frontend does not use `localId` for entity matching.** It generates sequential negative numbers (`-1, -2, -3, …`) as temporary identifiers solely to satisfy the DTO contract; matching is done by server-assigned IDs (`shoppingItemId`, `categoryId`, `amountTypeId`).
+- **`localId` is never used in server-side logic.** The server only stores and echoes it — all business logic (conflict resolution, cascade deletes, sync delta) operates on the server-assigned primary keys.
+- **`localAmountTypeId` and `localCategoryId`** on `ShoppingItemDto` serve the same purpose for FK references — they let a client resolve which local amount type / category a shopping item referred to before the server assigned real IDs.
+
+### 7. ModifyState semantics
 
 | Value | Meaning |
 |-------|---------|

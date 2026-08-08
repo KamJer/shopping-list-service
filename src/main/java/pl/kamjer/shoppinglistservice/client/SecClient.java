@@ -34,13 +34,4 @@ public class SecClient {
                 .retrieve()
                 .body(UserInfo.class);
     }
-
-    public UserDto getUserByUserName(String userName, String accessToken) {
-        return userRestClient
-                .get()
-                .uri("/{userName}", userName)
-                .header("Authorization", "Bearer " + accessToken)
-                .retrieve()
-                .body(UserDto.class);
-    }
 }

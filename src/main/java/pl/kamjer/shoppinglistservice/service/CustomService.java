@@ -11,6 +11,7 @@ import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestClientResponseException;
 import pl.kamjer.shoppinglistservice.client.SecClient;
+import pl.kamjer.shoppinglistservice.config.security.UserInfo;
 import pl.kamjer.shoppinglistservice.model.User;
 
 import java.util.Optional;
@@ -39,8 +40,11 @@ public class CustomService {
             return Optional.empty();
         }
         try {
-            User user = objectMapper.convertValue(secClient.getUserByUserName(userName, token), User.class);
-            return Optional.ofNullable(user);
+            UserInfo userInfo = secClient.isValid(token);
+            if (userInfo == null) {
+                return Optional.empty();
+            }
+            return Optional.of(User.builder().userName(userInfo.getUserName()).build());
         } catch (RestClientResponseException e) {
             int status = e.getStatusCode().value();
             if (status == 401 || status == 403) {

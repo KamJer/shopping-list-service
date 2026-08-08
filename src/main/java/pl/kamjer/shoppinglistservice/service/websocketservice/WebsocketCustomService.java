@@ -5,6 +5,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 import org.springframework.web.socket.WebSocketSession;
 import pl.kamjer.shoppinglistservice.client.SecClient;
+import pl.kamjer.shoppinglistservice.config.security.UserInfo;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.User;
@@ -40,10 +41,11 @@ public class WebsocketCustomService extends CustomService {
         }
         String token = tokenObj.toString();
         try {
-            User user = objectMapper.convertValue(secClient.getUserByUserName(userName.get(), token), User.class);
-            if (user == null) {
+            UserInfo userInfo = secClient.isValid(token);
+            if (userInfo == null) {
                 return Optional.empty();
             }
+            User user = User.builder().userName(userInfo.getUserName()).build();
             user.setPassword(token);
             return Optional.of(user);
         } catch (RuntimeException e) {
