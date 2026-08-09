@@ -2,7 +2,6 @@ package pl.kamjer.shoppinglistservice.controller.websocket_controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
@@ -25,7 +24,7 @@ public class WebSocketShoppingItemController extends WebsocketCustomController{
     }
 
     @MessageMapping("/{userName}/putShoppingItem")
-    public ShoppingItemDto  putShoppingItem(@DestinationVariable String userName, ShoppingItemDto shoppingItemDto) throws IOException {
+    public ShoppingItemDto  putShoppingItem(ShoppingItemDto shoppingItemDto) throws IOException {
         log.info("/putShoppingItem connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
         ShoppingItemDto dto = webSocketShoppingItemService.putShoppingItem(shoppingItemDto);
         notifyClients(AllDto.builder()
@@ -37,7 +36,7 @@ public class WebSocketShoppingItemController extends WebsocketCustomController{
     }
 
     @MessageMapping("/{userName}/postShoppingItem")
-    public ShoppingItemDto postShoppingItem(@DestinationVariable String userName, ShoppingItemDto shoppingItemDto) throws IOException {
+    public ShoppingItemDto postShoppingItem(ShoppingItemDto shoppingItemDto) throws IOException {
         log.info("/postShoppingItem connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
         ShoppingItemDto dto = webSocketShoppingItemService.postShoppingItem(shoppingItemDto);
         notifyClients(AllDto.builder()
@@ -49,7 +48,7 @@ public class WebSocketShoppingItemController extends WebsocketCustomController{
     }
 
     @MessageMapping("/{userName}/deleteShoppingItem")
-    public ShoppingItemDto deleteShoppingItem(@DestinationVariable String userName, ShoppingItemDto shoppingItemDto) throws IOException {
+    public ShoppingItemDto deleteShoppingItem(ShoppingItemDto shoppingItemDto) throws IOException {
         log.info("/deleteShoppingItem connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
         ShoppingItemDto dto = webSocketShoppingItemService.deleteShoppingItem(shoppingItemDto);
         notifyClients(AllDto.builder()

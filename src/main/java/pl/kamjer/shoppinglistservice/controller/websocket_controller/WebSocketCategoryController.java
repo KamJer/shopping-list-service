@@ -2,7 +2,6 @@ package pl.kamjer.shoppinglistservice.controller.websocket_controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
@@ -25,7 +24,7 @@ public class WebSocketCategoryController extends WebsocketCustomController{
     }
 
     @MessageMapping("/{userName}/putCategory")
-    public CategoryDto putCategory(@DestinationVariable String userName, CategoryDto categoryDto) throws IOException {
+    public CategoryDto putCategory(CategoryDto categoryDto) throws IOException {
         log.info("/putCategory connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
         CategoryDto categoryDtoToSend = webSocketCategoryService.putCategory(categoryDto);
         notifyClients(AllDto.builder()
@@ -37,7 +36,7 @@ public class WebSocketCategoryController extends WebsocketCustomController{
     }
 
     @MessageMapping("/{userName}/postCategory")
-    public CategoryDto postCategory(@DestinationVariable String userName, CategoryDto categoryDto) throws IOException {
+    public CategoryDto postCategory(CategoryDto categoryDto) throws IOException {
         log.info("/postCategory connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
         CategoryDto categoryDtoProcessed = webSocketCategoryService.postCategory(categoryDto);
         notifyClients(AllDto.builder()
@@ -49,7 +48,7 @@ public class WebSocketCategoryController extends WebsocketCustomController{
     }
 
     @MessageMapping("/{userName}/deleteCategory")
-    public CategoryDto deleteCategory(@DestinationVariable String userName, CategoryDto categoryDto) throws IOException {
+    public CategoryDto deleteCategory(CategoryDto categoryDto) throws IOException {
         log.info("/deleteCategory connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
         CategoryDto categoryDtoProcessed = webSocketCategoryService.deleteCategory(categoryDto);
         notifyClients(AllDto.builder()

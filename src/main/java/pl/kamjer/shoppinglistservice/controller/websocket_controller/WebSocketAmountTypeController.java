@@ -2,7 +2,6 @@ package pl.kamjer.shoppinglistservice.controller.websocket_controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
@@ -25,7 +24,7 @@ public class WebSocketAmountTypeController extends WebsocketCustomController {
     }
 
     @MessageMapping("/{userName}/putAmountType")
-    public AmountTypeDto putAmountType(@DestinationVariable String userName, AmountTypeDto amountTypeDto) throws IOException {
+    public AmountTypeDto putAmountType(AmountTypeDto amountTypeDto) throws IOException {
         log.info("/putAmountType connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
         AmountTypeDto amountTypeDtoProcessed = webSocketAmountTypeService.putAmountType(amountTypeDto);
         notifyClients(AllDto.builder()
@@ -37,7 +36,7 @@ public class WebSocketAmountTypeController extends WebsocketCustomController {
     }
 
     @MessageMapping("/{userName}/postAmountType")
-    public AmountTypeDto postAmountType(@DestinationVariable String userName, AmountTypeDto amountTypeDto) throws IOException {
+    public AmountTypeDto postAmountType(AmountTypeDto amountTypeDto) throws IOException {
         log.info("/postAmountType connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
         AmountTypeDto amountTypeDtoProcessed = webSocketAmountTypeService.postAmountType(amountTypeDto);
         notifyClients(AllDto.builder()
@@ -49,7 +48,7 @@ public class WebSocketAmountTypeController extends WebsocketCustomController {
     }
 
     @MessageMapping("/{userName}/deleteAmountType")
-    public AmountTypeDto deleteAmountType(@DestinationVariable String userName, AmountTypeDto amountTypeDto) throws IOException {
+    public AmountTypeDto deleteAmountType(AmountTypeDto amountTypeDto) throws IOException {
         log.info("/deleteAmountType connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
         AmountTypeDto amountTypeDtoProcessed = webSocketAmountTypeService.deleteAmountType(amountTypeDto);
         notifyClients(AllDto.builder()
