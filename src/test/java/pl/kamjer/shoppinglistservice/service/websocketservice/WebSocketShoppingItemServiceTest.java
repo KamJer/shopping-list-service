@@ -1,5 +1,8 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -33,6 +36,7 @@ import static org.mockito.Mockito.*;
 class WebSocketShoppingItemServiceTest {
 
     private static final User USER = User.builder().userName("tester").password("token").build();
+    private static final Validator VALIDATOR = Validation.buildDefaultValidatorFactory().getValidator();
 
     @Mock private SecClient secClient;
     @Mock private WebSocketDataHolder webSocketDataHolder;
@@ -51,9 +55,9 @@ class WebSocketShoppingItemServiceTest {
         service = new WebSocketShoppingItemService(
                 secClient, webSocketDataHolder, shoppingItemRepository,
                 amountTypeRepository, categoryRepository,
-                shoppingEntityMapper, shoppingItemResolver);
+                shoppingEntityMapper, shoppingItemResolver, VALIDATOR);
         service = spy(service);
-        doReturn(USER).when(service).requireAuthenticatedUser();
+        lenient().doReturn(USER).when(service).requireAuthenticatedUser();
     }
 
     @Test
@@ -78,6 +82,7 @@ class WebSocketShoppingItemServiceTest {
                 .localId(100L)
                 .localAmountTypeId(10L)
                 .localCategoryId(20L)
+                .modifyState(ModifyState.UPDATE)
                 .build();
 
         when(shoppingItemResolver.resolve(any(), anyMap(), anyMap(), any(), any())).thenReturn(resolved);
@@ -99,8 +104,10 @@ class WebSocketShoppingItemServiceTest {
     @Test
     void putShoppingItem_whenResolverThrows_throwsNoResourcesFoundException() {
         ShoppingItemDto dto = ShoppingItemDto.builder()
+                .itemName("x")
                 .itemAmountTypeId(999L)
                 .itemCategoryId(999L)
+                .modifyState(ModifyState.UPDATE)
                 .build();
 
         when(shoppingItemResolver.resolve(any(), anyMap(), anyMap(), any(), any()))
@@ -138,6 +145,7 @@ class WebSocketShoppingItemServiceTest {
                 .localId(100L)
                 .localAmountTypeId(10L)
                 .localCategoryId(20L)
+                .modifyState(ModifyState.UPDATE)
                 .build();
 
         when(shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId("tester", 10L))
@@ -164,8 +172,10 @@ class WebSocketShoppingItemServiceTest {
                 .build();
         ShoppingItemDto dto = ShoppingItemDto.builder()
                 .shoppingItemId(10L)
+                .itemName("x")
                 .itemAmountTypeId(999L)
                 .itemCategoryId(2L)
+                .modifyState(ModifyState.UPDATE)
                 .build();
 
         when(shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId("tester", 10L))
@@ -188,6 +198,7 @@ class WebSocketShoppingItemServiceTest {
                 .itemAmountTypeId(1L)
                 .itemCategoryId(1L)
                 .deleted(false)
+                .modifyState(ModifyState.UPDATE)
                 .build();
 
         when(shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId("tester", 10L))
@@ -207,10 +218,12 @@ class WebSocketShoppingItemServiceTest {
 
         ShoppingItemDto dto = ShoppingItemDto.builder()
                 .shoppingItemId(10L)
+                .itemName("x")
                 .deleted(true)
                 .localId(100L)
                 .localAmountTypeId(10L)
                 .localCategoryId(20L)
+                .modifyState(ModifyState.DELETE)
                 .build();
 
         when(shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId("tester", 10L))
@@ -229,6 +242,7 @@ class WebSocketShoppingItemServiceTest {
                 .shoppingItemId(10L)
                 .itemName("Item")
                 .amount(1.0)
+                .modifyState(ModifyState.DELETE)
                 .build();
 
         when(shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId("tester", 10L))
@@ -240,5 +254,17 @@ class WebSocketShoppingItemServiceTest {
         verify(secClient, never()).putUser(any(), any());
         assertThat(result.getModifyState()).isEqualTo(ModifyState.DELETE);
         assertThat(result.getItemName()).isEqualTo("Item");
+    }
+
+    @Test
+    void putShoppingItem_whenDtoInvalid_throwsConstraintViolation() {
+        ShoppingItemDto dto = ShoppingItemDto.builder()
+                .itemName("")
+                .build();
+
+        assertThatThrownBy(() -> service.putShoppingItem(dto))
+                .isInstanceOf(ConstraintViolationException.class);
+        verify(shoppingItemRepository, never()).save(any());
+        verify(secClient, never()).putUser(any(), any());
     }
 }

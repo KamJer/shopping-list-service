@@ -1,5 +1,8 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -30,6 +33,7 @@ import static org.mockito.Mockito.*;
 class WebSocketCategoryServiceTest {
 
     private static final User USER = User.builder().userName("tester").password("token").build();
+    private static final Validator VALIDATOR = Validation.buildDefaultValidatorFactory().getValidator();
 
     @Mock private SecClient secClient;
     @Mock private WebSocketDataHolder webSocketDataHolder;
@@ -46,9 +50,9 @@ class WebSocketCategoryServiceTest {
         service = new WebSocketCategoryService(
                 secClient, webSocketDataHolder, categoryRepository,
                 shoppingItemRepository,
-                shoppingEntityMapper);
+                shoppingEntityMapper, VALIDATOR);
         service = spy(service);
-        doReturn(USER).when(service).requireAuthenticatedUser();
+        lenient().doReturn(USER).when(service).requireAuthenticatedUser();
     }
 
     @Test
@@ -56,6 +60,7 @@ class WebSocketCategoryServiceTest {
         CategoryDto dto = CategoryDto.builder()
                 .categoryName("Dairy")
                 .localId(50L)
+                .modifyState(ModifyState.UPDATE)
                 .build();
 
         when(categoryRepository.save(any())).then(returnsFirstArg());
@@ -85,6 +90,7 @@ class WebSocketCategoryServiceTest {
                 .categoryName("New")
                 .deleted(false)
                 .localId(50L)
+                .modifyState(ModifyState.UPDATE)
                 .build();
 
         when(categoryRepository.findCategoryByUserNameAndCategoryId("tester", 10L))
@@ -103,6 +109,7 @@ class WebSocketCategoryServiceTest {
                 .categoryId(10L)
                 .categoryName("New")
                 .deleted(false)
+                .modifyState(ModifyState.UPDATE)
                 .build();
 
         when(categoryRepository.findCategoryByUserNameAndCategoryId("tester", 10L))
@@ -124,6 +131,7 @@ class WebSocketCategoryServiceTest {
                 .categoryId(10L)
                 .deleted(true)
                 .localId(50L)
+                .modifyState(ModifyState.DELETE)
                 .build();
 
         when(categoryRepository.findCategoryByUserNameAndCategoryId("tester", 10L))
@@ -142,6 +150,7 @@ class WebSocketCategoryServiceTest {
         CategoryDto dto = CategoryDto.builder()
                 .categoryId(10L)
                 .categoryName("Dairy")
+                .modifyState(ModifyState.DELETE)
                 .build();
 
         when(categoryRepository.findCategoryByUserNameAndCategoryId("tester", 10L))
@@ -154,5 +163,15 @@ class WebSocketCategoryServiceTest {
         verify(secClient, never()).putUser(any(), any());
         assertThat(result.getModifyState()).isEqualTo(ModifyState.DELETE);
         assertThat(result.getCategoryName()).isEqualTo("Dairy");
+    }
+
+    @Test
+    void putCategory_whenDtoInvalid_throwsConstraintViolation() {
+        CategoryDto dto = CategoryDto.builder()
+                .categoryName("Dairy")
+                .build();
+
+        assertThrows(ConstraintViolationException.class, () -> service.putCategory(dto));
+        verify(categoryRepository, never()).save(any());
     }
 }

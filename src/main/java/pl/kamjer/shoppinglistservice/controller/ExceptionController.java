@@ -1,5 +1,6 @@
 package pl.kamjer.shoppinglistservice.controller;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +18,7 @@ public class ExceptionController {
     private ExceptionService exceptionService;
 
     @PostMapping
-    private ResponseEntity<Void> sendLog(@RequestBody ExceptionDto e) {
+    private ResponseEntity<Void> sendLog(@Valid @RequestBody ExceptionDto e) {
         exceptionService.insertLog(e);
         return ResponseEntity.ok().build();
     }

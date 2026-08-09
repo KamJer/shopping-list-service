@@ -1,5 +1,6 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
+import jakarta.validation.Validation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -64,7 +65,8 @@ class WebSocketUtilServiceSyncEntitiesTest {
                 shoppingItemRepository,
                 webSocketDataHolder,
                 shoppingEntityMapper,
-                shoppingItemResolver
+                shoppingItemResolver,
+                Validation.buildDefaultValidatorFactory().getValidator()
         );
         user = User.builder().userName("tester").build();
     }

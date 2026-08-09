@@ -28,8 +28,9 @@ public class WebSocketCategoryService extends WebsocketCustomService {
                                     WebSocketDataHolder webSocketDataHolder,
                                     CategoryRepository categoryRepository,
                                     ShoppingItemRepository shoppingItemRepository,
-                                    ShoppingEntityMapper shoppingEntityMapper) {
-        super(webSocketDataHolder, secClient);
+                                    ShoppingEntityMapper shoppingEntityMapper,
+                                    jakarta.validation.Validator validator) {
+        super(webSocketDataHolder, secClient, validator);
         this.categoryRepository = categoryRepository;
         this.shoppingItemRepository = shoppingItemRepository;
         this.shoppingEntityMapper = shoppingEntityMapper;
@@ -37,6 +38,7 @@ public class WebSocketCategoryService extends WebsocketCustomService {
 
     @Transactional
     public CategoryDto putCategory(CategoryDto categoryDto) {
+        validate(categoryDto);
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         if (categoryDto.getCategoryId() > 0) {
@@ -52,6 +54,7 @@ public class WebSocketCategoryService extends WebsocketCustomService {
 
     @Transactional
     public CategoryDto postCategory(CategoryDto categoryDto) {
+        validate(categoryDto);
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         Optional<Category> optionalCategory =
@@ -69,6 +72,7 @@ public class WebSocketCategoryService extends WebsocketCustomService {
 
     @Transactional
     public CategoryDto deleteCategory(CategoryDto categoryDto) {
+        validate(categoryDto);
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         Optional<Category> categoryOptional =

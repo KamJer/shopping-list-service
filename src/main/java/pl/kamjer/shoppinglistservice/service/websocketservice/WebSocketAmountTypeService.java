@@ -25,8 +25,9 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
     public WebSocketAmountTypeService(SecClient secClient, WebSocketDataHolder webSocketDataHolder,
                                       AmountTypeRepository amountTypeRepository,
                                       ShoppingItemRepository shoppingItemRepository,
-                                      ShoppingEntityMapper shoppingEntityMapper) {
-        super(webSocketDataHolder, secClient);
+                                      ShoppingEntityMapper shoppingEntityMapper,
+                                      jakarta.validation.Validator validator) {
+        super(webSocketDataHolder, secClient, validator);
         this.amountTypeRepository = amountTypeRepository;
         this.shoppingItemRepository = shoppingItemRepository;
         this.shoppingEntityMapper = shoppingEntityMapper;
@@ -34,6 +35,7 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
 
     @Transactional
     public AmountTypeDto putAmountType(AmountTypeDto amountTypeDto) {
+        validate(amountTypeDto);
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         if (amountTypeDto.getAmountTypeId() > 0) {
@@ -49,6 +51,7 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
 
     @Transactional
     public AmountTypeDto postAmountType(AmountTypeDto amountTypeDto) {  
+        validate(amountTypeDto);
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         Optional<AmountType> amountTypeOptional = amountTypeRepository
@@ -66,6 +69,7 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
 
     @Transactional
     public AmountTypeDto deleteAmountType(AmountTypeDto amountTypeDto) {
+        validate(amountTypeDto);
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         Optional<AmountType> amountTypeOptional = amountTypeRepository

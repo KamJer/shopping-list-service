@@ -36,8 +36,9 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
                                         AmountTypeRepository amountTypeRepository,
                                         CategoryRepository categoryRepository,
                                         ShoppingEntityMapper shoppingEntityMapper,
-                                        ShoppingItemResolver shoppingItemResolver) {
-        super(webSocketDataHolder, secClient);
+                                        ShoppingItemResolver shoppingItemResolver,
+                                        jakarta.validation.Validator validator) {
+        super(webSocketDataHolder, secClient, validator);
         this.shoppingItemRepository = shoppingItemRepository;
         this.amountTypeRepository = amountTypeRepository;
         this.categoryRepository = categoryRepository;
@@ -47,6 +48,7 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
 
     @Transactional
     public ShoppingItemDto putShoppingItem(ShoppingItemDto shoppingItemDto) {
+        validate(shoppingItemDto);
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         if (shoppingItemDto.getShoppingItemId() > 0) {
@@ -65,6 +67,7 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
 
     @Transactional
     public ShoppingItemDto postShoppingItem(ShoppingItemDto shoppingItemDto) {
+        validate(shoppingItemDto);
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         Optional<ShoppingItem> shoppingItemOptional = shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(user.getUserName(), shoppingItemDto.getShoppingItemId());
@@ -93,6 +96,7 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
 
     @Transactional
     public ShoppingItemDto deleteShoppingItem(ShoppingItemDto shoppingItemDto) {
+        validate(shoppingItemDto);
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         Optional<ShoppingItem> shoppingItemOptional = shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(user.getUserName(), shoppingItemDto.getShoppingItemId());

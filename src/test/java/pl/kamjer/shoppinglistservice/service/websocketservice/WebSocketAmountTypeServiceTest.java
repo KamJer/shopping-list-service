@@ -1,5 +1,8 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -30,6 +33,7 @@ import static org.mockito.Mockito.*;
 class WebSocketAmountTypeServiceTest {
 
     private static final User USER = User.builder().userName("tester").password("token").build();
+    private static final Validator VALIDATOR = Validation.buildDefaultValidatorFactory().getValidator();
 
     @Mock private SecClient secClient;
     @Mock private WebSocketDataHolder webSocketDataHolder;
@@ -46,9 +50,9 @@ class WebSocketAmountTypeServiceTest {
         service = new WebSocketAmountTypeService(
                 secClient, webSocketDataHolder, amountTypeRepository,
                 shoppingItemRepository,
-                shoppingEntityMapper);
+                shoppingEntityMapper, VALIDATOR);
         service = spy(service);
-        doReturn(USER).when(service).requireAuthenticatedUser();
+        lenient().doReturn(USER).when(service).requireAuthenticatedUser();
     }
 
     @Test
@@ -56,6 +60,7 @@ class WebSocketAmountTypeServiceTest {
         AmountTypeDto dto = AmountTypeDto.builder()
                 .typeName("kg")
                 .localId(50L)
+                .modifyState(ModifyState.UPDATE)
                 .build();
 
         when(amountTypeRepository.save(any())).then(returnsFirstArg());
@@ -85,6 +90,7 @@ class WebSocketAmountTypeServiceTest {
                 .typeName("New")
                 .deleted(false)
                 .localId(50L)
+                .modifyState(ModifyState.UPDATE)
                 .build();
 
         when(amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId("tester", 10L))
@@ -103,6 +109,7 @@ class WebSocketAmountTypeServiceTest {
                 .amountTypeId(10L)
                 .typeName("New")
                 .deleted(false)
+                .modifyState(ModifyState.UPDATE)
                 .build();
 
         when(amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId("tester", 10L))
@@ -122,8 +129,10 @@ class WebSocketAmountTypeServiceTest {
 
         AmountTypeDto dto = AmountTypeDto.builder()
                 .amountTypeId(10L)
+                .typeName("kg")
                 .deleted(true)
                 .localId(50L)
+                .modifyState(ModifyState.DELETE)
                 .build();
 
         when(amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId("tester", 10L))
@@ -142,6 +151,7 @@ class WebSocketAmountTypeServiceTest {
         AmountTypeDto dto = AmountTypeDto.builder()
                 .amountTypeId(10L)
                 .typeName("kg")
+                .modifyState(ModifyState.DELETE)
                 .build();
 
         when(amountTypeRepository.findAmountTypeByUserNameAndAmountTypeId("tester", 10L))
@@ -154,5 +164,15 @@ class WebSocketAmountTypeServiceTest {
         verify(secClient, never()).putUser(any(), any());
         assertThat(result.getModifyState()).isEqualTo(ModifyState.DELETE);
         assertThat(result.getTypeName()).isEqualTo("kg");
+    }
+
+    @Test
+    void putAmountType_whenDtoInvalid_throwsConstraintViolation() {
+        AmountTypeDto dto = AmountTypeDto.builder()
+                .typeName("")
+                .build();
+
+        assertThrows(ConstraintViolationException.class, () -> service.putAmountType(dto));
+        verify(amountTypeRepository, never()).save(any());
     }
 }

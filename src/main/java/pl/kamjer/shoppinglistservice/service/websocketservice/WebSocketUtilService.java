@@ -39,8 +39,9 @@ public class WebSocketUtilService extends WebsocketCustomService {
                                 ShoppingItemRepository shoppingItemRepository,
                                 WebSocketDataHolder webSocketDataHolder,
                                 ShoppingEntityMapper shoppingEntityMapper,
-                                ShoppingItemResolver shoppingItemResolver) {
-        super(webSocketDataHolder, secClient);
+                                ShoppingItemResolver shoppingItemResolver,
+                                jakarta.validation.Validator validator) {
+        super(webSocketDataHolder, secClient, validator);
         this.amountTypeRepository = amountTypeRepository;
         this.categoryRepository = categoryRepository;
         this.shoppingItemRepository = shoppingItemRepository;
