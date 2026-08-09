@@ -1,7 +1,9 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 import pl.kamjer.shoppinglistservice.client.SecClient;
 import pl.kamjer.shoppinglistservice.mapping.ShoppingEntityMapper;
 import pl.kamjer.shoppinglistservice.mapping.ShoppingItemResolver;
@@ -22,6 +24,7 @@ import java.util.HashMap;
 import java.util.Optional;
 
 @Service
+@Validated
 public class WebSocketShoppingItemService extends WebsocketCustomService {
 
     private final ShoppingItemRepository shoppingItemRepository;
@@ -36,9 +39,8 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
                                         AmountTypeRepository amountTypeRepository,
                                         CategoryRepository categoryRepository,
                                         ShoppingEntityMapper shoppingEntityMapper,
-                                        ShoppingItemResolver shoppingItemResolver,
-                                        jakarta.validation.Validator validator) {
-        super(webSocketDataHolder, secClient, validator);
+                                        ShoppingItemResolver shoppingItemResolver) {
+        super(webSocketDataHolder, secClient);
         this.shoppingItemRepository = shoppingItemRepository;
         this.amountTypeRepository = amountTypeRepository;
         this.categoryRepository = categoryRepository;
@@ -47,8 +49,7 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
     }
 
     @Transactional
-    public ShoppingItemDto putShoppingItem(ShoppingItemDto shoppingItemDto) {
-        validate(shoppingItemDto);
+    public ShoppingItemDto putShoppingItem(@Valid ShoppingItemDto shoppingItemDto) {
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         if (shoppingItemDto.getShoppingItemId() > 0) {
@@ -66,8 +67,7 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
     }
 
     @Transactional
-    public ShoppingItemDto postShoppingItem(ShoppingItemDto shoppingItemDto) {
-        validate(shoppingItemDto);
+    public ShoppingItemDto postShoppingItem(@Valid ShoppingItemDto shoppingItemDto) {
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         Optional<ShoppingItem> shoppingItemOptional = shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(user.getUserName(), shoppingItemDto.getShoppingItemId());
@@ -95,8 +95,7 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
     }
 
     @Transactional
-    public ShoppingItemDto deleteShoppingItem(ShoppingItemDto shoppingItemDto) {
-        validate(shoppingItemDto);
+    public ShoppingItemDto deleteShoppingItem(@Valid ShoppingItemDto shoppingItemDto) {
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         Optional<ShoppingItem> shoppingItemOptional = shoppingItemRepository.findShoppingItemByUserNameAndShoppingItemId(user.getUserName(), shoppingItemDto.getShoppingItemId());

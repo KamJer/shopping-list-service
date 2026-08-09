@@ -9,7 +9,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.test.util.ReflectionTestUtils;
+import org.springframework.validation.beanvalidation.MethodValidationInterceptor;
 import pl.kamjer.shoppinglistservice.client.SecClient;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
 import pl.kamjer.shoppinglistservice.mapping.IdAdjuster;
@@ -50,9 +52,17 @@ class WebSocketCategoryServiceTest {
         service = new WebSocketCategoryService(
                 secClient, webSocketDataHolder, categoryRepository,
                 shoppingItemRepository,
-                shoppingEntityMapper, VALIDATOR);
+                shoppingEntityMapper);
         service = spy(service);
         lenient().doReturn(USER).when(service).requireAuthenticatedUser();
+    }
+
+    @SuppressWarnings("unchecked")
+    private WebSocketCategoryService validatedProxy(WebSocketCategoryService target) {
+        ProxyFactory factory = new ProxyFactory();
+        factory.setTarget(target);
+        factory.addAdvice(new MethodValidationInterceptor(VALIDATOR));
+        return (WebSocketCategoryService) factory.getProxy();
     }
 
     @Test
@@ -171,7 +181,9 @@ class WebSocketCategoryServiceTest {
                 .categoryName("Dairy")
                 .build();
 
-        assertThrows(ConstraintViolationException.class, () -> service.putCategory(dto));
+        WebSocketCategoryService proxied = validatedProxy(service);
+
+        assertThrows(ConstraintViolationException.class, () -> proxied.putCategory(dto));
         verify(categoryRepository, never()).save(any());
     }
 }

@@ -1,7 +1,9 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 import pl.kamjer.shoppinglistservice.client.SecClient;
 import pl.kamjer.shoppinglistservice.mapping.ShoppingEntityMapper;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
@@ -16,6 +18,7 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
+@Validated
 public class WebSocketAmountTypeService extends WebsocketCustomService {
 
     private final AmountTypeRepository amountTypeRepository;
@@ -25,17 +28,15 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
     public WebSocketAmountTypeService(SecClient secClient, WebSocketDataHolder webSocketDataHolder,
                                       AmountTypeRepository amountTypeRepository,
                                       ShoppingItemRepository shoppingItemRepository,
-                                      ShoppingEntityMapper shoppingEntityMapper,
-                                      jakarta.validation.Validator validator) {
-        super(webSocketDataHolder, secClient, validator);
+                                      ShoppingEntityMapper shoppingEntityMapper) {
+        super(webSocketDataHolder, secClient);
         this.amountTypeRepository = amountTypeRepository;
         this.shoppingItemRepository = shoppingItemRepository;
         this.shoppingEntityMapper = shoppingEntityMapper;
     }
 
     @Transactional
-    public AmountTypeDto putAmountType(AmountTypeDto amountTypeDto) {
-        validate(amountTypeDto);
+    public AmountTypeDto putAmountType(@Valid AmountTypeDto amountTypeDto) {
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         if (amountTypeDto.getAmountTypeId() > 0) {
@@ -50,8 +51,7 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
     }
 
     @Transactional
-    public AmountTypeDto postAmountType(AmountTypeDto amountTypeDto) {  
-        validate(amountTypeDto);
+    public AmountTypeDto postAmountType(@Valid AmountTypeDto amountTypeDto) {  
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         Optional<AmountType> amountTypeOptional = amountTypeRepository
@@ -68,8 +68,7 @@ public class WebSocketAmountTypeService extends WebsocketCustomService {
     }
 
     @Transactional
-    public AmountTypeDto deleteAmountType(AmountTypeDto amountTypeDto) {
-        validate(amountTypeDto);
+    public AmountTypeDto deleteAmountType(@Valid AmountTypeDto amountTypeDto) {
         User user = requireAuthenticatedUser();
         LocalDateTime savedTime = LocalDateTime.now();
         Optional<AmountType> amountTypeOptional = amountTypeRepository

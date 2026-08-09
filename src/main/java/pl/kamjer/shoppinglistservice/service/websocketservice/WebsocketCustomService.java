@@ -1,8 +1,5 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
-import jakarta.validation.ConstraintViolation;
-import jakarta.validation.ConstraintViolationException;
-import jakarta.validation.Validator;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 import org.springframework.web.socket.WebSocketSession;
@@ -15,26 +12,16 @@ import pl.kamjer.shoppinglistservice.service.CustomService;
 
 import java.security.Principal;
 import java.util.Optional;
-import java.util.Set;
 
 @Service
 @Log4j2
 public class WebsocketCustomService extends CustomService {
 
     private final WebSocketDataHolder webSocketDataHolder;
-    private final Validator validator;
 
-    public WebsocketCustomService(WebSocketDataHolder webSocketDataHolder, SecClient secClient, Validator validator) {
+    public WebsocketCustomService(WebSocketDataHolder webSocketDataHolder, SecClient secClient) {
         super(secClient);
         this.webSocketDataHolder = webSocketDataHolder;
-        this.validator = validator;
-    }
-
-    protected void validate(Object dto) {
-        Set<ConstraintViolation<Object>> violations = validator.validate(dto);
-        if (!violations.isEmpty()) {
-            throw new ConstraintViolationException(violations);
-        }
     }
 
     @Override

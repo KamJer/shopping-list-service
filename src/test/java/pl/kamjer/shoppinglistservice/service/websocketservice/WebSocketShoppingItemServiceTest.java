@@ -9,7 +9,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.test.util.ReflectionTestUtils;
+import org.springframework.validation.beanvalidation.MethodValidationInterceptor;
 import pl.kamjer.shoppinglistservice.client.SecClient;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
@@ -55,9 +57,17 @@ class WebSocketShoppingItemServiceTest {
         service = new WebSocketShoppingItemService(
                 secClient, webSocketDataHolder, shoppingItemRepository,
                 amountTypeRepository, categoryRepository,
-                shoppingEntityMapper, shoppingItemResolver, VALIDATOR);
+                shoppingEntityMapper, shoppingItemResolver);
         service = spy(service);
         lenient().doReturn(USER).when(service).requireAuthenticatedUser();
+    }
+
+    @SuppressWarnings("unchecked")
+    private WebSocketShoppingItemService validatedProxy(WebSocketShoppingItemService target) {
+        ProxyFactory factory = new ProxyFactory();
+        factory.setTarget(target);
+        factory.addAdvice(new MethodValidationInterceptor(VALIDATOR));
+        return (WebSocketShoppingItemService) factory.getProxy();
     }
 
     @Test
@@ -262,7 +272,9 @@ class WebSocketShoppingItemServiceTest {
                 .itemName("")
                 .build();
 
-        assertThatThrownBy(() -> service.putShoppingItem(dto))
+        WebSocketShoppingItemService proxied = validatedProxy(service);
+
+        assertThatThrownBy(() -> proxied.putShoppingItem(dto))
                 .isInstanceOf(ConstraintViolationException.class);
         verify(shoppingItemRepository, never()).save(any());
         verify(secClient, never()).putUser(any(), any());
