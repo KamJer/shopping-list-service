@@ -1,6 +1,5 @@
 package pl.kamjer.shoppinglistservice.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
@@ -22,7 +21,6 @@ import java.util.Optional;
 public class CustomService {
 
     protected SecClient secClient;
-    protected ObjectMapper objectMapper;
 
     public Optional<User> getUserFromAuth() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

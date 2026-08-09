@@ -1,6 +1,5 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -51,7 +50,7 @@ class WebSocketShoppingItemServiceTest {
         ReflectionTestUtils.setField(shoppingEntityMapper, "idAdjuster", new IdAdjuster());
         service = new WebSocketShoppingItemService(
                 secClient, webSocketDataHolder, shoppingItemRepository,
-                amountTypeRepository, categoryRepository, new ObjectMapper(),
+                amountTypeRepository, categoryRepository,
                 shoppingEntityMapper, shoppingItemResolver);
         service = spy(service);
         doReturn(USER).when(service).requireAuthenticatedUser();

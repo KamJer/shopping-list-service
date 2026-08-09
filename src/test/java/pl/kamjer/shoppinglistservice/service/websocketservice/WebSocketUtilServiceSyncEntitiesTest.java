@@ -1,6 +1,5 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -64,7 +63,6 @@ class WebSocketUtilServiceSyncEntitiesTest {
                 categoryRepository,
                 shoppingItemRepository,
                 webSocketDataHolder,
-                new ObjectMapper(),
                 shoppingEntityMapper,
                 shoppingItemResolver
         );
