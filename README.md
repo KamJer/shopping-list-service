@@ -399,7 +399,7 @@ All foreign key relationships are JPA-only (no database-level constraints).
 mvn test
 ```
 
-Uses H2 in-memory database (not MariaDB). 6 test classes with JUnit 5 + Mockito:
+Unit tests only (no database). 9 test classes with JUnit 5 + Mockito:
 
 | Test class | Scope |
 |------------|-------|
@@ -409,13 +409,15 @@ Uses H2 in-memory database (not MariaDB). 6 test classes with JUnit 5 + Mockito:
 | `WebSocketUtilServiceSyncEntitiesTest` | Synchronization entity logic |
 | `ShoppingEntityMapperTest` | MapStruct entity↔DTO mappings |
 | `WebSocketDataHolderTest` | WebSocket topic registration and subscription |
+| `WebSocketHandlerTest` | WebSocket handler topic registration |
+| `BeanInspectorTest` | Reflective controller dispatch and parameter binding |
+| `ConnectionBrokerTest` | WebSocket message routing |
 
 ## Project directories
 
 | Directory | Description |
 |-----------|-------------|
 | `sql/` | Helper scripts (database reset, select queries) |
-| `keystore_old/` | Legacy TLS keystores (unused) |
 | `logs/` | Runtime log output |
 
 ## Related repositories
