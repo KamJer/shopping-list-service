@@ -14,7 +14,6 @@ import java.util.Optional;
 @Repository
 public interface ShoppingItemRepository extends JpaRepository<ShoppingItem, Long> {
     Optional<ShoppingItem> findShoppingItemByUserNameAndShoppingItemId(String userName, Long shoppingItemId);
-    List<ShoppingItem> findShoppingItemByUserNameAndSavedTimeAfter(String userName, LocalDateTime savedTime);
     List<ShoppingItem> findBySavedTimeBeforeAndBoughtIsTrue(LocalDateTime deleteTime);
     List<ShoppingItem> findByUserName(String userName);
 
