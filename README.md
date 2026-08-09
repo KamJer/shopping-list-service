@@ -26,7 +26,7 @@ Layered Spring Boot application.
 | Migrations | Flyway (`classpath:db/migration`) |
 | Mapping | MapStruct + Lombok |
 | Auth delegation | RestClient → ShoppingSecService (`user.service.base-url`) |
-| Scheduling | `@Scheduled` (requires manual `@EnableScheduling`) |
+| Scheduling | `@Scheduled` (enabled via `@EnableScheduling`) |
 | Build | Maven 3.8+, `spring-boot-maven-plugin` |
 
 ## Ecosystem (microservices)
@@ -391,7 +391,7 @@ All foreign key relationships are JPA-only (no database-level constraints).
 
 - **`ScheduledJob.deleteOldData()`** runs daily at 12:00 server time
 - Soft-deletes (`deleted = true`) shopping items where `bought = true` and `savedTime` is older than one month
-- **Note:** `@EnableScheduling` is not present on the application class — the cron does not run unless added
+- Enabled by `@EnableScheduling` on `ShoppingListServiceApplication`
 
 ## Tests
 
