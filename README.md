@@ -134,8 +134,7 @@ This service exposes minimal REST endpoints. Most operations go through WebSocke
 }
 ```
 
-> All user management and token operations go through [ShoppingSecService](https://github.com/KamJer/Shopping-security-service).  
-> Legacy path `/user/log/*` is handled by `SkipAuthorizationFilter` which strips the `Authorization` header.
+> All user management and token operations go through [ShoppingSecService](https://github.com/KamJer/Shopping-security-service).
 
 ---
 
