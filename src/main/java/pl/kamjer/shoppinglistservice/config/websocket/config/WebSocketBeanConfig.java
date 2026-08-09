@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.WebSocketSession;
 import pl.kamjer.shoppinglistservice.config.websocket.Topic;
-import pl.kamjer.shoppinglistservice.config.websocket.UserSession;
 
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;

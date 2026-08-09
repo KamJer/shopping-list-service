@@ -1,7 +1,6 @@
 package pl.kamjer.shoppinglistservice.service.websocketservice;
 
 import jakarta.transaction.Transactional;
-import lombok.extern.java.Log;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 import pl.kamjer.shoppinglistservice.client.SecClient;

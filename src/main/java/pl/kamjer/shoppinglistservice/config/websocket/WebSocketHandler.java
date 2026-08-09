@@ -104,13 +104,4 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
     public void registerTopic(String... topic) {
         webSocketDataHolder.registerTopic(topic);
     }
-
-//    private void validateUser(String auth, WebSocketSession session) throws IOException {
-//        try {
-//            Authentication authentication = new JwtAuthToken(auth);
-//            authenticationManager.authenticate(authentication);
-//        } catch (BadCredentialsException ex) {
-//            session.close(CloseStatus.NOT_ACCEPTABLE.withReason(ex.getMessage()));
-//        }
-//    }
 }

@@ -51,8 +51,7 @@ public class Message {
         DEST,
         BODY,
 //        Parameter: for custom parameter a user or server may want to use in a destination url (used when url contains {parameter})
-        PARA,
-        AUTH
+        PARA
     }
 
     public final static String MESSAGE_ENDER = "\0";

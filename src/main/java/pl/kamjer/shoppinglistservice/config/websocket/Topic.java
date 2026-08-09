@@ -8,14 +8,6 @@ import java.util.stream.Stream;
 
 public record Topic(String topicUrl, String[] parameters) {
 
-    int getParameterCount() {
-        return parameters.length;
-    }
-
-    boolean isTopicParameterized() {
-        return parameters.length > 0;
-    }
-
     String getParameterizedUrl() {
         String[] urlElements = topicUrl.split("/");
         int parameterCount = 0;

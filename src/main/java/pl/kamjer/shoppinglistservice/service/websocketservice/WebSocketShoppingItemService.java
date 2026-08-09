@@ -79,11 +79,9 @@ public class WebSocketShoppingItemService extends WebsocketCustomService {
                 shoppingItem.setAmount(shoppingItemDto.getAmount());
                 shoppingItem.setDeleted(shoppingItemDto.isDeleted());
                 shoppingItem.setBought(shoppingItemDto.isBought());
-                shoppingItem.setSavedTime(savedTime);
                 shoppingItem.setLocalShoppingItemId(shoppingItemDto.getLocalId());
                 shoppingItem.setLocalAmountTypeId(shoppingItemDto.getLocalAmountTypeId());
                 shoppingItem.setLocalCategoryId(shoppingItemDto.getLocalCategoryId());
-                shoppingItem.setSavedTime(savedTime);
                 return shoppingEntityMapper.toShoppingItemDto(shoppingItem, ModifyState.UPDATE, savedTime);
             } else {
                 throw new NoResourcesFoundException("Such Amount Type or Category does not exist");

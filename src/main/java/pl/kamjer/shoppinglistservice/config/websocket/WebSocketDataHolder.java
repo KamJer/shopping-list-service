@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.socket.WebSocketSession;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
-import pl.kamjer.shoppinglistservice.model.User;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
