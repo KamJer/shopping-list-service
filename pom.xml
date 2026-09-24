@@ -19,6 +19,8 @@
         <lombok.version>1.18.46</lombok.version>
         <start-class>pl.kamjer.shoppinglistservice.ShoppingListServiceApplication</start-class>
         <mapstruct.version>1.6.3</mapstruct.version>
+        <mockito.version>5.18.0</mockito.version>
+        <byte-buddy.version>1.18.12</byte-buddy.version>
     </properties>
 
     <dependencies>
