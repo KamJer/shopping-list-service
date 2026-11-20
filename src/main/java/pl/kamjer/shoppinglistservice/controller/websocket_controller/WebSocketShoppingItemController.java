@@ -25,7 +25,7 @@ public class WebSocketShoppingItemController extends WebsocketCustomController{
 
     @MessageMapping("/{userName}/putShoppingItem")
     public ShoppingItemDto  putShoppingItem(ShoppingItemDto shoppingItemDto) throws IOException {
-        log.info("/putShoppingItem connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
+        log.info("/putShoppingItem connected: User " + currentUserName());
         ShoppingItemDto dto = webSocketShoppingItemService.putShoppingItem(shoppingItemDto);
         notifyClients(AllDto.builder()
                 .amountTypeDtoList(List.of())
@@ -37,7 +37,7 @@ public class WebSocketShoppingItemController extends WebsocketCustomController{
 
     @MessageMapping("/{userName}/postShoppingItem")
     public ShoppingItemDto postShoppingItem(ShoppingItemDto shoppingItemDto) throws IOException {
-        log.info("/postShoppingItem connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
+        log.info("/postShoppingItem connected: User " + currentUserName());
         ShoppingItemDto dto = webSocketShoppingItemService.postShoppingItem(shoppingItemDto);
         notifyClients(AllDto.builder()
                 .amountTypeDtoList(List.of())
@@ -49,7 +49,7 @@ public class WebSocketShoppingItemController extends WebsocketCustomController{
 
     @MessageMapping("/{userName}/deleteShoppingItem")
     public ShoppingItemDto deleteShoppingItem(ShoppingItemDto shoppingItemDto) throws IOException {
-        log.info("/deleteShoppingItem connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
+        log.info("/deleteShoppingItem connected: User " + currentUserName());
         ShoppingItemDto dto = webSocketShoppingItemService.deleteShoppingItem(shoppingItemDto);
         notifyClients(AllDto.builder()
                 .amountTypeDtoList(List.of())

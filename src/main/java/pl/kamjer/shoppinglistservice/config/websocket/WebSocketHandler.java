@@ -2,6 +2,8 @@ package pl.kamjer.shoppinglistservice.config.websocket;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.WebSocketMessage;
@@ -30,10 +32,37 @@ public class WebSocketHandler implements org.springframework.web.socket.WebSocke
     public void afterConnectionEstablished(WebSocketSession session) {
         log.info("New session connected: {}, user: {}", session.getId(), Optional.ofNullable(session.getPrincipal()).map(Principal::getName).orElse(""));
         webSocketDataHolder.putSessionConnected(session);
-        session.getAttributes().put("TOKEN", UriComponentsBuilder.fromUri(session.getUri())
+        String token = resolveToken(session);
+        if (token != null) {
+            session.getAttributes().put(WebSocketTokenHandshakeInterceptor.TOKEN_ATTRIBUTE, token);
+        }
+    }
+
+//    The token can arrive through two channels: the Authorization header on the handshake
+//    (native clients, e.g. Android) or the "token" query parameter (browsers, which cannot set
+//    custom handshake headers). The SecurityContext is cleared before this callback, so the
+//    primary source is the attribute captured by WebSocketTokenHandshakeInterceptor while the
+//    handshake request was still available. The remaining branches are defensive fallbacks.
+    private String resolveToken(WebSocketSession session) {
+        Object handshakeToken = session.getAttributes()
+                .get(WebSocketTokenHandshakeInterceptor.HANDSHAKE_TOKEN_ATTRIBUTE);
+        if (handshakeToken instanceof String token && !token.isBlank()) {
+            return token;
+        }
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication != null) {
+            if (authentication.getDetails() instanceof String detailsToken && !detailsToken.isBlank()) {
+                return detailsToken;
+            }
+            if (authentication.getCredentials() instanceof String credentialsToken && !credentialsToken.isBlank()) {
+                return credentialsToken;
+            }
+        }
+        return UriComponentsBuilder.fromUri(session.getUri())
                 .build()
                 .getQueryParams()
-                .getFirst("token"));
+                .getFirst("token");
     }
 
     @Override

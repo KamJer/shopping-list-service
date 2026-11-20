@@ -27,8 +27,15 @@ public class WebsocketCustomController {
     WebSocketDataHolder webSocketDataHolder;
     ObjectMapper objectMapper;
 
+    /** Logs must contain the user name only — Principal.toString() includes the token in Details. */
+    protected String currentUserName() {
+        return Optional.ofNullable(webSocketDataHolder.getCurrentSession().getPrincipal())
+                .map(Principal::getName)
+                .orElse("unknown");
+    }
+
     void notifyClients(AllDto allDto) throws IOException {
-        String currentUserName = Optional.ofNullable(webSocketDataHolder.getCurrentSession().getPrincipal()).map(Principal::getName).orElseThrow();
+        String currentUserName = currentUserName();
 
         if (newDataBrought(allDto)) {
             HashMap<Message.Header, String> headersForOthers = new HashMap<>();

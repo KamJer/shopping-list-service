@@ -25,7 +25,7 @@ public class WebSocketAmountTypeController extends WebsocketCustomController {
 
     @MessageMapping("/{userName}/putAmountType")
     public AmountTypeDto putAmountType(AmountTypeDto amountTypeDto) throws IOException {
-        log.info("/putAmountType connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
+        log.info("/putAmountType connected: User " + currentUserName());
         AmountTypeDto amountTypeDtoProcessed = webSocketAmountTypeService.putAmountType(amountTypeDto);
         notifyClients(AllDto.builder()
                 .amountTypeDtoList(List.of(amountTypeDtoProcessed))
@@ -37,7 +37,7 @@ public class WebSocketAmountTypeController extends WebsocketCustomController {
 
     @MessageMapping("/{userName}/postAmountType")
     public AmountTypeDto postAmountType(AmountTypeDto amountTypeDto) throws IOException {
-        log.info("/postAmountType connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
+        log.info("/postAmountType connected: User " + currentUserName());
         AmountTypeDto amountTypeDtoProcessed = webSocketAmountTypeService.postAmountType(amountTypeDto);
         notifyClients(AllDto.builder()
                 .amountTypeDtoList(List.of(amountTypeDtoProcessed))
@@ -49,7 +49,7 @@ public class WebSocketAmountTypeController extends WebsocketCustomController {
 
     @MessageMapping("/{userName}/deleteAmountType")
     public AmountTypeDto deleteAmountType(AmountTypeDto amountTypeDto) throws IOException {
-        log.info("/deleteAmountType connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
+        log.info("/deleteAmountType connected: User " + currentUserName());
         AmountTypeDto amountTypeDtoProcessed = webSocketAmountTypeService.deleteAmountType(amountTypeDto);
         notifyClients(AllDto.builder()
                 .amountTypeDtoList(List.of(amountTypeDtoProcessed))

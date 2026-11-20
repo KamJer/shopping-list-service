@@ -7,6 +7,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketMessage;
@@ -63,6 +65,42 @@ class WebSocketHandlerTest {
 
         verify(webSocketDataHolder).putSessionConnected(session);
         assertThat(attrs.get("TOKEN")).isEqualTo("abc123");
+    }
+
+    @Test
+    void afterConnectionEstablished_prefersTokenFromSecurityContext() throws Exception {
+        ConcurrentHashMap<String, Object> attrs = new ConcurrentHashMap<>();
+        when(session.getId()).thenReturn("sess-1");
+        when(session.getPrincipal()).thenReturn(null);
+        when(session.getAttributes()).thenReturn(attrs);
+
+        UsernamePasswordAuthenticationToken authentication =
+                new UsernamePasswordAuthenticationToken("user", null);
+        authentication.setDetails("header-token");
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        try {
+            handler.afterConnectionEstablished(session);
+
+            verify(webSocketDataHolder).putSessionConnected(session);
+            assertThat(attrs.get("TOKEN")).isEqualTo("header-token");
+        } finally {
+            SecurityContextHolder.clearContext();
+        }
+    }
+
+    @Test
+    void afterConnectionEstablished_prefersTokenCapturedAtHandshake() throws Exception {
+        ConcurrentHashMap<String, Object> attrs = new ConcurrentHashMap<>();
+        attrs.put(WebSocketTokenHandshakeInterceptor.HANDSHAKE_TOKEN_ATTRIBUTE, "handshake-token");
+        when(session.getId()).thenReturn("sess-1");
+        when(session.getPrincipal()).thenReturn(null);
+        when(session.getAttributes()).thenReturn(attrs);
+
+        handler.afterConnectionEstablished(session);
+
+        verify(webSocketDataHolder).putSessionConnected(session);
+        assertThat(attrs.get(WebSocketTokenHandshakeInterceptor.TOKEN_ATTRIBUTE)).isEqualTo("handshake-token");
     }
 
     @Test

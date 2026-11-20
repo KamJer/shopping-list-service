@@ -6,6 +6,7 @@ import org.springframework.web.socket.WebSocketSession;
 import pl.kamjer.shoppinglistservice.client.SecClient;
 import pl.kamjer.shoppinglistservice.config.security.UserInfo;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketDataHolder;
+import pl.kamjer.shoppinglistservice.config.websocket.WebSocketTokenHandshakeInterceptor;
 import pl.kamjer.shoppinglistservice.exception.NoResourcesFoundException;
 import pl.kamjer.shoppinglistservice.model.User;
 import pl.kamjer.shoppinglistservice.service.CustomService;
@@ -34,11 +35,11 @@ public class WebsocketCustomService extends CustomService {
         if (userName.isEmpty()) {
             return Optional.empty();
         }
-        Object tokenObj = session.getAttributes().get("TOKEN");
-        if (tokenObj == null) {
+        Object tokenObj = session.getAttributes().get(WebSocketTokenHandshakeInterceptor.TOKEN_ATTRIBUTE);
+        if (!(tokenObj instanceof String token) || token.isBlank()) {
+            log.warn("WebSocket session has no authentication token for userName={}", userName.get());
             return Optional.empty();
         }
-        String token = tokenObj.toString();
         try {
             UserInfo userInfo = secClient.isValid(token);
             if (userInfo == null) {

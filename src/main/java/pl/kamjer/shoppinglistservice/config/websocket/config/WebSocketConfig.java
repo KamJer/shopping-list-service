@@ -6,6 +6,7 @@ import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
 import pl.kamjer.shoppinglistservice.config.websocket.WebSocketHandler;
+import pl.kamjer.shoppinglistservice.config.websocket.WebSocketTokenHandshakeInterceptor;
 
 @Configuration
 @EnableWebSocket
@@ -29,6 +30,8 @@ public class WebSocketConfig implements WebSocketConfigurer {
                 "/{userName}/postShoppingItem",
                 "/{userName}/deleteShoppingItem"
         );
-        registry.addHandler(webSocketHandler, "/ws").setAllowedOriginPatterns("*");
+        registry.addHandler(webSocketHandler, "/ws")
+                .addInterceptors(new WebSocketTokenHandshakeInterceptor())
+                .setAllowedOriginPatterns("*");
     }
 }

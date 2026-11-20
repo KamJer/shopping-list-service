@@ -25,7 +25,7 @@ public class WebSocketCategoryController extends WebsocketCustomController{
 
     @MessageMapping("/{userName}/putCategory")
     public CategoryDto putCategory(CategoryDto categoryDto) throws IOException {
-        log.info("/putCategory connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
+        log.info("/putCategory connected: User " + currentUserName());
         CategoryDto categoryDtoToSend = webSocketCategoryService.putCategory(categoryDto);
         notifyClients(AllDto.builder()
                 .amountTypeDtoList(List.of())
@@ -37,7 +37,7 @@ public class WebSocketCategoryController extends WebsocketCustomController{
 
     @MessageMapping("/{userName}/postCategory")
     public CategoryDto postCategory(CategoryDto categoryDto) throws IOException {
-        log.info("/postCategory connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
+        log.info("/postCategory connected: User " + currentUserName());
         CategoryDto categoryDtoProcessed = webSocketCategoryService.postCategory(categoryDto);
         notifyClients(AllDto.builder()
                 .amountTypeDtoList(List.of())
@@ -49,7 +49,7 @@ public class WebSocketCategoryController extends WebsocketCustomController{
 
     @MessageMapping("/{userName}/deleteCategory")
     public CategoryDto deleteCategory(CategoryDto categoryDto) throws IOException {
-        log.info("/deleteCategory connected: User " + webSocketDataHolder.getCurrentSession().getPrincipal());
+        log.info("/deleteCategory connected: User " + currentUserName());
         CategoryDto categoryDtoProcessed = webSocketCategoryService.deleteCategory(categoryDto);
         notifyClients(AllDto.builder()
                 .amountTypeDtoList(List.of())
